@@ -1,0 +1,7 @@
+{
+    "logEnabled": true,
+    "logPath": "./",
+    "logFileName": "log_{DDMMYY}.log",
+    "logCacheEnabled": true,
+    "logCacheMaxSize": 1000
+}

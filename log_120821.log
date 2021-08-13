@@ -1,0 +1,140 @@
+2021-08-12 13:31:30.798 TEST [milton]2021-08-12 13:31:30.798 INFO [tree]2021-08-12 13:48:33.780 INFO [tree]
+2021-08-12 13:48:33.779 SILLY [milton]
+2021-08-12 13:49:27.876 SILLY [milton]
+2021-08-12 13:49:27.877 INFO [tree]
+2021-08-12 13:50:13.434 SILLY [milton]
+2021-08-12 13:50:13.434 INFO [tree]
+2021-08-12 14:06:35.159 SILLY [milton]
+2021-08-12 14:06:35.160 INFO [tree]
+2021-08-12 14:06:35.161 INFO [treeddd]
+{"a":"1","b":"2","c":true,"d":-1,"date":"2021-08-12T19:06:35.161Z"}
+2021-08-12 14:07:42.312 SILLY [milton]
+2021-08-12 14:07:42.314 INFO [tree]
+2021-08-12 14:07:42.314 INFO [treeddd]
+{
+  "a": "1",
+  "b": "2",
+  "c": true,
+  "d": -1,
+  "date": "2021-08-12T19:07:42.314Z"
+}
+2021-08-12 14:59:18.820 SILLY [milton]
+2021-08-12 14:59:18.821 INFO [tree]
+2021-08-12 14:59:18.821 INFO [treeddd]
+{
+  "a": "1",
+  "b": "2",
+  "c": true,
+  "d": -1,
+  "date": "2021-08-12T19:59:18.821Z"
+}
+2021-08-12 15:01:29.325 SILLY [milton]
+2021-08-12 15:01:29.326 INFO [treeddd]
+2021-08-12 15:01:29.326 INFO [tree]
+2021-08-12 15:01:29.330 FATAL [nnnnnn]
+Error: nnnnnn
+    at eval (webpack://abm_aml/./src/app/main/main.ts?:34:13)
+    at Object../src/app/main/main.ts (/DATA/code/electron/abm_aml/dist/main.js:1411:1)
+    at __webpack_require__ (/DATA/code/electron/abm_aml/dist/main.js:1490:42)
+    at /DATA/code/electron/abm_aml/dist/main.js:1519:37
+    at Object.<anonymous> (/DATA/code/electron/abm_aml/dist/main.js:1521:12)
+    at Module._compile (internal/modules/cjs/loader.js:1078:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1108:10)
+    at Module.load (internal/modules/cjs/loader.js:935:32)
+    at Module._load (internal/modules/cjs/loader.js:776:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12913)
+{
+  "a": "1",
+  "b": "2",
+  "c": true,
+  "d": -1,
+  "date": "2021-08-12T20:01:29.326Z"
+}
+2021-08-12 15:18:39.355 SILLY [milton]
+2021-08-12 15:18:39.356 INFO [tree]
+2021-08-12 15:18:39.356 INFO [treeddd]
+{
+  "a": "1",
+  "b": "2",
+  "c": true,
+  "d": -1,
+  "date": "2021-08-12T20:18:39.356Z"
+}
+2021-08-12 15:18:39.360 FATAL [nnnnnn]
+Error: nnnnnn
+    at eval (webpack://abm_aml/./src/app/main/main.ts?:34:13)
+    at Object../src/app/main/main.ts (/DATA/code/electron/abm_aml/dist/main.js:1411:1)
+    at __webpack_require__ (/DATA/code/electron/abm_aml/dist/main.js:1490:42)
+    at /DATA/code/electron/abm_aml/dist/main.js:1519:37
+    at Object.<anonymous> (/DATA/code/electron/abm_aml/dist/main.js:1521:12)
+    at Module._compile (internal/modules/cjs/loader.js:1078:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1108:10)
+    at Module.load (internal/modules/cjs/loader.js:935:32)
+    at Module._load (internal/modules/cjs/loader.js:776:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12913)
+2021-08-12 15:49:34.965 SILLY [milton]
+2021-08-12 15:49:34.966 INFO [tree]
+2021-08-12 15:49:34.966 INFO [treeddd]
+{
+  "a": "1",
+  "b": "2",
+  "c": true,
+  "d": -1,
+  "date": "2021-08-12T20:49:34.966Z"
+}
+2021-08-12 15:49:34.970 FATAL [nnnnnn]
+Error: nnnnnn
+    at eval (webpack://abm_aml/./src/app/main/main.ts?:34:13)
+    at Object../src/app/main/main.ts (/DATA/code/electron/abm_aml/dist/main.js:1411:1)
+    at __webpack_require__ (/DATA/code/electron/abm_aml/dist/main.js:1490:42)
+    at /DATA/code/electron/abm_aml/dist/main.js:1519:37
+    at Object.<anonymous> (/DATA/code/electron/abm_aml/dist/main.js:1521:12)
+    at Module._compile (internal/modules/cjs/loader.js:1078:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1108:10)
+    at Module.load (internal/modules/cjs/loader.js:935:32)
+    at Module._load (internal/modules/cjs/loader.js:776:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12913)
+2021-08-12 19:40:23.896 SILLY [milton]
+2021-08-12 19:40:23.897 INFO [tree]
+2021-08-12 19:40:23.897 INFO [treeddd]
+{
+  "a": "1",
+  "b": "2",
+  "c": true,
+  "d": -1,
+  "date": "2021-08-13T00:40:23.897Z"
+}
+2021-08-12 19:40:23.901 FATAL [nnnnnn]
+Error: nnnnnn
+    at eval (webpack://abm_aml/./src/app/main/main.ts?:34:13)
+    at Object../src/app/main/main.ts (/DATA/code/electron/abm_aml/dist/main.js:1411:1)
+    at __webpack_require__ (/DATA/code/electron/abm_aml/dist/main.js:1490:42)
+    at /DATA/code/electron/abm_aml/dist/main.js:1519:37
+    at Object.<anonymous> (/DATA/code/electron/abm_aml/dist/main.js:1521:12)
+    at Module._compile (internal/modules/cjs/loader.js:1078:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1108:10)
+    at Module.load (internal/modules/cjs/loader.js:935:32)
+    at Module._load (internal/modules/cjs/loader.js:776:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12913)
+2021-08-12 19:52:52.306 SILLY [milton]
+2021-08-12 19:52:52.307 INFO [treeddd]
+{
+  "a": "1",
+  "b": "2",
+  "c": true,
+  "d": -1,
+  "date": "2021-08-13T00:52:52.307Z"
+}
+2021-08-12 19:52:52.307 INFO [tree]
+2021-08-12 19:52:52.311 FATAL [nnnnnn]
+Error: nnnnnn
+    at eval (webpack://abm_aml/./src/app/main/main.ts?:34:13)
+    at Object../src/app/main/main.ts (/DATA/code/electron/abm_aml/dist/main.js:1411:1)
+    at __webpack_require__ (/DATA/code/electron/abm_aml/dist/main.js:1490:42)
+    at /DATA/code/electron/abm_aml/dist/main.js:1519:37
+    at Object.<anonymous> (/DATA/code/electron/abm_aml/dist/main.js:1521:12)
+    at Module._compile (internal/modules/cjs/loader.js:1078:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1108:10)
+    at Module.load (internal/modules/cjs/loader.js:935:32)
+    at Module._load (internal/modules/cjs/loader.js:776:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12913)
