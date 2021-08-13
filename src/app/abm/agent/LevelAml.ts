@@ -1,3 +1,6 @@
 export enum LevelAml {
-    x
+    COLOCATION = "COLOCACIÓN",
+    STRUCTURATION = "ESTRUCTURACIÓN",
+    INTEGRATION = "INTEGRACIÓN",
+    NINGUNO = "NINGUNO",
 }

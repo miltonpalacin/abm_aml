@@ -4,6 +4,7 @@ import { ArrayList } from "../helper/ArrayList";
 import { HashMap } from "../helper/HashMap";
 import { Log } from "../helper/Log";
 import { Alphabet } from "./Alphabet";
+import { LevelAml } from "./LevelAml";
 import { State } from "./State";
 import { StateAlphabet } from "./StateAlphabet";
 
@@ -24,6 +25,9 @@ export abstract class BaseAgent {
 
     /** Información de movimientos financieros */
     private ledger!: Ledger;
+
+    /** Nivel dentro del proceos de Anti-Money Laundering */
+    private level!: LevelAml;
 
     //#####################################
     // ATRIBUTOS DE AUTOMATA
@@ -46,8 +50,6 @@ export abstract class BaseAgent {
 
     /** Estados de aceptación */
     private acceptanceStates!: ArrayList<State>;
-
-
 
 
     //#####################################
