@@ -2,12 +2,24 @@ import { IHash } from "./IHash";
 
 export class HashMap<K extends IHash, V> {
 
+    //#####################################
+    // ATRIBUTOS CLASE
+    //#####################################
+
     private map!: Map<K, V>;
+
+    //#####################################
+    // CONSTRUCTOR
+    //#####################################
 
     public constructor() {
         this.map = new Map();
 
     }
+
+    //#####################################
+    // MÉTODOS
+    //####################################
 
     public clear(): void { this.map.clear(); }
 
@@ -19,7 +31,7 @@ export class HashMap<K extends IHash, V> {
 
     public get(key: K): V | undefined { return this.map.get(key); }
 
-    public has(key: IHash): boolean {
+    public has(key: K): boolean {
         const keys = this.map.keys();
         let anotherKey;
 
@@ -30,5 +42,7 @@ export class HashMap<K extends IHash, V> {
     }
 
     public set(key: K, value: V): this { this.map.set(key, value); return this; }
+
+    public getLength(): number { return this.map.size; }
 
 }

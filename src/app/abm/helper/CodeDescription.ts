@@ -50,7 +50,7 @@ export class CodeDescription implements IHash {
 
     public equals(o: any): boolean {
         if (this === o) return true;
-        if (o == null || (<any>this.constructor) !== (<any>o.constructor)) return false;
+        if (o == null || this.constructor.name !== o.constructor.name) return false;
         const obj: CodeDescription = <CodeDescription>o;
         return this.code === obj.code;
     }
@@ -61,7 +61,7 @@ export class CodeDescription implements IHash {
     }
 
     public hash(): string {
-        return (<any>this.constructor) + "." + this.code;
+        return this.constructor.name + "." + this.code;
     }
 
 }

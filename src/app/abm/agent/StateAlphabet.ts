@@ -18,12 +18,12 @@ export class StateAlphabet implements IHash {
 
     public equals(o: any): boolean {
         if (this === o) return true;
-        if (o == null || (<any>this.constructor) !== (<any>o.constructor)) return false;
+        if (o == null || this.constructor.name !== o.constructor.name) return false;
         const state: StateAlphabet = <StateAlphabet>o;
         return this.codeState === state.codeState && this.codeAlphabet === state.codeAlphabet && this.closeMove === state.closeMove;
     }
 
     public hash(): string {
-        return this.codeState + "." + this.codeAlphabet + "." + this.closeMove;
+        return this.constructor.name + "." + this.codeState + "." + this.codeAlphabet + "." + this.closeMove;
     }
 }

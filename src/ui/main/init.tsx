@@ -1,39 +1,46 @@
 import React, { Fragment } from 'react';
 import "./app.scss";
 import "bootswatch/dist/minty/bootstrap.min.css";
-import { TypeMove } from '@/app/abm/environment/TypeMove';
-import { Place } from '@/app/abm/environment/Place';
+// import { TypeMove } from '@/app/abm/environment/TypeMove';
+// import { Place } from '@/app/abm/environment/Place';
 import { State } from "@/app/abm/agent/State"
-import { Alphabet } from '@/app/abm/agent/Alphabet';
-import { HashMap } from '@/app/abm/helper/HashMap';
-import { StateAlphabet } from '@/app/abm/agent/StateAlphabet';
-import { ArrayList } from '@/app/abm/helper/ArrayList';
-//import { CoreAgent } from '@/app/abm/agent/CoreAgent';
+import { TypeMove } from '@/app/abm/data/TypeMove';
+// import { Alphabet } from '@/app/abm/agent/Alphabet';
+// import { HashMap } from '@/app/abm/helper/HashMap';
+// import { StateAlphabet } from '@/app/abm/agent/StateAlphabet';
+// import { ArrayList } from '@/app/abm/helper/ArrayList';
+// //import { CoreAgent } from '@/app/abm/agent/CoreAgent';
 
-let move = TypeMove.NONE;
-const location = Place.U240202
+// let move = TypeMove.NONE;
+// const location = Place.U240202
 const state01 = new State("01", "milto");
 const state02 = new State("01s", "milto");
 const state03 = state02;
-const xxx = new Alphabet("01", "milto");
-const map: HashMap<StateAlphabet, State> = new HashMap();
-map.set(new StateAlphabet(state01, xxx, true), state02);
-const arr: ArrayList<State> = ArrayList.create();
+// const xxx = new Alphabet("01", "milto");
+// const map: HashMap<StateAlphabet, State> = new HashMap();
+// map.set(new StateAlphabet(state01, xxx, true), state02);
+// const arr: ArrayList<State> = ArrayList.create();
 
-arr.push(state01);
-arr.push(state02);
+// arr.push(state01);
+// arr.push(state02);
+// console.log("arr: " + arr[1].hash() + "---.---" + (new StateAlphabet(state01, xxx, true).hash()));
 
-// if (state01.equals(xxx))
-// if(state01.equals(state02))
-//if (arr.contains(new State("01ss","mIlto")))
-if (map.has(new StateAlphabet(state01, xxx, true)))
-    move = TypeMove.DEPOSIT;
+// // if (state01.equals(xxx))
+let valtemp = "NADA";
+if (state01.equals(state01))
+    valtemp = "entro";
 
+console.log(TypeMove.data.getByIndex(2))
+// //if (arr.contains(new State("01ss","mIlto")))
+// if (map.has(new StateAlphabet(state01, xxx, true)))
+//move = TypeMove.DEPOSIT;
+
+// {move + "." + move.toString() + "." + move.valueOf()}
 const App = () => {
     return (
         <Fragment>
             <div className="ecample">
-                {move + "." + move.toString() + "." + move.valueOf()}
+                {valtemp}
             </div>
             <main className="container-fluid" id="productForm">
                 <div className="row">
