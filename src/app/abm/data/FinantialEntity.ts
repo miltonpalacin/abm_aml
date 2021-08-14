@@ -1,0 +1,83 @@
+import { StringMap } from "../helper/StringMap";
+
+export class FinantialEntity {
+
+    public static data: StringMap = new StringMap();
+
+    private static _initialize = (() => {
+        FinantialEntity.data.set("BA001","Banco de Comercio");
+        FinantialEntity.data.set("BA002","Banco de Crédito del Perú");
+        FinantialEntity.data.set("BA003","Banco Interamericano de Finanzas (BanBif)");
+        FinantialEntity.data.set("BA004","Banco Pichincha");
+        FinantialEntity.data.set("BA005","BBVA");
+        FinantialEntity.data.set("BA006","Citibank Perú");
+        FinantialEntity.data.set("BA007","Interbank");
+        FinantialEntity.data.set("BA008","MiBanco");
+        FinantialEntity.data.set("BA009","Scotiabank Perú");
+        FinantialEntity.data.set("BA010","Banco GNB Perú");
+        FinantialEntity.data.set("BA011","Banco Falabella");
+        FinantialEntity.data.set("BA012","Banco Ripley");
+        FinantialEntity.data.set("BA013","Banco Santander Perú");
+        FinantialEntity.data.set("BA014","Banco Azteca");
+        FinantialEntity.data.set("BA015","Bank of China");
+        FinantialEntity.data.set("BA016","ICBC PERU BANK");
+        FinantialEntity.data.set("BAE01","Agrobanco");
+        FinantialEntity.data.set("BAE02","Banco de la Nación");
+        FinantialEntity.data.set("BAE03","COFIDE");
+        FinantialEntity.data.set("BAE04","Fondo MiVivienda");
+        FinantialEntity.data.set("EF001","Amérika");
+        FinantialEntity.data.set("EF002","Crediscotia");
+        FinantialEntity.data.set("EF003","Confianza");
+        FinantialEntity.data.set("EF004","Compartamos");
+        FinantialEntity.data.set("EF005","Credinka");
+        FinantialEntity.data.set("EF006","Efectiva");
+        FinantialEntity.data.set("EF007","Proempresa");
+        FinantialEntity.data.set("EF008","Mitsui Auto Finance");
+        FinantialEntity.data.set("EF009","Oh!");
+        FinantialEntity.data.set("EF010","Qapaq");
+        FinantialEntity.data.set("EF011","TFC");
+        FinantialEntity.data.set("CA001","Arequipa");
+        FinantialEntity.data.set("CA002","Cusco");
+        FinantialEntity.data.set("CA003","Del Santa");
+        FinantialEntity.data.set("CA004","Trujillo");
+        FinantialEntity.data.set("CA005","Huancayo");
+        FinantialEntity.data.set("CA006","Ica");
+        FinantialEntity.data.set("CA007","Maynas");
+        FinantialEntity.data.set("CA008","Paita");
+        FinantialEntity.data.set("CA009","Piura");
+        FinantialEntity.data.set("CA010","Sullana");
+        FinantialEntity.data.set("CA011","Tacna");
+        FinantialEntity.data.set("CO001","Coopac Inkapresta");
+        FinantialEntity.data.set("CO002","Coopac Jaén");
+        FinantialEntity.data.set("CO003","Coopac Arequipayy");
+        FinantialEntity.data.set("CO004","Coopac Heroica");
+        FinantialEntity.data.set("CO005","Coopac Sembrar");
+        FinantialEntity.data.set("CO006","Coopac Grupo");
+        FinantialEntity.data.set("CO007","Coopac Crecemype");
+        FinantialEntity.data.set("CO008","Coopac Altiplano");
+        FinantialEntity.data.set("CO009","Coopac Financoop");
+        FinantialEntity.data.set("CO010","Coopac Amcechan");
+        FinantialEntity.data.set("CO011","Coopac Inversiones");
+        FinantialEntity.data.set("CO012","Coopac Progresa");
+        FinantialEntity.data.set("CO013","Coopac Crecer");
+        FinantialEntity.data.set("CO014","Coopac Horizonte");
+        FinantialEntity.data.set("CO015","Coopac Econopresto");
+        FinantialEntity.data.set("CO016","Coopac Investmind");
+        FinantialEntity.data.set("CO017","Coopac Andreli");
+        FinantialEntity.data.set("CO018","Coopac.Telefonica Del");
+        FinantialEntity.data.set("CO019","Coopac Negocios");
+        FinantialEntity.data.set("CO020","Coopac Ipemec");
+        FinantialEntity.data.set("CO021","Coopac Financenter");
+        FinantialEntity.data.set("CO022","Coopac Bienestar,Desarrollo");
+        FinantialEntity.data.set("CO023","Coopac Integra");
+        FinantialEntity.data.set("CO024","Coopac Unión");
+        FinantialEntity.data.set("CO025","Coopac Yanawara");
+        FinantialEntity.data.set("CO026","Coopac Intercrédito");
+        FinantialEntity.data.set("CO027","Coopac Santa");
+        FinantialEntity.data.set("CO028","Coopac Crezkamos");
+        FinantialEntity.data.set("CO029","Coopac Nuestra");
+        FinantialEntity.data.set("CO030","Coopac Crediconfia");
+        FinantialEntity.data.set("CO031","Coopac Líder");
+       
+    })();
+}

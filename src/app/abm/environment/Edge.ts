@@ -1,4 +1,4 @@
-import { TypeMove } from "./TypeMove";
+import { StringItem } from "../helper/StringItem";
 
 /** Edge o arista representa la transacción */
 export class Edge {
@@ -11,7 +11,7 @@ export class Edge {
 
     private endNode!: Node;
 
-    private typeMove!: TypeMove;
+    private typeMove!: StringItem;
 
     private isMoveIlegally!: boolean;
 
@@ -44,12 +44,12 @@ export class Edge {
         return this.endNode;
     }
 
-    public setTypeMove(typeMove: TypeMove): this {
+    public setTypeMove(typeMove: StringItem): this {
         this.typeMove = typeMove;
         return this;
     }
 
-    public getTypeMove(): TypeMove {
+    public getTypeMove(): StringItem {
         return this.typeMove;
     }
 

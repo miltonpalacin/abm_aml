@@ -1,6 +1,5 @@
 import { BaseAgent } from "../agent/BaseAgent";
-import { FinantialEntity } from "./FinantialEntity";
-import { Place } from "./Place";
+import { StringItem } from "../helper/StringItem";
 
 /** Node o nodo representa al agente, lugar y la cuenta de la entidad financiera */
 export class Node {
@@ -10,13 +9,13 @@ export class Node {
     //#####################################
 
     /** Lugar donde se estará el nodo para realizar la transacción */
-    private location!: Place;
+    private location!: StringItem;
 
     private agent!: BaseAgent;
 
     private currentTime!: number;
 
-    private entity!: FinantialEntity;
+    private finantialEntity!: StringItem;
 
     //#####################################
     // CONSTUCTOR
@@ -30,11 +29,11 @@ export class Node {
     // PROPIEDADES
     //####################################
 
-    public getLocation(): Place {
+    public getLocation(): StringItem {
         return this.location;
     }
 
-    public setLocation(location: Place): void {
+    public setLocation(location: StringItem): void {
         this.location = location;
     }
 

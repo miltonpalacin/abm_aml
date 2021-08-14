@@ -1,12 +1,10 @@
-import { FinantialEntity } from "./FinantialEntity";
-import { Place } from "./Place";
-
+import { StringItem } from "../helper/StringItem";
 
 interface MoneyData {
-    sourceEntity: FinantialEntity,
-    targetEntity: FinantialEntity;
-    sourcePlace: Place;
-    targetPlace: Place;
+    sourceEntity: StringItem,
+    targetEntity: StringItem;
+    sourcePlace: StringItem;
+    targetPlace: StringItem;
     amount: number;
 }
 
@@ -44,7 +42,7 @@ export class Ledger {
     // MÉTODOS
     //####################################
 
-    public moneyIn(sourceEntity: FinantialEntity, targetEntity: FinantialEntity, sourcePlace: Place, targetPlace: Place, amount: number): void {
+    public moneyIn(sourceEntity: StringItem, targetEntity: StringItem, sourcePlace: StringItem, targetPlace: StringItem, amount: number): void {
         const flow: MoneyData = {
             sourceEntity: sourceEntity,
             targetEntity: targetEntity,
@@ -57,7 +55,7 @@ export class Ledger {
         this.totalMoney += amount;
     }
 
-    public moneyOut(sourceEntity: FinantialEntity, targetEntity: FinantialEntity, sourcePlace: Place, targetPlace: Place, amount: number): void {
+    public moneyOut(sourceEntity: StringItem, targetEntity: StringItem, sourcePlace: StringItem, targetPlace: StringItem, amount: number): void {
         if (!this.hasMoney(amount)) return;
 
         const flow: MoneyData = {

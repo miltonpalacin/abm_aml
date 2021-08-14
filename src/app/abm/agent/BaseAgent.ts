@@ -1,7 +1,7 @@
 import { Ledger } from "../environment/Ledger";
-import { Place } from "../environment/Place";
 import { ArrayList } from "../helper/ArrayList";
 import { HashMap } from "../helper/HashMap";
+import { StringItem } from "../helper/StringItem";
 import { Log } from "../helper/Log";
 import { Alphabet } from "./Alphabet";
 import { LevelAml } from "./LevelAml";
@@ -21,7 +21,7 @@ export abstract class BaseAgent {
     private code!: string;
 
     // /** Localización del agente / Lugar de residencia según DNI */
-    private location!: Place;
+    private location!: StringItem;
 
     /** Información de movimientos financieros */
     private ledger!: Ledger;
@@ -84,11 +84,11 @@ export abstract class BaseAgent {
         this.code = code;
     }
 
-    public getLocation(): Place {
+    public getLocation(): StringItem {
         return this.location;
     }
 
-    public setLocation(location: Place): void {
+    public setLocation(location: StringItem): void {
         this.location = location;
     }
 

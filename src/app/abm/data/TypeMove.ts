@@ -2,11 +2,11 @@
  * Tipo de movimiento o transacción de los agentes dentro de ambiente o red (network)
  */
 
-import { MapIndex } from "../helper/MapIndex";
+import { StringMap } from "../helper/StringMap";
 
 export class TypeMove {
 
-    public static data: MapIndex<string, string> = new MapIndex();
+    public static data: StringMap = new StringMap();
 
     private static _initialize = (() => {
         TypeMove.data.set("TRANSFER ","Tranferencia");

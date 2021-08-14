@@ -1,14 +1,13 @@
-import { IHash } from "./IHash";
-import { ItemMap } from "./ItemMap";
+import { StringItem } from "./StringItem";
 
 
-export class MapIndex<K, V> {
+export class StringMap {
 
     //#####################################
     // ATRIBUTOS CLASE
     //#####################################
 
-    private array!: Array<ItemMap<K, V>>;
+    private array!: Array<StringItem>;
 
     //#####################################
     // CONSTRUCTOR
@@ -25,11 +24,11 @@ export class MapIndex<K, V> {
     //####################################
 
 
-    public getByIndex(index: number): ItemMap<K, V> {
+    public getByIndex(index: number): StringItem {
         return this.array[index];
     }
 
-    public getByKey(key: K): V | undefined {
+    public getByKey(key: string): string | undefined {
         const item = this.array.find(e => e.key === key);
         if (item === undefined) return undefined;
         return item.value;
@@ -37,26 +36,26 @@ export class MapIndex<K, V> {
 
     public clear(): void { this.array = new Array(); }
 
-    public delete(key: K): boolean {
+    public delete(key: string): boolean {
         const index = this.array.findIndex(e => e.key === key);
         const del = this.array.splice(index, 1);
         return del && del.length > 0;
     }
 
-    public forEach(callbackfn: (value: ItemMap<K, V>, index: number, array: ItemMap<K, V>[]) => void, thisArg?: any): void {
+    public forEach(callbackfn: (value: StringItem, index: number, array: StringItem[]) => void, thisArg?: any): void {
         this.array.forEach(callbackfn, thisArg);
     }
 
 
-    public has(key: K): boolean {
+    public has(key: string): boolean {
         const item = this.array.find(e => e.key === key);
         return !(item === undefined)
 
     }
 
-    public set(key: K, value: V): this {
+    public set(key: string, value: string): this {
         const index = this.array.findIndex(e => e.key === key);
-        const newItem = new ItemMap(key, value);
+        const newItem = new StringItem(key, value);
         if (index >= 0)
             this.array[index] = newItem
 
