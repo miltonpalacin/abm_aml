@@ -1,11 +1,15 @@
-import { StringItem } from "../helper/StringItem";
+import { KeyValue } from "../helper/KeyValue";
+import { KeyValueExtra } from "../helper/KeyValueExtra";
 
-interface MoneyData {
-    sourceEntity: StringItem,
-    targetEntity: StringItem;
-    sourcePlace: StringItem;
-    targetPlace: StringItem;
+export interface IMoneyData {
+
+    sourceEntity: KeyValueExtra<string, string, KeyValue<String, String>>;
+    targetEntity: KeyValueExtra<string, string, KeyValue<String, String>>;
+    sourcePlace: KeyValue<String, String>;
+    targetPlace: KeyValue<String, String>;
+    currentTime: number;
     amount: number;
+
 }
 
 export class Ledger {
@@ -14,9 +18,9 @@ export class Ledger {
     // ATRIBUTOS CLASE
     //#####################################
 
-    private income!: Array<MoneyData>;
+    private income!: Array<IMoneyData>;
 
-    private expenditure!: Array<MoneyData>;
+    private expenditure!: Array<IMoneyData>;
 
     private totalMoney!: number;
 
@@ -42,32 +46,40 @@ export class Ledger {
     // MÉTODOS
     //####################################
 
-    public moneyIn(sourceEntity: StringItem, targetEntity: StringItem, sourcePlace: StringItem, targetPlace: StringItem, amount: number): void {
-        const flow: MoneyData = {
-            sourceEntity: sourceEntity,
-            targetEntity: targetEntity,
-            sourcePlace: sourcePlace,
-            targetPlace: targetPlace,
-            amount: amount
+    public moneyIn(moneyData: IMoneyData): void {
+
+        if (!(moneyData && moneyData.amount > 0)) return;
+
+        const flow: IMoneyData = {
+            sourceEntity: moneyData.sourceEntity,
+            targetEntity: moneyData.targetEntity,
+            sourcePlace: moneyData.sourcePlace,
+            targetPlace: moneyData.targetPlace,
+            currentTime: moneyData.currentTime,
+            amount: moneyData.amount
         };
 
         this.income.push(flow);
-        this.totalMoney += amount;
+        this.totalMoney += moneyData.amount;
     }
 
-    public moneyOut(sourceEntity: StringItem, targetEntity: StringItem, sourcePlace: StringItem, targetPlace: StringItem, amount: number): void {
-        if (!this.hasMoney(amount)) return;
+    public moneyOut(moneyData: IMoneyData): void {
 
-        const flow: MoneyData = {
-            sourceEntity: sourceEntity,
-            targetEntity: targetEntity,
-            sourcePlace: sourcePlace,
-            targetPlace: targetPlace,
-            amount: amount
+        if (!(moneyData && moneyData.amount > 0)) return;
+
+        if (!this.hasMoney(moneyData.amount)) return;
+
+        const flow: IMoneyData = {
+            sourceEntity: moneyData.sourceEntity,
+            targetEntity: moneyData.targetEntity,
+            sourcePlace: moneyData.sourcePlace,
+            targetPlace: moneyData.targetPlace,
+            currentTime: moneyData.currentTime,
+            amount: moneyData.amount
         };
 
         this.expenditure.push(flow);
-        this.totalMoney -= amount;
+        this.totalMoney -= moneyData.amount;
     }
 
     public hasMoney(amount: number): boolean {

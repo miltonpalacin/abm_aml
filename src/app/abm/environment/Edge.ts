@@ -1,4 +1,4 @@
-import { StringItem } from "../helper/StringItem";
+import { KeyValue } from "../helper/KeyValue";
 
 /** Edge o arista representa la transacción */
 export class Edge {
@@ -11,12 +11,15 @@ export class Edge {
 
     private endNode!: Node;
 
-    private typeMove!: StringItem;
+    private typeMove!: KeyValue<string, string>;
 
     private isMoveIlegally!: boolean;
 
     private amount!: number;
 
+    private currentTime!: number;
+
+    
     //#####################################
     // CONSTUCTOR
     //#################################### 
@@ -44,12 +47,12 @@ export class Edge {
         return this.endNode;
     }
 
-    public setTypeMove(typeMove: StringItem): this {
+    public setTypeMove(typeMove: KeyValue<string, string>): this {
         this.typeMove = typeMove;
         return this;
     }
 
-    public getTypeMove(): StringItem {
+    public getTypeMove(): KeyValue<string, string> {
         return this.typeMove;
     }
 

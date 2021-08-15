@@ -1,5 +1,6 @@
 import { BaseAgent } from "../agent/BaseAgent";
-import { StringItem } from "../helper/StringItem";
+import { KeyValue } from "../helper/KeyValue";
+import { KeyValueExtra } from "../helper/KeyValueExtra";
 
 /** Node o nodo representa al agente, lugar y la cuenta de la entidad financiera */
 export class Node {
@@ -8,14 +9,18 @@ export class Node {
     // ATRIBUTOS CLASE
     //#####################################
 
-    /** Lugar donde se estará el nodo para realizar la transacción */
-    private location!: StringItem;
+    /** Lugar donde estará el nodo para realizar la transacción */
+    private location!: KeyValue<String, String>;
 
+    /** Agente dueño del agent */
     private agent!: BaseAgent;
 
+    /** Tiempo actual, que se actualiza en todas las iteraciones */
     private currentTime!: number;
 
-    private finantialEntity!: StringItem;
+    /** El nodo esta asociado a una cuenta de una entidada financiera  */
+    // private finantialEntity!: KeyValueExtra<string, string, KeyValue<String, String>>;
+
 
     //#####################################
     // CONSTUCTOR
@@ -29,11 +34,11 @@ export class Node {
     // PROPIEDADES
     //####################################
 
-    public getLocation(): StringItem {
+    public getLocation(): KeyValue<String, String> {
         return this.location;
     }
 
-    public setLocation(location: StringItem): void {
+    public setLocation(location: KeyValue<String, String>): void {
         this.location = location;
     }
 

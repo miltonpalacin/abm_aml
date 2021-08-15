@@ -11,6 +11,7 @@ import { TypeFinantialEntity } from '@/app/abm/data/TypeFinantialEntity';
 // import { StateAlphabet } from '@/app/abm/agent/StateAlphabet';
 // import { ArrayList } from '@/app/abm/helper/ArrayList';
 // //import { CoreAgent } from '@/app/abm/agent/CoreAgent';
+import { IHash } from "@/app/abm/helper/IHash";
 
 // let move = TypeMove.NONE;
 // const location = Place.U240202
@@ -37,6 +38,7 @@ console.log(TypeFinantialEntity.data.getByIndex(10).toString())
 //move = TypeMove.DEPOSIT;
 
 // {move + "." + move.toString() + "." + move.valueOf()}
+
 const App = () => {
     return (
         <Fragment>

@@ -1,12 +1,12 @@
-import { StringMap } from "../helper/StringMap";
+import { KeyValueMap } from "../helper/KeyValueMap";
 
 export class TypeIntermediary {
 
-    public static data: StringMap = new StringMap();
+    public static data: KeyValueMap<string, string> = new KeyValueMap();
 
     private static _initialize = (() => {
-        TypeIntermediary.data.set("FORMAL-FS ","Sistema Financiero Formal");
-        TypeIntermediary.data.set("INFORMAL-HAWALA ","Sistema Hawal de Transferencia");
+        TypeIntermediary.data.set("FORMAL ","Sistema Financiero Formal");
+        TypeIntermediary.data.set("INFORMAL ","Sistema Informal (Hawala, Otros)");
         TypeIntermediary.data.set("NONE ","Ninguno");
     })();
 }

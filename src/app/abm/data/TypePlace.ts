@@ -2,11 +2,11 @@
  * Localización del agente detro de red de manera referencial 
  */
 
-import { StringMap } from "../helper/StringMap";
+import { KeyValueMap } from "../helper/KeyValueMap";
 
 export class TypePlace {
 
-    public static data: StringMap = new StringMap();
+    public static data: KeyValueMap<string, string> = new KeyValueMap();
 
     private static _initialize = (() => {
         TypePlace.data.set("U010202", "Amazonas - Bagua - Aramango");

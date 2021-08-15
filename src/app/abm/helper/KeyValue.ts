@@ -1,18 +1,18 @@
-export class StringItem {
+export class KeyValue<K, V> {
 
-    public key!: string;
-    public value!: string;
+    public key!: K;
+    public value!: V;
 
-    public constructor(key: string, value: string) {
+    public constructor(key: K, value: V) {
         this.key = key;
         this.value = value;
     }
 
-    public getKey(): string {
+    public getKey(): K {
         return this.key;
     }
 
-    public getValue(): string {
+    public getValue(): V {
         return this.value;
     }
 

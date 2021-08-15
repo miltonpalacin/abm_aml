@@ -1,12 +1,12 @@
 import { Ledger } from "../environment/Ledger";
 import { ArrayList } from "../helper/ArrayList";
 import { HashMap } from "../helper/HashMap";
-import { StringItem } from "../helper/StringItem";
 import { Log } from "../helper/Log";
 import { Alphabet } from "./Alphabet";
 import { LevelAml } from "./LevelAml";
 import { State } from "./State";
 import { StateAlphabet } from "./StateAlphabet";
+import { KeyValue } from "../helper/KeyValue";
 
 export abstract class BaseAgent {
 
@@ -20,14 +20,17 @@ export abstract class BaseAgent {
     /** Identificador de agente */
     private code!: string;
 
-    // /** Localización del agente / Lugar de residencia según DNI */
-    private location!: StringItem;
+    /**   Lugar de residencia del agente. */
+    private place!: KeyValue<string, string>;
 
-    /** Información de movimientos financieros */
-    private ledger!: Ledger;
+    // /** Información de movimientos financieros */
+    // private ledger!: Ledger;
 
-    /** Nivel dentro del proceos de Anti-Money Laundering */
-    private level!: LevelAml;
+    // /** Nivel dentro del proceso de Anti-Money Laundering */
+    // private level!: LevelAml;
+
+    // /** Predisposición al freaude */
+    // private predispositionFraud!: number;
 
     //#####################################
     // ATRIBUTOS DE AUTOMATA
@@ -51,7 +54,6 @@ export abstract class BaseAgent {
     /** Estados de aceptación */
     private acceptanceStates!: ArrayList<State>;
 
-
     //#####################################
     // CONSTRUCTOR
     //#####################################
@@ -61,7 +63,7 @@ export abstract class BaseAgent {
         this.transitionsFunction = new HashMap();
         this.alphabets = ArrayList.create();
         this.acceptanceStates = ArrayList.create();
-        this.ledger = new Ledger();
+        // this.ledger = new Ledger();
     }
 
     //#####################################
@@ -84,11 +86,11 @@ export abstract class BaseAgent {
         this.code = code;
     }
 
-    public getLocation(): StringItem {
+    public getLocation(): KeyValue<string, string> {
         return this.location;
     }
 
-    public setLocation(location: StringItem): void {
+    public setLocation(location: KeyValue<string, string>): void {
         this.location = location;
     }
 

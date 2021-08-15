@@ -1,14 +1,13 @@
-import { StringMap } from "../helper/StringMap";
+import { KeyValueMap } from "../helper/KeyValueMap";
 
 export class TypeBusiness {
 
-    public static data: StringMap = new StringMap();
+    public static data: KeyValueMap<string, string> = new KeyValueMap();
 
     private static _initialize = (() => {
-        TypeBusiness.data.set("FOR-PROFIT ","Con fines de lucro");
-        TypeBusiness.data.set("NO-PROFIT ","Sin fines de lucro");
-        TypeBusiness.data.set("TRUST-FUND ","Fondo Fiduciario");
-        TypeBusiness.data.set("SHELL-TYPE ","Negocio tipo fantasma");
-        TypeBusiness.data.set("NONE ","Ninguno");
+        TypeBusiness.data.set("FORPROFIT ", "Con Fines de Lucro");
+        TypeBusiness.data.set("NOPROFIT ", "Sin Fines de Lucro");
+        TypeBusiness.data.set("TRUSTFUND ", "Fondo Fiduciario");
+        TypeBusiness.data.set("SHELLTYPE ", "Negocio Fantasma");
     })();
 }

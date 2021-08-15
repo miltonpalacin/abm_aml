@@ -1,18 +1,18 @@
-import { StringItem } from "./StringItem";
+import { IHash } from "./IHash";
+import { KeyValue } from "./KeyValue";
 
 
-export class StringMap {
+export class KeyValueMap<K, V> {
 
     //#####################################
     // ATRIBUTOS CLASE
     //#####################################
 
-    private array!: Array<StringItem>;
+    private array!: Array<KeyValue<K, V>>;
 
     //#####################################
     // CONSTRUCTOR
     //#####################################
-
 
     public constructor() {
         this.array = new Array();
@@ -24,38 +24,44 @@ export class StringMap {
     //####################################
 
 
-    public getByIndex(index: number): StringItem {
+    public getByIndex(index: number): KeyValue<K, V> {
         return this.array[index];
     }
 
-    public getByKey(key: string): string | undefined {
+    public getByKey(key: K): V | undefined {
         const item = this.array.find(e => e.key === key);
         if (item === undefined) return undefined;
         return item.value;
     }
 
+    public getByKeyTrust(key: K): KeyValue<K, V> {
+        const item = this.array.find(e => e.key === key);
+        return item!;
+    }
+
     public clear(): void { this.array = new Array(); }
 
-    public delete(key: string): boolean {
+    public delete(key: K): boolean {
         const index = this.array.findIndex(e => e.key === key);
         const del = this.array.splice(index, 1);
         return del && del.length > 0;
     }
 
-    public forEach(callbackfn: (value: StringItem, index: number, array: StringItem[]) => void, thisArg?: any): void {
+    public forEach(callbackfn: (value: KeyValue<K, V>, index: number, array: KeyValue<K, V>[]) => void, thisArg?: any): void {
         this.array.forEach(callbackfn, thisArg);
     }
 
 
-    public has(key: string): boolean {
+    public has(key: K): boolean {
         const item = this.array.find(e => e.key === key);
         return !(item === undefined)
 
     }
 
-    public set(key: string, value: string): this {
+    public set(key: K, value: V): this {
+        const s = <IHash><unknown>key;
         const index = this.array.findIndex(e => e.key === key);
-        const newItem = new StringItem(key, value);
+        const newItem = new KeyValue(key, value);
         if (index >= 0)
             this.array[index] = newItem
 
