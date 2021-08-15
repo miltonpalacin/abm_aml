@@ -5,8 +5,8 @@ export interface IMoneyData {
 
     sourceEntity: KeyValueExtra<string, string, KeyValue<String, String>>;
     targetEntity: KeyValueExtra<string, string, KeyValue<String, String>>;
-    sourcePlace: KeyValue<String, String>;
-    targetPlace: KeyValue<String, String>;
+    sourceLocation: KeyValue<String, String>;
+    targetLocation: KeyValue<String, String>;
     currentTime: number;
     amount: number;
 
@@ -53,8 +53,8 @@ export class Ledger {
         const flow: IMoneyData = {
             sourceEntity: moneyData.sourceEntity,
             targetEntity: moneyData.targetEntity,
-            sourcePlace: moneyData.sourcePlace,
-            targetPlace: moneyData.targetPlace,
+            sourceLocation: moneyData.sourceLocation,
+            targetLocation: moneyData.targetLocation,
             currentTime: moneyData.currentTime,
             amount: moneyData.amount
         };
@@ -72,8 +72,8 @@ export class Ledger {
         const flow: IMoneyData = {
             sourceEntity: moneyData.sourceEntity,
             targetEntity: moneyData.targetEntity,
-            sourcePlace: moneyData.sourcePlace,
-            targetPlace: moneyData.targetPlace,
+            sourceLocation: moneyData.sourceLocation,
+            targetLocation: moneyData.targetLocation,
             currentTime: moneyData.currentTime,
             amount: moneyData.amount
         };

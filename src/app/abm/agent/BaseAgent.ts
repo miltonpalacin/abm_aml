@@ -1,4 +1,4 @@
-import { Ledger } from "../environment/Ledger";
+import { Ledger } from "./Ledger";
 import { ArrayList } from "../helper/ArrayList";
 import { HashMap } from "../helper/HashMap";
 import { Log } from "../helper/Log";
@@ -20,7 +20,7 @@ export abstract class BaseAgent {
     /** Identificador de agente */
     private code!: string;
 
-    /**   Lugar de residencia del agente. */
+    /**  Lugar de de origen del agente. */
     private place!: KeyValue<string, string>;
 
     // /** Información de movimientos financieros */
@@ -87,11 +87,11 @@ export abstract class BaseAgent {
     }
 
     public getLocation(): KeyValue<string, string> {
-        return this.location;
+        return this.place;
     }
 
-    public setLocation(location: KeyValue<string, string>): void {
-        this.location = location;
+    public setLocation(place: KeyValue<string, string>): void {
+        this.place = place;
     }
 
     public getCurrentState(): State {

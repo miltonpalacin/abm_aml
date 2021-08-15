@@ -7,6 +7,5 @@ export class TypeIntermediary {
     private static _initialize = (() => {
         TypeIntermediary.data.set("FORMAL ","Sistema Financiero Formal");
         TypeIntermediary.data.set("INFORMAL ","Sistema Informal (Hawala, Otros)");
-        TypeIntermediary.data.set("NONE ","Ninguno");
     })();
 }

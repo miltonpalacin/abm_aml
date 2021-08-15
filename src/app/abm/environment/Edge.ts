@@ -11,11 +11,11 @@ export class Edge {
 
     private endNode!: Node;
 
-    private typeMove!: KeyValue<string, string>;
+    // private typeMove!: KeyValue<string, string>;
 
-    private isMoveIlegally!: boolean;
+    // private isMoveIlegally!: boolean;
 
-    private amount!: number;
+    // private amount!: number;
 
     private currentTime!: number;
 
@@ -47,31 +47,31 @@ export class Edge {
         return this.endNode;
     }
 
-    public setTypeMove(typeMove: KeyValue<string, string>): this {
-        this.typeMove = typeMove;
-        return this;
-    }
+    // public setTypeMove(typeMove: KeyValue<string, string>): this {
+    //     this.typeMove = typeMove;
+    //     return this;
+    // }
 
-    public getTypeMove(): KeyValue<string, string> {
-        return this.typeMove;
-    }
+    // public getTypeMove(): KeyValue<string, string> {
+    //     return this.typeMove;
+    // }
 
-    public setIsMoveIlegally(isMoveIlegally: boolean): this {
-        this.isMoveIlegally = isMoveIlegally;
-        return this;
-    }
+    // public setIsMoveIlegally(isMoveIlegally: boolean): this {
+    //     this.isMoveIlegally = isMoveIlegally;
+    //     return this;
+    // }
 
-    public getIsMoveIlegally(): boolean {
-        return this.isMoveIlegally
-    }
+    // public getIsMoveIlegally(): boolean {
+    //     return this.isMoveIlegally
+    // }
 
-    public setAmount(amount: number): this {
-        this.amount = amount;
-        return this;
-    }
+    // public setAmount(amount: number): this {
+    //     this.amount = amount;
+    //     return this;
+    // }
 
-    public getAmount(): number {
-        return this.amount;
-    }
+    // public getAmount(): number {
+    //     return this.amount;
+    // }
 
 }

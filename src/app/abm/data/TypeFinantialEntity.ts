@@ -84,8 +84,11 @@ export class TypeFinantialEntity {
         TypeFinantialEntity.data.set("CO029", "Coopac Nuestra", informal);
         TypeFinantialEntity.data.set("CO030", "Coopac Crediconfia", informal);
         TypeFinantialEntity.data.set("CO031", "Coopac Líder", informal); // Formal
-        TypeFinantialEntity.data.set("00000", "Hawala", informal); // Informal
-        TypeFinantialEntity.data.set("00000", "Ninguno", informal);
+        TypeFinantialEntity.data.set("99999", "Hawala", informal); // Informal
+        TypeFinantialEntity.data.set("00000", "Ingreso Formal", informal); // Informal
+        TypeFinantialEntity.data.set("11111", "Ingreso Informal", informal); // Informal
+        TypeFinantialEntity.data.set("22222", "Egreso Formal", informal); // Informal
+        TypeFinantialEntity.data.set("33333", "Egreso Informal", informal); // Informal
 
     })();
 }
