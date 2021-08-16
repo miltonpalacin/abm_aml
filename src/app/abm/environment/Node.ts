@@ -1,6 +1,5 @@
 import { BaseAgent } from "../agent/BaseAgent";
 import { KeyValue } from "../helper/KeyValue";
-import { KeyValueExtra } from "../helper/KeyValueExtra";
 
 /** Node o nodo representa al agente, lugar y la cuenta de la entidad financiera */
 export class Node {
@@ -17,10 +16,6 @@ export class Node {
 
     /** Tiempo actual, que se actualiza en todas las iteraciones */
     private currentTime!: number;
-
-    /** El nodo esta asociado a una cuenta de una entidada financiera  */
-    // private finantialEntity!: KeyValueExtra<string, string, KeyValue<String, String>>;
-
 
     //#####################################
     // CONSTUCTOR

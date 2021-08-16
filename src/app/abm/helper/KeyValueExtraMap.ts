@@ -16,7 +16,6 @@ export class KeyValueExtraMap<K, V, E> {
 
     public constructor() {
         this.array = new Array();
-
     }
 
     //#####################################
@@ -54,7 +53,6 @@ export class KeyValueExtraMap<K, V, E> {
     }
 
     public set(key: K, value: V, extra: E): this {
-        const s = <IHash><unknown>key;
         const index = this.array.findIndex(e => e.key === key);
         const newItem = new KeyValueExtra(key, value, extra);
         if (index >= 0)

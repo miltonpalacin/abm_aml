@@ -12,6 +12,5 @@ export class TypeMove {
         TypeMove.data.set("TRANSFER ","Tranferencia");
         TypeMove.data.set("DEPOSIT ","Depósito");
         TypeMove.data.set("WITHDRAWAL ","Retiro");
-        TypeMove.data.set("NONE ","Ninguno");
     })();
 }

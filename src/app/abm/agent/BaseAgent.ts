@@ -3,7 +3,6 @@ import { ArrayList } from "../helper/ArrayList";
 import { HashMap } from "../helper/HashMap";
 import { Log } from "../helper/Log";
 import { Alphabet } from "./Alphabet";
-import { LevelAml } from "./LevelAml";
 import { State } from "./State";
 import { StateAlphabet } from "./StateAlphabet";
 import { KeyValue } from "../helper/KeyValue";
@@ -14,23 +13,14 @@ export abstract class BaseAgent {
     // ATRIBUTOS CLASE
     //#####################################
 
-    /** Identificador de agente */
-    private codeStart!: string;
+    /** Identificador corto de agente */
+    private codeShort!: string;
 
     /** Identificador de agente */
     private code!: string;
 
     /**  Lugar de de origen del agente. */
     private place!: KeyValue<string, string>;
-
-    // /** Información de movimientos financieros */
-    // private ledger!: Ledger;
-
-    // /** Nivel dentro del proceso de Anti-Money Laundering */
-    // private level!: LevelAml;
-
-    // /** Predisposición al freaude */
-    // private predispositionFraud!: number;
 
     //#####################################
     // ATRIBUTOS DE AUTOMATA
@@ -63,19 +53,18 @@ export abstract class BaseAgent {
         this.transitionsFunction = new HashMap();
         this.alphabets = ArrayList.create();
         this.acceptanceStates = ArrayList.create();
-        // this.ledger = new Ledger();
     }
 
     //#####################################
     // PROPIEDADES
     //####################################
 
-    public getCodeStart(): string {
-        return this.codeStart;
+    public getCodeShort(): string {
+        return this.codeShort;
     }
 
-    public setCodeStart(codeStart: string): void {
-        this.codeStart = codeStart;
+    public setCodeShort(codeShort: string): void {
+        this.codeShort = codeShort;
     }
 
     public getCode(): string {
