@@ -1,6 +1,7 @@
 import { BaseOperationAgent } from "./BaseOperationAgent copy";
 
-export class IndividualAgent extends BaseOperationAgent {
+export class ShellTypeBusinessAgent extends BaseOperationAgent {
+
 
     //#####################################
     // ATRIBUTOS ESTÄTICOS
@@ -15,9 +16,9 @@ export class IndividualAgent extends BaseOperationAgent {
 
     public constructor() {
         super();
-        const code = (++IndividualAgent.orderCreate).toString().padStart(5, "0");
-        this.setCode("Individuo_" + code);
-        this.setCodeShort("I_" + code);
+        const code = (++ShellTypeBusinessAgent.orderCreate).toString().padStart(5, "0");
+        this.setCode("ShellTypeBusiness_" + code);
+        this.setCodeShort("BS_" + code);
     }
 
     //#####################################

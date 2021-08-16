@@ -139,7 +139,7 @@ export abstract class BaseAgent {
         if (this.states.contains(iniState)) {
             if (this.alphabets.contains(alphabet)) {
                 if (this.states.contains(outState)) {
-                    const stateAlphabet: StateAlphabet = new StateAlphabet(iniState, alphabet, !iniState.equals(outState));
+                    const stateAlphabet: StateAlphabet = new StateAlphabet(iniState, alphabet, iniState.equals(outState));
                     if (!this.transitionsFunction.has(stateAlphabet)) {
                         this.transitionsFunction.set(stateAlphabet, outState);
                     } else

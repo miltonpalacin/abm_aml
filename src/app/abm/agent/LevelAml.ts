@@ -1,6 +1,0 @@
-export enum LevelAml {
-    COLOCATION = "COLOCACIÓN",
-    STRUCTURATION = "ESTRUCTURACIÓN",
-    INTEGRATION = "INTEGRACIÓN",
-    NINGUNO = "NINGUNO",
-}

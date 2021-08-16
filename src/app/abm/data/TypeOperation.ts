@@ -4,13 +4,13 @@
 
 import { KeyValueMap } from "../helper/KeyValueMap";
 
-export class TypeMove {
+export class TypeOperation {
 
     public static data: KeyValueMap<string, string> = new KeyValueMap();
 
     private static _initialize = (() => {
-        TypeMove.data.set("TRANSFER ","Tranferencia");
-        TypeMove.data.set("DEPOSIT ","Depósito");
-        TypeMove.data.set("WITHDRAWAL ","Retiro");
+        TypeOperation.data.set("TRANSFER","Tranferencia");
+        TypeOperation.data.set("DEPOSIT","Depósito");
+        TypeOperation.data.set("WITHDRAWAL","Retiro");
     })();
 }

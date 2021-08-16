@@ -1,6 +1,6 @@
 import { KeyValue } from "../helper/KeyValue";
 import { KeyValueExtraMap } from "../helper/KeyValueExtraMap";
-import { TypeBusiness } from "./TypeBusiness";
+import { TypeIntermediary } from "./TypeIntermediary";
 
 export class TypeFinantialEntity {
 
@@ -8,8 +8,8 @@ export class TypeFinantialEntity {
 
     private static _initialize = (() => {
         
-        const formal = TypeBusiness.data.getByKeyTrust("FORMAL");
-        const informal = TypeBusiness.data.getByKeyTrust("INFORMAL");
+        const formal = TypeIntermediary.data.getByKeyTrust("FORMAL");
+        const informal = TypeIntermediary.data.getByKeyTrust("INFORMAL");
 
         TypeFinantialEntity.data.set("BA001", "Banco de Comercio", formal);
         TypeFinantialEntity.data.set("BA002", "Banco de Crédito del Perú", formal);
