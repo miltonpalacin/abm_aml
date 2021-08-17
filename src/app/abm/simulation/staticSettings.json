@@ -1,0 +1,16 @@
+{
+  "timesSimulation": 120,
+  "samplesSize": 200,
+  "population": {
+    "rateIndividual": 0.016,
+    "rateBusiness": 0.02,
+    "rateIntermediary": 0.03,
+    "inititialIndividual": 200,
+    "initialBusiness": 50,
+    "initialIntermediary": 20
+  },
+  "rangeHighPropensityFraud": [
+    0.1,
+    0.8
+  ]
+}

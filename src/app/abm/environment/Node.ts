@@ -1,8 +1,9 @@
 import { BaseAgent } from "../agent/BaseAgent";
+import { IHash } from "../helper/IHash";
 import { KeyValue } from "../helper/KeyValue";
 
 /** Node o nodo representa al agente, lugar y la cuenta de la entidad financiera */
-export class Node {
+export class Node implements IHash {
 
     //#####################################
     // ATRIBUTOS CLASE
@@ -17,12 +18,21 @@ export class Node {
     /** Tiempo actual, que se actualiza en todas las iteraciones */
     private currentTime!: number;
 
+    /** Orden de creación */
+    private static orderCreate: number = 0;
+
+    /** Código del Nodo */
+    private code!: string;
+
     //#####################################
     // CONSTUCTOR
     //####################################
 
     public constructor(agent: BaseAgent) {
         this.agent = agent;
+        this.code = "Nodo_" + (++Node.orderCreate);
+        this.agent.setNodeAddress(this.code);
+
     }
 
     //#####################################
@@ -47,6 +57,10 @@ export class Node {
 
     public setCurrentTime(currentTime: number): void {
         this.currentTime = currentTime;
+    }
+
+    public hash(): string {
+        return this.constructor.name + "." + this.code;
     }
 
 }

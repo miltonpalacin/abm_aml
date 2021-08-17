@@ -6,8 +6,9 @@ import { Alphabet } from "./Alphabet";
 import { State } from "./State";
 import { StateAlphabet } from "./StateAlphabet";
 import { KeyValue } from "../helper/KeyValue";
+import { IHash } from "../helper/IHash";
 
-export abstract class BaseAgent {
+export abstract class BaseAgent implements IHash {
 
     //#####################################
     // ATRIBUTOS CLASE
@@ -21,6 +22,9 @@ export abstract class BaseAgent {
 
     /**  Lugar de de origen del agente. */
     private place!: KeyValue<string, string>;
+
+    /** Dirección de Nodo */
+    private nodeAddress!: string;
 
     //#####################################
     // ATRIBUTOS DE AUTOMATA
@@ -91,6 +95,14 @@ export abstract class BaseAgent {
         this.currentState = currentState;
     }
 
+    public getNodeAddress(): string {
+        return this.nodeAddress;
+    }
+
+    public setNodeAddress(nodeAddress: string): void {
+        this.nodeAddress = nodeAddress;
+    }
+
     //#####################################
     // MÉTODOS ABSTRACTOS
     //####################################
@@ -109,7 +121,7 @@ export abstract class BaseAgent {
         return this;
     }
 
-    public setInitialState(state: State): void {
+    protected setInitialState(state: State): void {
         if (this.states.contains(state)) this.initialState = state;
         else Log.warn("No existe el estate: " + state.toString);
 
@@ -167,5 +179,7 @@ export abstract class BaseAgent {
         }
     }
 
-
+    public hash(): string {
+        return this.constructor.name + "." + this.code;
+    }
 }

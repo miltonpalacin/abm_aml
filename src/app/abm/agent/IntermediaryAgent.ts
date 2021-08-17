@@ -37,7 +37,7 @@ export class IntermediaryAgent extends BaseAgent {
         super();
         const code = (++IntermediaryAgent.orderCreate).toString().padStart(5, "0");
         this.setCode("Individuo_" + code);
-        this.setCodeShort("T_" + code);
+        this.setCodeShort("M_" + code);
     }
 
 

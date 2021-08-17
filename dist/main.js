@@ -20,13 +20,33 @@ eval("\nconst electron = __webpack_require__(/*! electron */ \"electron\");\n\ni
 
 /***/ }),
 
+/***/ "./src/app/abm/odd/UtilityRandom.ts":
+/*!******************************************!*\
+  !*** ./src/app/abm/odd/UtilityRandom.ts ***!
+  \******************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.UtilityRandom = void 0;\nvar crypto_1 = __importDefault(__webpack_require__(/*! crypto */ \"crypto\"));\nvar UtilityRandom = /** @class */ (function () {\n    function UtilityRandom() {\n    }\n    // public static getRandomValue(array: KeyValueMap<string, string>):string{\n    // }\n    UtilityRandom.gerRandom = function (min, max) {\n        return crypto_1.default.randomInt(min, max);\n    };\n    return UtilityRandom;\n}());\nexports.UtilityRandom = UtilityRandom;\n\n\n//# sourceURL=webpack://abm_aml/./src/app/abm/odd/UtilityRandom.ts?");
+
+/***/ }),
+
 /***/ "./src/app/main/main.ts":
 /*!******************************!*\
   !*** ./src/app/main/main.ts ***!
   \******************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar electron_1 = __webpack_require__(/*! electron */ \"electron\");\nvar electron_is_dev_1 = __importDefault(__webpack_require__(/*! electron-is-dev */ \"./node_modules/electron-is-dev/index.js\"));\n//console.log(__dirname);\nvar createWindow = function () {\n    var win = new electron_1.BrowserWindow({\n        width: 800,\n        height: 600,\n        webPreferences: {\n            nodeIntegration: true,\n            contextIsolation: false,\n            enableRemoteModule: true\n        }\n    });\n    win.loadURL(electron_is_dev_1.default\n        ? 'http://localhost:9000'\n        : \"file://\" + electron_1.app.getAppPath() + \"/index.html\");\n};\n//console.log(\"ANTES.... \" +Log.getFileName());\n// Log.silly(\"milton\");\n// Log.info(\"tree\");\n// const obj = { a: \"1\", b: \"2\", c: true, d: -1, date: new Date() };\n// obj.date = new Date();\n// Log.info(\"treeddd\", obj);\n// //console.log(Log.getFileName());\n// try {\n//     const I = 0;\n//     const II = 100 / I;\n//     const x = new Error(\"nnnnnn\");\n//     throw x;\n// } catch (error) {\n//     Log.fatal(error);\n// }\n// let logs = Log.getNewLogsCache();\n// logs.forEach(e => {\n//     console.log(\"OONE_\" + e.order + \"._.\" + e.message);\n// });\n// logs = Log.getNewLogsCache();\n// logs.forEach(e => {\n//     console.log(\"TTWO_\" + e.order + \"._.\" + e.message);\n// });\nelectron_1.app.on('ready', createWindow);\n\n\n//# sourceURL=webpack://abm_aml/./src/app/main/main.ts?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar electron_1 = __webpack_require__(/*! electron */ \"electron\");\nvar electron_is_dev_1 = __importDefault(__webpack_require__(/*! electron-is-dev */ \"./node_modules/electron-is-dev/index.js\"));\nvar UtilityRandom_1 = __webpack_require__(/*! ../abm/odd/UtilityRandom */ \"./src/app/abm/odd/UtilityRandom.ts\");\nvar createWindow = function () {\n    var win = new electron_1.BrowserWindow({\n        width: 800,\n        height: 600,\n        webPreferences: {\n            nodeIntegration: true,\n            contextIsolation: false,\n            enableRemoteModule: true\n        }\n    });\n    win.loadURL(electron_is_dev_1.default\n        ? 'http://localhost:9000'\n        : \"file://\" + electron_1.app.getAppPath() + \"/index.html\");\n};\n//console.log(\"WWWWW=>\" + TypePlace.data.getByKey(\"U05\"));\n// console.log(Settings.settigsValues.population.initialBusiness);\n// Settings.settigsValues.population.initialBusiness = 100000;\n// Settings.save();\n// console.log(Settings.settigsValues.population.initialBusiness);\nconsole.log(UtilityRandom_1.UtilityRandom.test());\n//console.log(\"ANTES.... \" +Log.getFileName());\n// Log.silly(\"milton\");\n// Log.info(\"tree\");\n// const obj = { a: \"1\", b: \"2\", c: true, d: -1, date: new Date() };\n// obj.date = new Date();\n// Log.info(\"treeddd\", obj);\n// //console.log(Log.getFileName());\n// try {\n//     const I = 0;\n//     const II = 100 / I;\n//     const x = new Error(\"nnnnnn\");\n//     throw x;\n// } catch (error) {\n//     Log.fatal(error);\n// }\n// let logs = Log.getNewLogsCache();\n// logs.forEach(e => {\n//     console.log(\"OONE_\" + e.order + \"._.\" + e.message);\n// });\n// logs = Log.getNewLogsCache();\n// logs.forEach(e => {\n//     console.log(\"TTWO_\" + e.order + \"._.\" + e.message);\n// });\nelectron_1.app.on('ready', createWindow);\n\n\n//# sourceURL=webpack://abm_aml/./src/app/main/main.ts?");
+
+/***/ }),
+
+/***/ "crypto":
+/*!*************************!*\
+  !*** external "crypto" ***!
+  \*************************/
+/***/ ((module) => {
+
+module.exports = require("crypto");
 
 /***/ }),
 

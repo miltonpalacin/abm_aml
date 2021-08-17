@@ -1,8 +1,6 @@
 import { app, BrowserWindow } from 'electron';
 import isDev from 'electron-is-dev';
-import { Log } from '../abm/helper/Log';
-
-//console.log(__dirname);
+import { Settings } from '../abm/simulation/Settings';
 
 const createWindow = (): void => {
     let win = new BrowserWindow({
@@ -22,8 +20,14 @@ const createWindow = (): void => {
     );
 }
 
+//console.log("WWWWW=>" + TypePlace.data.getByKey("U05"));
+ console.log(Settings.settigsValues.population.initialBusiness);
 
+// Settings.settigsValues.population.initialBusiness = 100000;
+// Settings.save();
+// console.log(Settings.settigsValues.population.initialBusiness);
 
+// console.log(UtilityRandom.test())
 //console.log("ANTES.... " +Log.getFileName());
 // Log.silly("milton");
 // Log.info("tree");

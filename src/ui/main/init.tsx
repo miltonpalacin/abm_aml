@@ -4,7 +4,6 @@ import "bootswatch/dist/minty/bootstrap.min.css";
 // import { TypeMove } from '@/app/abm/environment/TypeMove';
 // import { Place } from '@/app/abm/environment/Place';
 import { State } from "@/app/abm/agent/State"
-import { TypeMove } from '@/app/abm/data/TypeMove';
 import { TypeFinantialEntity } from '@/app/abm/data/TypeFinantialEntity';
 // import { Alphabet } from '@/app/abm/agent/Alphabet';
 // import { HashMap } from '@/app/abm/helper/HashMap';
@@ -12,6 +11,7 @@ import { TypeFinantialEntity } from '@/app/abm/data/TypeFinantialEntity';
 // import { ArrayList } from '@/app/abm/helper/ArrayList';
 // //import { CoreAgent } from '@/app/abm/agent/CoreAgent';
 import { IHash } from "@/app/abm/helper/IHash";
+import { TypePlace } from '@/app/abm/data/TypePlace';
 
 // let move = TypeMove.NONE;
 // const location = Place.U240202
@@ -32,7 +32,7 @@ let valtemp = "NADA";
 if (state01.equals(state01))
     valtemp = "entro";
 
-console.log(TypeFinantialEntity.data.getByIndex(10).toString())
+//console.log(TypeFinantialEntity.data.getByIndex(10).toString())
 // //if (arr.contains(new State("01ss","mIlto")))
 // if (map.has(new StateAlphabet(state01, xxx, true)))
 //move = TypeMove.DEPOSIT;

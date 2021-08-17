@@ -7,7 +7,7 @@ export class TypeFinantialEntity {
     public static data: KeyValueExtraMap<string, string, KeyValue<String, String>> = new KeyValueExtraMap();
 
     private static _initialize = (() => {
-        
+
         const formal = TypeIntermediary.data.getByKeyTrust("FORMAL");
         const informal = TypeIntermediary.data.getByKeyTrust("INFORMAL");
 

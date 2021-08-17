@@ -9,8 +9,8 @@ export class TypeOperation {
     public static data: KeyValueMap<string, string> = new KeyValueMap();
 
     private static _initialize = (() => {
-        TypeOperation.data.set("TRANSFER","Tranferencia");
-        TypeOperation.data.set("DEPOSIT","Depósito");
-        TypeOperation.data.set("WITHDRAWAL","Retiro");
+        TypeOperation.data.set("TRANSFER", "Tranferencia");
+        TypeOperation.data.set("DEPOSIT", "Depósito");
+        TypeOperation.data.set("WITHDRAWAL", "Retiro");
     })();
 }

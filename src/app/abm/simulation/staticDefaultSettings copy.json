@@ -1,0 +1,13 @@
+{
+  "timesSimulation": 120,
+  "yearsSampling": 20,
+  "samplesSize": 6,
+  "population": {
+    "rateIndividual": 0.016,
+    "rateBusiness": 0.02,
+    "rateIntermediary": 0.03,
+    "inititialIndividual": 200,
+    "initialBusiness": 50,
+    "initialIntermediary": 20
+  }
+}
