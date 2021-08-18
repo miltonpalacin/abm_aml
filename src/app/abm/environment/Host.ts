@@ -1,9 +1,12 @@
 import { BaseAgent } from "../agent/BaseAgent";
+import { TypePlace } from "../data/TypePlace";
+import { ArrayList } from "../helper/ArrayList";
 import { IHash } from "../helper/IHash";
 import { KeyValue } from "../helper/KeyValue";
+import { UtilityRandom } from "../odd/UtilityRandom";
 
 /** Node o nodo representa al agente, lugar y la cuenta de la entidad financiera */
-export class Node implements IHash {
+export class Host implements IHash {
 
     //#####################################
     // ATRIBUTOS CLASE
@@ -30,7 +33,7 @@ export class Node implements IHash {
 
     public constructor(agent: BaseAgent) {
         this.agent = agent;
-        this.code = "Nodo_" + (++Node.orderCreate);
+        this.code = "Nodo_" + (++Host.orderCreate);
         this.agent.setNodeAddress(this.code);
 
     }
@@ -61,6 +64,32 @@ export class Node implements IHash {
 
     public hash(): string {
         return this.constructor.name + "." + this.code;
+    }
+
+    //#####################################
+    // MËTODOS
+    //####################################
+
+    public static createAgents<T extends BaseAgent>(total: number, nodes: ArrayList<Host>, type: { new(): T; }): void {
+
+        // Creando nodo individuales
+        for (let _ = 0; _ < total; _++) {
+            // Crear agente
+            let agent = new type()
+            agent.build();
+            agent.setLocation(UtilityRandom.getRandomOfKeyValue(TypePlace.data))
+            agent.setCurrentState(agent.getInitialState());
+
+            // Crear node
+            let node = new Host(agent);
+            node.setCurrentTime(0);
+            node.setLocation(UtilityRandom.getRandomOfKeyValue(TypePlace.data));
+
+            // Agregando a la red
+            nodes.push(node);
+
+        }
+
     }
 
 }

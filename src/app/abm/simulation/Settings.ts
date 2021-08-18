@@ -1,26 +1,15 @@
 import * as fs from "fs";
 import path from "path";
+import { ITypeSettings } from "../helper/Types";
 
-interface TypeSettings {
-    timesSimulation: number,
-    yearsSampling: number,
-    samplesSize: number,
-    population: {
-        rateIndividual: number,
-        rateBusiness: number,
-        rateIntermediary: number,
-        inititialIndividual: number,
-        initialBusiness: number,
-        initialIntermediary: number
-    }
-}
+
 
 export class Settings {
 
     private static fileName: string = path.resolve("./src/app/abm/simulation", "staticSettings.json");
     private static fileDefaultName: string = path.resolve("./src/app/abm/simulation", "staticDefaultSettings.json");
 
-    public static settigsValues: TypeSettings;
+    public static settigsValues: ITypeSettings;
 
     private static _initialize = (() => { Settings.load(); })();
 
