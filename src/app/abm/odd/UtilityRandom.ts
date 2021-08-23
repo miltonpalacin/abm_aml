@@ -12,6 +12,7 @@ export class UtilityRandom {
     }
 
     public static getRandomRange(min: number, max: number, numDec?: number): number {
+        if (min === max) return min;
         if (numDec) {
             const factor = Math.pow(10, numDec);
             return crypto.randomInt(min * factor, max * factor) / factor;

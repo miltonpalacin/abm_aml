@@ -21,6 +21,10 @@ export class NetworkCreation {
 
     public createAgents(args: ITypeCreateAgent): void {
 
+        /** ********************************************************* */
+        /**                   CREACIÓN DE AGENTES                     */
+        /** ********************************************************* */
+
         // Crear nodos individuales
         Host.createAgents(args.popIndivual, this.nodes, IndividualAgent);
 
@@ -39,14 +43,48 @@ export class NetworkCreation {
         // Crear nodos empresa fantasma
         Host.createAgents(args.popShellBusiness, this.nodes, ShellTypeBusinessAgent);
 
-        const arrayIndBuss = this.nodes.filter(e => !e.getAgent().isAgent(IntermediaryAgent));
+        let arraySelect = this.nodes.filter(e => !e.getAgent().isAgent(IntermediaryAgent));
 
+        /** ********************************************************* */
+        /**               CON PREDISPOSICIÓN AL FRAUDE                */
+        /** ********************************************************* */
+
+        // Asignación de predisposición al fraude 
         for (let _ = 0; _ < args.popHighPropensityFraud; _++) {
-            const idx = UtilityRandom.getRandomRange(0, arrayIndBuss.length);
-            let agent = <BaseOperationAgent>arrayIndBuss[idx].getAgent();
-            // agent.setPredispositionFraud(args.maxPropensityFraud, Odds.rangePropensityFraud.max, 2);
+            const idx = UtilityRandom.getRandomRange(0, arraySelect.length - 1);
+            let agent = <BaseOperationAgent>arraySelect[idx].getAgent();
+
+            // Asignación de valor predisposición alto
+            agent.setPredispositionFraud(UtilityRandom.getRandomRange(args.maxPropensityFraud, Odds.rangePropensityFraud.max, 2));
 
         }
+
+        this.nodes.filter(e => !e.getAgent().isAgent(IntermediaryAgent))
+            .forEach(e => {
+                let agent = <BaseOperationAgent>e.getAgent();
+                if (agent.getPredispositionFraud() === undefined)
+
+                    // Asignación de valor predisposición baja
+                    agent.setPredispositionFraud(UtilityRandom.getRandomRange(Odds.rangePropensityFraud.min, args.maxPropensityFraud, 2));
+            });
+
+        /** ********************************************************* */
+        /**                    CON NIVEL                              */
+        /** ********************************************************* */
+
+        arraySelect = this.nodes.filter(e => !e.getAgent().isAgent(IntermediaryAgent)
+            && (<BaseOperationAgent>e.getAgent()).getPredispositionFraud() >= args.maxPropensityFraud);
+            
+        for (let _ = 0; _ < args.popColocation; _++) {
+            const idx = UtilityRandom.getRandomRange(0, arraySelect.length - 1);
+            let agent = <BaseOperationAgent>arraySelect[idx].getAgent();
+
+            // Asignación de valor predisposición alto
+            agent.setPredispositionFraud(UtilityRandom.getRandomRange(args.maxPropensityFraud, Odds.rangePropensityFraud.max, 2));
+
+        }
+
+
     }
 
 

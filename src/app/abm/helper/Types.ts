@@ -9,26 +9,25 @@ export interface IRangeMM {
 }
 
 export interface ITypeSettings {
-    timesSimulation: number,
-    yearsSampling: number,
+    totalSimulation: number,
     samplesSize: number,
-    rangeMinMaxPropensityFraud: IRangeMM,
+    rangePropensityFraud: IRange,
     population: {
-        rateIndividual: number,
-        rateBusiness: number,
-        rateIntermediary: number,
-        inititialIndividual: number,
-        initialBusiness: number,
-        initialIntermediary: number,
+        rate: IRange,
+        
+        rangeIndividual: IRange,
+        rateBusiness: IRange,
+        rateIntermediary: IRange,
 
         rangeNoProfitBusiness: IRange,
         rangeProfitBusiness: IRange,
         rangeTrustBusiness: IRange,
         rangeShellBusiness: IRange,
+
         rangeColocation: IRange,
         rangeEstructuration: IRange,
         rangeIntegration: IRange,
-        rangeNormal: IRange,
+
         rangeHighPropensityFraud: IRange
     },
 }

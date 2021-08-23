@@ -23,6 +23,11 @@ const createWindow = (): void => {
             : `file://${app.getAppPath()}/index.html`,
     );
 }
+const agent = new IndividualAgent();
+if (agent.getPredispositionFraud() === undefined)
+    console.log("OOOOO: " + agent.getPredispositionFraud());
+// console.log("DDDDDDDDD: " + UtilityRandom.getRandomRange(0, 0, 2));
+
 
 // let nodes: ArrayList<Node> = ArrayList.create();
 
@@ -34,31 +39,31 @@ const createWindow = (): void => {
 // console.log(nodes[3].getAgent().getCode());
 // console.log(nodes[9].getAgent().getLocation());
 
-const array: ArrayList<BaseAgent> = ArrayList.create();
-let agent = new IndividualAgent();
-agent.build();
-agent.setLocation(TypePlace.data.getByKeyTrust("U08"))
-console.log("1):" + agent.getCode() + "." + agent.getLocation());
-array.push(new IndividualAgent());
-array.push(new IndividualAgent());
-array.push(agent);
-array.push(agent);
-array.push(agent);
-let x = array[2];
-console.log("2):" + x.getCode() + "." + x.getLocation());
-const val = UtilityRandom.getRandomOfKeyValue(TypePlace.data);
-agent.setLocation(val);
-console.log("3):" + x.getCode() + "." + x.getLocation());
+// const array: ArrayList<BaseAgent> = ArrayList.create();
+// let agent = new IndividualAgent();
+// agent.build();
+// agent.setLocation(TypePlace.data.getByKeyTrust("U08"))
+// console.log("1):" + agent.getCode() + "." + agent.getLocation());
+// array.push(new IndividualAgent());
+// array.push(new IndividualAgent());
+// array.push(agent);
+// array.push(agent);
+// array.push(agent);
+// let x = array[2];
+// console.log("2):" + x.getCode() + "." + x.getLocation());
+// const val = UtilityRandom.getRandomOfKeyValue(TypePlace.data);
+// agent.setLocation(val);
+// console.log("3):" + x.getCode() + "." + x.getLocation());
 
-let xs = array.filter(e => e.getLocation() === undefined);
-let v = xs[0];
-console.log("4):" + xs.length + "-" + xs[0].getCode());
-v.setLocation(TypePlace.data.getByKeyTrust("U09"))
-xs.pop();
-xs.pop();
-console.log("5):" + xs.length);
-x = array[0];
-console.log("6):" + x.getCode() + "." + x.getLocation());
+// let xs = array.filter(e => e.getLocation() === undefined);
+// let v = xs[0];
+// console.log("4):" + xs.length + "-" + xs[0].getCode());
+// v.setLocation(TypePlace.data.getByKeyTrust("U09"))
+// xs.pop();
+// xs.pop();
+// console.log("5):" + xs.length);
+// x = array[0];
+// console.log("6):" + x.getCode() + "." + x.getLocation());
 
 // let aa = array.find(e => e.getLocation() === undefined);
 // console.log("2):" + aa?.getCode());

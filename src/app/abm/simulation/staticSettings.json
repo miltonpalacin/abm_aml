@@ -1,17 +1,27 @@
 {
-  "timesSimulation": 120,
+  "totalSimulation": 120,
   "samplesSize": 200,
-  "rangeMinMaxPropensityFraud": {
-    "min": 0.6,
-    "max": 0.9
+  "rangePropensityFraud": {
+    "start": 0.6,
+    "end": 0.9
   },
   "population": {
-    "rateIndividual": 0.016,
-    "rateBusiness": 0.02,
-    "rateIntermediary": 0.03,
-    "inititialIndividual": 200,
-    "initialBusiness": 50,
-    "initialIntermediary": 20,
+    "rate": {
+      "start": 200,
+      "end": 7000
+    },
+    "rangeIndividual": {
+      "start": 0.5,
+      "end": 0.8
+    },
+    "rateBusiness": {
+      "start": 0.1,
+      "end": 0.4
+    },
+    "rateIntermediary": {
+      "start": 0.1,
+      "end": 0.3
+    },
     "rangeNoProfitBusiness": {
       "start": 0.1,
       "end": 0.8
@@ -37,10 +47,6 @@
       "end": 0.8
     },
     "rangeIntegration": {
-      "start": 0.1,
-      "end": 0.8
-    },
-    "rangeNormal": {
       "start": 0.1,
       "end": 0.8
     },
