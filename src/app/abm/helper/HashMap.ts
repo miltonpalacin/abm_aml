@@ -6,14 +6,14 @@ export class HashMap<K extends IHash, V> {
     // ATRIBUTOS CLASE
     //#####################################
 
-    private map!: Map<K, V>;
+    private _map!: Map<K, V>;
 
     //#####################################
     // CONSTRUCTOR
     //#####################################
 
     public constructor() {
-        this.map = new Map();
+        this._map = new Map();
 
     }
 
@@ -21,18 +21,18 @@ export class HashMap<K extends IHash, V> {
     // MÉTODOS
     //####################################
 
-    public clear(): void { this.map.clear(); }
+    public clear(): void { this._map.clear(); }
 
-    public delete(key: K): boolean { return this.map.delete(key); }
+    public delete(key: K): boolean { return this._map.delete(key); }
 
     public forEach(callbackfn: (value: V, key: K, map: Map<K, V>) => void, thisArg?: any): void {
-        this.map.forEach(callbackfn, thisArg);
+        this._map.forEach(callbackfn, thisArg);
     }
 
-    public get(key: K): V | undefined { return this.map.get(key); }
+    public get(key: K): V | undefined { return this._map.get(key); }
 
     public has(key: K): boolean {
-        const keys = this.map.keys();
+        const keys = this._map.keys();
         let anotherKey;
 
         while (anotherKey = <IHash>keys.next().value)
@@ -41,8 +41,8 @@ export class HashMap<K extends IHash, V> {
         return false;
     }
 
-    public set(key: K, value: V): this { this.map.set(key, value); return this; }
+    public set(key: K, value: V): this { this._map.set(key, value); return this; }
 
-    public getLength(): number { return this.map.size; }
+    public getLength(): number { return this._map.size; }
 
 }

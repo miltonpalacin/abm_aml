@@ -8,14 +8,14 @@ export class KeyValueMap<K, V> {
     // ATRIBUTOS CLASE
     //#####################################
 
-    private array!: Array<KeyValue<K, V>>;
+    private _array!: Array<KeyValue<K, V>>;
 
     //#####################################
     // CONSTRUCTOR
     //#####################################
 
     public constructor() {
-        this.array = new Array();
+        this._array = new Array();
 
     }
 
@@ -25,51 +25,49 @@ export class KeyValueMap<K, V> {
 
 
     public getByIndex(index: number): KeyValue<K, V> {
-        return this.array[index];
+        return this._array[index];
     }
 
     public getByKey(key: K): V | undefined {
-        const item = this.array.find(e => e.key === key);
+        const item = this._array.find(e => e.key === key);
         if (item === undefined) return undefined;
         return item.value;
     }
 
     public getByKeyTrust(key: K): KeyValue<K, V> {
-        const item = this.array.find(e => e.key === key);
+        const item = this._array.find(e => e.key === key);
         return item!;
     }
 
-    public clear(): void { this.array = new Array(); }
+    public clear(): void { this._array = new Array(); }
 
     public delete(key: K): boolean {
-        const index = this.array.findIndex(e => e.key === key);
-        const del = this.array.splice(index, 1);
+        const index = this._array.findIndex(e => e.key === key);
+        const del = this._array.splice(index, 1);
         return del && del.length > 0;
     }
 
     public forEach(callbackfn: (value: KeyValue<K, V>, index: number, array: KeyValue<K, V>[]) => void, thisArg?: any): void {
-        this.array.forEach(callbackfn, thisArg);
+        this._array.forEach(callbackfn, thisArg);
     }
 
 
     public has(key: K): boolean {
-        const item = this.array.find(e => e.key === key);
+        const item = this._array.find(e => e.key === key);
         return !(item === undefined)
-
     }
 
     public set(key: K, value: V): this {
-        const s = <IHash><unknown>key;
-        const index = this.array.findIndex(e => e.key === key);
+        const index = this._array.findIndex(e => e.key === key);
         const newItem = new KeyValue(key, value);
         if (index >= 0)
-            this.array[index] = newItem
+            this._array[index] = newItem
 
         else
-            this.array.push(newItem)
+            this._array.push(newItem)
         return this;
     }
 
-    public getLength(): number { return this.array.length; }
+    public getLength(): number { return this._array.length; }
 
 }

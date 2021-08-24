@@ -8,14 +8,14 @@ export class KeyValueExtraMap<K, V, E> {
     // ATRIBUTOS CLASE
     //#####################################
 
-    private array!: Array<KeyValueExtra<K, V, E>>;
+    private _array!: Array<KeyValueExtra<K, V, E>>;
 
     //#####################################
     // CONSTRUCTOR
     //#####################################
 
     public constructor() {
-        this.array = new Array();
+        this._array = new Array();
     }
 
     //#####################################
@@ -24,45 +24,44 @@ export class KeyValueExtraMap<K, V, E> {
 
 
     public getByIndex(index: number): KeyValueExtra<K, V, E> {
-        return this.array[index];
+        return this._array[index];
     }
 
     public getByKey(key: K): V | undefined {
-        const item = this.array.find(e => e.key === key);
+        const item = this._array.find(e => e._key === key);
         if (item === undefined) return undefined;
-        return item.value;
+        return item._value;
     }
 
-    public clear(): void { this.array = new Array(); }
+    public clear(): void { this._array = new Array(); }
 
     public delete(key: K): boolean {
-        const index = this.array.findIndex(e => e.key === key);
-        const del = this.array.splice(index, 1);
+        const index = this._array.findIndex(e => e._key === key);
+        const del = this._array.splice(index, 1);
         return del && del.length > 0;
     }
 
     public forEach(callbackfn: (value: KeyValueExtra<K, V, E>, index: number, array: KeyValueExtra<K, V, E>[]) => void, thisArg?: any): void {
-        this.array.forEach(callbackfn, thisArg);
+        this._array.forEach(callbackfn, thisArg);
     }
 
-
     public has(key: K): boolean {
-        const item = this.array.find(e => e.key === key);
+        const item = this._array.find(e => e._key === key);
         return !(item === undefined)
 
     }
 
     public set(key: K, value: V, extra: E): this {
-        const index = this.array.findIndex(e => e.key === key);
+        const index = this._array.findIndex(e => e._key === key);
         const newItem = new KeyValueExtra(key, value, extra);
         if (index >= 0)
-            this.array[index] = newItem
+            this._array[index] = newItem
 
         else
-            this.array.push(newItem)
+            this._array.push(newItem)
         return this;
     }
 
-    public getLength(): number { return this.array.length; }
+    public getLength(): number { return this._array.length; }
 
 }

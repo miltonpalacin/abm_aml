@@ -1,20 +1,21 @@
 export interface IRange {
-    start: number,
-    end: number
+    start: number;
+    end: number;
 }
 
 export interface IRangeMM {
-    min: number,
-    max: number
+    min: number;
+    max: number;
 }
 
 export interface ITypeSettings {
-    totalSimulation: number,
-    samplesSize: number,
-    rangePropensityFraud: IRange,
+    totalSimulation: number;
+    samplesSize: number;
+    rangePropensityFraud: IRange;
+    maxTimesMaxWatchList: IRange;
     population: {
         rate: IRange,
-        
+
         rangeIndividual: IRange,
         rateBusiness: IRange,
         rateIntermediary: IRange,
@@ -28,8 +29,10 @@ export interface ITypeSettings {
         rangeEstructuration: IRange,
         rangeIntegration: IRange,
 
-        rangeHighPropensityFraud: IRange
-    },
+        rangeHighPropensityFraud: IRange,
+
+        rangeWatchList: IRange
+    };
 }
 
 
@@ -46,12 +49,11 @@ export interface ITypeCreateAgent {
 
     popHighPropensityFraud: number; // En base a solo individuos y negocios
 
-    popColocation: number; // En base a solo individuos y negocios
-    popStrucuturation: number; // En base a solo individuos y negocios
-    popIntegration: number; // En base a solo individuos y negocios
-    popNormal: number; // En base a solo individuos y negocios
+    /**  Porcentaje, debido que solo recién en la creación se tiene el dato del 
+     numero de agentes con alta propensión a cometer fraude */
+    popWatchList: number;
 
-    minPropensityFraud: number,
-    maxPropensityFraud: number
+    maxPropensityFraud: number;
+
 
 }

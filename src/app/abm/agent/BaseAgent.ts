@@ -1,4 +1,3 @@
-import { Ledger } from "./Ledger";
 import { ArrayList } from "../helper/ArrayList";
 import { HashMap } from "../helper/HashMap";
 import { Log } from "../helper/Log";
@@ -15,38 +14,44 @@ export abstract class BaseAgent implements IHash {
     //#####################################
 
     /** Identificador corto de agente */
-    private codeShort!: string;
+    private _codeShort!: string;
 
     /** Identificador de agente */
-    private code!: string;
+    private _code!: string;
 
     /**  Lugar de de origen del agente. */
-    private place!: KeyValue<string, string>;
+    private _place!: KeyValue<string, string>;
 
     /** Dirección de Nodo */
-    private nodeAddress!: string;
+    private _nodeAddress!: string;
 
     //#####################################
     // ATRIBUTOS DE AUTOMATA
     //#####################################
 
     /** Estados del agente */
-    private states!: ArrayList<State>;
+    private _states!: ArrayList<State>;
+
 
     /** Alfabeto/lenguaje del agente */
-    private alphabets!: ArrayList<Alphabet>;
+    private _alphabets!: ArrayList<Alphabet>;
+
 
     /** Funciones de transición */
-    private transitionsFunction!: HashMap<StateAlphabet, State>;
+    private _transitionsFunction!: HashMap<StateAlphabet, State>;
+
 
     /** Estado actual del agente */
-    private currentState!: State;
+    private _currentState!: State;
+
 
     /**  Estado inicial del agente */
-    private initialState!: State;
+    private _initialState!: State;
+
 
     /** Estados de aceptación */
-    private acceptanceStates!: ArrayList<State>;
+    private _acceptanceStates!: ArrayList<State>;
+
 
     //#####################################
     // CONSTRUCTOR
@@ -63,44 +68,84 @@ export abstract class BaseAgent implements IHash {
     // PROPIEDADES
     //####################################
 
-    public getCodeShort(): string {
-        return this.codeShort;
+    public get codeShort(): string {
+        return this._codeShort;
     }
 
-    public setCodeShort(codeShort: string): void {
-        this.codeShort = codeShort;
+    protected set codeShort(value: string) {
+        this._codeShort = value;
     }
 
-    public getCode(): string {
-        return this.code;
+    public get code(): string {
+        return this._code;
     }
 
-    public setCode(code: string): void {
-        this.code = code;
+    protected set code(value: string) {
+        this._code = value;
     }
 
-    public getLocation(): KeyValue<string, string> {
-        return this.place;
+    public get place(): KeyValue<string, string> {
+        return this._place;
     }
 
-    public setLocation(place: KeyValue<string, string>): void {
-        this.place = place;
+    public set place(value: KeyValue<string, string>) {
+        this._place = value;
     }
 
-    public getCurrentState(): State {
-        return this.currentState;
+    public get nodeAddress(): string {
+        return this._nodeAddress;
     }
 
-    public setCurrentState(currentState: State): void {
-        this.currentState = currentState;
+    public set nodeAddress(value: string) {
+        this._nodeAddress = value;
     }
 
-    public getNodeAddress(): string {
-        return this.nodeAddress;
+    public get states(): ArrayList<State> {
+        return this._states;
     }
 
-    public setNodeAddress(nodeAddress: string): void {
-        this.nodeAddress = nodeAddress;
+    public set states(value: ArrayList<State>) {
+        this._states = value;
+    }
+
+    public get alphabets(): ArrayList<Alphabet> {
+        return this._alphabets;
+    }
+
+    public set alphabets(value: ArrayList<Alphabet>) {
+        this._alphabets = value;
+    }
+
+    public get transitionsFunction(): HashMap<StateAlphabet, State> {
+        return this._transitionsFunction;
+    }
+
+    public set transitionsFunction(value: HashMap<StateAlphabet, State>) {
+        this._transitionsFunction = value;
+    }
+
+    public get currentState(): State {
+        return this._currentState;
+    }
+
+    public set currentState(value: State) {
+        this._currentState = value;
+    }
+
+    public get initialState(): State {
+        return this._initialState;
+    }
+
+    // public set initialState(value: State) {
+    //     this._initialState = value;
+    // }
+
+    public get acceptanceStates(): ArrayList<State> {
+        return this._acceptanceStates;
+    }
+
+    public set acceptanceStates(value: ArrayList<State>) {
+        this._acceptanceStates = value;
     }
 
     //#####################################
@@ -122,13 +167,9 @@ export abstract class BaseAgent implements IHash {
     }
 
     protected setInitialState(state: State): void {
-        if (this.states.contains(state)) this.initialState = state;
+        if (this.states.contains(state)) this._initialState = state;
         else Log.warn("No existe el estate: " + state.toString);
 
-    }
-
-    public getInitialState(): State {
-        return this.initialState;
     }
 
     public addAcceptanceStates(state: State): this {
@@ -155,7 +196,7 @@ export abstract class BaseAgent implements IHash {
                     if (!this.transitionsFunction.has(stateAlphabet)) {
                         this.transitionsFunction.set(stateAlphabet, outState);
                     } else
-                        Log.warn("Ya existe la transición: (" + iniState.getCode() + "," + alphabet.getCode() + ")" + "=>" + outState);
+                        Log.warn("Ya existe la transición: (" + iniState.code + "," + alphabet.code + ")" + "=>" + outState);
                 } else
                     Log.warn("No se ha declarado el estado final: " + outState.toString());
             } else
@@ -170,7 +211,6 @@ export abstract class BaseAgent implements IHash {
         return this instanceof type;
     }
 
-
     // public isAgent(type: string): boolean {
     //     return type === this.constructor.name;
     // }
@@ -180,7 +220,7 @@ export abstract class BaseAgent implements IHash {
             const stateAlphabet: StateAlphabet = new StateAlphabet(this.currentState, alphabet, closeMove);
             const beforeState: State | undefined = this.currentState;
             this.currentState = this.transitionsFunction.get(stateAlphabet)!;
-            Log.warn("Cambio estado: " + this.code + ", de: " + beforeState.getCode() + ", a: " + this.currentState.getCode());
+            Log.warn("Cambio estado: " + this.code + ", de: " + beforeState.code + ", a: " + this.currentState.code);
         }
     }
 

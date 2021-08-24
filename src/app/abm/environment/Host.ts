@@ -13,57 +13,57 @@ export class Host implements IHash {
     //#####################################
 
     /** Lugar donde estará el nodo para realizar la transacción */
-    private location!: KeyValue<String, String>;
+    private _location!: KeyValue<String, String>;
 
     /** Agente dueño del agent */
-    private agent!: BaseAgent;
+    private _agent!: BaseAgent;
 
     /** Tiempo actual, que se actualiza en todas las iteraciones */
-    private currentTime!: number;
+    private _currentTime!: number;
 
     /** Orden de creación */
-    private static orderCreate: number = 0;
+    private static _orderCreate: number = 0;
 
     /** Código del Nodo */
-    private code!: string;
+    private _code!: string;
 
     //#####################################
     // CONSTUCTOR
     //####################################
 
     public constructor(agent: BaseAgent) {
-        this.agent = agent;
-        this.code = "Nodo_" + (++Host.orderCreate);
-        this.agent.setNodeAddress(this.code);
-
+        this._agent = agent;
+        const code = (++Host._orderCreate).toString().padStart(5, "0");
+        this._code = "Nodo_" + code;
+        this._agent.nodeAddress = this.code;
     }
 
     //#####################################
     // PROPIEDADES
     //####################################
 
-    public getLocation(): KeyValue<String, String> {
-        return this.location;
+    public get location(): KeyValue<String, String> {
+        return this._location;
     }
 
-    public setLocation(location: KeyValue<String, String>): void {
-        this.location = location;
+    public set location(value: KeyValue<String, String>) {
+        this._location = value;
     }
 
-    public getAgent(): BaseAgent {
-        return this.agent;
+    public get agent(): BaseAgent {
+        return this._agent;
     }
 
-    public getCurrentTime(): number {
-        return this.currentTime;
+    public get currentTime(): number {
+        return this._currentTime;
     }
 
-    public setCurrentTime(currentTime: number): void {
-        this.currentTime = currentTime;
+    public set currentTime(value: number) {
+        this._currentTime = value;
     }
 
-    public hash(): string {
-        return this.constructor.name + "." + this.code;
+    public get code(): string {
+        return this._code;
     }
 
     //#####################################
@@ -77,13 +77,13 @@ export class Host implements IHash {
             // Crear agente
             let agent = new type()
             agent.build();
-            agent.setLocation(UtilityRandom.getRandomOfKeyValue(TypePlace.data))
-            agent.setCurrentState(agent.getInitialState());
+            agent.place = UtilityRandom.getRandomOfKeyValue(TypePlace.data);
+            agent.currentState = agent.initialState;
 
             // Crear node
             let node = new Host(agent);
-            node.setCurrentTime(0);
-            node.setLocation(UtilityRandom.getRandomOfKeyValue(TypePlace.data));
+            node.currentTime = 0;
+            node.location = UtilityRandom.getRandomOfKeyValue(TypePlace.data);
 
             // Agregando a la red
             nodes.push(node);
@@ -91,5 +91,10 @@ export class Host implements IHash {
         }
 
     }
+
+    public hash(): string {
+        return this.constructor.name + "." + this._agent.code;
+    }
+
 
 }

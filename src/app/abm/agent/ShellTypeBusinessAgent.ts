@@ -1,4 +1,4 @@
-import { BaseOperationAgent } from "./BaseOperationAgent copy";
+import { BaseOperationAgent } from "./BaseOperationAgent";
 
 export class ShellTypeBusinessAgent extends BaseOperationAgent {
 
@@ -8,7 +8,7 @@ export class ShellTypeBusinessAgent extends BaseOperationAgent {
     //#####################################
 
     /** Orden de creación */
-    private static orderCreate: number = 0;
+    private static _orderCreate: number = 0;
 
     //#####################################
     // CONSTRUCTOR y BUILD
@@ -16,9 +16,9 @@ export class ShellTypeBusinessAgent extends BaseOperationAgent {
 
     public constructor() {
         super();
-        const code = (++ShellTypeBusinessAgent.orderCreate).toString().padStart(5, "0");
-        this.setCode("ShellTypeBusiness_" + code);
-        this.setCodeShort("BS_" + code);
+        const code = (++ShellTypeBusinessAgent._orderCreate).toString().padStart(5, "0");
+        this.code = "ShellTypeBusiness_" + code;
+        this.codeShort = "BS_" + code;
     }
 
     //#####################################

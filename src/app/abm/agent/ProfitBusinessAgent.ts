@@ -1,4 +1,4 @@
-import { BaseOperationAgent } from "./BaseOperationAgent copy";
+import { BaseOperationAgent } from "./BaseOperationAgent";
 
 export class ProfitBusinessAgent extends BaseOperationAgent {
 
@@ -8,7 +8,7 @@ export class ProfitBusinessAgent extends BaseOperationAgent {
     //#####################################
 
     /** Orden de creación */
-    private static orderCreate: number = 0;
+    private static _orderCreate: number = 0;
 
     //#####################################
     // CONSTRUCTOR y BUILD
@@ -16,9 +16,9 @@ export class ProfitBusinessAgent extends BaseOperationAgent {
 
     public constructor() {
         super();
-        const code = (++ProfitBusinessAgent.orderCreate).toString().padStart(5, "0");
-        this.setCode("ProfitBusiness_" + code);
-        this.setCodeShort("BP_" + code);
+        const code = (++ProfitBusinessAgent._orderCreate).toString().padStart(5, "0");
+        this.code = "ProfitBusiness_" + code;
+        this.codeShort = "BP_" + code;
     }
 
     //#####################################

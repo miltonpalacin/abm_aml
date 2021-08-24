@@ -6,7 +6,7 @@ import { CodeDescription } from "@/app/abm/helper/CodeDescription";
 export class Alphabet extends CodeDescription {
     
     public toString(): string {
-        return "alphabet {code=\'" + this.getCode() + '\'' + ", description=\'" + this.getDescription() + '\'' + '}';
+        return "alphabet {code=\'" + this.code + '\'' + ", description=\'" + this.description + '\'' + '}';
     }
 
 }

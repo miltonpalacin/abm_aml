@@ -1,42 +1,66 @@
+import { IHash } from "../helper/IHash";
+import { Host } from "./Host";
+
 /** Edge o arista representa la transacción */
-export class Edge {
+export class Edge implements IHash {
 
     //#####################################
     // ATRIBUTOS CLASE
     //#####################################
 
-    private startNode!: Node;
+    private _startNode!: Host;
 
-    private endNode!: Node;
+    private _endNode!: Host;
 
-    private currentTime!: number;
+    private _currentTime!: number;
+
+    /** Orden de creación */
+    private static _orderCreate: number = 0;
+
+    /** Código del Nodo */
+    private _code!: string;
 
 
     //#####################################
     // CONSTUCTOR
     //#################################### 
 
+    public constructor(startNode: Host, endNode: Host) {
+        this._startNode = startNode;
+        this._endNode = endNode;
+        const code = (++Edge._orderCreate).toString().padStart(5, "0");
+        this._code = "Edge_" + code;
+    }
 
     //#####################################
     // PROPIEDADES
     //####################################
 
-    public setStartNode(startNode: Node): this {
-        this.startNode = startNode;
-        return this;
+    public get startNode(): Host {
+        return this._startNode;
     }
 
-    public getStartNode(): Node {
-        return this.startNode;
+    public get endNode(): Host {
+        return this._endNode;
     }
 
-    public setEndNode(endNode: Node): this {
-        this.endNode = endNode;
-        return this;
+    public get currentTime(): number {
+        return this._currentTime;
+    }
+    public set currentTime(value: number) {
+        this._currentTime = value;
     }
 
-    public getEndNode(): Node {
-        return this.endNode;
+    public get code(): string {
+        return this._code;
+    }
+
+    //#####################################
+    // MÉTODOS
+    //#################################### 
+
+    public hash(): string {
+        return this.constructor.name + "." + this._startNode.code + this._endNode.code;
     }
 
 }

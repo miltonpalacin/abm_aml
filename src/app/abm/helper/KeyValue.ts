@@ -1,22 +1,22 @@
 export class KeyValue<K, V> {
 
-    public key!: K;
-    public value!: V;
+    public _key!: K;
+    public _value!: V;
 
     public constructor(key: K, value: V) {
-        this.key = key;
-        this.value = value;
+        this._key = key;
+        this._value = value;
     }
 
-    public getKey(): K {
-        return this.key;
+    public get key(): K {
+        return this._key;
     }
 
-    public getValue(): V {
-        return this.value;
+    public get value(): V {
+        return this._value;
     }
 
     public toString(): string {
-        return this.key + ": " + this.value;
+        return this._key + ": " + this._value;
     }
 }

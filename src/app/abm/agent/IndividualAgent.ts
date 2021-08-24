@@ -1,4 +1,4 @@
-import { BaseOperationAgent } from "./BaseOperationAgent copy";
+import { BaseOperationAgent } from "./BaseOperationAgent";
 
 export class IndividualAgent extends BaseOperationAgent {
 
@@ -7,7 +7,7 @@ export class IndividualAgent extends BaseOperationAgent {
     //#####################################
 
     /** Orden de creación */
-    private static orderCreate: number = 0;
+    private static _orderCreate: number = 0;
 
     //#####################################
     // CONSTRUCTOR y BUILD
@@ -15,9 +15,9 @@ export class IndividualAgent extends BaseOperationAgent {
 
     public constructor() {
         super();
-        const code = (++IndividualAgent.orderCreate).toString().padStart(5, "0");
-        this.setCode("Individuo_" + code);
-        this.setCodeShort("I_" + code);
+        const code = (++IndividualAgent._orderCreate).toString().padStart(5, "0");
+        this.code = "Individuo_" + code;
+        this.codeShort = "I_" + code;
     }
 
     //#####################################

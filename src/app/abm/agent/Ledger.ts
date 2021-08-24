@@ -18,28 +18,29 @@ export class Ledger {
     // ATRIBUTOS CLASE
     //#####################################
 
-    private income!: Array<IMoneyData>;
+    private _income!: Array<IMoneyData>;
 
-    private expenditure!: Array<IMoneyData>;
+    private _expenditure!: Array<IMoneyData>;
 
-    private totalMoney!: number;
+    private _totalMoney!: number;
+
 
     //#####################################
     // CONSTRUCTOR
     //#####################################
 
     public constructor() {
-        this.income = new Array();
-        this.expenditure = new Array();
-        this.totalMoney = 0;
+        this._income = new Array();
+        this._expenditure = new Array();
+        this._totalMoney = 0;
     }
 
     //#####################################
     // PROPIEDADES
     //####################################
 
-    public getTotalMoney(): number {
-        return this.totalMoney;
+    public get totalMoney(): number {
+        return this._totalMoney;
     }
 
     //#####################################
@@ -59,8 +60,8 @@ export class Ledger {
             amount: moneyData.amount
         };
 
-        this.income.push(flow);
-        this.totalMoney += moneyData.amount;
+        this._income.push(flow);
+        this._totalMoney += moneyData.amount;
     }
 
     public moneyOut(moneyData: IMoneyData): void {
@@ -78,8 +79,8 @@ export class Ledger {
             amount: moneyData.amount
         };
 
-        this.expenditure.push(flow);
-        this.totalMoney -= moneyData.amount;
+        this._expenditure.push(flow);
+        this._totalMoney -= moneyData.amount;
     }
 
     public hasMoney(amount: number): boolean {

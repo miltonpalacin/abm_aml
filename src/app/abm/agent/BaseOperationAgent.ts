@@ -11,16 +11,13 @@ export class BaseOperationAgent extends BaseAgent {
     //#####################################
 
     /** Cuentas congelada por estar en el Whatchr por más de n días continuos */
-    private isFrozenAccounts!: boolean;
+    private _isFrozenAccounts!: boolean;
 
     /** Información de movimientos financieros */
-    private ledger!: Ledger;
-
-    /** Nivel dentro del proceso de Anti-Money Laundering */
-    private level!: KeyValue<String, String>;
+    private _ledger!: Ledger;
 
     /** Predisposición al freaude */
-    private predispositionFraud!: number;
+    private _predispositionFraud!: number;
 
     //#####################################
     // ATRIBUTOS ESTÄTICOS
@@ -85,36 +82,27 @@ export class BaseOperationAgent extends BaseAgent {
     // PROPIEDADES
     //#####################################
 
-    public getIsFrozenAccounts(): boolean {
-        return this.isFrozenAccounts;
+    public get isFrozenAccounts(): boolean {
+        return this._isFrozenAccounts;
     }
 
-    public setIsFrozenAccounts(isFrozenAccounts: boolean): void {
-        this.isFrozenAccounts = isFrozenAccounts;
+    public set isFrozenAccounts(value: boolean) {
+        this._isFrozenAccounts = value;
+    }
+    public get ledger(): Ledger {
+        return this._ledger;
     }
 
-    public getLedger(): Ledger {
-        return this.ledger;
+    public set ledger(value: Ledger) {
+        this._ledger = value;
     }
-
-    public setLedger(ledger: Ledger): void {
-        this.ledger = ledger;
+    
+    public get predispositionFraud(): number {
+        return this._predispositionFraud;
     }
-
-    public getLevel(): KeyValue<String, String> {
-        return this.level;
-    }
-
-    public setLevel(level: KeyValue<String, String>): void {
-        this.level = level;
-    }
-
-    public getPredispositionFraud(): number {
-        return this.predispositionFraud;
-    }
-
-    public setPredispositionFraud(predispositionFraud: number): void {
-        this.predispositionFraud = predispositionFraud;
+    
+    public set predispositionFraud(value: number) {
+        this._predispositionFraud = value;
     }
 
 

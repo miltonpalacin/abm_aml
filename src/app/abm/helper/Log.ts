@@ -26,19 +26,19 @@ export class Log {
     // ATRIBUTOS CLASE
     //#####################################
 
-    private static fileName: string;
+    private static _fileName: string;
 
-    private static logEnabled: boolean = false;
+    private static _logEnabled: boolean = false;
 
-    private static logCache: Array<LogItemCache>;
+    private static _logCache: Array<LogItemCache>;
 
-    private static logCacheEnabled: boolean = false;
+    private static _logCacheEnabled: boolean = false;
 
-    private static logCacheReady: boolean = false;
+    private static _logCacheReady: boolean = false;
 
-    private static logCacheMaxSize: number;
+    private static _logCacheMaxSize: number;
 
-    private static orderCache: number = 0;
+    private static _orderCache: number = 0;
 
     //#####################################
     // CONSTUCTOR BUILD
@@ -46,8 +46,8 @@ export class Log {
 
     private static async reBuild() {
 
-        this.logEnabled = config.logEnabled;
-        if (!this.logEnabled) return;
+        this._logEnabled = config.logEnabled;
+        if (!this._logEnabled) return;
 
         const formatFileName = config.logFileName;
         const matches = formatFileName.match(/{\w+}/);
@@ -55,39 +55,39 @@ export class Log {
         if (matches) {
             const format = matches[0];
             const formatDate = (moment(new Date())).format(format);
-            this.fileName = path.resolve(config.logPath, config.logFileName);
-            this.fileName = this.fileName.replace(format, formatDate).replace("{", "").replace("}", "");
+            this._fileName = path.resolve(config.logPath, config.logFileName);
+            this._fileName = this._fileName.replace(format, formatDate).replace("{", "").replace("}", "");
 
-            fs.access(this.fileName, fs.constants.F_OK, (err) => {
+            fs.access(this._fileName, fs.constants.F_OK, (err) => {
                 if (!err) {
-                    console.error(`${this.fileName}, archivo ya existe.`);
+                    console.error(`${this._fileName}, archivo ya existe.`);
                     return;
                 }
 
-                fs.closeSync(fs.openSync(this.fileName, 'w'));
-                console.log(`${this.fileName}, archivo creado.`);
+                fs.closeSync(fs.openSync(this._fileName, 'w'));
+                console.log(`${this._fileName}, archivo creado.`);
             });
         }
     }
 
     private static async reBuildCache() {
 
-        this.logCacheReady = true;
+        this._logCacheReady = true;
 
         if (config.logCacheEnabled) {
-            this.logCacheEnabled = config.logCacheEnabled;
-            this.logCacheMaxSize = config.logCacheMaxSize
-            this.logCache = new Array();
+            this._logCacheEnabled = config.logCacheEnabled;
+            this._logCacheMaxSize = config.logCacheMaxSize
+            this._logCache = new Array();
         }
     }
 
     private static build() {
-        if (this.fileName) return;
+        if (this._fileName) return;
         this.reBuild();
     }
 
     private static buildCache() {
-        if (this.logCacheReady) return;
+        if (this._logCacheReady) return;
         this.reBuildCache();
     }
 
@@ -97,7 +97,7 @@ export class Log {
     //####################################
 
     public static getFileName(): string {
-        return this.fileName;
+        return this._fileName;
     }
 
     //#####################################
@@ -109,13 +109,13 @@ export class Log {
         const item: LogItemCache = {
             message: message,
             isRead: false,
-            order: ++this.orderCache
+            order: ++this._orderCache
         };
 
-        const len = this.logCache.push(item);
+        const len = this._logCache.push(item);
 
-        if (len > this.logCacheMaxSize)
-            this.logCache.shift();
+        if (len > this._logCacheMaxSize)
+            this._logCache.shift();
     }
 
     private static addLogCache(type: LogTypes, message: string, detail?: string): void {
@@ -124,7 +124,7 @@ export class Log {
 
         this.buildCache();
 
-        if (!this.logCacheEnabled) return;
+        if (!this._logCacheEnabled) return;
 
         const date = (moment(new Date())).format("YYYY-MM-DD HH:mm:ss.SSS");
 
@@ -141,7 +141,7 @@ export class Log {
 
         this.build();
 
-        if (!this.logEnabled) return;
+        if (!this._logEnabled) return;
 
         const date = (moment(new Date())).format("YYYY-MM-DD HH:mm:ss.SSS");
 
@@ -149,13 +149,13 @@ export class Log {
         if (detail)
             finalMessage = finalMessage + os.EOL + detail;
 
-        fs.appendFile(this.fileName, finalMessage + os.EOL, (err) => {
+        fs.appendFile(this._fileName, finalMessage + os.EOL, (err) => {
             if (err) throw err;
         });
 
         this.buildCache();
 
-        if (!this.logCacheEnabled) return;
+        if (!this._logCacheEnabled) return;
 
         this.appendCache(finalMessage);
     }
@@ -184,7 +184,6 @@ export class Log {
         this.addLog(LogTypes.FATAL, error.message, error.stack);
     };
 
-
     public static sillyCache(message: string): void {
         this.addLogCache(LogTypes.SILLY, message);
     }
@@ -210,12 +209,12 @@ export class Log {
     };
 
     public static getNewLogsCache(): LogItemCache[] {
-        let listLogs = this.logCache.filter(e => !e.isRead);
+        let listLogs = this._logCache.filter(e => !e.isRead);
 
         listLogs.forEach(el => {
-            const ind = this.logCache.findIndex(e => e.order === el.order);
+            const ind = this._logCache.findIndex(e => e.order === el.order);
             if (ind >= 0)
-                this.logCache[ind].isRead = true;
+                this._logCache[ind].isRead = true;
         });
 
         listLogs.sort((a, b) => (a.order < b.order ? -1 : 1));

@@ -10,38 +10,38 @@ export class CodeDescription implements IHash {
     //#####################################
 
     /** Código */
-    private code: string;
+    private _code: string;
 
     /** Descripción */
-    private description: string;
+    private _description: string;
 
     //#####################################
     // CONSTRUCTOR
     //#####################################
 
     public constructor(code: string, description: string) {
-        this.code = code;
-        this.description = description;
+        this._code = code;
+        this._description = description;
     }
 
     //#####################################
     // PROPIEDADES
     //####################################
 
-    public getCode(): string {
-        return this.code;
+    public get code(): string {
+        return this._code;
+    }
+    
+    public set code(value: string) {
+        this._code = value;
     }
 
-    public setCode(code: string): void {
-        this.code = code;
+    public get description(): string {
+        return this._description;
     }
 
-    public getDescription(): string {
-        return this.description;
-    }
-
-    public setDescription(description: string): void {
-        this.description = description;
+    public set description(value: string) {
+        this._description = value;
     }
 
     //#####################################

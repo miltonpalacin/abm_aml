@@ -1,28 +1,28 @@
 export class KeyValueExtra<K, V, E> {
 
-    public key!: K;
-    public value!: V;
-    public extra!: E;
+    public _key!: K;
+    public _value!: V;
+    public _extra!: E;
 
     public constructor(key: K, value: V, extra: E) {
-        this.key = key;
-        this.value = value;
-        this.extra = extra;
+        this._key = key;
+        this._value = value;
+        this._extra = extra;
     }
 
-    public getKey(): K {
-        return this.key;
+    public get key(): K {
+        return this._key;
     }
 
-    public getValue(): V {
-        return this.value;
+    public get value(): V {
+        return this._value;
     }
 
-    public getExtra(): E {
-        return this.extra;
+    public get extra(): E {
+        return this._extra;
     }
 
     public toString(): string {
-        return this.key + ": " + this.value + ", " + this.extra;
+        return this._key + ": " + this._value + ", " + this._extra;
     }
 }
