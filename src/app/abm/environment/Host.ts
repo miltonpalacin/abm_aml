@@ -5,7 +5,7 @@ import { IHash } from "../helper/IHash";
 import { KeyValue } from "../helper/KeyValue";
 import { UtilityRandom } from "../odd/UtilityRandom";
 
-/** Node o nodo representa al agente, lugar y la cuenta de la entidad financiera */
+/** Node o nodo que representa al agente, lugar y la cuenta de la entidad financiera */
 export class Host implements IHash {
 
     //#####################################
@@ -20,6 +20,9 @@ export class Host implements IHash {
 
     /** Tiempo actual, que se actualiza en todas las iteraciones */
     private _currentTime!: number;
+
+    private _neighbors!: ArrayList<Host>;
+
 
     /** Orden de creación */
     private static _orderCreate: number = 0;
@@ -36,6 +39,7 @@ export class Host implements IHash {
         const code = (++Host._orderCreate).toString().padStart(5, "0");
         this._code = "Nodo_" + code;
         this._agent.nodeAddress = this.code;
+        this._neighbors = ArrayList.create();
     }
 
     //#####################################
@@ -65,6 +69,8 @@ export class Host implements IHash {
     public get code(): string {
         return this._code;
     }
+
+
 
     //#####################################
     // MËTODOS
@@ -96,5 +102,23 @@ export class Host implements IHash {
         return this.constructor.name + "." + this._agent.code;
     }
 
+    public equal(node: Host): boolean {
+        return node.agent.equal(this._agent);
+    }
 
+    //#####################################
+    // NEIGHBORDS
+    //####################################
+
+    public get neighbors(): ArrayList<Host> {
+        return this._neighbors;
+    }
+
+    public totalNeighbors(): number {
+        return this._neighbors.length;
+    }
+
+    public totalNeighborsByAgent<T>(type: { new(): T; }): number {
+        return this._neighbors.filter(e => e.agent.isAgent(type)).length;
+    }
 }

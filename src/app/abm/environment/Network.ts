@@ -6,10 +6,11 @@ import { ProfitBusinessAgent } from "../agent/ProfitBusinessAgent";
 import { ShellTypeBusinessAgent } from "../agent/ShellTypeBusinessAgent";
 import { TrustFundBusinessAgent } from "../agent/TrustFundBusinessAgent";
 import { ArrayList } from "../helper/ArrayList";
-import { ITypeCreateAgent } from "../helper/Types";
+import { ITypeArgNetwork } from "../helper/Types";
 import { Odds } from "../odd/Odds";
 import { UtilityRandom } from "../odd/UtilityRandom";
 import { Edge } from "./Edge";
+import { EdgeList } from "./EdgeList";
 import { Host } from "./Host";
 import { WhachList } from "./WhatchList";
 
@@ -17,39 +18,39 @@ export class Network {
 
     private _nodes!: ArrayList<Host>;
 
-    private _edges!: ArrayList<Edge>;
+    private _edges!: EdgeList;
 
     private _whachList!: WhachList;
 
     public constructor() {
         this._nodes = ArrayList.create();
-        this._edges = ArrayList.create();
+        this._edges = EdgeList.create();
         this._whachList = new WhachList();
     }
 
-    public createAgents(args: ITypeCreateAgent, currentTime: number): void {
+    public createAgents(args: ITypeArgNetwork, currentTime: number): void {
 
         /** ********************************************************* */
         /**                   CREACIÓN DE AGENTES                     */
         /** ********************************************************* */
 
         // Crear nodos individuales
-        Host.createAgents(args.popIndivual, this._nodes, IndividualAgent);
+        Host.createAgents(args.numPopIndivual, this._nodes, IndividualAgent);
 
         // Crear nodos intermediarios
-        Host.createAgents(args.popIntermediary, this._nodes, IntermediaryAgent);
+        Host.createAgents(args.numPopIntermediary, this._nodes, IntermediaryAgent);
 
         // Crear nodos empresa fines de lucro
-        Host.createAgents(args.popProfitBusiness, this._nodes, ProfitBusinessAgent);
+        Host.createAgents(args.numPopProfitBusiness, this._nodes, ProfitBusinessAgent);
 
         // Crear nodos empresa sin fines de lucro
-        Host.createAgents(args.popNoProfitBusiness, this._nodes, NoProfitBusinessAgent);
+        Host.createAgents(args.numPopNoProfitBusiness, this._nodes, NoProfitBusinessAgent);
 
         // Crear nodos empresa fondo fiduciario
-        Host.createAgents(args.popTrustBusiness, this._nodes, TrustFundBusinessAgent);
+        Host.createAgents(args.numPopTrustBusiness, this._nodes, TrustFundBusinessAgent);
 
         // Crear nodos empresa fantasma
-        Host.createAgents(args.popShellBusiness, this._nodes, ShellTypeBusinessAgent);
+        Host.createAgents(args.numPopShellBusiness, this._nodes, ShellTypeBusinessAgent);
 
         let arraySelect = this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent));
 
@@ -58,9 +59,9 @@ export class Network {
         /** ********************************************************* */
 
         // Asignación de predisposición al fraude 
-        for (let _ = 0; _ < args.popHighPropensityFraud; _++) {
+        for (let _ = 0; _ < args.numPopHighPropensityFraud; _++) {
 
-            if (arraySelect.length <= 0) continue;
+            if (arraySelect.length <= 0) break;
 
             // Elegir de manera aleatoria un índice del arreglo de nodos
             const idx = UtilityRandom.getRandomRange(0, arraySelect.length - 1);
@@ -90,7 +91,7 @@ export class Network {
         arraySelect = this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent)
             && (<BaseOperationAgent>e.agent).predispositionFraud >= args.maxPropensityFraud);
 
-        const totalInWatchList = Math.round(args.popWatchList * arraySelect.length);
+        const totalInWatchList = Math.round(args.perPopWatchList * arraySelect.length);
 
         // Asignación a lista de observación
         for (let _ = 0; _ < totalInWatchList; _++) {
@@ -112,8 +113,60 @@ export class Network {
 
     }
 
-    public createNetwork(): void {
-        // Creación de conexiones
+    public createNetwork(args: ITypeArgNetwork, currentTime: number): void {
+
+
+        /** ********************************************************* */
+        /**           CONEXIONES DE AGENTES INTERMEDIARIOS            */
+        /** ********************************************************* */
+
+        let arraySelect01 = this._nodes.filter(e => e.agent.isAgent(IntermediaryAgent));
+
+        const totalLinked = Math.round(args.perLinkedIntermediary * (arraySelect01.length - 1));
+
+
+        while (arraySelect01.length > 0) {
+
+
+            // Elegir de manera aleatoria un índice del arreglo de nodos
+            const idx01 = UtilityRandom.getRandomRange(0, arraySelect01.length - 1);
+
+            const oneNode = arraySelect01[idx01];
+
+            const links = totalLinked - oneNode.totalNeighborsByAgent(IntermediaryAgent);
+
+            let arraySelect02 = this._nodes.filter(e => e.agent.isAgent(IntermediaryAgent) && e.totalNeighborsByAgent(IntermediaryAgent) < totalLinked);
+
+            // Asignación de predisposición al fraude 
+            for (let _ = 0; _ < links; _++) {
+
+                if (arraySelect02.length <= 0) break;
+
+                // Elegir de manera aleatoria un índice del arreglo de nodos
+                const idx02 = UtilityRandom.getRandomRange(0, arraySelect02.length - 1);
+                const twoNode = arraySelect02[idx02];
+
+                if (oneNode.equal(twoNode)) { arraySelect02.splice(idx02, 1); continue; };
+
+                // Vecinos nuevos
+                oneNode.neighbors.push(twoNode);
+                twoNode.neighbors.push(oneNode);
+                // agregamos conexión
+                this._edges.set(new Edge(oneNode, twoNode));
+
+                // Quitar del arreglo para no considerarlo en la siguiente iteración
+                arraySelect02.splice(idx02, 1);
+
+            }
+
+            arraySelect01.splice(idx01, 1);
+        }
+
+        /** ********************************************************* */
+        /**           CONEXIONES DE AGENTES INTERMEDIARIOS            */
+        /** ********************************************************* */
+
+         arraySelect01 = this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent));
     }
 
 }

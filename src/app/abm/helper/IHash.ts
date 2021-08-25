@@ -1,3 +1,5 @@
-export interface IHash {
-    hash(): string;
+export abstract class IHash {
+
+    public abstract hash(): string;
+
 }

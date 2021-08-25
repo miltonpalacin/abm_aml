@@ -5,6 +5,8 @@ import { BaseOperationAgent } from '../abm/agent/BaseOperationAgent';
 import { IndividualAgent } from '../abm/agent/IndividualAgent';
 import { IntermediaryAgent } from '../abm/agent/IntermediaryAgent';
 import { NoProfitBusinessAgent } from '../abm/agent/NoProfitBusinessAgent';
+import { ShellTypeBusinessAgent } from '../abm/agent/ShellTypeBusinessAgent';
+import { TrustFundBusinessAgent } from '../abm/agent/TrustFundBusinessAgent';
 import { TypePlace } from '../abm/data/TypePlace';
 import { Host } from '../abm/environment/Host';
 import { ArrayList } from '../abm/helper/ArrayList';
@@ -44,14 +46,12 @@ nodes.push(new Host(new IntermediaryAgent()));
 nodes.filter(e => !e.agent.isAgent(IntermediaryAgent) &&
     (<BaseOperationAgent>e.agent).predispositionFraud === undefined)
     .forEach(e => {
-        console.log("Agente: " + e.agent.code);
+        //console.log("Agente: " + e.agent.code + "----" + e.agent.constructor.name + "----" + IntermediaryAgent.name);
+        console.log("Agente: " + e.agent.code + "----" + e.agent.getClass() + "----" + IntermediaryAgent.getClass());
     });
 
-
-const x = 23
-const y = 4
-console.log("1)" + (x/y) )
-console.log("2)" + Math.round(x/y) )
+console.log("A:" + nodes.filter(e => e.agent.code === "XX"));
+console.log("B:" + nodes.filter(e => e.agent.code === "XX").length);
 
 app.on('ready', createWindow);
- 
+

@@ -211,9 +211,6 @@ export abstract class BaseAgent implements IHash {
         return this instanceof type;
     }
 
-    // public isAgent(type: string): boolean {
-    //     return type === this.constructor.name;
-    // }
 
     public updateEvent(alphabet: Alphabet, closeMove: boolean) {
         if (typeof this.currentState) {
@@ -228,4 +225,15 @@ export abstract class BaseAgent implements IHash {
         return this.constructor.name + "." + this.code;
     }
 
+    public equal(agent: BaseAgent): boolean {
+        return agent.code === this.code;
+    }
+
+    public getClass(): string {
+        return this.constructor.name;
+    }
+
+    public static getClass(): string {
+        return this.name;
+    }
 }

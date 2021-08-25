@@ -77,7 +77,6 @@ export class WhachList {
             this._arrayHistory.splice(idx, 1);
         });
 
-
         return del && del.length > 0;
     }
 

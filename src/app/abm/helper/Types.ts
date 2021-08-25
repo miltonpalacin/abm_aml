@@ -12,7 +12,9 @@ export interface ITypeSettings {
     totalSimulation: number;
     samplesSize: number;
     rangePropensityFraud: IRange;
-    maxTimesMaxWatchList: IRange;
+    rangeMaxTimesMaxWatchList: IRange;
+    ragenLinkedIntermediary: IRange;
+    rangeLinkedNoIntermediary: IRange;
     population: {
         rate: IRange,
 
@@ -36,24 +38,28 @@ export interface ITypeSettings {
 }
 
 
-export interface ITypeCreateAgent {
+export interface ITypeArgNetwork {
 
-    popIndivual: number;
+    numPopIndivual: number;
     //popBusiness: number;
-    popIntermediary: number;
+    numPopIntermediary: number;
 
-    popNoProfitBusiness: number;
-    popProfitBusiness: number;
-    popTrustBusiness: number;
-    popShellBusiness: number;
+    numPopNoProfitBusiness: number;
+    numPopProfitBusiness: number;
+    numPopTrustBusiness: number;
+    numPopShellBusiness: number;
 
-    popHighPropensityFraud: number; // En base a solo individuos y negocios
+    numPopHighPropensityFraud: number; // En base a solo individuos y negocios
 
     /**  Porcentaje, debido que solo recién en la creación se tiene el dato del 
      numero de agentes con alta propensión a cometer fraude */
-    popWatchList: number;
+    perPopWatchList: number;
 
     maxPropensityFraud: number;
+
+    perLinkedIntermediary: number;
+
+    numLinkedNoIntermediary: number;
 
 
 }

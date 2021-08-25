@@ -8,9 +8,9 @@ export class Edge implements IHash {
     // ATRIBUTOS CLASE
     //#####################################
 
-    private _startNode!: Host;
+    private _oneNode!: Host;
 
-    private _endNode!: Host;
+    private _twoNode!: Host;
 
     private _currentTime!: number;
 
@@ -25,9 +25,9 @@ export class Edge implements IHash {
     // CONSTUCTOR
     //#################################### 
 
-    public constructor(startNode: Host, endNode: Host) {
-        this._startNode = startNode;
-        this._endNode = endNode;
+    public constructor(oneNode: Host, twoNode: Host) {
+        this._oneNode = oneNode;
+        this._twoNode = twoNode;
         const code = (++Edge._orderCreate).toString().padStart(5, "0");
         this._code = "Edge_" + code;
     }
@@ -36,12 +36,12 @@ export class Edge implements IHash {
     // PROPIEDADES
     //####################################
 
-    public get startNode(): Host {
-        return this._startNode;
+    public get oneNode(): Host {
+        return this._oneNode;
     }
 
-    public get endNode(): Host {
-        return this._endNode;
+    public get twoNode(): Host {
+        return this._twoNode;
     }
 
     public get currentTime(): number {
@@ -60,7 +60,12 @@ export class Edge implements IHash {
     //#################################### 
 
     public hash(): string {
-        return this.constructor.name + "." + this._startNode.code + this._endNode.code;
+        return this.constructor.name + "." + this.oneNode.code + this.twoNode.code;
+    }
+
+    public equal(edge: Edge): boolean {
+        const code = edge.oneNode.code + "." + edge.twoNode.code;
+        return (code === (this.oneNode.code + "." + this.twoNode.code)) || (code === (this.twoNode.code + "." + this.oneNode.code));
     }
 
 }
