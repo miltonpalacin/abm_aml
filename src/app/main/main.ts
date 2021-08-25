@@ -53,5 +53,7 @@ nodes.filter(e => !e.agent.isAgent(IntermediaryAgent) &&
 console.log("A:" + nodes.filter(e => e.agent.code === "XX"));
 console.log("B:" + nodes.filter(e => e.agent.code === "XX").length);
 
+
+console.log("C:" + Math.ceil(0.0732625555549367));
 app.on('ready', createWindow);
 

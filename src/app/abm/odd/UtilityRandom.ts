@@ -21,4 +21,11 @@ export class UtilityRandom {
             return crypto.randomInt(min, max);
     }
 
+    public static getRandomExp(mean: number, value: number, factor: number = 100): number {
+
+        const x = crypto.randomInt(0 * factor, 1 * factor) / factor;
+        return value * (1 - Math.exp(-1 * x * (1 / mean)))
+
+    }
+
 }

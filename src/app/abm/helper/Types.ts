@@ -3,6 +3,11 @@ export interface IRange {
     end: number;
 }
 
+// export interface IRangeExp {
+//     start: number;
+//     end: number;
+// }
+
 export interface IRangeMM {
     min: number;
     max: number;

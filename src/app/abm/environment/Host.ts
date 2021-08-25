@@ -1,4 +1,8 @@
 import { BaseAgent } from "../agent/BaseAgent";
+import { NoProfitBusinessAgent } from "../agent/NoProfitBusinessAgent";
+import { ProfitBusinessAgent } from "../agent/ProfitBusinessAgent";
+import { ShellTypeBusinessAgent } from "../agent/ShellTypeBusinessAgent";
+import { TrustFundBusinessAgent } from "../agent/TrustFundBusinessAgent";
 import { TypePlace } from "../data/TypePlace";
 import { ArrayList } from "../helper/ArrayList";
 import { IHash } from "../helper/IHash";
@@ -120,5 +124,18 @@ export class Host implements IHash {
 
     public totalNeighborsByAgent<T>(type: { new(): T; }): number {
         return this._neighbors.filter(e => e.agent.isAgent(type)).length;
+    }
+
+    public totalNeighborsByNoAgent<T>(type: { new(): T; }): number {
+        return this._neighbors.filter(e => !e.agent.isAgent(type)).length;
+    }
+
+    public totalNeighborsBusiness(): number {
+        return this._neighbors.filter(e =>
+            e.agent.isAgent(ProfitBusinessAgent) ||
+            e.agent.isAgent(NoProfitBusinessAgent) ||
+            e.agent.isAgent(ShellTypeBusinessAgent) ||
+            e.agent.isAgent(TrustFundBusinessAgent)
+        ).length;
     }
 }
