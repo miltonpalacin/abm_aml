@@ -7,15 +7,16 @@ import { ProfitBusinessAgent } from "../agent/ProfitBusinessAgent";
 import { ShellTypeBusinessAgent } from "../agent/ShellTypeBusinessAgent";
 import { TrustFundBusinessAgent } from "../agent/TrustFundBusinessAgent";
 import { TypeFinantialEntity } from "../data/TypeFinantialEntity";
+import { TypeOperation } from "../data/TypeOperation";
 import { TypePlace } from "../data/TypePlace";
 import { ArrayList } from "../helper/ArrayList";
-import { KeyValueExtra } from "../helper/KeyValueExtra";
 import { ITypeArgNetwork } from "../helper/Types";
 import { Odds } from "../odd/Odds";
 import { UtilityRandom } from "../odd/UtilityRandom";
 import { Edge } from "./Edge";
 import { EdgeList } from "./EdgeList";
 import { Host } from "./Host";
+import { Transact } from "./Transact";
 import { WhachList } from "./WhatchList";
 
 export class Network {
@@ -26,12 +27,15 @@ export class Network {
 
     private _whachList!: WhachList;
 
+    private _transactions!: ArrayList<Transact>;
+
     private _args!: ITypeArgNetwork;
 
     public constructor(args: ITypeArgNetwork) {
         this._nodes = ArrayList.create();
         this._edges = EdgeList.create();
         this._whachList = new WhachList();
+        this._transactions = ArrayList.create();
         this._args = args;
     }
 
@@ -252,15 +256,60 @@ export class Network {
 
                 if (amountTransaction > 0) {
 
-                    const isIllegalMove = isIllegal ? amountTransaction >= this._args.amountSuspiciousOperation : false;
+                    const isObserved = amountTransaction >= this._args.amountSuspiciousOperation;
 
                     // Destino
                     const neighbors = oneNode.neighborsByNoAgent(IntermediaryAgent);
                     const twoNode = neighbors[UtilityRandom.getRandomRange(0, neighbors.length - 1)];
-                    const agentTarge = <BaseOperationAgent>arraySelect[idx].agent;
+                    const agentTarget = <BaseOperationAgent>arraySelect[idx].agent;
 
                     // Entidades de origen y destino
                     const entities = this.sourceDestinyEntity(oneNode, twoNode);
+
+                    if (agentSource.predispositionFraud < this._args.maxPropensityFraud && agentTarget.predispositionFraud < this._args.maxPropensityFraud) {
+                        // Money out
+                        agentSource.ledger.moneyOut({
+
+                            sourceEntity: entities[0].finantialEntity,
+                            targetEntity: entities[1].finantialEntity,
+                            sourceLocation: oneNode.location,
+                            targetLocation: twoNode.location,
+                            currentTime: currentTime,
+                            amount: amountTransaction,
+                            isIllegaly: isIllegal
+
+                        });
+
+                        // Money in
+                        agentTarget.ledger.moneyIn({
+
+                            sourceEntity: entities[0].finantialEntity,
+                            targetEntity: entities[1].finantialEntity,
+                            sourceLocation: oneNode.location,
+                            targetLocation: twoNode.location,
+                            currentTime: currentTime,
+                            amount: amountTransaction,
+                            isIllegaly: isIllegal
+                        });
+
+                        const transact = new Transact();
+                        transact.sourceNode = oneNode;
+                        transact.destinyNode = twoNode;
+                        transact.sourceEntity = entities[0].finantialEntity;
+                        transact.destinyEntity = entities[1].finantialEntity;
+                        transact.isSourceInWatchList = this._whachList.isAgentInWatch(agentSource, currentTime);
+                        transact.isDestinyInWatchList = this._whachList.isAgentInWatch(agentTarget, currentTime);
+                        transact.typeMove = TypeOperation.TRANSFER;
+                        transact.isIlegally = isIllegal;
+                        transact.amount = amountTransaction;
+                        transact.currentTime = currentTime;
+                        this._transactions.push(transact);
+
+                        //WHAT LISTT
+                        // Create transacción
+                    }
+
+
 
 
 

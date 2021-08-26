@@ -1,8 +1,8 @@
 export class KeyValueExtra<K, V, E> {
 
-    public _key!: K;
-    public _value!: V;
-    public _extra!: E;
+    private _key!: K;
+    private _value!: V;
+    private _extra!: E;
 
     public constructor(key: K, value: V, extra: E) {
         this._key = key;

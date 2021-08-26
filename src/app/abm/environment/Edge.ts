@@ -2,7 +2,7 @@ import { IHash } from "../helper/IHash";
 import { Host } from "./Host";
 
 /** Edge o arista representa la transacción */
-export class Edge implements IHash {
+export class Edge {
 
     //#####################################
     // ATRIBUTOS CLASE
@@ -59,9 +59,9 @@ export class Edge implements IHash {
     // MÉTODOS
     //#################################### 
 
-    public hash(): string {
-        return this.constructor.name + "." + this.oneNode.code + this.twoNode.code;
-    }
+    // public hash(): string {
+    //     return this.constructor.name + "." + this.oneNode.code + this.twoNode.code;
+    // }
 
     public equal(edge: Edge): boolean {
         const code = edge.oneNode.code + "." + edge.twoNode.code;
