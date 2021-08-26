@@ -2,11 +2,13 @@
  * Localización del agente detro de red de manera referencial 
  */
 
+import { KeyValue } from "../helper/KeyValue";
 import { KeyValueMap } from "../helper/KeyValueMap";
 
 export class TypePlace {
 
     public static data: KeyValueMap<string, string> = new KeyValueMap();
+    public static DESCONOCIDO: KeyValue<string, string>;
 
     private static _initialize = (() => {
         TypePlace.data.set("U01", "Amazonas");
@@ -35,6 +37,8 @@ export class TypePlace {
         TypePlace.data.set("U24", "Tumbes");
         TypePlace.data.set("U25", "Ucayali");
         TypePlace.data.set("U99", "Externo");
+
+        TypePlace.DESCONOCIDO = new KeyValue("U00", "Desconocido");
     })();
 
 }

@@ -1,6 +1,12 @@
 {
   "totalSimulation": 120,
   "samplesSize": 200,
+  "amountSuspiciousOperation": 10000,
+  "maxTimesWatchList": 20,
+  "rangeAmountTransaction": {
+    "min": 500,
+    "max": 100000
+  },
   "rangePropensityFraud": {
     "start": 0.6,
     "end": 0.9
@@ -20,6 +26,14 @@
   "rangeMaxLinkedIndBusInter": {
     "start": 2,
     "end": 6
+  },
+  "rangeExecuteTransaction": {
+    "start": 0.3,
+    "end": 0.7
+  },
+  "rangeNoNeighbor": {
+    "start": 0.3,
+    "end": 0.7
   },
   "population": {
     "rate": {

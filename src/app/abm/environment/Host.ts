@@ -1,4 +1,5 @@
 import { BaseAgent } from "../agent/BaseAgent";
+import { BaseOperationAgent } from "../agent/BaseOperationAgent";
 import { IntermediaryAgent } from "../agent/IntermediaryAgent";
 import { NoProfitBusinessAgent } from "../agent/NoProfitBusinessAgent";
 import { ProfitBusinessAgent } from "../agent/ProfitBusinessAgent";
@@ -79,7 +80,7 @@ export class Host implements IHash {
     // MËTODOS
     //####################################
 
-    public static createAgents<T extends BaseAgent>(total: number, nodes: ArrayList<Host>, type: { new(): T; }): void {
+    public static createAgents<T extends BaseOperationAgent>(total: number, nodes: ArrayList<Host>, type: { new(): T; }): void {
 
         // Creando nodo individuales
         for (let _ = 0; _ < total; _++) {
@@ -149,6 +150,9 @@ export class Host implements IHash {
         return this._neighbors;
     }
 
+
+
+
     public totalNeighbors(): number {
         return this._neighbors.length;
     }
@@ -157,8 +161,16 @@ export class Host implements IHash {
         return this._neighbors.filter(e => e.agent.isAgent(type)).length;
     }
 
+    public neighborsByAgent<T>(type: { new(): T; }): Host[] {
+        return this._neighbors.filter(e => e.agent.isAgent(type));
+    }
+
     public totalNeighborsByNoAgent<T>(type: { new(): T; }): number {
         return this._neighbors.filter(e => !e.agent.isAgent(type)).length;
+    }
+
+    public neighborsByNoAgent<T>(type: { new(): T; }): Host[] {
+        return this._neighbors.filter(e => !e.agent.isAgent(type));
     }
 
     public totalNeighborsBusiness(): number {

@@ -1,5 +1,6 @@
 import { BaseAgent } from "../agent/BaseAgent";
 import { Edge } from "./Edge";
+import { Host } from "./Host";
 
 export class EdgeList extends Array<Edge> {
 
@@ -14,6 +15,11 @@ export class EdgeList extends Array<Edge> {
     public contains(edge: Edge): boolean {
 
         return this.some(e => e.equal(edge));
+    }
+
+    public containsNode(oneNode: Host, twoNode: Host): boolean {
+
+        return this.some(e => e.equalNode(oneNode, twoNode));
     }
 
     public filterByAgent(agent: BaseAgent): Array<Edge> {

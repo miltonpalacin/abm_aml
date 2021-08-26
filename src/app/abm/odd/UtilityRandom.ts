@@ -39,4 +39,11 @@ export class UtilityRandom {
 
     }
 
+    public static rouletteOne(percentage: number) {
+        const point = this.getRandomRange(1, 100);
+        return point >= 0 && point < percentage;
+
+    }
+
+
 }

@@ -1,10 +1,16 @@
 import { KeyValue } from "../helper/KeyValue";
+import { KeyValueExtra } from "../helper/KeyValueExtra";
 import { KeyValueExtraMap } from "../helper/KeyValueExtraMap";
 import { TypeIntermediary } from "./TypeIntermediary";
 
 export class TypeFinantialEntity {
 
     public static data: KeyValueExtraMap<string, string, KeyValue<String, String>> = new KeyValueExtraMap();
+    
+    public static INGRESO_FORMAL: KeyValueExtra<string, string, KeyValue<String, String>>;
+    public static INGRESO_INFORMAL: KeyValueExtra<string, string, KeyValue<String, String>>;
+    public static EGRESO_FORMAL: KeyValueExtra<string, string, KeyValue<String, String>>;
+    public static EGRESO_INFORMAL: KeyValueExtra<string, string, KeyValue<String, String>>;
 
     private static _initialize = (() => {
 
@@ -83,12 +89,13 @@ export class TypeFinantialEntity {
         TypeFinantialEntity.data.set("CO028", "Coopac Crezkamos", informal);
         TypeFinantialEntity.data.set("CO029", "Coopac Nuestra", informal);
         TypeFinantialEntity.data.set("CO030", "Coopac Crediconfia", informal);
-        TypeFinantialEntity.data.set("CO031", "Coopac Líder", informal); // Formal
-        TypeFinantialEntity.data.set("99999", "Hawala", informal); // Informal
-        TypeFinantialEntity.data.set("00000", "Financiamiento Formal", formal); // Informal
-        TypeFinantialEntity.data.set("11111", "Financiamiento Informal", informal); // Informal
-        TypeFinantialEntity.data.set("22222", "Inversión Formal", formal); // Informal
-        TypeFinantialEntity.data.set("33333", "Inversión Informal", informal); // Informal
+        TypeFinantialEntity.data.set("CO031", "Coopac Líder", informal);
+        TypeFinantialEntity.data.set("99999", "Hawala", informal);
+
+        TypeFinantialEntity.INGRESO_FORMAL = new KeyValueExtra("00000", "Ingreso Formal", formal); // Formal
+        TypeFinantialEntity.INGRESO_INFORMAL = new KeyValueExtra("11111", "Ingreso Informal", informal); // Informal
+        TypeFinantialEntity.EGRESO_FORMAL = new KeyValueExtra("22222", "Egreso Formal", formal); // Formal
+        TypeFinantialEntity.EGRESO_INFORMAL = new KeyValueExtra("33333", "Egreso Informal", informal); // Informal
 
     })();
 }

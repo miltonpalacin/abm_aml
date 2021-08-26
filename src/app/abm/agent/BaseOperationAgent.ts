@@ -11,7 +11,7 @@ export class BaseOperationAgent extends BaseAgent {
     //#####################################
 
     /** Cuentas congelada por estar en el Whatchr por más de n días continuos */
-    private _isFrozenAccounts!: boolean;
+    private _isFrozenAccounts: boolean = false;
 
     /** Información de movimientos financieros */
     private _ledger!: Ledger;
@@ -38,6 +38,10 @@ export class BaseOperationAgent extends BaseAgent {
     // CONSTRUCTOR y BUILD
     //#####################################
 
+    public constructor() {
+        super();
+        this._ledger = new Ledger();
+    }
 
     public build(): this {
 
@@ -96,11 +100,11 @@ export class BaseOperationAgent extends BaseAgent {
     public set ledger(value: Ledger) {
         this._ledger = value;
     }
-    
+
     public get predispositionFraud(): number {
         return this._predispositionFraud;
     }
-    
+
     public set predispositionFraud(value: number) {
         this._predispositionFraud = value;
     }

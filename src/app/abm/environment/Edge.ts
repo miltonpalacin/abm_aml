@@ -68,4 +68,9 @@ export class Edge implements IHash {
         return (code === (this.oneNode.code + "." + this.twoNode.code)) || (code === (this.twoNode.code + "." + this.oneNode.code));
     }
 
+    public equalNode(oneNode: Host, twoNode: Host): boolean {
+        const code = oneNode.code + "." + twoNode.code;
+        return (code === (this.oneNode.code + "." + this.twoNode.code)) || (code === (this.twoNode.code + "." + this.oneNode.code));
+    }
+
 }

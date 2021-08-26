@@ -22,13 +22,20 @@ export class Setup {
             /**  Porcentaje, debido que solo recién en la creación se tiene el dato del 
              numero de agentes con alta propensión a cometer fraude */
             perPopWatchList: 0,
+            maxTimesWatchList: 0,
 
             maxPropensityFraud: 0,
             maxHighPropensityFraud: 0, // Math.min(maxPropensityFraud + 0.2, 0.9) 
 
             perLinkedIntermediary: 0, //Solo intermediarios
             numMaxLinkedNoIntermediary: 0, // Entre empresa e individuos
-            numMaxLinkedIndBusInter: 0 // Enter empresa / individuos y intermediarios
+            numMaxLinkedIndBusInter: 0, // Enter empresa / individuos y intermediarios
+
+            perExcecuteTransaction: 0,
+
+            amountSuspiciousOperation: 0,
+
+            rangeAmountTransaction: { min: 0, max: 0 }
         };
         return argsCreateAgent;
     }

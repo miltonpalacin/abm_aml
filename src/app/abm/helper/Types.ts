@@ -16,11 +16,15 @@ export interface IRangeMM {
 export interface ITypeSettings {
     totalSimulation: number;
     samplesSize: number;
+    amountSuspiciousOperation: number;
+    maxTimesWatchList: number;
+    rangeAmountTransaction: IRangeMM;
     rangePropensityFraud: IRange;
     rangeMaxTimesMaxWatchList: IRange;
     rangeLinkedIntermediary: IRange;
     rangeMaxLinkedNoIntermediary: IRange;
     rangeMaxLinkedIndBusInter: IRange;
+    rangeExecuteTransaction: IRange;
     population: {
         rate: IRange,
 
@@ -60,6 +64,7 @@ export interface ITypeArgNetwork {
     /**  Porcentaje, debido que solo recién en la creación se tiene el dato del 
      numero de agentes con alta propensión a cometer fraude */
     perPopWatchList: number;
+    maxTimesWatchList: number;
 
     maxPropensityFraud: number;
     maxHighPropensityFraud: number;
@@ -68,5 +73,9 @@ export interface ITypeArgNetwork {
     numMaxLinkedNoIntermediary: number;
     numMaxLinkedIndBusInter: number;
 
+    perExcecuteTransaction: number;
+
+    amountSuspiciousOperation: number;
+    rangeAmountTransaction: IRangeMM;
 
 }

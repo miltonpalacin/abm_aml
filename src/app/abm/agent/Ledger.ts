@@ -9,6 +9,7 @@ export interface IMoneyData {
     targetLocation: KeyValue<String, String>;
     currentTime: number;
     amount: number;
+    isIllegaly: boolean;
 
 }
 
@@ -51,16 +52,7 @@ export class Ledger {
 
         if (!(moneyData && moneyData.amount > 0)) return;
 
-        const flow: IMoneyData = {
-            sourceEntity: moneyData.sourceEntity,
-            targetEntity: moneyData.targetEntity,
-            sourceLocation: moneyData.sourceLocation,
-            targetLocation: moneyData.targetLocation,
-            currentTime: moneyData.currentTime,
-            amount: moneyData.amount
-        };
-
-        this._income.push(flow);
+        this._income.push(moneyData);
         this._totalMoney += moneyData.amount;
     }
 
@@ -70,16 +62,7 @@ export class Ledger {
 
         if (!this.hasMoney(moneyData.amount)) return;
 
-        const flow: IMoneyData = {
-            sourceEntity: moneyData.sourceEntity,
-            targetEntity: moneyData.targetEntity,
-            sourceLocation: moneyData.sourceLocation,
-            targetLocation: moneyData.targetLocation,
-            currentTime: moneyData.currentTime,
-            amount: moneyData.amount
-        };
-
-        this._expenditure.push(flow);
+        this._expenditure.push(moneyData);
         this._totalMoney -= moneyData.amount;
     }
 

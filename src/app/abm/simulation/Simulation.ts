@@ -21,7 +21,7 @@ export class Simulation {
 
             for (let iteration = 1; iteration < 100; iteration++) {
 
-                const network = new Network();
+
                 currentTime = 0;
 
                 /** ********************************************************* */
@@ -29,19 +29,20 @@ export class Simulation {
                 /** ********************************************************* */
 
                 const args = setup.local();
+                const network = new Network(args);
 
                 /** ********************************************************* */
                 /**                INICIALIZACIÓN DE AGENTES                  */
                 /** ********************************************************* */
 
-                network.createAgents(args, currentTime);
+                network.createAgents();
 
                 /** ********************************************************* */
                 /**                   CREACIÓN DE LA RED                      */
                 /** ********************************************************* */
 
-                network.createNetwork(args, currentTime);
-                
+                network.createNetwork();
+
                 /** ******************************************************************* */
                 /**                          SIMULAR TRANSACCIONES                      */
                 /** ******************************************************************* */
@@ -50,9 +51,22 @@ export class Simulation {
 
 
                     currentTime = tick
-                    /** ********************************************************* */
-                    /**                   ***                 */
-                    /** ********************************************************* */
+
+                    /** ************************************************************** */
+                    /**    OPERACION: DEPOSIT    */
+                    /** ************************************************************** */
+
+                    network.createDepositOperacion(currentTime);
+
+                    /** ************************************************************** */
+                    /**           OPERACION: TRANSFER, WITHDRAWAL             */
+                    /** ************************************************************** */
+                    network.createTransferOperation(currentTime);
+
+                    /** ************************************************************** */
+                    /**           OPERACION: TRANSFER, WITHDRAWAL             */
+                    /** ************************************************************** */
+                    network.createWithdrawalOperation(currentTime);
                 }
 
 
