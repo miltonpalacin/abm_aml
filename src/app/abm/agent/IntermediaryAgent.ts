@@ -10,8 +10,8 @@ export class IntermediaryAgent extends BaseAgent {
     // ATRIBUTOS CLASE
     //#####################################
 
-    /** El nodo esta asociado a una cuenta de una entidada financiera  */
-    private finantialEntity!: KeyValueExtra<string, string, KeyValue<String, String>>;
+    /** El agente esta asociado una entidada financiera  */
+    private _finantialEntity!: KeyValueExtra<string, string, KeyValue<String, String>>;
 
     //#####################################
     // ATRIBUTOS ESTÄTICOS
@@ -80,6 +80,12 @@ export class IntermediaryAgent extends BaseAgent {
     // PROPIEDADES
     //#####################################
 
+    public get finantialEntity(): KeyValueExtra<string, string, KeyValue<String, String>> {
+        return this._finantialEntity;
+    }
+    public set finantialEntity(value: KeyValueExtra<string, string, KeyValue<String, String>>) {
+        this._finantialEntity = value;
+    }
 
     //#####################################
     // MÉTODOS

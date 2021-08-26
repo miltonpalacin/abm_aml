@@ -24,10 +24,11 @@ export class Setup {
             perPopWatchList: 0,
 
             maxPropensityFraud: 0,
+            maxHighPropensityFraud: 0, // Math.min(maxPropensityFraud + 0.2, 0.9) 
 
-            perLinkedIntermediary: 0,
-
-            numLinkedNoIntermediary: 0
+            perLinkedIntermediary: 0, //Solo intermediarios
+            numMaxLinkedNoIntermediary: 0, // Entre empresa e individuos
+            numMaxLinkedIndBusInter: 0 // Enter empresa / individuos y intermediarios
         };
         return argsCreateAgent;
     }

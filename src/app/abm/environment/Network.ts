@@ -38,8 +38,7 @@ export class Network {
         Host.createAgents(args.numPopIndivual, this._nodes, IndividualAgent);
 
         // Crear nodos intermediarios
-        // Aqui falta agregar l aentidad financiera
-        Host.createAgents(args.numPopIntermediary, this._nodes, IntermediaryAgent);
+        Host.createIntermediaries(args.numPopIntermediary, this._nodes);
 
         // Crear nodos empresa fines de lucro
         Host.createAgents(args.numPopProfitBusiness, this._nodes, ProfitBusinessAgent);
@@ -67,10 +66,10 @@ export class Network {
             // Elegir de manera aleatoria un índice del arreglo de nodos
             const idx = UtilityRandom.getRandomRange(0, arraySelect.length - 1);
             // Sacar el agente
-            let agent = <BaseOperationAgent>arraySelect[idx].agent;
+            const agent = <BaseOperationAgent>arraySelect[idx].agent;
 
             // Asignación de valor predisposición alto
-            agent.predispositionFraud = UtilityRandom.getRandomRange(args.maxPropensityFraud, Odds.rangePropensityFraud.max, 2);
+            agent.predispositionFraud = UtilityRandom.getRandomRange(args.maxPropensityFraud, Odds.rangePropensityFraud.max, 3);
 
             // Quitar del arreglo para no considerarlo en la siguiente iteración
             arraySelect.splice(idx, 1);
@@ -80,9 +79,9 @@ export class Network {
         this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent)
             && (<BaseOperationAgent>e.agent).predispositionFraud === undefined)
             .forEach(e => {
-                let agent = <BaseOperationAgent>e.agent;
+                const agent = <BaseOperationAgent>e.agent;
                 // Asignación de valor predisposición baja
-                agent.predispositionFraud = UtilityRandom.getRandomRange(Odds.rangePropensityFraud.min, args.maxPropensityFraud, 2);
+                agent.predispositionFraud = UtilityRandom.getRandomRange(Odds.rangePropensityFraud.min, args.maxPropensityFraud, 3);
             });
 
         /** ********************************************************* */
@@ -102,7 +101,7 @@ export class Network {
             // Elegir de manera aleatoria un índice del arreglo de nodos
             const idx = UtilityRandom.getRandomRange(0, arraySelect.length - 1);
             // Sacar el agente
-            let agent = <BaseOperationAgent>arraySelect[idx].agent;
+            const agent = <BaseOperationAgent>arraySelect[idx].agent;
 
             // Agregar agente a la lista de observación
             this._whachList.pushWatch(agent, currentTime);
@@ -117,7 +116,7 @@ export class Network {
     public createNetwork(args: ITypeArgNetwork, currentTime: number): void {
 
         /** *************************************************************** */
-        /**           CONEXIONES DE AGENTES ENTRE INTERMEDIARIOS            */
+        /**            ENLACES DE AGENTES ENTRE INTERMEDIARIOS              */
         /** *************************************************************** */
 
         let arraySelect01 = this._nodes.filter(e => e.agent.isAgent(IntermediaryAgent));
@@ -133,43 +132,14 @@ export class Network {
 
             const links = totalLinked - oneNode.totalNeighborsByAgent(IntermediaryAgent);
 
-            if (links > 0) {
-
+            if (links > 0)
                 this.createConnections(oneNode, links, this._nodes.filter(e => e.agent.isAgent(IntermediaryAgent) && e.totalNeighborsByAgent(IntermediaryAgent) < totalLinked));
-                // let arraySelect02 = this._nodes.filter(e => e.agent.isAgent(IntermediaryAgent) && e.totalNeighborsByAgent(IntermediaryAgent) < totalLinked);
-
-                // // Asignación de predisposición al fraude 
-                // for (let _ = 0; _ < links; _++) {
-
-                //     if (arraySelect02.length <= 0) break;
-
-                //     // Elegir de manera aleatoria un índice del arreglo de nodos
-                //     const idx02 = UtilityRandom.getRandomRange(0, arraySelect02.length - 1);
-                //     const twoNode = arraySelect02[idx02];
-
-                //     if (oneNode.equal(twoNode)) { arraySelect02.splice(idx02, 1); continue; };
-
-                //     // Vecinos nuevos
-                //     oneNode.neighbors.push(twoNode);
-                //     twoNode.neighbors.push(oneNode);
-                //     // agregamos conexión
-                //     this._edges.set(new Edge(oneNode, twoNode));
-
-                //     // Quitar del arreglo para no considerarlo en la siguiente iteración
-                //     arraySelect02.splice(idx02, 1);
-
-                // }
-            }
 
             arraySelect01.splice(idx01, 1);
         }
 
         /** ************************************************************************************ */
-        /**           CONEXIONES DE AGENTES ENTRE INTERMEDIARIOS Y INDIVIDUOS/EMPRESAS          */
-        /** ************************************************************************************ */
-
-        /** ************************************************************************************ */
-        /**                  CONEXIONES DE AGENTES ENTRE INDIVIDUOS Y EMPRESAS                   */
+        /**            ENLACES DE AGENTES ENTRE INTERMEDIARIOS Y INDIVIDUOS/EMPRESAS             */
         /** ************************************************************************************ */
 
         arraySelect01 = this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent));
@@ -181,59 +151,72 @@ export class Network {
 
             const oneNode = arraySelect01[idx01];
 
-            totalLinked = Math.ceil(UtilityRandom.getRandomExp(Odds.meanDistributionExpEdge, args.numLinkedNoIntermediary));
-            const links = totalLinked - oneNode.totalNeighborsByNoAgent(IntermediaryAgent);
+            totalLinked = Math.ceil(UtilityRandom.getRandomRange(1, args.numMaxLinkedIndBusInter));
 
-            if (links > 0) {
+            const links = totalLinked - oneNode.totalNeighborsByAgent(IntermediaryAgent);
 
-                this.createConnections(oneNode, links, this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent) && e.totalNeighborsByNoAgent(IntermediaryAgent) < totalLinked));
-                // let arraySelect02 = this._nodes.filter(e => e.agent.isAgent(IntermediaryAgent) && e.totalNeighborsByNoAgent(IntermediaryAgent) < totalLinked);
-
-                // // Asignación de predisposición al fraude 
-                // for (let _ = 0; _ < links; _++) {
-
-                //     if (arraySelect02.length <= 0) break;
-
-                //     // Elegir de manera aleatoria un índice del arreglo de nodos
-                //     const idx02 = UtilityRandom.getRandomRange(0, arraySelect02.length - 1);
-                //     const twoNode = arraySelect02[idx02];
-
-                //     if (oneNode.equal(twoNode)) { arraySelect02.splice(idx02, 1); continue; };
-
-                //     // Vecinos nuevos
-                //     oneNode.neighbors.push(twoNode);
-                //     twoNode.neighbors.push(oneNode);
-                //     // agregamos conexión
-                //     this._edges.set(new Edge(oneNode, twoNode));
-
-                //     // Quitar del arreglo para no considerarlo en la siguiente iteración
-                //     arraySelect02.splice(idx02, 1);
-
-                // }
-            }
+            if (links > 0)
+                this.createConnections(oneNode, links, this._nodes.filter(e => e.agent.isAgent(IntermediaryAgent)));
 
             arraySelect01.splice(idx01, 1);
         }
 
-
-
         /** ************************************************************************************ */
-        /**           CONEXIONES DE AGENTES ENTRE INDIVIDUOS Y EMPRESAS          */
+        /**                    ENLACES DE AGENTES ENTRE INDIVIDUOS Y EMPRESAS                    */
         /** ************************************************************************************ */
 
-        /** ************************************************************************************ */
-        /**           CONEXIONES DE AGENTES ENTRE INDIVIDUOS/EMPRESAS Y TRUST/SHELL         */
-        /** ************************************************************************************ */
+        arraySelect01 = this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent));
+
+        while (arraySelect01.length > 0) {
+
+            // Elegir de manera aleatoria un índice del arreglo de nodos
+            const idx01 = UtilityRandom.getRandomRange(0, arraySelect01.length - 1);
+
+            const oneNode = arraySelect01[idx01];
+
+            totalLinked = Math.ceil(UtilityRandom.getRandomExp(Odds.meanDistributionExpEdge, args.numMaxLinkedNoIntermediary));
+
+            const links = totalLinked - oneNode.totalNeighborsByNoAgent(IntermediaryAgent);
+
+            if (links > 0)
+                this.createConnections(oneNode, links, this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent) && e.totalNeighborsByNoAgent(IntermediaryAgent) < totalLinked));
+
+            arraySelect01.splice(idx01, 1);
+        }
 
         /** ************************************************************************************ */
-        /**           CONEXIONES DE AGENTES ENTRE INDIVIDUOS/EMPRESAS Y TRUST/SHELL         */
+        /**             ENLACES DE AGENTES ENTRE INDIVIDUOS/EMPRESAS Y TRUST/SHELL               */
         /** ************************************************************************************ */
+
+        this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent) && (<BaseOperationAgent>e.agent).predispositionFraud >= args.maxPropensityFraud)
+            .forEach(e => {
+                this.createConnections(e, 1, this._nodes.filter(e => e.agent.isAgent(TrustFundBusinessAgent) || e.agent.isAgent(ShellTypeBusinessAgent)));
+            });
+
+        /** ************************************************************************************ */
+        /**         ENLACES DE AGENTES ENTRE INDIVIDUOS/EMPRESAS Y TRUST/SHELL - EXTRA           */
+        /** ************************************************************************************ */
+
+        this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent) && (<BaseOperationAgent>e.agent).predispositionFraud >= args.maxHighPropensityFraud)
+            .forEach(e => {
+
+                this.createConnections(e, 1, this._nodes.filter(e => e.agent.isAgent(TrustFundBusinessAgent) || e.agent.isAgent(ShellTypeBusinessAgent)));
+
+                this.createConnections(e, 1, this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent) && (<BaseOperationAgent>e.agent).predispositionFraud >= args.maxPropensityFraud));
+
+            });
     }
+
+
+    //#####################################
+    // MËTODOS DE APOYO
+    //####################################
 
     private createConnections(oneNode: Host, links: number, arraySelect02: Host[]): void {
 
         // Crear conexiones y vecinos
-        for (let _ = 0; _ < links; _++) {
+        while (links > 0) {
+            //for (let _ = 0; _ < links; _++) {
 
             if (arraySelect02.length <= 0) break;
 
@@ -241,13 +224,22 @@ export class Network {
             const idx02 = UtilityRandom.getRandomRange(0, arraySelect02.length - 1);
             const twoNode = arraySelect02[idx02];
 
-            if (oneNode.equal(twoNode)) { arraySelect02.splice(idx02, 1); continue; };
+            if (!oneNode.equal(twoNode)) {
 
-            // Vecinos nuevos
-            oneNode.neighbors.push(twoNode);
-            twoNode.neighbors.push(oneNode);
-            // agregamos conexión
-            this._edges.set(new Edge(oneNode, twoNode));
+                const edge = new Edge(oneNode, twoNode)
+
+                if (!this._edges.contains(edge)) {
+
+                    // Crear vecinos nuevos
+                    oneNode.neighbors.push(twoNode);
+                    twoNode.neighbors.push(oneNode);
+
+                    // Agregar enlace/edge
+
+                    this._edges.push(new Edge(oneNode, twoNode));
+                    links--;
+                }
+            }
 
             // Quitar del arreglo para no considerarlo en la siguiente iteración
             arraySelect02.splice(idx02, 1);

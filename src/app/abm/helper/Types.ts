@@ -18,8 +18,9 @@ export interface ITypeSettings {
     samplesSize: number;
     rangePropensityFraud: IRange;
     rangeMaxTimesMaxWatchList: IRange;
-    ragenLinkedIntermediary: IRange;
-    rangeLinkedNoIntermediary: IRange;
+    rangeLinkedIntermediary: IRange;
+    rangeMaxLinkedNoIntermediary: IRange;
+    rangeMaxLinkedIndBusInter: IRange;
     population: {
         rate: IRange,
 
@@ -61,10 +62,11 @@ export interface ITypeArgNetwork {
     perPopWatchList: number;
 
     maxPropensityFraud: number;
+    maxHighPropensityFraud: number;
 
     perLinkedIntermediary: number;
-
-    numLinkedNoIntermediary: number;
+    numMaxLinkedNoIntermediary: number;
+    numMaxLinkedIndBusInter: number;
 
 
 }

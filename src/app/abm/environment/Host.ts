@@ -1,8 +1,10 @@
 import { BaseAgent } from "../agent/BaseAgent";
+import { IntermediaryAgent } from "../agent/IntermediaryAgent";
 import { NoProfitBusinessAgent } from "../agent/NoProfitBusinessAgent";
 import { ProfitBusinessAgent } from "../agent/ProfitBusinessAgent";
 import { ShellTypeBusinessAgent } from "../agent/ShellTypeBusinessAgent";
 import { TrustFundBusinessAgent } from "../agent/TrustFundBusinessAgent";
+import { TypeFinantialEntity } from "../data/TypeFinantialEntity";
 import { TypePlace } from "../data/TypePlace";
 import { ArrayList } from "../helper/ArrayList";
 import { IHash } from "../helper/IHash";
@@ -26,7 +28,6 @@ export class Host implements IHash {
     private _currentTime!: number;
 
     private _neighbors!: ArrayList<Host>;
-
 
     /** Orden de creación */
     private static _orderCreate: number = 0;
@@ -74,8 +75,6 @@ export class Host implements IHash {
         return this._code;
     }
 
-
-
     //#####################################
     // MËTODOS
     //####################################
@@ -97,6 +96,38 @@ export class Host implements IHash {
 
             // Agregando a la red
             nodes.push(node);
+
+        }
+
+    }
+
+    public static createIntermediaries(total: number, nodes: ArrayList<Host>): void {
+
+        const data = TypeFinantialEntity.data.clone();
+        let idx: number = -1;
+
+        // Creando nodo individuales
+        for (let _ = 0; _ < total; _++) {
+            // Crear agente
+            let agent = new IntermediaryAgent()
+            agent.build();
+            agent.place = UtilityRandom.getRandomOfKeyValue(TypePlace.data);
+            agent.currentState = agent.initialState;
+
+            // Elegir de manera aleatoria un índice del arreglo de nodos
+            // Seleccionar entidad financiera
+            idx = UtilityRandom.getRandomRange(0, data.length - 1);
+            agent.finantialEntity = data.getByIndex(idx);
+
+            // Crear node
+            let node = new Host(agent);
+            node.currentTime = 0;
+            node.location = UtilityRandom.getRandomOfKeyValue(TypePlace.data);
+
+            // Agregando a la red
+            nodes.push(node);
+
+            data.deleteByIndex(idx);
 
         }
 

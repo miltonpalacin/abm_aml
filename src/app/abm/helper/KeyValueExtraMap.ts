@@ -14,8 +14,17 @@ export class KeyValueExtraMap<K, V, E> {
     // CONSTRUCTOR
     //#####################################
 
-    public constructor() {
-        this._array = new Array();
+    // public constructor() {
+    //     this._array = new Array();
+    // }
+
+    public constructor(array?: Array<KeyValueExtra<K, V, E>>) {
+
+        if (array)
+            this._array = array;
+        else
+            this._array = new Array();
+
     }
 
     //#####################################
@@ -35,8 +44,13 @@ export class KeyValueExtraMap<K, V, E> {
 
     public clear(): void { this._array = new Array(); }
 
-    public delete(key: K): boolean {
+    public deleteByKey(key: K): boolean {
         const index = this._array.findIndex(e => e._key === key);
+        const del = this._array.splice(index, 1);
+        return del && del.length > 0;
+    }
+
+    public deleteByIndex(index: number): boolean {
         const del = this._array.splice(index, 1);
         return del && del.length > 0;
     }
@@ -62,6 +76,10 @@ export class KeyValueExtraMap<K, V, E> {
         return this;
     }
 
-    public getLength(): number { return this._array.length; }
+    public get length(): number { return this._array.length; }
+
+    public clone(): KeyValueExtraMap<K, V, E> {
+        return new KeyValueExtraMap([...this._array]);
+    }
 
 }

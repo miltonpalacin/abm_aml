@@ -9,13 +9,17 @@
     "start": 5,
     "end": 20
   },
-  "ragenLinkedIntermediary": {
+  "rangeLinkedIntermediary": {
     "start": 0.4,
     "end": 0.8
   },
-  "rangeLinkedNoIntermediary": {
+  "rangeMaxLinkedNoIntermediary": {
     "start": 1,
     "end": 16
+  },
+  "rangeMaxLinkedIndBusInter": {
+    "start": 2,
+    "end": 6
   },
   "population": {
     "rate": {

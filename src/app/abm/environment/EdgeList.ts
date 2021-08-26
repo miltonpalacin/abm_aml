@@ -20,10 +20,10 @@ export class EdgeList extends Array<Edge> {
         return this.filter(e => e.oneNode.agent.equal(agent) || e.twoNode.agent.equal(agent));
     }
 
-    public set(edge: Edge): this {
+
+    public setValid(edge: Edge): this {
 
         if (!this.contains(edge)) this.push(edge)
-
         return this;
     }
 
