@@ -17,7 +17,10 @@ export interface ITypeSettings {
     totalSimulation: number;
     samplesSize: number;
     amountSuspiciousOperation: number;
-    maxTimesWatchList: number;
+
+    rangeMaxTimesWatchList: number;
+    rangeMaxTimesCleanWatchList: number;
+
     rangeAmountTransaction: IRangeMM;
     rangePropensityFraud: IRange;
     rangeMaxTimesMaxWatchList: IRange;
@@ -25,6 +28,8 @@ export interface ITypeSettings {
     rangeMaxLinkedNoIntermediary: IRange;
     rangeMaxLinkedIndBusInter: IRange;
     rangeExecuteTransaction: IRange;
+    rangeNewLinkTransact: IRange;
+
     population: {
         rate: IRange,
 
@@ -65,6 +70,7 @@ export interface ITypeArgNetwork {
      numero de agentes con alta propensión a cometer fraude */
     perPopWatchList: number;
     maxTimesWatchList: number;
+    maxTimesCleanWatchList: number;
 
     maxPropensityFraud: number;
     maxHighPropensityFraud: number;
@@ -77,5 +83,7 @@ export interface ITypeArgNetwork {
 
     amountSuspiciousOperation: number;
     rangeAmountTransaction: IRangeMM;
+
+    perNewLinkTransact: number;
 
 }

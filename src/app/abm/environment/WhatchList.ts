@@ -34,7 +34,6 @@ export class WhachList {
         this._arrayHistory = new Array();
     }
 
-
     //#####################################
     // MÉTODOS
     //####################################

@@ -6,13 +6,13 @@ import { IRangeMM } from "../helper/Types";
 export class UtilityRandom {
 
 
-    public static getRandomOfKeyValue(array: KeyValueMap<string, string>): KeyValue<string, string> {
-        const idx = this.getRandomRange(0, array.getLength() - 1);
+    public static randomOfKeyValue(array: KeyValueMap<string, string>): KeyValue<string, string> {
+        const idx = this.randomRange(0, array.getLength() - 1);
         return array.getByIndex(idx);
 
     }
 
-    public static getRandomRange(min: number, max: number, numDec?: number): number {
+    public static randomRange(min: number, max: number, numDec?: number): number {
         if (min === max) return min;
         if (numDec) {
             const factor = Math.pow(10, numDec);
@@ -22,7 +22,7 @@ export class UtilityRandom {
             return crypto.randomInt(min, max);
     }
 
-    public static getRandomRangeMM(minmax: IRangeMM, numDec?: number): number {
+    public static randomRangeMM(minmax: IRangeMM, numDec?: number): number {
         if (minmax.min === minmax.max) return minmax.min;
         if (numDec) {
             const factor = Math.pow(10, numDec);
@@ -32,18 +32,22 @@ export class UtilityRandom {
             return crypto.randomInt(minmax.min, minmax.max);
     }
 
-    public static getRandomExp(mean: number, value: number, factor: number = 100): number {
+    public static randomExp(mean: number, value: number, factor: number = 100): number {
 
         const x = crypto.randomInt(0 * factor, 1 * factor) / factor;
         return value * (1 - Math.exp(-1 * x * (1 / mean)))
 
     }
 
-    public static rouletteOne(percentage: number) {
-        const point = this.getRandomRange(1, 100);
+    public static roulettePerOne(percentage: number) {
+        const point = this.randomRange(1, 100);
         return point >= 0 && point < percentage;
 
     }
 
+    public static roundDec(num: number, numDec: number): number {
+        const factor = Math.pow(10, numDec);
+        return Math.round((num + Number.EPSILON) * factor) / factor;
+    }
 
 }

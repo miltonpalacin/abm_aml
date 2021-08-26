@@ -23,6 +23,7 @@ export class Setup {
              numero de agentes con alta propensión a cometer fraude */
             perPopWatchList: 0,
             maxTimesWatchList: 0,
+            maxTimesCleanWatchList: 0,
 
             maxPropensityFraud: 0,
             maxHighPropensityFraud: 0, // Math.min(maxPropensityFraud + 0.2, 0.9) 
@@ -35,7 +36,9 @@ export class Setup {
 
             amountSuspiciousOperation: 0,
 
-            rangeAmountTransaction: { min: 0, max: 0 }
+            rangeAmountTransaction: { min: 0, max: 0 },
+
+            perNewLinkTransact: 0
         };
         return argsCreateAgent;
     }

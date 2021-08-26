@@ -87,13 +87,13 @@ export class Host implements IHash {
             // Crear agente
             let agent = new type()
             agent.build();
-            agent.place = UtilityRandom.getRandomOfKeyValue(TypePlace.data);
+            agent.place = UtilityRandom.randomOfKeyValue(TypePlace.data);
             agent.currentState = agent.initialState;
 
             // Crear node
             let node = new Host(agent);
             node.currentTime = 0;
-            node.location = UtilityRandom.getRandomOfKeyValue(TypePlace.data);
+            node.location = UtilityRandom.randomOfKeyValue(TypePlace.data);
 
             // Agregando a la red
             nodes.push(node);
@@ -112,18 +112,18 @@ export class Host implements IHash {
             // Crear agente
             let agent = new IntermediaryAgent()
             agent.build();
-            agent.place = UtilityRandom.getRandomOfKeyValue(TypePlace.data);
+            agent.place = UtilityRandom.randomOfKeyValue(TypePlace.data);
             agent.currentState = agent.initialState;
 
             // Elegir de manera aleatoria un índice del arreglo de nodos
             // Seleccionar entidad financiera
-            idx = UtilityRandom.getRandomRange(0, data.length - 1);
+            idx = UtilityRandom.randomRange(0, data.length - 1);
             agent.finantialEntity = data.getByIndex(idx);
 
             // Crear node
             let node = new Host(agent);
             node.currentTime = 0;
-            node.location = UtilityRandom.getRandomOfKeyValue(TypePlace.data);
+            node.location = UtilityRandom.randomOfKeyValue(TypePlace.data);
 
             // Agregando a la red
             nodes.push(node);
@@ -149,9 +149,6 @@ export class Host implements IHash {
     public get neighbors(): ArrayList<Host> {
         return this._neighbors;
     }
-
-
-
 
     public totalNeighbors(): number {
         return this._neighbors.length;

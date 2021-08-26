@@ -2,7 +2,14 @@
   "totalSimulation": 120,
   "samplesSize": 200,
   "amountSuspiciousOperation": 10000,
-  "maxTimesWatchList": 20,
+  "rangeMaxTimesWatchList": {
+    "start": 15,
+    "end": 25
+  },
+  "rangeMaxTimesCleanWatchList": {
+    "start": 5,
+    "end": 10
+  },
   "rangeAmountTransaction": {
     "min": 500,
     "max": 100000
@@ -34,6 +41,10 @@
   "rangeNoNeighbor": {
     "start": 0.3,
     "end": 0.7
+  },
+  "rangeNewLinkTransact": {
+    "start": 0,
+    "end": 0.2
   },
   "population": {
     "rate": {
