@@ -27,7 +27,10 @@ export interface ITypeSettings {
     rangeLinkedIntermediary: IRange;
     rangeMaxLinkedNoIntermediary: IRange;
     rangeMaxLinkedIndBusInter: IRange;
-    rangeExecuteTransaction: IRange;
+    rangeExecuteDeposit: IRange;
+    rangeExecuteTransfer: IRange;
+    rangeExecuteWithdrawl: IRange;
+    rangeNoNeighbor: IRange;
     rangeNewLinkTransact: IRange;
 
     population: {
@@ -79,7 +82,10 @@ export interface ITypeArgNetwork {
     numMaxLinkedNoIntermediary: number;
     numMaxLinkedIndBusInter: number;
 
-    perExcecuteTransaction: number;
+    perExcecuteDeposit: number;
+    perExcecuteTransfer: number;
+    perExcecuteWithdrawal: number;
+
 
     amountSuspiciousOperation: number;
     rangeAmountTransaction: IRangeMM;

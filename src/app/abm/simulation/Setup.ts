@@ -32,7 +32,9 @@ export class Setup {
             numMaxLinkedNoIntermediary: 0, // Entre empresa e individuos
             numMaxLinkedIndBusInter: 0, // Enter empresa / individuos y intermediarios
 
-            perExcecuteTransaction: 0,
+            perExcecuteDeposit: 0,
+            perExcecuteTransfer: 0,
+            perExcecuteWithdrawal: 0,
 
             amountSuspiciousOperation: 0,
 

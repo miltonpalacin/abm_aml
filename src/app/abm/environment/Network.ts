@@ -1,7 +1,6 @@
 import { BaseOperationAgent } from "../agent/BaseOperationAgent";
 import { IndividualAgent } from "../agent/IndividualAgent";
 import { IntermediaryAgent } from "../agent/IntermediaryAgent";
-import { IMoneyData } from "../agent/Ledger";
 import { NoProfitBusinessAgent } from "../agent/NoProfitBusinessAgent";
 import { ProfitBusinessAgent } from "../agent/ProfitBusinessAgent";
 import { ShellTypeBusinessAgent } from "../agent/ShellTypeBusinessAgent";
@@ -138,16 +137,16 @@ export class Network {
         while (arraySelect.length > 0 && totalLinked > 0) {
 
             // Elegir de manera aleatoria un índice del arreglo de nodos
-            const idx01 = UtilityRandom.randomRange(0, arraySelect.length - 1);
+            const idx = UtilityRandom.randomRange(0, arraySelect.length - 1);
 
-            const oneNode = arraySelect[idx01];
+            const oneNode = arraySelect[idx];
 
             const links = totalLinked - oneNode.totalNeighborsByAgent(IntermediaryAgent);
 
             if (links > 0)
                 this.createEdge(oneNode, links, this._nodes.filter(e => e.agent.isAgent(IntermediaryAgent) && e.totalNeighborsByAgent(IntermediaryAgent) < totalLinked));
 
-            arraySelect.splice(idx01, 1);
+            arraySelect.splice(idx, 1);
         }
 
         /** ************************************************************************************ */
@@ -159,9 +158,9 @@ export class Network {
         while (arraySelect.length > 0) {
 
             // Elegir de manera aleatoria un índice del arreglo de nodos
-            const idx01 = UtilityRandom.randomRange(0, arraySelect.length - 1);
+            const idx = UtilityRandom.randomRange(0, arraySelect.length - 1);
 
-            const oneNode = arraySelect[idx01];
+            const oneNode = arraySelect[idx];
 
             totalLinked = Math.ceil(UtilityRandom.randomRange(1, this._args.numMaxLinkedIndBusInter));
 
@@ -170,7 +169,7 @@ export class Network {
             if (links > 0)
                 this.createEdgeFinantial(oneNode, links, this._nodes.filter(e => e.agent.isAgent(IntermediaryAgent)));
 
-            arraySelect.splice(idx01, 1);
+            arraySelect.splice(idx, 1);
         }
 
         /** ************************************************************************************ */
@@ -182,9 +181,9 @@ export class Network {
         while (arraySelect.length > 0) {
 
             // Elegir de manera aleatoria un índice del arreglo de nodos
-            const idx01 = UtilityRandom.randomRange(0, arraySelect.length - 1);
+            const idx = UtilityRandom.randomRange(0, arraySelect.length - 1);
 
-            const oneNode = arraySelect[idx01];
+            const oneNode = arraySelect[idx];
 
             totalLinked = Math.ceil(UtilityRandom.randomExp(Odds.meanDistributionExpEdge, this._args.numMaxLinkedNoIntermediary));
 
@@ -193,7 +192,7 @@ export class Network {
             if (links > 0)
                 this.createEdge(oneNode, links, this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent) && e.totalNeighborsByNoAgent(IntermediaryAgent) < totalLinked));
 
-            arraySelect.splice(idx01, 1);
+            arraySelect.splice(idx, 1);
         }
 
         /** ************************************************************************************ */
@@ -221,35 +220,111 @@ export class Network {
 
     public createDepositOperacion(currentTime: number): void {
 
-    }
-
-    public createTransferOperation(currentTime: number): void {
-
-        const nodesTransaction: ArrayList<Host> = ArrayList.create();
-
         // Individuos y empresas
         let arraySelect = this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent));
 
         // Total de transacciones a realizar en diferentes agentes
-        const totalExecuteTransaction = Math.ceil(this._args.perExcecuteTransaction * arraySelect.length);
+        const totalExecuteDeposit = Math.ceil(this._args.perExcecuteDeposit * arraySelect.length);
 
         // realizar las transacciones
-        for (let _ = 0; _ < totalExecuteTransaction; _++) {
+        for (let _ = 0; _ < totalExecuteDeposit; _++) {
 
             if (arraySelect.length <= 0) break;
 
             // Elegir de manera aleatoria un índice del arreglo de nodos
             const idx = UtilityRandom.randomRange(0, arraySelect.length - 1);
 
-            // Origen
+            // NODO ORIGEN
             const oneNode = arraySelect[idx];
             const agentSource = <BaseOperationAgent>oneNode.agent;
 
             if (!agentSource.isFrozenAccounts) {
-                // Si el agente tiene alta predisposición al fraude tiene alta probabilida de hacer fraude 
 
-                // Simular que el agente DECIDE si hacer un transacción legal o ilegal
-                const isStructure = UtilityRandom.roulettePerOne(agentSource.predispositionFraud);
+                // Definir el monto a transferir
+                const amountTransaction = UtilityRandom.randomRangeMM(this._args.rangeAmountTransaction, 2);
+
+                if (amountTransaction > 0) {
+
+                    // Si el agente tiene alta predisposición al fraude tiene alta probabilidad realizar un movimiento ilícito
+                    // Simular que el agente DECIDE si hacer un transacción legal o ilegal
+                    const isStructure = UtilityRandom.roulettePerOne(agentSource.predispositionFraud);
+
+                    const isObserved = amountTransaction >= this._args.amountSuspiciousOperation;
+
+                    if ((agentSource.predispositionFraud >= this._args.maxPropensityFraud && isObserved && isStructure)) {
+
+                        /** ************************************************* */
+                        /**        TRANSACCIÓN COMPLEJA FRAUDULENTA           */
+                        /** ************************************************* */
+
+                        // Complex/Fraund/structure
+                        const totalNeighbors = oneNode.totalNeighborsByNoAgent(IntermediaryAgent);
+
+                        // Re-estructura de la transacción.
+                        const structure = this.structureAmount(amountTransaction);
+                        if (structure.length > totalNeighbors) this.createNewNeighbors(oneNode, structure.length - totalNeighbors)
+
+                        const selectNeighbors = oneNode.neighborsByNoAgent(IntermediaryAgent);
+
+                        structure.some(amount => {
+
+                            /** ************************************************* */
+                            /**       EJECUTAR ESTRUCTURA DE TRANSFERENCIAS       */
+                            /** ************************************************* */
+
+                            if (selectNeighbors.length <= 0) return;
+
+                            // Elegir de manera aleatoria un índice del arreglo de nodos
+                            const idx = UtilityRandom.randomRange(0, selectNeighbors.length - 1);
+
+                            // Seleccionar un tercer participante
+                            const threeNode = selectNeighbors[idx];
+
+                            // Transferencia fraudalenta/ilegal e indireacta: DEPOSITO
+                            this.doDeposit(threeNode, currentTime, amountTransaction, true, false);
+
+                            // Transferencia para consolidar los montos en el destino
+                            this.doTransfer(threeNode, oneNode, currentTime, amount, true, false);
+                        });
+
+                    }
+                    else
+                        /** ************************************************* */
+                        /**             TRANSACCIÓN SIMPLE LEGAL              */
+                        /** ************************************************* */
+                        // Transferencia legal
+                        this.doDeposit(oneNode, currentTime, amountTransaction, false, isObserved);
+
+
+                }
+            }
+
+            // Para garantizar que no se considere a un agente que ya realizó una trasacción en este currentTime
+            arraySelect.splice(idx, 1);
+        }
+    }
+
+    public createTransferOperation(currentTime: number): void {
+
+        // Individuos y empresas
+        let arraySelect = this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent));
+
+        // Total de transacciones a realizar en diferentes agentes
+        const totalExecuteTransfer = Math.ceil(this._args.perExcecuteTransfer * arraySelect.length);
+
+        // realizar las transacciones
+        for (let _ = 0; _ < totalExecuteTransfer; _++) {
+
+            if (arraySelect.length <= 0) break;
+
+            // Elegir de manera aleatoria un índice del arreglo de nodos
+            const idx = UtilityRandom.randomRange(0, arraySelect.length - 1);
+
+            // NODO ORIGEN
+            const oneNode = arraySelect[idx];
+            const agentSource = <BaseOperationAgent>oneNode.agent;
+
+            if (!agentSource.isFrozenAccounts) {
 
                 // Definir el monto a transferir
                 let amountTransaction = UtilityRandom.randomRangeMM(this._args.rangeAmountTransaction, 2);
@@ -257,9 +332,13 @@ export class Network {
 
                 if (amountTransaction > 0) {
 
+                    // Si el agente tiene alta predisposición al fraude tiene alta probabilidad realizar un movimiento ilícito
+                    // Simular que el agente DECIDE si hacer un transacción legal o ilegal
+                    const isStructure = UtilityRandom.roulettePerOne(agentSource.predispositionFraud);
+
                     const isObserved = amountTransaction >= this._args.amountSuspiciousOperation;
 
-                    // Seleccionar al destino
+                    // NODO DESTINO
                     const twoNode = this.oldOrNewNeighbor(oneNode);
                     const agentTarget = <BaseOperationAgent>twoNode.agent;
 
@@ -267,17 +346,24 @@ export class Network {
 
                         if ((agentSource.predispositionFraud >= this._args.maxPropensityFraud && isObserved && isStructure)) {
 
+                            /** ************************************************* */
+                            /**        TRANSACCIÓN COMPLEJA FRAUDULENTA           */
+                            /** ************************************************* */
+
                             // Complex/Fraund/structure
                             const totalNeighbors = oneNode.totalNeighborsByNoAgent(IntermediaryAgent);
 
                             // Re-estructura de la transacción.
                             const structure = this.structureAmount(amountTransaction);
-                            if (structure.length > totalNeighbors)
-                                this.createNewNeighbors(oneNode, structure.length - totalNeighbors)
+                            if (structure.length > totalNeighbors) this.createNewNeighbors(oneNode, structure.length - totalNeighbors)
 
                             const selectNeighbors = oneNode.neighborsByNoAgent(IntermediaryAgent);
 
-                            this.structureAmount(amountTransaction).some(amount => {
+                            structure.some(amount => {
+
+                                /** ************************************************* */
+                                /**       EJECUTAR ESTRUCTURA DE TRANSFERENCIAS       */
+                                /** ************************************************* */
 
                                 if (selectNeighbors.length <= 0) return;
 
@@ -295,56 +381,107 @@ export class Network {
                             });
                         }
                         else
+                            /** ************************************************* */
+                            /**             TRANSACCIÓN SIMPLE LEGAL              */
+                            /** ************************************************* */
                             // Transferencia legal
                             this.doTransfer(oneNode, twoNode, currentTime, amountTransaction, false, isObserved);
                     }
                 }
             }
 
+            // Para garantizar que no se considere a un agente que ya realizó una trasacción en este currentTime
+            arraySelect.splice(idx, 1);
         }
-        // Anañidr a wachtlist
-    }
 
+    }
 
     public createWithdrawalOperation(currentTime: number): void {
 
-        // CREAR TRANSACCIONES
-        const nodesTransaction: ArrayList<Host> = ArrayList.create();
-
-
-        // No eliminar las transacciones anteriores
+        // Individuos y empresas
         let arraySelect = this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent));
 
-        const totalExecuteTransaction = Math.ceil(this._args.perExcecuteTransaction * arraySelect.length);
-
+        // Total de transacciones a realizar en diferentes agentes
+        const totalExecuteWithdrawal = Math.ceil(this._args.perExcecuteWithdrawal * arraySelect.length);
 
         // realizar las transacciones
-
-        // VERIFICAR SI CUENTA ESTA INCATIVADA
-        for (let _ = 0; _ < totalExecuteTransaction; _++) {
+        for (let _ = 0; _ < totalExecuteWithdrawal; _++) {
 
             if (arraySelect.length <= 0) break;
 
             // Elegir de manera aleatoria un índice del arreglo de nodos
             const idx = UtilityRandom.randomRange(0, arraySelect.length - 1);
 
+            // NODO ORIGEN
             const oneNode = arraySelect[idx];
-            const agent = <BaseOperationAgent>arraySelect[idx].agent;
+            const agentSource = <BaseOperationAgent>oneNode.agent;
 
-            // Si el agente tiene alta predisposición al fraude tiene alta probabilida de hacer fraude 
-            // Simular que el agente decide si hacer un transacción legal o ilegal
-            const isIllegal = UtilityRandom.roulettePerOne(agent.predispositionFraud);
+            if (!agentSource.isFrozenAccounts) {
 
-            /** CREAR ENLACES ADICIONAL PARA FORZAR TRANSACCIÓN */
+                // Definir el monto a transferir
+                let amountTransaction = UtilityRandom.randomRangeMM(this._args.rangeAmountTransaction, 2);
+                amountTransaction = agentSource.ledger.maxMoney(amountTransaction);
 
-            const amountTransaction = UtilityRandom.randomRangeMM(this._args.rangeAmountTransaction, 2);
+                if (amountTransaction > 0) {
 
-            const isIllegalMove = isIllegal ? amountTransaction >= this._args.amountSuspiciousOperation : false;
+                    // Si el agente tiene alta predisposición al fraude tiene alta probabilidad realizar un movimiento ilícito
+                    // Simular que el agente DECIDE si hacer un transacción legal o ilegal
+                    const isStructure = UtilityRandom.roulettePerOne(agentSource.predispositionFraud);
 
-            /** CUANDO ESTA MAS TIEMPO EN LA LISTA INACTIVAR LA CUENTA */
+                    const isObserved = amountTransaction >= this._args.amountSuspiciousOperation;
 
+                    if ((agentSource.predispositionFraud >= this._args.maxPropensityFraud && isObserved && isStructure)) {
+
+                        /** ************************************************* */
+                        /**        TRANSACCIÓN COMPLEJA FRAUDULENTA           */
+                        /** ************************************************* */
+
+                        // Complex/Fraund/structure
+                        const totalNeighbors = oneNode.totalNeighborsByNoAgent(IntermediaryAgent);
+
+                        // Re-estructura de la transacción.
+                        const structure = this.structureAmount(amountTransaction);
+                        if (structure.length > totalNeighbors) this.createNewNeighbors(oneNode, structure.length - totalNeighbors)
+
+                        const selectNeighbors = oneNode.neighborsByNoAgent(IntermediaryAgent);
+
+                        structure.some(amount => {
+
+                            /** ************************************************* */
+                            /**       EJECUTAR ESTRUCTURA DE TRANSFERENCIAS       */
+                            /** ************************************************* */
+
+                            if (selectNeighbors.length <= 0) return;
+
+                            // Elegir de manera aleatoria un índice del arreglo de nodos
+                            const idx = UtilityRandom.randomRange(0, selectNeighbors.length - 1);
+
+                            // Seleccionar un tercer participante
+                            const threeNode = selectNeighbors[idx];
+
+                            // Transferencia para consolidar los montos en el destino
+                            this.doTransfer(oneNode, threeNode, currentTime, amount, true, false);
+
+                            // Transferencia fraudalenta/ilegal e indireacta: DEPOSITO
+                            this.doWithdrawal(threeNode, currentTime, amount, true, false);
+
+                        });
+
+                    }
+                    else
+                        /** ************************************************* */
+                        /**             TRANSACCIÓN SIMPLE LEGAL              */
+                        /** ************************************************* */
+                        // Transferencia legal
+                        this.doWithdrawal(oneNode, currentTime, amountTransaction, false, isObserved);
+
+
+                }
+            }
+
+            // Para garantizar que no se considere a un agente que ya realizó una trasacción en este currentTime
+            arraySelect.splice(idx, 1);
         }
-        // Anañidr a wachtlist
     }
 
     //#####################################
@@ -359,8 +496,8 @@ export class Network {
             if (arraySelect.length <= 0) break;
 
             // Elegir de manera aleatoria un índice del arreglo de nodos
-            const idx02 = UtilityRandom.randomRange(0, arraySelect.length - 1);
-            const twoNode = arraySelect[idx02];
+            const idx = UtilityRandom.randomRange(0, arraySelect.length - 1);
+            const twoNode = arraySelect[idx];
 
             if (!oneNode.equal(twoNode)) {
 
@@ -380,7 +517,7 @@ export class Network {
             }
 
             // Quitar del arreglo para no considerarlo en la siguiente iteración
-            arraySelect.splice(idx02, 1);
+            arraySelect.splice(idx, 1);
 
         }
     }
@@ -412,20 +549,20 @@ export class Network {
 
                     const agent = <BaseOperationAgent>oneNode.agent;
                     const entity = <IntermediaryAgent>twoNode.agent;
-                    const isIllegaly = UtilityRandom.roulettePerOne(agent.predispositionFraud)
+                    const isIllegal = UtilityRandom.roulettePerOne(agent.predispositionFraud)
 
                     // Parte de un balance inicial
                     agent.ledger.moneyIn({
 
-                        sourceEntity: isIllegaly ? TypeFinantialEntity.INGRESO_INFORMAL : TypeFinantialEntity.INGRESO_FORMAL,
+                        sourceEntity: isIllegal ? TypeFinantialEntity.INGRESO_INFORMAL : TypeFinantialEntity.INGRESO_FORMAL,
                         targetEntity: entity.finantialEntity,
                         sourceLocation: TypePlace.DESCONOCIDO,
                         targetLocation: oneNode.location,
                         currentTime: 0,  // 0 será el currentTime debido que aún no hay ningun Tick
                         amount: UtilityRandom.randomRangeMM(this._args.rangeAmountTransaction, 2),
-                        isIllegaly: isIllegaly
+                        isIllegaly: isIllegal
 
-                    })
+                    });
 
                     links--;
                 }
@@ -449,13 +586,62 @@ export class Network {
         }
 
         // Agregar nuevo enlace en caso no exista niguna coincidencia en el paso anterior
-        const idx01 = UtilityRandom.randomRange(0, twoEntities.length - 1);
-        const threeNode = twoEntities[idx01];
+        const threeNode = twoEntities[UtilityRandom.randomRange(0, twoEntities.length - 1)];
 
         this.createEdge(oneNode, 1, [threeNode]);
 
         return [(<IntermediaryAgent>threeNode.agent), (<IntermediaryAgent>threeNode.agent)]
 
+    }
+
+    private oldOrNewNeighbor(oneNode: Host): Host {
+        const isNewNeighbor = UtilityRandom.roulettePerOne(this._args.perNewLinkTransact);
+        let twoNode!: Host;
+        if (isNewNeighbor) {
+            this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent))
+                .some(el => {
+                    if (!oneNode.equal(twoNode)) {
+                        const edge = new Edge(oneNode, twoNode)
+
+                        if (!oneNode.neighbors.contains(el)) {
+                            twoNode = el;
+
+                            // Crear vecinos nuevos
+                            oneNode.neighbors.push(twoNode);
+                            twoNode.neighbors.push(oneNode);
+
+                            // Agregar enlace/edge
+                            this._edges.push(new Edge(oneNode, twoNode));
+
+                            return;
+                        }
+                    }
+                });
+
+        }
+        if (twoNode === undefined) {
+            const neighbors = oneNode.neighborsByNoAgent(IntermediaryAgent);
+            twoNode = neighbors[UtilityRandom.randomRange(0, neighbors.length - 1)];
+        }
+
+        return twoNode;
+    }
+
+    private structureAmount(amount: number): Array<number> {
+        const capAmount = this._args.amountSuspiciousOperation;
+        const structure: Array<number> = new Array();
+        if (amount >= capAmount) {
+
+            const dim = Math.ceil(amount / (0.8 * capAmount));
+            const amountStructure = UtilityRandom.roundDec((amount / dim), 2);
+            structure.push(amountStructure);
+        }
+        return structure;
+    }
+
+    private createNewNeighbors(oneNode: Host, links: number) {
+
+        this.createEdge(oneNode, links, this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent)));
     }
 
     private doTransfer(oneNode: Host, twoNode: Host, currentTime: number, amountTransaction: number, isIllegal: boolean, isObserved: boolean): void {
@@ -509,54 +695,82 @@ export class Network {
                 agentSource.isFrozenAccounts = true;
     }
 
-    private oldOrNewNeighbor(oneNode: Host): Host {
-        const isNewNeighbor = UtilityRandom.roulettePerOne(this._args.perNewLinkTransact);
-        let twoNode!: Host;
-        if (isNewNeighbor) {
-            this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent))
-                .some(el => {
-                    if (!oneNode.equal(twoNode)) {
-                        const edge = new Edge(oneNode, twoNode)
+    private doDeposit(oneNode: Host, currentTime: number, amountTransaction: number, isIllegal: boolean, isObserved: boolean): void {
 
-                        if (!oneNode.neighbors.contains(el)) {
-                            twoNode = el;
+        const oneEntities = oneNode.neighborsByAgent(IntermediaryAgent);
+        const entity = <IntermediaryAgent>oneEntities[UtilityRandom.randomRange(0, oneEntities.length - 1)].agent;
+        const agentSource = <BaseOperationAgent>oneNode.agent;
 
-                            // Crear vecinos nuevos
-                            oneNode.neighbors.push(twoNode);
-                            twoNode.neighbors.push(oneNode);
+        // Parte de un balance inicial
+        agentSource.ledger.moneyIn({
 
-                            // Agregar enlace/edge
-                            this._edges.push(new Edge(oneNode, twoNode));
+            sourceEntity: isIllegal ? TypeFinantialEntity.INGRESO_INFORMAL : TypeFinantialEntity.INGRESO_FORMAL,
+            targetEntity: entity.finantialEntity,
+            sourceLocation: TypePlace.DESCONOCIDO,
+            targetLocation: oneNode.location,
+            currentTime: currentTime,
+            amount: amountTransaction,
+            isIllegaly: isIllegal
 
-                            return;
-                        }
-                    }
-                });
+        });
 
-        }
-        if (twoNode === undefined) {
-            const neighbors = oneNode.neighborsByNoAgent(IntermediaryAgent);
-            twoNode = neighbors[UtilityRandom.randomRange(0, neighbors.length - 1)];
-        }
+        this._whachList.isAgentInWatch(agentSource, currentTime);
+        const transact = new Transact();
+        transact.sourceNode = undefined;
+        transact.destinyNode = oneNode;
+        transact.sourceEntity = isIllegal ? TypeFinantialEntity.INGRESO_INFORMAL : TypeFinantialEntity.INGRESO_FORMAL;
+        transact.destinyEntity = entity.finantialEntity;
+        transact.isSourceInWatchList = false;
+        transact.isDestinyInWatchList = this._whachList.isAgentInWatch(agentSource, currentTime);
+        transact.typeMove = TypeOperation.DEPOSIT;
+        transact.isIlegally = isIllegal;
+        transact.amount = amountTransaction;
+        transact.currentTime = currentTime;
+        this._transactions.push(transact);
 
-        return twoNode;
+        // Agregar a watchlist
+        if (isObserved)
+            if (this._whachList.pushWatchFrozen(agentSource, currentTime))
+                agentSource.isFrozenAccounts = true;
     }
 
-    private structureAmount(amount: number): Array<number> {
-        const capAmount = this._args.amountSuspiciousOperation;
-        const structure: Array<number> = new Array();
-        if (amount >= capAmount) {
+    private doWithdrawal(oneNode: Host, currentTime: number, amountTransaction: number, isIllegal: boolean, isObserved: boolean): void {
 
-            const dim = Math.ceil(amount / (0.8 * capAmount));
-            const amountStructure = UtilityRandom.roundDec((amount / dim), 2);
-            structure.push(amountStructure);
-        }
-        return structure;
-    }
+        const oneEntities = oneNode.neighborsByAgent(IntermediaryAgent);
+        const entity = <IntermediaryAgent>oneEntities[UtilityRandom.randomRange(0, oneEntities.length - 1)].agent;
+        const agentSource = <BaseOperationAgent>oneNode.agent;
 
-    private createNewNeighbors(oneNode: Host, links: number) {
+        // Parte de un balance inicial
+        agentSource.ledger.moneyOut({
 
-        this.createEdge(oneNode, links, this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent)));
+            sourceEntity: entity.finantialEntity,
+            targetEntity: isIllegal ? TypeFinantialEntity.EGRESO_INFORMAL : TypeFinantialEntity.EGRESO_FORMAL,
+            sourceLocation: oneNode.location,
+            targetLocation: TypePlace.DESCONOCIDO,
+            currentTime: currentTime,
+            amount: amountTransaction,
+            isIllegaly: isIllegal
+
+        });
+
+        this._whachList.isAgentInWatch(agentSource, currentTime);
+        const transact = new Transact();
+        transact.sourceNode = oneNode;
+        transact.destinyNode = undefined;
+        transact.sourceEntity = entity.finantialEntity;
+        transact.destinyEntity = isIllegal ? TypeFinantialEntity.EGRESO_INFORMAL : TypeFinantialEntity.EGRESO_FORMAL;
+        transact.isSourceInWatchList = this._whachList.isAgentInWatch(agentSource, currentTime);
+        transact.isDestinyInWatchList = false;
+        transact.typeMove = TypeOperation.WITHDRAWAL;
+        transact.isIlegally = isIllegal;
+        transact.amount = amountTransaction;
+        transact.currentTime = currentTime;
+        this._transactions.push(transact);
+
+        // Agregar a watchlist
+        if (isObserved)
+            if (this._whachList.pushWatchFrozen(agentSource, currentTime))
+                agentSource.isFrozenAccounts = true;
     }
 
 }

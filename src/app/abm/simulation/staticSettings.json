@@ -34,9 +34,17 @@
     "start": 2,
     "end": 6
   },
-  "rangeExecuteTransaction": {
+  "rangeExecuteDeposit": {
+    "start": 0,
+    "end": 0.3
+  },
+  "rangeExecuteTransfer": {
     "start": 0.3,
     "end": 0.7
+  },
+  "rangeExecuteWithdrawl": {
+    "start": 0.2,
+    "end": 0.5
   },
   "rangeNoNeighbor": {
     "start": 0.3,

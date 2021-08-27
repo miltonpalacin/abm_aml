@@ -5,9 +5,9 @@ import { Host } from "./Host";
 
 export class Transact implements IHash {
 
-    sourceNode!: Host;
+    sourceNode!: Host | undefined;
 
-    destinyNode!: Host;
+    destinyNode!: Host | undefined;
 
     sourceEntity!: KeyValueExtra<string, string, KeyValue<String, String>>;
 
