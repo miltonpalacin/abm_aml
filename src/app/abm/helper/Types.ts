@@ -14,38 +14,37 @@ export interface IRange {
 // }
 
 export interface ITypePreSettings {
-    rangeMaxTimesWatchList: string;
-    rangeMaxTimesCleanWatchList: string;
-    rangeAmountTransaction: string;
-    rangePropensityFraud: string;
-    rangeMaxTimesMaxWatchList: string;
-    rangeLinkedIntermediary: string;
-    rangeMaxLinkedNoIntermediary: string;
-    rangeMaxLinkedIndBusInter: string;
-    rangeExecuteDeposit: string;
-    rangeExecuteTransfer: string;
-    rangeExecuteWithdrawl: string;
-    rangeNoNeighbor: string;
-    rangeNewLinkTransact: string;
-    ratePopulation: string;
-    rangeIndividual: string;
-    rateBusiness: string;
-    rateIntermediary: string;
-    rangeNoProfitBusiness: string;
-    rangeProfitBusiness: string;
-    rangeTrustBusiness: string;
-    rangeShellBusiness: string;
-    rangeHighPropensityFraud: string;
-    rangeWatchList: string;
+    rangeMaxTimesWatchList: number;
+    rangeMaxTimesCleanWatchList: number;
+    rangeMaxAmountTransaction: number;
+    rangePropensityFraud: number;
+    rangeLinkedIntermediary: number;
+    rangeMaxLinkedNoIntermediary: number;
+    rangeMaxLinkedIndBusInter: number;
+    rangeExecuteDeposit: number;
+    rangeExecuteTransfer: number;
+    rangeExecuteWithdrawal: number;
+    rangeNoNeighbor: number;
+    rangeNewLinkTransact: number;
+    rangePopulation: number;
+    rangeIndividual: number;
+    rangeBusiness: number;
+    rangeIntermediary: number;
+    rangeNoProfitBusiness: number;
+    rangeProfitBusiness: number;
+    rangeTrustBusiness: number;
+    rangeShellBusiness: number;
+    rangeHighPropensityFraud: number;
+    rangeWatchList: number;
 }
 
 export interface ITypeSettings {
-    totalSimulation: number;
-    samplesSize: number;
+    totalTimes: number;
+    totalIterations: number;
     amountSuspiciousOperation: number;
     rangeMaxTimesWatchList: IRange;
     rangeMaxTimesCleanWatchList: IRange;
-    rangeAmountTransaction: IRange;
+    rangeMaxAmountTransaction: IRange;
     rangePropensityFraud: IRange;
     rangeMaxTimesMaxWatchList: IRange;
     rangeLinkedIntermediary: IRange;
@@ -53,14 +52,14 @@ export interface ITypeSettings {
     rangeMaxLinkedIndBusInter: IRange;
     rangeExecuteDeposit: IRange;
     rangeExecuteTransfer: IRange;
-    rangeExecuteWithdrawl: IRange;
+    rangeExecuteWithdrawal: IRange;
     rangeNoNeighbor: IRange;
     rangeNewLinkTransact: IRange;
     population: {
-        rate: IRange,
+        range: IRange,
         rangeIndividual: IRange,
-        rateBusiness: IRange,
-        rateIntermediary: IRange,
+        rangeBusiness: IRange,
+        rangeIntermediary: IRange,
         rangeNoProfitBusiness: IRange,
         rangeProfitBusiness: IRange,
         rangeTrustBusiness: IRange,
@@ -73,10 +72,10 @@ export interface ITypeSettings {
 
 export interface ITypeArgNetwork {
 
-    numPopIndivual: number;
-    //popBusiness: number;
-    numPopIntermediary: number;
+    totalTimes: Number;
 
+    numPopIndivual: number;
+    numPopIntermediary: number;
     numPopNoProfitBusiness: number;
     numPopProfitBusiness: number;
     numPopTrustBusiness: number;
@@ -97,9 +96,9 @@ export interface ITypeArgNetwork {
     numMaxLinkedNoIntermediary: number;
     numMaxLinkedIndBusInter: number;
 
-    perExcecuteDeposit: number;
-    perExcecuteTransfer: number;
-    perExcecuteWithdrawal: number;
+    perExecuteDeposit: number;
+    perExecuteTransfer: number;
+    perExecuteWithdrawal: number;
 
 
     amountSuspiciousOperation: number;

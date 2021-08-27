@@ -224,7 +224,7 @@ export class Network {
         let arraySelect = this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent));
 
         // Total de transacciones a realizar en diferentes agentes
-        const totalExecuteDeposit = Math.ceil(this._args.perExcecuteDeposit * arraySelect.length);
+        const totalExecuteDeposit = Math.ceil(this._args.perExecuteDeposit * arraySelect.length);
 
         // realizar las transacciones
         for (let _ = 0; _ < totalExecuteDeposit; _++) {
@@ -310,7 +310,7 @@ export class Network {
         let arraySelect = this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent));
 
         // Total de transacciones a realizar en diferentes agentes
-        const totalExecuteTransfer = Math.ceil(this._args.perExcecuteTransfer * arraySelect.length);
+        const totalExecuteTransfer = Math.ceil(this._args.perExecuteTransfer * arraySelect.length);
 
         // realizar las transacciones
         for (let _ = 0; _ < totalExecuteTransfer; _++) {
@@ -402,7 +402,7 @@ export class Network {
         let arraySelect = this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent));
 
         // Total de transacciones a realizar en diferentes agentes
-        const totalExecuteWithdrawal = Math.ceil(this._args.perExcecuteWithdrawal * arraySelect.length);
+        const totalExecuteWithdrawal = Math.ceil(this._args.perExecuteWithdrawal * arraySelect.length);
 
         // realizar las transacciones
         for (let _ = 0; _ < totalExecuteWithdrawal; _++) {

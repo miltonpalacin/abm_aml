@@ -69,7 +69,6 @@ export class WhachList {
         return false;
     }
 
-
     public isFrozenAgent(agent: BaseAgent): boolean {
         const index = this._array.findIndex(e => e.key.code === agent.code);
         if (index >= 0)

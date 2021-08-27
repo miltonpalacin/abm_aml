@@ -223,5 +223,4 @@ export class Log {
 
     }
 
-
 }

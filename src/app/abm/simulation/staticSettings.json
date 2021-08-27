@@ -1,6 +1,6 @@
 {
-  "totalSimulation": 120,
-  "samplesSize": 200,
+  "totalTimes": 1,
+  "totalIterations": 1,
   "amountSuspiciousOperation": 10000,
   "rangeMaxTimesWatchList": {
     "start": 15,
@@ -10,17 +10,13 @@
     "start": 5,
     "end": 10
   },
-  "rangeAmountTransaction": {
+  "rangeMaxAmountTransaction": {
     "start": 500,
     "end": 100000
   },
   "rangePropensityFraud": {
     "start": 0.6,
     "end": 0.9
-  },
-  "rangeMaxTimesMaxWatchList": {
-    "start": 5,
-    "end": 20
   },
   "rangeLinkedIntermediary": {
     "start": 0.4,
@@ -42,7 +38,7 @@
     "start": 0.3,
     "end": 0.7
   },
-  "rangeExecuteWithdrawl": {
+  "rangeExecuteWithdrawal": {
     "start": 0.2,
     "end": 0.5
   },

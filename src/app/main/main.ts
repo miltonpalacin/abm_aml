@@ -1,18 +1,6 @@
 import { app, BrowserWindow } from 'electron';
 import isDev from 'electron-is-dev';
-import { BaseAgent } from '../abm/agent/BaseAgent';
-import { BaseOperationAgent } from '../abm/agent/BaseOperationAgent';
-import { IndividualAgent } from '../abm/agent/IndividualAgent';
-import { IntermediaryAgent } from '../abm/agent/IntermediaryAgent';
-import { NoProfitBusinessAgent } from '../abm/agent/NoProfitBusinessAgent';
-import { ShellTypeBusinessAgent } from '../abm/agent/ShellTypeBusinessAgent';
-import { TrustFundBusinessAgent } from '../abm/agent/TrustFundBusinessAgent';
-import { TypePlace } from '../abm/data/TypePlace';
-import { Host } from '../abm/environment/Host';
-import { ArrayList } from '../abm/helper/ArrayList';
 import { UtilityRandom } from '../abm/odd/UtilityRandom';
-import { Settings } from '../abm/simulation/Settings';
-import { Setup } from '../abm/simulation/Setup';
 
 const createWindow = (): void => {
     let win = new BrowserWindow({
@@ -31,8 +19,17 @@ const createWindow = (): void => {
             : `file://${app.getAppPath()}/index.html`,
     );
 }
+console.log("A) " + 0.78665.toFixed(3))
+console.log("B) " + UtilityRandom.roundDec(0.786625, 3))
 
-Setup.global();
+console.log("C) " + UtilityRandom.randomRange(0.78225, 1, 3))
+console.log("C) " + UtilityRandom.randomRange(0.78225, 1, 3))
+console.log("C) " + UtilityRandom.randomRange(0.78225, 1, 3))
+console.log("C) " + UtilityRandom.randomRange(0.78225, 1, 3))
+console.log("C) " + UtilityRandom.randomRange(0.78225, 1, 3))
+console.log("C) " + UtilityRandom.randomRange(0.78225, 1, 3))
+console.log("C) " + UtilityRandom.randomRange(0.78225, 1, 3))
+// Setup.global();
 // console.log(Settings.values)
 // const agent = new IndividualAgent();
 // if (agent.getPredispositionFraud() === undefined)

@@ -13,23 +13,33 @@ export class UtilityRandom {
     }
 
     public static randomRange(min: number, max: number, numDec?: number): number {
-        if (min === max) return min;
+
         if (numDec) {
+
             const factor = Math.pow(10, numDec);
-            return crypto.randomInt(min * factor, max * factor) / factor;
+            if (min === max) return Math.round(min * factor) / factor;
+            return crypto.randomInt(Math.ceil(min * factor), Math.floor(max * factor)) / factor;
         }
-        else
-            return crypto.randomInt(min, max);
+        else {
+
+            if (min === max) return min;
+            return crypto.randomInt(Math.ceil(min), Math.floor(max));
+
+        }
     }
 
     public static randomRangeMM(minmax: IRange, numDec?: number): number {
-        if (minmax.start === minmax.end) return minmax.start;
         if (numDec) {
+
             const factor = Math.pow(10, numDec);
-            return crypto.randomInt(minmax.start * factor, minmax.end * factor) / factor;
+            if (minmax.start === minmax.end) return Math.round(minmax.start * factor) / factor;
+
+            return crypto.randomInt(Math.ceil(minmax.start * factor), Math.floor(minmax.end * factor)) / factor;
         }
-        else
-            return crypto.randomInt(minmax.start, minmax.end);
+        else {
+            if (minmax.start === minmax.end) return minmax.start;
+            return crypto.randomInt(Math.ceil(minmax.start), Math.floor(minmax.end));
+        }
     }
 
     public static randomExp(mean: number, value: number, factor: number = 100): number {

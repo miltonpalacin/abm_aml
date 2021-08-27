@@ -7,7 +7,7 @@ import * as csv from 'fast-csv';
 export class Setup {
 
     private static _fileName: string = path.resolve("./src/app/abm/simulation", "abm-aml.csv");
-    public static values: Array<ITypePreSettings>[];
+    private static _values: Array<ITypePreSettings>;
 
 
     private static _initialize = (() => {
@@ -17,64 +17,100 @@ export class Setup {
 
     private static async init() {
 
-        const values: Array<ITypePreSettings>[] = [];
+        this._values = new Array();
 
         await new Promise(resolve => {
             fs.createReadStream(this._fileName)
                 .pipe(csv.parse({ headers: true }))
                 .on('error', error => console.error(error))
-                .on('data', row => { values.push(row); })
+                .on('data', row => {
+                    const newRow: ITypePreSettings = {
+                        rangeMaxTimesWatchList: Number(row.rangeMaxTimesWatchList),
+                        rangeMaxTimesCleanWatchList: Number(row.rangeMaxTimesCleanWatchList),
+                        rangeMaxAmountTransaction: Number(row.rangeMaxAmountTransaction),
+                        rangePropensityFraud: Number(row.rangePropensityFraud),
+                        rangeLinkedIntermediary: Number(row.rangeLinkedIntermediary),
+                        rangeMaxLinkedNoIntermediary: Number(row.rangeMaxLinkedNoIntermediary),
+                        rangeMaxLinkedIndBusInter: Number(row.rangeMaxLinkedIndBusInter),
+                        rangeExecuteDeposit: Number(row.rangeExecuteDeposit),
+                        rangeExecuteTransfer: Number(row.rangeExecuteTransfer),
+                        rangeExecuteWithdrawal: Number(row.rangeExecuteWithdrawal),
+                        rangeNoNeighbor: Number(row.rangeNoNeighbor),
+                        rangeNewLinkTransact: Number(row.rangeNewLinkTransact),
+                        rangePopulation: Number(row.rangePopulation),
+                        rangeIndividual: Number(row.rangeIndividual),
+                        rangeBusiness: Number(row.rangeBusiness),
+                        rangeIntermediary: Number(row.rangeIntermediary),
+                        rangeNoProfitBusiness: Number(row.rangeNoProfitBusiness),
+                        rangeProfitBusiness: Number(row.rangeProfitBusiness),
+                        rangeTrustBusiness: Number(row.rangeTrustBusiness),
+                        rangeShellBusiness: Number(row.rangeShellBusiness),
+                        rangeHighPropensityFraud: Number(row.rangeHighPropensityFraud),
+                        rangeWatchList: Number(row.rangeWatchList)
+                    }
+                    this._values.push(newRow);
+
+
+                })
                 .on('end', (rowCount: number) => { resolve(`Parsed ${rowCount} rows`) });
         });
-
-        console.log(values[1]);
-
 
     }
 
     public static async global() {
 
         return {
-            totalIteration: Settings.values.totalSimulation
+            totalIteration: Settings.values.totalIterations
         }
     }
 
     public static local(index: number): ITypeArgNetwork {
+
+        const sample = this._values[index];
+
+        const factorPop01 = sample.rangeIntermediary + sample.rangeBusiness + sample.rangeIndividual;
+
+        const popIndividual = Math.ceil(sample.rangeIndividual / factorPop01) * sample.rangePopulation;
+        const popBusiness = Math.ceil(sample.rangeBusiness / factorPop01) * sample.rangePopulation;
+        const popIntermediary = Math.ceil(sample.rangeIntermediary / factorPop01) * sample.rangePopulation;
+
+        const factorPop02 = sample.rangeNoProfitBusiness + sample.rangeProfitBusiness + sample.rangeTrustBusiness + sample.rangeShellBusiness;
+
         const argsCreateAgent: ITypeArgNetwork = {
-            numPopIndivual: 0,
+            totalTimes: Settings.values.totalTimes,
 
-            //popBusiness: number;
-            numPopIntermediary: 0,
+            numPopIndivual: popIndividual,
+            numPopIntermediary: popIntermediary,
 
-            numPopNoProfitBusiness: 0,
-            numPopProfitBusiness: 0,
-            numPopTrustBusiness: 0,
-            numPopShellBusiness: 0,
+            numPopNoProfitBusiness: Math.ceil(sample.rangeNoProfitBusiness / factorPop02) * popBusiness,
+            numPopProfitBusiness: Math.ceil(sample.rangeProfitBusiness / factorPop02) * popBusiness,
+            numPopTrustBusiness: Math.ceil(sample.rangeTrustBusiness / factorPop02) * popBusiness,
+            numPopShellBusiness: Math.ceil(sample.rangeShellBusiness / factorPop02) * popBusiness,
 
-            numPopHighPropensityFraud: 0, // En base a solo individuos y negocios
+            numPopHighPropensityFraud: Math.floor(sample.rangeHighPropensityFraud * (popIndividual + popBusiness)), // En base a solo individuos y negocios
 
             /**  Porcentaje, debido que solo recién en la creación se tiene el dato del 
              numero de agentes con alta propensión a cometer fraude */
-            perPopWatchList: 0,
-            maxTimesWatchList: 0,
-            maxTimesCleanWatchList: 0,
+            perPopWatchList: Math.round(sample.rangeWatchList),
+            maxTimesWatchList: Math.round(sample.rangeMaxTimesWatchList),
+            maxTimesCleanWatchList: Math.round(sample.rangeMaxTimesCleanWatchList),
 
-            maxPropensityFraud: 0,
-            maxHighPropensityFraud: 0, // Math.min(maxPropensityFraud + 0.2, 0.9) 
+            maxPropensityFraud: sample.rangePropensityFraud,
+            maxHighPropensityFraud: Math.min(sample.rangePropensityFraud + 0.2, 0.9),
 
-            perLinkedIntermediary: 0, //Solo intermediarios
-            numMaxLinkedNoIntermediary: 0, // Entre empresa e individuos
-            numMaxLinkedIndBusInter: 0, // Enter empresa / individuos y intermediarios
+            perLinkedIntermediary: sample.rangeLinkedIntermediary, //Solo intermediarios
+            numMaxLinkedNoIntermediary: sample.rangeMaxLinkedNoIntermediary, // Entre empresa e individuos
+            numMaxLinkedIndBusInter: sample.rangeMaxLinkedIndBusInter, // Enter empresa / individuos y intermediarios
 
-            perExcecuteDeposit: 0,
-            perExcecuteTransfer: 0,
-            perExcecuteWithdrawal: 0,
+            perExecuteDeposit: sample.rangeExecuteDeposit,
+            perExecuteTransfer: sample.rangeExecuteTransfer,
+            perExecuteWithdrawal: sample.rangeExecuteWithdrawal,
 
-            amountSuspiciousOperation: 0,
+            amountSuspiciousOperation: Settings.values.amountSuspiciousOperation,
 
-            rangeAmountTransaction: { start: 0, end: 0 },
+            rangeAmountTransaction: { start: 0, end: sample.rangeMaxAmountTransaction },
 
-            perNewLinkTransact: 0
+            perNewLinkTransact: sample.rangeNewLinkTransact
         };
         return argsCreateAgent;
     }

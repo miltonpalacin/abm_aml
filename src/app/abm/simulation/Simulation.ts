@@ -6,7 +6,7 @@ export class Simulation {
 
     public static async run() {
 
-        // const setup = new Setup();
+        // Tiempo que viene ser por día
         let currentTime: number = 0;
 
         try {
@@ -14,11 +14,17 @@ export class Simulation {
             /**                   CONFIGURACIÓN GLOBAL                   */
             /** ********************************************************* */
 
+            Log.info("=======================");
+            Log.info("Inicio de la simulación");
+            Log.info("=======================");
+
             const config = await Setup.global();
+            Log.info("Coniguración global: " + config)
 
-            for (let iteration = 1; iteration < config.totalIteration; iteration++) {
 
+            for (let iteration = 0; iteration < config.totalIteration; iteration++) {
 
+                // En cada iteración se re-establece el tiempo
                 currentTime = 0;
 
                 /** ********************************************************* */
@@ -26,7 +32,9 @@ export class Simulation {
                 /** ********************************************************* */
 
                 const args = Setup.local(iteration);
+
                 const network = new Network(args);
+
 
                 /** ********************************************************* */
                 /**                INICIALIZACIÓN DE AGENTES                  */
