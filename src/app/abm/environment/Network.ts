@@ -79,7 +79,7 @@ export class Network {
             const agent = <BaseOperationAgent>arraySelect[idx].agent;
 
             // Asignación de valor predisposición alto
-            agent.predispositionFraud = UtilityRandom.randomRange(this._args.maxPropensityFraud, Odds.rangePropensityFraud.max, 3);
+            agent.predispositionFraud = UtilityRandom.randomRange(this._args.maxPropensityFraud, Odds.rangePropensityFraud.end, 3);
 
             // Quitar del arreglo para no considerarlo en la siguiente iteración
             arraySelect.splice(idx, 1);
@@ -91,7 +91,7 @@ export class Network {
             .forEach(e => {
                 const agent = <BaseOperationAgent>e.agent;
                 // Asignación de valor predisposición baja
-                agent.predispositionFraud = UtilityRandom.randomRange(Odds.rangePropensityFraud.min, this._args.maxPropensityFraud, 3);
+                agent.predispositionFraud = UtilityRandom.randomRange(Odds.rangePropensityFraud.start, this._args.maxPropensityFraud, 3);
             });
 
         /** ********************************************************* */

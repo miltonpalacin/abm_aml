@@ -8,20 +8,44 @@ export interface IRange {
 //     end: number;
 // }
 
-export interface IRangeMM {
-    min: number;
-    max: number;
+// export interface IRangeMM {
+//     min: number;
+//     max: number;
+// }
+
+export interface ITypePreSettings {
+    rangeMaxTimesWatchList: string;
+    rangeMaxTimesCleanWatchList: string;
+    rangeAmountTransaction: string;
+    rangePropensityFraud: string;
+    rangeMaxTimesMaxWatchList: string;
+    rangeLinkedIntermediary: string;
+    rangeMaxLinkedNoIntermediary: string;
+    rangeMaxLinkedIndBusInter: string;
+    rangeExecuteDeposit: string;
+    rangeExecuteTransfer: string;
+    rangeExecuteWithdrawl: string;
+    rangeNoNeighbor: string;
+    rangeNewLinkTransact: string;
+    ratePopulation: string;
+    rangeIndividual: string;
+    rateBusiness: string;
+    rateIntermediary: string;
+    rangeNoProfitBusiness: string;
+    rangeProfitBusiness: string;
+    rangeTrustBusiness: string;
+    rangeShellBusiness: string;
+    rangeHighPropensityFraud: string;
+    rangeWatchList: string;
 }
 
 export interface ITypeSettings {
     totalSimulation: number;
     samplesSize: number;
     amountSuspiciousOperation: number;
-
-    rangeMaxTimesWatchList: number;
-    rangeMaxTimesCleanWatchList: number;
-
-    rangeAmountTransaction: IRangeMM;
+    rangeMaxTimesWatchList: IRange;
+    rangeMaxTimesCleanWatchList: IRange;
+    rangeAmountTransaction: IRange;
     rangePropensityFraud: IRange;
     rangeMaxTimesMaxWatchList: IRange;
     rangeLinkedIntermediary: IRange;
@@ -32,25 +56,16 @@ export interface ITypeSettings {
     rangeExecuteWithdrawl: IRange;
     rangeNoNeighbor: IRange;
     rangeNewLinkTransact: IRange;
-
     population: {
         rate: IRange,
-
         rangeIndividual: IRange,
         rateBusiness: IRange,
         rateIntermediary: IRange,
-
         rangeNoProfitBusiness: IRange,
         rangeProfitBusiness: IRange,
         rangeTrustBusiness: IRange,
         rangeShellBusiness: IRange,
-
-        rangeColocation: IRange,
-        rangeEstructuration: IRange,
-        rangeIntegration: IRange,
-
         rangeHighPropensityFraud: IRange,
-
         rangeWatchList: IRange
     };
 }
@@ -88,7 +103,7 @@ export interface ITypeArgNetwork {
 
 
     amountSuspiciousOperation: number;
-    rangeAmountTransaction: IRangeMM;
+    rangeAmountTransaction: IRange;
 
     perNewLinkTransact: number;
 

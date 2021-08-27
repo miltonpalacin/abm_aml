@@ -1,34 +1,31 @@
 import { Network } from "../environment/Network";
 import { Log } from "../helper/Log";
-import { Setup } from "./Setup";
+import { Setup, sleep } from "./Setup";
 
 export class Simulation {
 
-    public run(): void {
+    public static async run() {
 
-        const setup = new Setup();
+        // const setup = new Setup();
         let currentTime: number = 0;
-        /* delay de cada ticke 
-        que repsenta un día
-        */
 
         try {
             /** ********************************************************* */
             /**                   CONFIGURACIÓN GLOBAL                   */
             /** ********************************************************* */
 
-            setup.global();
+            const config = await Setup.global();
 
-            for (let iteration = 1; iteration < 100; iteration++) {
+            for (let iteration = 1; iteration < config.totalIteration; iteration++) {
 
 
                 currentTime = 0;
 
                 /** ********************************************************* */
-                /**                   CONFIGURACIÓN LOCAL                   */
+                /**                    CONFIGURACIÓN LOCAL                    */
                 /** ********************************************************* */
 
-                const args = setup.local();
+                const args = Setup.local(iteration);
                 const network = new Network(args);
 
                 /** ********************************************************* */
@@ -67,29 +64,19 @@ export class Simulation {
                     /**           OPERACION: TRANSFER, WITHDRAWAL             */
                     /** ************************************************************** */
                     network.createWithdrawalOperation(currentTime);
+
+                    await sleep(100);
                 }
 
-
-                /** ********************************************************* */
-                /**                   CONFIGURACIÓN INICIAL                   */
-                /** ********************************************************* */
-
-
-                /** ********************************************************* */
-                /**                   CONFIGURACIÓN INICIAL                   */
-                /** ********************************************************* */
-
-                /** ********************************************************* */
-                /**                   CONFIGURACIÓN INICIAL                   */
-                /** ********************************************************* */
-
-                /** ********************************************************* */
-                /**                   CONFIGURACIÓN INICIAL                   */
-                /** ********************************************************* */
             }
 
         } catch (error) {
             Log.fatal(error);
         }
     }
+
 }
+
+// function sleep(ms: number) {
+//     return new Promise(resolve => setTimeout(resolve, ms));
+// }

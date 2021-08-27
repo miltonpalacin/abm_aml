@@ -1,13 +1,99 @@
 {
-  "timesSimulation": 120,
-  "yearsSampling": 20,
-  "samplesSize": 6,
+  "totalSimulation": 120,
+  "samplesSize": 200,
+  "amountSuspiciousOperation": 10000,
+  "rangeMaxTimesWatchList": {
+    "start": 15,
+    "end": 25
+  },
+  "rangeMaxTimesCleanWatchList": {
+    "start": 5,
+    "end": 10
+  },
+  "rangeAmountTransaction": {
+    "min": 500,
+    "max": 100000
+  },
+  "rangePropensityFraud": {
+    "start": 0.6,
+    "end": 0.9
+  },
+  "rangeMaxTimesMaxWatchList": {
+    "start": 5,
+    "end": 20
+  },
+  "rangeLinkedIntermediary": {
+    "start": 0.4,
+    "end": 0.8
+  },
+  "rangeMaxLinkedNoIntermediary": {
+    "start": 1,
+    "end": 16
+  },
+  "rangeMaxLinkedIndBusInter": {
+    "start": 2,
+    "end": 6
+  },
+  "rangeExecuteDeposit": {
+    "start": 0,
+    "end": 0.3
+  },
+  "rangeExecuteTransfer": {
+    "start": 0.3,
+    "end": 0.7
+  },
+  "rangeExecuteWithdrawl": {
+    "start": 0.2,
+    "end": 0.5
+  },
+  "rangeNoNeighbor": {
+    "start": 0.3,
+    "end": 0.7
+  },
+  "rangeNewLinkTransact": {
+    "start": 0,
+    "end": 0.2
+  },
   "population": {
-    "rateIndividual": 0.016,
-    "rateBusiness": 0.02,
-    "rateIntermediary": 0.03,
-    "inititialIndividual": 200,
-    "initialBusiness": 50,
-    "initialIntermediary": 20
+    "rate": {
+      "start": 200,
+      "end": 7000
+    },
+    "rangeIndividual": {
+      "start": 0.5,
+      "end": 0.8
+    },
+    "rateBusiness": {
+      "start": 0.1,
+      "end": 0.4
+    },
+    "rateIntermediary": {
+      "start": 0.1,
+      "end": 0.3
+    },
+    "rangeNoProfitBusiness": {
+      "start": 0.1,
+      "end": 0.8
+    },
+    "rangeProfitBusiness": {
+      "start": 0.1,
+      "end": 0.8
+    },
+    "rangeTrustBusiness": {
+      "start": 0.1,
+      "end": 0.8
+    },
+    "rangeShellBusiness": {
+      "start": 0.1,
+      "end": 0.8
+    },
+    "rangeHighPropensityFraud": {
+      "start": 0.1,
+      "end": 0.8
+    },
+    "rangeWatchList": {
+      "start": 0,
+      "end": 0.3
+    }
   }
 }

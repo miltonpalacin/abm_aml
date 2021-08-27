@@ -1,4 +1,3 @@
-import { IHash } from "./IHash";
 import { KeyValueExtra } from "./KeyValueExtra";
 
 
@@ -37,15 +36,15 @@ export class KeyValueExtraMap<K, V, E> {
     }
 
     public getByKey(key: K): V | undefined {
-        const item = this._array.find(e => e._key === key);
+        const item = this._array.find(e => e.key === key);
         if (item === undefined) return undefined;
-        return item._value;
+        return item.value;
     }
 
     public clear(): void { this._array = new Array(); }
 
     public deleteByKey(key: K): boolean {
-        const index = this._array.findIndex(e => e._key === key);
+        const index = this._array.findIndex(e => e.key === key);
         const del = this._array.splice(index, 1);
         return del && del.length > 0;
     }
@@ -60,13 +59,13 @@ export class KeyValueExtraMap<K, V, E> {
     }
 
     public has(key: K): boolean {
-        const item = this._array.find(e => e._key === key);
+        const item = this._array.find(e => e.key === key);
         return !(item === undefined)
 
     }
 
     public set(key: K, value: V, extra: E): this {
-        const index = this._array.findIndex(e => e._key === key);
+        const index = this._array.findIndex(e => e.key === key);
         const newItem = new KeyValueExtra(key, value, extra);
         if (index >= 0)
             this._array[index] = newItem

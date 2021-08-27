@@ -1,7 +1,7 @@
 import crypto from "crypto";
 import { KeyValue } from "../helper/KeyValue";
 import { KeyValueMap } from "../helper/KeyValueMap";
-import { IRangeMM } from "../helper/Types";
+import { IRange } from "../helper/Types";
 
 export class UtilityRandom {
 
@@ -22,14 +22,14 @@ export class UtilityRandom {
             return crypto.randomInt(min, max);
     }
 
-    public static randomRangeMM(minmax: IRangeMM, numDec?: number): number {
-        if (minmax.min === minmax.max) return minmax.min;
+    public static randomRangeMM(minmax: IRange, numDec?: number): number {
+        if (minmax.start === minmax.end) return minmax.start;
         if (numDec) {
             const factor = Math.pow(10, numDec);
-            return crypto.randomInt(minmax.min * factor, minmax.max * factor) / factor;
+            return crypto.randomInt(minmax.start * factor, minmax.end * factor) / factor;
         }
         else
-            return crypto.randomInt(minmax.min, minmax.max);
+            return crypto.randomInt(minmax.start, minmax.end);
     }
 
     public static randomExp(mean: number, value: number, factor: number = 100): number {

@@ -30482,7 +30482,7 @@ var State = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     State.prototype.toString = function () {
-        return "state {code=\'" + this.getCode() + '\'' + ", description=\'" + this.getDescription() + '\'' + '}';
+        return "state {code=\'" + this.code + '\'' + ", description=\'" + this.description + '\'' + '}';
     };
     return State;
 }(CodeDescription_1.CodeDescription));
@@ -30508,24 +30508,32 @@ var CodeDescription = /** @class */ (function () {
     // CONSTRUCTOR
     //#####################################
     function CodeDescription(code, description) {
-        this.code = code;
-        this.description = description;
+        this._code = code;
+        this._description = description;
     }
-    //#####################################
-    // PROPIEDADES
-    //####################################
-    CodeDescription.prototype.getCode = function () {
-        return this.code;
-    };
-    CodeDescription.prototype.setCode = function (code) {
-        this.code = code;
-    };
-    CodeDescription.prototype.getDescription = function () {
-        return this.description;
-    };
-    CodeDescription.prototype.setDescription = function (description) {
-        this.description = description;
-    };
+    Object.defineProperty(CodeDescription.prototype, "code", {
+        //#####################################
+        // PROPIEDADES
+        //####################################
+        get: function () {
+            return this._code;
+        },
+        set: function (value) {
+            this._code = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(CodeDescription.prototype, "description", {
+        get: function () {
+            return this._description;
+        },
+        set: function (value) {
+            this._description = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
     //#####################################
     // MÉTODOS
     //####################################
@@ -30602,11 +30610,6 @@ __webpack_require__(/*! bootswatch/dist/minty/bootstrap.min.css */ "./node_modul
 // import { TypeMove } from '@/app/abm/environment/TypeMove';
 // import { Place } from '@/app/abm/environment/Place';
 var State_1 = __webpack_require__(/*! @/app/abm/agent/State */ "./src/app/abm/agent/State.ts");
-// import { Alphabet } from '@/app/abm/agent/Alphabet';
-// import { HashMap } from '@/app/abm/helper/HashMap';
-// import { StateAlphabet } from '@/app/abm/agent/StateAlphabet';
-// import { ArrayList } from '@/app/abm/helper/ArrayList';
-// //import { CoreAgent } from '@/app/abm/agent/CoreAgent';
 // let move = TypeMove.NONE;
 // const location = Place.U240202
 var state01 = new State_1.State("01", "milto");
@@ -30623,6 +30626,7 @@ var state03 = state02;
 var valtemp = "NADA";
 if (state01.equals(state01))
     valtemp = "entro";
+//console.log(TypeFinantialEntity.data.getByIndex(10).toString())
 // //if (arr.contains(new State("01ss","mIlto")))
 // if (map.has(new StateAlphabet(state01, xxx, true)))
 //move = TypeMove.DEPOSIT;

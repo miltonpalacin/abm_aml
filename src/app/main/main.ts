@@ -11,6 +11,8 @@ import { TypePlace } from '../abm/data/TypePlace';
 import { Host } from '../abm/environment/Host';
 import { ArrayList } from '../abm/helper/ArrayList';
 import { UtilityRandom } from '../abm/odd/UtilityRandom';
+import { Settings } from '../abm/simulation/Settings';
+import { Setup } from '../abm/simulation/Setup';
 
 const createWindow = (): void => {
     let win = new BrowserWindow({
@@ -30,30 +32,32 @@ const createWindow = (): void => {
     );
 }
 
+Setup.global();
+// console.log(Settings.values)
 // const agent = new IndividualAgent();
 // if (agent.getPredispositionFraud() === undefined)
 //     console.log("OOOOO: " + agent.getPredispositionFraud());
 
-const nodes: ArrayList<Host> = ArrayList.create();
+// const nodes: ArrayList<Host> = ArrayList.create();
 
-nodes.push(new Host(new IndividualAgent()));
-nodes.push(new Host(new IndividualAgent()));
-nodes.push(new Host(new NoProfitBusinessAgent()));
-nodes.push(new Host(new NoProfitBusinessAgent()));
-nodes.push(new Host(new IntermediaryAgent()));
-nodes.push(new Host(new IntermediaryAgent()));
+// nodes.push(new Host(new IndividualAgent()));
+// nodes.push(new Host(new IndividualAgent()));
+// nodes.push(new Host(new NoProfitBusinessAgent()));
+// nodes.push(new Host(new NoProfitBusinessAgent()));
+// nodes.push(new Host(new IntermediaryAgent()));
+// nodes.push(new Host(new IntermediaryAgent()));
 
-nodes.filter(e => !e.agent.isAgent(IntermediaryAgent) &&
-    (<BaseOperationAgent>e.agent).predispositionFraud === undefined)
-    .forEach(e => {
-        //console.log("Agente: " + e.agent.code + "----" + e.agent.constructor.name + "----" + IntermediaryAgent.name);
-        console.log("Agente: " + e.agent.code + "----" + e.agent.getClass() + "----" + IntermediaryAgent.getClass());
-    });
+// nodes.filter(e => !e.agent.isAgent(IntermediaryAgent) &&
+//     (<BaseOperationAgent>e.agent).predispositionFraud === undefined)
+//     .forEach(e => {
+//         //console.log("Agente: " + e.agent.code + "----" + e.agent.constructor.name + "----" + IntermediaryAgent.name);
+//         console.log("Agente: " + e.agent.code + "----" + e.agent.getClass() + "----" + IntermediaryAgent.getClass());
+//     });
 
-console.log("A:" + nodes.filter(e => e.agent.code === "XX"));
-console.log("B:" + nodes.filter(e => e.agent.code === "XX").length);
+// console.log("A:" + nodes.filter(e => e.agent.code === "XX"));
+// console.log("B:" + nodes.filter(e => e.agent.code === "XX").length);
 
 
-console.log("C:" + Math.ceil(0.0732625555549367));
+// console.log("C:" + Math.ceil(0.0732625555549367));
 app.on('ready', createWindow);
 
