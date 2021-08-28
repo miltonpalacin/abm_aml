@@ -5,7 +5,6 @@ import { IRange } from "../helper/Types";
 
 export class UtilityRandom {
 
-
     public static randomOfKeyValue(array: KeyValueMap<string, string>): KeyValue<string, string> {
         const idx = this.randomRange(0, array.getLength() - 1);
         return array.getByIndex(idx);

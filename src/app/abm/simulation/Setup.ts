@@ -14,7 +14,6 @@ export class Setup {
         Setup.init();
     })();
 
-
     private static async init() {
 
         this._values = new Array();

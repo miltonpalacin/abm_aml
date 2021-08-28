@@ -30,7 +30,7 @@ export class Log {
 
     private static _logEnabled: boolean = false;
 
-    private static _logCache: Array<LogItemCache>;
+    private static _logCache: Array<LogItemCache> = new Array();
 
     private static _logCacheEnabled: boolean = false;
 
@@ -60,12 +60,12 @@ export class Log {
 
             fs.access(this._fileName, fs.constants.F_OK, (err) => {
                 if (!err) {
-                    console.error(`${this._fileName}, archivo ya existe.`);
+                    //console.error(`${this._fileName}, archivo ya existe.`);
                     return;
                 }
 
                 fs.closeSync(fs.openSync(this._fileName, 'w'));
-                console.log(`${this._fileName}, archivo creado.`);
+                //console.log(`${this._fileName}, archivo creado.`);
             });
         }
     }
@@ -98,6 +98,10 @@ export class Log {
 
     public static getFileName(): string {
         return this._fileName;
+    }
+
+    public static get logCache(): Array<LogItemCache> {
+        return Log._logCache;
     }
 
     //#####################################

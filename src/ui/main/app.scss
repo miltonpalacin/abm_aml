@@ -1,11 +1,42 @@
+html,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-  }
-   
-  #products {
-    height: 100vh;
-    overflow: auto;
-    padding: 2px;
-  }
-  
+  margin: 0;
+  padding: 0;
+  height: calc(100% - 51px);
+}
+
+#products {
+  height: 100vh;
+  overflow: auto;
+  padding: 2px;
+}
+
+.max-vh {
+  height: 80vh;
+  overflow: auto;
+  padding: 2px;
+}
+.background-black {
+  background-color: black;
+}
+.background-red {
+  background-color: red;
+}
+.background-blue {
+  background-color: blue;
+  height: calc(100% - 100px);
+}
+.background-yellow {
+  background-color: yellow;
+}
+.background-green {
+  background-color: green;
+}
+.background-pink {
+  background-color: pink;
+}

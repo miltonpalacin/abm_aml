@@ -3,16 +3,6 @@ export interface IRange {
     end: number;
 }
 
-// export interface IRangeExp {
-//     start: number;
-//     end: number;
-// }
-
-// export interface IRangeMM {
-//     min: number;
-//     max: number;
-// }
-
 export interface ITypePreSettings {
     rangeMaxTimesWatchList: number;
     rangeMaxTimesCleanWatchList: number;
@@ -68,7 +58,6 @@ export interface ITypeSettings {
         rangeWatchList: IRange
     };
 }
-
 
 export interface ITypeArgNetwork {
 

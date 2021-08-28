@@ -6,7 +6,7 @@ export class Simulation {
 
     public static async run() {
 
-        // Tiempo que viene ser por día
+        // Tiempo que tiene como unidad un día
         let currentTime: number = 0;
 
         try {
@@ -34,7 +34,6 @@ export class Simulation {
                 const args = Setup.local(iteration);
 
                 const network = new Network(args);
-
 
                 /** ********************************************************* */
                 /**                INICIALIZACIÓN DE AGENTES                  */
