@@ -1,7 +1,7 @@
-import { Simulation } from "../abm/simulation/Simulation";
+// import { Simulation } from "../abm/simulation/Simulation";
 
-export function main() {
+// export function main() {
 
-    Simulation.run();
+//     Simulation.run();
     
-}
+// }

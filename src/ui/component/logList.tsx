@@ -25,20 +25,20 @@ const scrollLogToBottom = () => {
 
 const LogList: React.FunctionComponent<IProps> = props => {
   return (
-    <div className="list-log">
-      {/*  <div className="col-md-3 background-green "> */}
+    <div className="list-log p-2">
 
-      <h4>Eventos de la simulación</h4>
+      <h5>Eventos de la simulación</h5>
+
       <ul className="list-group overflow-auto" >
         {props.logs.length > 0 ? (
           props.logs.map(i => (
-            <li key={i.order} className="list-group-item">
+            <li key={i.order} className={`list-group-item ${i.type}`}>
               {i.message}
             </li>
           ))
         ) : (
           <li style={{ float: "left", clear: "both" }} className="list-group-item">
-            .........
+            . . .
           </li>
         )}
         <div ref={logEndRef} />

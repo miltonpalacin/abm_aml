@@ -1,6 +1,5 @@
 import { app, BrowserWindow } from 'electron';
 import isDev from 'electron-is-dev';
-import { UtilityRandom } from '../abm/odd/UtilityRandom';
 
 const createWindow = (): void => {
     let win = new BrowserWindow({
@@ -9,12 +8,13 @@ const createWindow = (): void => {
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
-            enableRemoteModule: true
-        }
+            enableRemoteModule: true,
+        },
+        autoHideMenuBar: true
     });
 
-    win.maximize();
-    
+    //win.maximize();
+
     win.loadURL(
         isDev
             ? 'http://localhost:9000'

@@ -1,60 +1,62 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import "./app.scss";
-import "bootswatch/dist/minty/bootstrap.min.css";
+import "bootswatch/dist/sandstone/bootstrap.min.css";
 import { Log, LogItemCache } from '@/app/abm/helper/Log';
 import { LogList, scrollLogToBottom } from '../component/logList';
-// import LogList from '../component/logList';
+import { Simulation } from '@/app/abm/simulation/Simulation';
 
-
-// const logs: Array<LogItemCache> = Log.logCache;
 
 let c = 0;
-// Log.info("prueba.." + c);
+// // Log.info("prueba.." + c);
 
 const App = () => {
 
     const [log, setLog] = useState<Array<LogItemCache>>(Log.logCache)
 
     const updateLog = () => {
-        c++;
-        Log.info("prueba.." + c);
+
         setLog([...Log.logCache]);
         scrollLogToBottom();
     };
 
     useEffect(() => {
-        const logger = setInterval(() => updateLog(), 1000);
+        const logger = setInterval(() => updateLog(), 100);
         return () => clearInterval(logger);
     });
 
+    const onSimulation = () => {
+        // c++;
+        // Log.info("prueba.." + c);
+        Simulation.run();
+    }
 
     return (
         <Fragment>
-            <div className="container-fluid h-100 background-black">
-                <div className="row m-2 p-1 background-red">
-                    <div className="col-md-12 m-2 p-1">
-                        <span>Simulador Agent-Based Modelling y Anti-Money Launndering</span>
+            <div className="container-fluid h-100">
+                <div className="row background-soft-uni p-1 simulation-title">
+                    <div className="col-md-12">
+                        <h3><em>Simulador ABM - AML</em></h3>
                     </div>
                 </div>
-                <div className="row m-2 p-1 background-blue">
-                    <div className="col-md-3">
-                        <span>asdas</span>
-                        <button type="button" className="btn btn-success">
-                            Button
-                        </button>
-                    </div>
-                    <div className="col-md-9 background-yellow">
+                <div className="row background-cream-uni simulation-body">
+
+                    <div className="col-md-9 background-no-uni simulation-draw">
                         <h3>
                             h3. Lorem ipsum dolor sit amet.
                         </h3>
                     </div>
+                    <div className="col-md-3 p-2">
+                        <button type="button" className="btn btn-success" onClick={() => onSimulation()}>
+                            Simular
+                        </button>
+                    </div>
                     {/* <div className="col-md-3 background-green"> */}
-                        
+
                     {/* </div> */}
                 </div>
-                <div className="row mt-auto m-2 p-1 align-items-end background-pink">
-                    <div className="col-md-12 m-2 p-1">
-                    <LogList logs={log}></LogList>
+                <div className="row mt-auto background-gray-uni">
+                    <div className="col-md-12">
+                        <LogList logs={log}></LogList>
                     </div>
                 </div>
             </div>

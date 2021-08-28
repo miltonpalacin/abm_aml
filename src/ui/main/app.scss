@@ -15,12 +15,53 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: calc(100vh - 51px);
+  height: calc(100vh - 190px);
 }
-.list-log ul {
-  min-height: 200px;
-  max-height: 200px;
+
+.list-log {
+  ul {
+    border: 1px dashed rgba(0, 0, 0, 0.3);
+    border-radius: 0 !important;
+    min-height: 200px;
+    max-height: 200px;
+    font-size: 12px;
+    background-color: white;
+    background-color: rgb(248, 248, 248);
+    li {
+      background-color: rgb(248, 248, 248);
+    }
+  }
 }
+
+.simulation-title h3 {
+  color: rgb(55, 3, 3) !important;
+}
+
+.simulation-body {
+  height: calc(100% - 100px);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.simulation-draw {
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.background-soft-uni {
+  background-color: rgb(248, 227, 227);
+}
+
+.background-cream-uni {
+  background-color: rgb(255, 248, 217);
+}
+
+.background-no-uni {
+  background-color: white;
+}
+.background-gray-uni {
+  background-color: rgb(248, 248, 248);
+}
+
 // #products {
 //   height: 100vh;
 //   overflow: auto;
@@ -32,22 +73,22 @@ body {
 //   overflow: auto;
 //   padding: 2px;
 // }
-.background-black {
-  background-color: black;
-}
-.background-red {
-  background-color: red;
-}
-.background-blue {
-  background-color: blue;
-  height: calc(100% - 100px);
-}
-.background-yellow {
-  background-color: yellow;
-}
-.background-green {
-  background-color: green;
-}
-.background-pink {
-  background-color: pink;
-}
+// .background-black {
+//   background-color: black;
+// }
+// .background-red {
+//   background-color: red;
+// }
+// .background-blue {
+//   background-color: blue;
+//   height: calc(100% - 100px);
+// }
+// .background-yellow {
+//   background-color: yellow;
+// }
+// .background-green {
+//   background-color: green;
+// }
+// .background-pink {
+//   background-color: pink;
+// }

@@ -18,6 +18,7 @@ export interface LogItemCache {
     message: string;
     isRead: boolean;
     order: number;
+    type: string;
 }
 
 export class Log {
@@ -108,12 +109,34 @@ export class Log {
     // MÉTODOS
     //####################################
 
-    private static appendCache(message: string): void {
+    private static appendCache(message: string, type: LogTypes): void {
+
+        let style = "";
+
+        switch (type) {
+            case LogTypes.DEBUG: style = "list-group-item-primary"; break;
+            case LogTypes.ERROR: style = "list-group-item-warning"; break;
+            case LogTypes.FATAL: style = "list-group-item-danger"; break;
+            case LogTypes.INFO: style = "list-group-item-info"; break;
+            case LogTypes.SILLY: style = "list-group-item-light"; break;
+            case LogTypes.WARM: style = "list-group-item-secondary"; break;
+
+        }
+
+        // list - group - item - primary">A simple primary list group item</a>
+        //     < a href = "#" class="list-group-item list-group-item-action list-group-item-secondary" > A simple secondary list group item < /a>
+        //         < a href = "#" class="list-group-item list-group-item-action list-group-item-success" > A simple success list group item < /a>
+        //             < a href = "#" class="list-group-item list-group-item-action list-group-item-danger" > A simple danger list group item < /a>
+        //                 < a href = "#" class="list-group-item list-group-item-action list-group-item-warning" > A simple warning list group item < /a>
+        //                     < a href = "#" class="list-group-item list-group-item-action list-group-item-info" > A simple info list group item < /a>
+        //                         < a href = "#" class="list-group-item list-group-item-action list-group-item-light" > A simple light list group item < /a>
+        //                             < a href = "#" class="list-group-item list-group-item-action list-group-item-dark"
 
         const item: LogItemCache = {
             message: message,
             isRead: false,
-            order: ++this._orderCache
+            order: ++this._orderCache,
+            type: style
         };
 
         const len = this._logCache.push(item);
@@ -136,7 +159,7 @@ export class Log {
         if (detail)
             finalMessage = finalMessage + os.EOL + detail;
 
-        this.appendCache(finalMessage);
+        this.appendCache(finalMessage, type);
     }
 
     private static addLog(type: LogTypes, message: string, detail?: string) {
@@ -161,7 +184,7 @@ export class Log {
 
         if (!this._logCacheEnabled) return;
 
-        this.appendCache(finalMessage);
+        this.appendCache(finalMessage, type);
     }
 
     public static silly(message: string): void {

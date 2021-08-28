@@ -19,7 +19,7 @@ export class Simulation {
             Log.info("=======================");
 
             const config = await Setup.global();
-            Log.info("Coniguración global: " + config)
+            Log.info("Configuración global: ", config)
 
 
             for (let iteration = 0; iteration < config.totalIteration; iteration++) {
@@ -32,6 +32,7 @@ export class Simulation {
                 /** ********************************************************* */
 
                 const args = Setup.local(iteration);
+                Log.info("Configuración global: ", args);
 
                 const network = new Network(args);
 
