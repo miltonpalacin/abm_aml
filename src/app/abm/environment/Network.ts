@@ -76,7 +76,7 @@ export class Network {
         /** ********************************************************* */
 
         // Crear nodos individuales
-        Host.createAgents(this._args.numPopIndivual, this._nodes, IndividualAgent);
+        Host.createAgents(this._args.numPopIndividual, this._nodes, IndividualAgent);
 
         // Crear nodos intermediarios
         Host.createIntermediaries(this._args.numPopIntermediary, this._nodes);
@@ -278,11 +278,11 @@ export class Network {
 
                     // Si el agente tiene alta predisposición al fraude tiene alta probabilidad realizar un movimiento ilícito
                     // Simular que el agente DECIDE si hacer un transacción legal o ilegal
-                    const isStructure = UtilityRandom.roulettePerOne(agentSource.predispositionFraud);
+                    // const isStructure = UtilityRandom.roulettePerOne(agentSource.predispositionFraud);
 
                     const isObserved = amountTransaction >= this._args.amountSuspiciousOperation;
 
-                    if ((agentSource.predispositionFraud >= this._args.maxPropensityFraud && isObserved && isStructure)) {
+                    if ((agentSource.predispositionFraud >= this._args.maxPropensityFraud && isObserved)) {//&& isStructure)) {
 
                         /** ************************************************* */
                         /**        TRANSACCIÓN COMPLEJA FRAUDULENTA           */
@@ -365,7 +365,7 @@ export class Network {
 
                     // Si el agente tiene alta predisposición al fraude tiene alta probabilidad realizar un movimiento ilícito
                     // Simular que el agente DECIDE si hacer un transacción legal o ilegal
-                    const isStructure = UtilityRandom.roulettePerOne(agentSource.predispositionFraud);
+                    //const isStructure = UtilityRandom.roulettePerOne(agentSource.predispositionFraud);
 
                     const isObserved = amountTransaction >= this._args.amountSuspiciousOperation;
 
@@ -375,7 +375,7 @@ export class Network {
 
                     if (!agentTarget.isFrozenAccounts) {
 
-                        if ((agentSource.predispositionFraud >= this._args.maxPropensityFraud && isObserved && isStructure)) {
+                        if ((agentSource.predispositionFraud >= this._args.maxPropensityFraud && isObserved)) { // && isStructure)) {
 
                             /** ************************************************* */
                             /**        TRANSACCIÓN COMPLEJA FRAUDULENTA           */
@@ -457,11 +457,11 @@ export class Network {
 
                     // Si el agente tiene alta predisposición al fraude tiene alta probabilidad realizar un movimiento ilícito
                     // Simular que el agente DECIDE si hacer un transacción legal o ilegal
-                    const isStructure = UtilityRandom.roulettePerOne(agentSource.predispositionFraud);
+                    // const isStructure = UtilityRandom.roulettePerOne(agentSource.predispositionFraud);
 
                     const isObserved = amountTransaction >= this._args.amountSuspiciousOperation;
 
-                    if ((agentSource.predispositionFraud >= this._args.maxPropensityFraud && isObserved && isStructure)) {
+                    if ((agentSource.predispositionFraud >= this._args.maxPropensityFraud && isObserved)) {// && isStructure)) {
 
                         /** ************************************************* */
                         /**        TRANSACCIÓN COMPLEJA FRAUDULENTA           */
@@ -580,7 +580,7 @@ export class Network {
 
                     const agent = <BaseOperationAgent>oneNode.agent;
                     const entity = <IntermediaryAgent>twoNode.agent;
-                    const isIllegal = UtilityRandom.roulettePerOne(agent.predispositionFraud)
+                    const isIllegal = agent.predispositionFraud >= this._args.maxPropensityFraud;//UtilityRandom.roulettePerOne(agent.predispositionFraud)
 
                     // Parte de un balance inicial
                     agent.ledger.moneyIn({

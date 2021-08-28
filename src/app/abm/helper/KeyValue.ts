@@ -16,6 +16,11 @@ export class KeyValue<K, V> {
         return this._value;
     }
 
+
+    public equal(other: KeyValue<K, V>): boolean {
+        return this._key === other.key;
+    }
+
     public toString(): string {
         return this._key + ": " + this._value;
     }

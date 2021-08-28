@@ -1,18 +1,18 @@
 {
-  "totalTimes": 10,
-  "totalIterations": 4,
-  "amountSuspiciousOperation": 10000,
+  "totalTimes": 120,
+  "totalIterations": 200,
+  "amountSuspiciousOperation": 9000,
   "rangeMaxTimesWatchList": {
     "start": 15,
     "end": 25
   },
   "rangeMaxTimesCleanWatchList": {
-    "start": 5,
+    "start": 2,
     "end": 10
   },
   "rangeMaxAmountTransaction": {
     "start": 500,
-    "end": 100000
+    "end": 110000
   },
   "rangePropensityFraud": {
     "start": 0.6,

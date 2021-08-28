@@ -85,7 +85,7 @@ export class Setup {
         const argsCreateAgent: ITypeArgNetwork = {
             totalTimes: Settings.values.totalTimes,
 
-            numPopIndivual: popIndividual,
+            numPopIndividual: popIndividual,
             numPopIntermediary: popIntermediary,
 
             numPopNoProfitBusiness: Math.ceil((sample.rangeNoProfitBusiness / factorPop02) * popBusiness),

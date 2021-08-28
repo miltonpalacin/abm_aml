@@ -112,6 +112,6 @@ export class WhachList {
 
     }
 
-    public getLength(): number { return this._array.length; }
+    public get length(): number { return this._array.length; }
 
 }

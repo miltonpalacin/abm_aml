@@ -63,7 +63,7 @@ export interface ITypeArgNetwork {
 
     totalTimes: Number;
 
-    numPopIndivual: number;
+    numPopIndividual: number;
     numPopIntermediary: number;
     numPopNoProfitBusiness: number;
     numPopProfitBusiness: number;

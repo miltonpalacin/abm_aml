@@ -18,9 +18,9 @@ const App = () => {
 
     const updateLog = () => {
         if (sizeLogBefore - Log.logCache.length !== 0) {
+            scrollLogToBottom();
             sizeLogBefore = Log.logCache.length
             setLog([...Log.logCache]);
-            scrollLogToBottom();
         }
     };
 
