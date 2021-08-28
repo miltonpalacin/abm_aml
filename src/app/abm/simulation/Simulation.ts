@@ -1,3 +1,4 @@
+import { dbCreateSimulation } from "../data/DataBase";
 import { Network } from "../environment/Network";
 import { Log } from "../helper/Log";
 import { Setup, sleep } from "./Setup";
@@ -14,78 +15,94 @@ export class Simulation {
             /** ********************************************************* */
             /**                   CONFIGURACIÓN GLOBAL                   */
             /** ********************************************************* */
-
-            // Log.info("=======================");
-            Log.info("Inicio de la simulación");
-            // Log.info("=======================");
+           
 
             const config = Setup.global();
-            Log.info("Configuración global: ", config)
+            Log.debug("================================================")
+            Log.debug(`Inicio de ${config.totalIteration} simulaciones`);
+            Log.debug("================================================")
             await sleep(awaitTime);
 
-
-            for (let iteration = 0; iteration < config.totalIteration; iteration++) {
+            for (let iteration = 1; iteration <= config.totalIteration; iteration++) {
 
                 // En cada iteración se re-establece el tiempo
                 currentTime = 0;
+
+                Log.info("================================================")
+                Log.info(`SIMULACIÓN => ${iteration}`);
+                Log.info("================================================")
 
                 /** ********************************************************* */
                 /**                    CONFIGURACIÓN LOCAL                    */
                 /** ********************************************************* */
 
                 const args = Setup.local(iteration);
-                Log.info("Configuración global: ", args);
-                await sleep(awaitTime);
                 const network = new Network(args);
+                const idSimulation = await dbCreateSimulation(args)
+                Log.info(`ID Simulation [${idSimulation}]`);
+                Log.info(`Configuración global de la simulación [${iteration}]`, args);
+                await sleep(awaitTime);
 
                 /** ********************************************************* */
                 /**                INICIALIZACIÓN DE AGENTES                  */
                 /** ********************************************************* */
 
                 network.createAgents();
-                Log.info("Agentes creados");
+                Log.info(`Total de agentes creados [${network.nodes.length}]`);
                 await sleep(awaitTime);
+
 
                 /** ********************************************************* */
                 /**                   CREACIÓN DE LA RED                      */
                 /** ********************************************************* */
 
                 network.createNetwork();
-                Log.info("Red creada");
+                Log.info(`Red creada con [${network.edges.length}] enalces`);
                 await sleep(awaitTime);
 
                 /** ******************************************************************* */
                 /**                          SIMULAR TRANSACCIONES                      */
                 /** ******************************************************************* */
 
-                for (let tick = 1; tick < args.totalTimes; tick++) {
+                for (let tick = 1; tick <= args.totalTimes; tick++) {
 
                     currentTime = tick
+
+                    Log.warn(`INICIO DÍA => ${tick} DE LA SIMULACIÓN => ${config.totalIteration}`);
 
                     /** ************************************************************** */
                     /**    OPERACION: DEPOSIT    */
                     /** ************************************************************** */
 
                     network.createDepositOperacion(currentTime);
-                    Log.info("createDepositOperacion");
+                    Log.info(`Depósitos para el día ${tick} de la simulación ${iteration}`);
                     await sleep(awaitTime);
 
                     /** ************************************************************** */
                     /**           OPERACION: TRANSFER, WITHDRAWAL             */
                     /** ************************************************************** */
                     network.createTransferOperation(currentTime);
-                    Log.info("createTransferOperation");
+                    Log.info(`Transferencias para el día ${tick} de la simulación ${iteration}`);
                     await sleep(awaitTime);
 
                     /** ************************************************************** */
                     /**           OPERACION: TRANSFER, WITHDRAWAL             */
                     /** ************************************************************** */
                     network.createWithdrawalOperation(currentTime);
-                    Log.info("createWithdrawalOperation");
+                    Log.info(`Operaciones para el día ${tick} de la simulación ${iteration}`);
                     await sleep(awaitTime);
+
+                    Log.info(`FIN DÍA => ${tick} DE LA SIMULACIÓN => ${config.totalIteration}`);
                 }
 
+                Log.silly(`${network.transactions.length} de transacciones de la simulación ${iteration}`);
+                await sleep(awaitTime);
             }
+
+            Log.debug("================================================")
+            Log.debug(`Fin de ${config.totalIteration} simulaciones`);
+            Log.debug("================================================")
+            await sleep(awaitTime);
 
         } catch (error) {
             Log.fatal(error);
@@ -93,7 +110,3 @@ export class Simulation {
     }
 
 }
-
-// function sleep(ms: number) {
-//     return new Promise(resolve => setTimeout(resolve, ms));
-// }

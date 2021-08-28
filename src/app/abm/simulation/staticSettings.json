@@ -1,6 +1,6 @@
 {
-  "totalTimes": 1,
-  "totalIterations": 1,
+  "totalTimes": 10,
+  "totalIterations": 4,
   "amountSuspiciousOperation": 10000,
   "rangeMaxTimesWatchList": {
     "start": 15,

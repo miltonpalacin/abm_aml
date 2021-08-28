@@ -70,7 +70,7 @@ export class Setup {
 
         const sample = this._values[index];
 
-        Log.debug("DATOS DEL SAMPLE", sample);
+        // Log.debug("DATOS DEL SAMPLE", sample);
         const factorPop01 = sample.rangeBusiness + sample.rangeIndividual;
 
         const popIntermediary = Math.min(Math.ceil(sample.rangeIntermediary), TypeFinantialEntity.data.length);

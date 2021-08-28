@@ -20,6 +20,10 @@ import { WhachList } from "./WhatchList";
 
 export class Network {
 
+    //#####################################
+    // ATRIBUTOS CLASE
+    //#####################################
+
     private _nodes!: ArrayList<Host>;
 
     private _edges!: EdgeList;
@@ -30,6 +34,30 @@ export class Network {
 
     private _args!: ITypeArgNetwork;
 
+    //#####################################
+    // PROPIEDADES
+    //####################################
+
+    public get nodes(): ArrayList<Host> {
+        return this._nodes;
+    }
+
+    public get edges(): EdgeList {
+        return this._edges;
+    }
+
+    public get whachList(): WhachList {
+        return this._whachList;
+    }
+
+    public get transactions(): ArrayList<Transact> {
+        return this._transactions;
+    }
+
+    //#####################################
+    // CONSTRUCTOR
+    //#####################################
+
     public constructor(args: ITypeArgNetwork) {
         this._nodes = ArrayList.create();
         this._edges = EdgeList.create();
@@ -38,6 +66,9 @@ export class Network {
         this._whachList = new WhachList(args.maxTimesWatchList, args.maxTimesCleanWatchList);
     }
 
+    //#####################################
+    // MÉTODOS PRINCIPALEs
+    //#####################################
     public createAgents(): void {
 
         /** ********************************************************* */

@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin")
+const { IgnorePlugin } = require('webpack');
 
 const path = require('path');
 
@@ -42,6 +43,9 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/ui/main/index.html'
-        })
+        }),
+        new IgnorePlugin({
+			resourceRegExp: /^pg-native$/,
+		}),
     ]
 };
