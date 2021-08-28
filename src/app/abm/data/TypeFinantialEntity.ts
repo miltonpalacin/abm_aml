@@ -17,6 +17,7 @@ export class TypeFinantialEntity {
         const formal = TypeIntermediary.data.getByKeyTrust("FORMAL");
         const informal = TypeIntermediary.data.getByKeyTrust("INFORMAL");
 
+        /** SOLO HAY 74 INTERMEDIARIOS */
         TypeFinantialEntity.data.set("BA001", "Banco de Comercio", formal);
         TypeFinantialEntity.data.set("BA002", "Banco de Crédito del Perú", formal);
         TypeFinantialEntity.data.set("BA003", "Banco Interamericano de Finanzas (BanBif)", formal);

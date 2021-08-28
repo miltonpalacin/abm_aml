@@ -8,18 +8,20 @@ export class Simulation {
 
         // Tiempo que tiene como unidad un día
         let currentTime: number = 0;
+        const awaitTime = 5;
 
         try {
             /** ********************************************************* */
             /**                   CONFIGURACIÓN GLOBAL                   */
             /** ********************************************************* */
 
-            Log.info("=======================");
+            // Log.info("=======================");
             Log.info("Inicio de la simulación");
-            Log.info("=======================");
+            // Log.info("=======================");
 
-            const config = await Setup.global();
+            const config = Setup.global();
             Log.info("Configuración global: ", config)
+            await sleep(awaitTime);
 
 
             for (let iteration = 0; iteration < config.totalIteration; iteration++) {
@@ -33,7 +35,7 @@ export class Simulation {
 
                 const args = Setup.local(iteration);
                 Log.info("Configuración global: ", args);
-
+                await sleep(awaitTime);
                 const network = new Network(args);
 
                 /** ********************************************************* */
@@ -41,19 +43,22 @@ export class Simulation {
                 /** ********************************************************* */
 
                 network.createAgents();
+                Log.info("Agentes creados");
+                await sleep(awaitTime);
 
                 /** ********************************************************* */
                 /**                   CREACIÓN DE LA RED                      */
                 /** ********************************************************* */
 
                 network.createNetwork();
+                Log.info("Red creada");
+                await sleep(awaitTime);
 
                 /** ******************************************************************* */
                 /**                          SIMULAR TRANSACCIONES                      */
                 /** ******************************************************************* */
 
-                for (let tick = 1; tick < 100; tick++) {
-
+                for (let tick = 1; tick < args.totalTimes; tick++) {
 
                     currentTime = tick
 
@@ -62,18 +67,22 @@ export class Simulation {
                     /** ************************************************************** */
 
                     network.createDepositOperacion(currentTime);
+                    Log.info("createDepositOperacion");
+                    await sleep(awaitTime);
 
                     /** ************************************************************** */
                     /**           OPERACION: TRANSFER, WITHDRAWAL             */
                     /** ************************************************************** */
                     network.createTransferOperation(currentTime);
+                    Log.info("createTransferOperation");
+                    await sleep(awaitTime);
 
                     /** ************************************************************** */
                     /**           OPERACION: TRANSFER, WITHDRAWAL             */
                     /** ************************************************************** */
                     network.createWithdrawalOperation(currentTime);
-
-                    await sleep(100);
+                    Log.info("createWithdrawalOperation");
+                    await sleep(awaitTime);
                 }
 
             }

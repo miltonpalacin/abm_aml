@@ -41,6 +41,8 @@ export class Log {
 
     private static _orderCache: number = 0;
 
+    private static _dayCurrent: number = 0;
+
     //#####################################
     // CONSTUCTOR BUILD
     //####################################
@@ -55,7 +57,9 @@ export class Log {
 
         if (matches) {
             const format = matches[0];
-            const formatDate = (moment(new Date())).format(format);
+            const today = new Date();
+            Log._dayCurrent = today.getDay()
+            const formatDate = (moment(today)).format(format);
             this._fileName = path.resolve(config.logPath, config.logFileName);
             this._fileName = this._fileName.replace(format, formatDate).replace("{", "").replace("}", "");
 
@@ -83,7 +87,7 @@ export class Log {
     }
 
     private static build() {
-        if (this._fileName) return;
+        if (this._fileName && Log._dayCurrent === (new Date()).getDay()) return;
         this.reBuild();
     }
 
@@ -119,18 +123,9 @@ export class Log {
             case LogTypes.FATAL: style = "list-group-item-danger"; break;
             case LogTypes.INFO: style = "list-group-item-info"; break;
             case LogTypes.SILLY: style = "list-group-item-light"; break;
-            case LogTypes.WARM: style = "list-group-item-secondary"; break;
+            case LogTypes.WARM: style = "list-group-item-success"; break;
 
         }
-
-        // list - group - item - primary">A simple primary list group item</a>
-        //     < a href = "#" class="list-group-item list-group-item-action list-group-item-secondary" > A simple secondary list group item < /a>
-        //         < a href = "#" class="list-group-item list-group-item-action list-group-item-success" > A simple success list group item < /a>
-        //             < a href = "#" class="list-group-item list-group-item-action list-group-item-danger" > A simple danger list group item < /a>
-        //                 < a href = "#" class="list-group-item list-group-item-action list-group-item-warning" > A simple warning list group item < /a>
-        //                     < a href = "#" class="list-group-item list-group-item-action list-group-item-info" > A simple info list group item < /a>
-        //                         < a href = "#" class="list-group-item list-group-item-action list-group-item-light" > A simple light list group item < /a>
-        //                             < a href = "#" class="list-group-item list-group-item-action list-group-item-dark"
 
         const item: LogItemCache = {
             message: message,

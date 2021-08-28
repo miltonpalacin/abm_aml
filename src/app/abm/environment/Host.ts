@@ -10,6 +10,7 @@ import { TypePlace } from "../data/TypePlace";
 import { ArrayList } from "../helper/ArrayList";
 import { IHash } from "../helper/IHash";
 import { KeyValue } from "../helper/KeyValue";
+import { Log } from "../helper/Log";
 import { UtilityRandom } from "../odd/UtilityRandom";
 
 /** Node o nodo que representa al agente, lugar y la cuenta de la entidad financiera */
@@ -105,10 +106,13 @@ export class Host implements IHash {
     public static createIntermediaries(total: number, nodes: ArrayList<Host>): void {
 
         const data = TypeFinantialEntity.data.clone();
+        //Log.debug("data createIntermediaries: " + data.length);
         let idx: number = -1;
 
         // Creando nodo individuales
         for (let _ = 0; _ < total; _++) {
+
+            if (data.length <= 0) break;
             // Crear agente
             let agent = new IntermediaryAgent()
             agent.build();

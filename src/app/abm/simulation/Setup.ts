@@ -3,6 +3,9 @@ import { Settings } from "./Settings";
 import * as fs from 'fs';
 import path from "path";
 import * as csv from 'fast-csv';
+import { Log } from "../helper/Log";
+import { TypeFinantialEntity } from "../data/TypeFinantialEntity";
+import { UtilityRandom } from "../odd/UtilityRandom";
 
 export class Setup {
 
@@ -56,7 +59,7 @@ export class Setup {
 
     }
 
-    public static async global() {
+    public static global() {
 
         return {
             totalIteration: Settings.values.totalIterations
@@ -67,11 +70,15 @@ export class Setup {
 
         const sample = this._values[index];
 
-        const factorPop01 = sample.rangeIntermediary + sample.rangeBusiness + sample.rangeIndividual;
+        Log.debug("DATOS DEL SAMPLE", sample);
+        const factorPop01 = sample.rangeBusiness + sample.rangeIndividual;
 
-        const popIndividual = Math.ceil(sample.rangeIndividual / factorPop01) * sample.rangePopulation;
-        const popBusiness = Math.ceil(sample.rangeBusiness / factorPop01) * sample.rangePopulation;
-        const popIntermediary = Math.ceil(sample.rangeIntermediary / factorPop01) * sample.rangePopulation;
+        const popIntermediary = Math.min(Math.ceil(sample.rangeIntermediary), TypeFinantialEntity.data.length);
+        const totalPopulation = Math.ceil(sample.rangePopulation) - popIntermediary;
+
+        const popIndividual = Math.ceil((sample.rangeIndividual / factorPop01) * totalPopulation);
+        const popBusiness = Math.ceil((sample.rangeBusiness / factorPop01) * totalPopulation);
+        //const popIntermediary = Math.ceil((sample.rangeIntermediary / factorPop01) * sample.rangePopulation);
 
         const factorPop02 = sample.rangeNoProfitBusiness + sample.rangeProfitBusiness + sample.rangeTrustBusiness + sample.rangeShellBusiness;
 
@@ -81,21 +88,21 @@ export class Setup {
             numPopIndivual: popIndividual,
             numPopIntermediary: popIntermediary,
 
-            numPopNoProfitBusiness: Math.ceil(sample.rangeNoProfitBusiness / factorPop02) * popBusiness,
-            numPopProfitBusiness: Math.ceil(sample.rangeProfitBusiness / factorPop02) * popBusiness,
-            numPopTrustBusiness: Math.ceil(sample.rangeTrustBusiness / factorPop02) * popBusiness,
-            numPopShellBusiness: Math.ceil(sample.rangeShellBusiness / factorPop02) * popBusiness,
+            numPopNoProfitBusiness: Math.ceil((sample.rangeNoProfitBusiness / factorPop02) * popBusiness),
+            numPopProfitBusiness: Math.ceil((sample.rangeProfitBusiness / factorPop02) * popBusiness),
+            numPopTrustBusiness: Math.ceil((sample.rangeTrustBusiness / factorPop02) * popBusiness),
+            numPopShellBusiness: Math.ceil((sample.rangeShellBusiness / factorPop02) * popBusiness),
 
             numPopHighPropensityFraud: Math.floor(sample.rangeHighPropensityFraud * (popIndividual + popBusiness)), // En base a solo individuos y negocios
 
             /**  Porcentaje, debido que solo recién en la creación se tiene el dato del 
              numero de agentes con alta propensión a cometer fraude */
-            perPopWatchList: Math.round(sample.rangeWatchList),
+            perPopWatchList: sample.rangeWatchList,
             maxTimesWatchList: Math.round(sample.rangeMaxTimesWatchList),
             maxTimesCleanWatchList: Math.round(sample.rangeMaxTimesCleanWatchList),
 
             maxPropensityFraud: sample.rangePropensityFraud,
-            maxHighPropensityFraud: Math.min(sample.rangePropensityFraud + 0.2, 0.9),
+            maxHighPropensityFraud: UtilityRandom.roundDec(Math.min(sample.rangePropensityFraud + 0.2, 0.9), 5),
 
             perLinkedIntermediary: sample.rangeLinkedIntermediary, //Solo intermediarios
             numMaxLinkedNoIntermediary: sample.rangeMaxLinkedNoIntermediary, // Entre empresa e individuos

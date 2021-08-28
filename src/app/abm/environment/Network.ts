@@ -522,17 +522,17 @@ export class Network {
         }
     }
 
-    private createEdgeFinantial(oneNode: Host, links: number, arraySelect02: Host[]): void {
+    private createEdgeFinantial(oneNode: Host, links: number, arraySelect: Host[]): void {
 
         // Crear conexiones y vecinos
         while (links > 0) {
             //for (let _ = 0; _ < links; _++) {
 
-            if (arraySelect02.length <= 0) break;
+            if (arraySelect.length <= 0) break;
 
             // Elegir de manera aleatoria un índice del arreglo de nodos
-            const idx02 = UtilityRandom.randomRange(0, arraySelect02.length - 1);
-            const twoNode = arraySelect02[idx02];
+            const idx = UtilityRandom.randomRange(0, arraySelect.length - 1);
+            const twoNode = arraySelect[idx];
 
             if (!oneNode.equal(twoNode)) {
 
@@ -545,7 +545,7 @@ export class Network {
                     twoNode.neighbors.push(oneNode);
 
                     // Agregar enlace/edge
-                    this._edges.push(new Edge(oneNode, twoNode));
+                    this._edges.push(edge);
 
                     const agent = <BaseOperationAgent>oneNode.agent;
                     const entity = <IntermediaryAgent>twoNode.agent;
@@ -569,7 +569,7 @@ export class Network {
             }
 
             // Quitar del arreglo para no considerarlo en la siguiente iteración
-            arraySelect02.splice(idx02, 1);
+            arraySelect.splice(idx, 1);
 
         }
     }
@@ -597,11 +597,16 @@ export class Network {
     private oldOrNewNeighbor(oneNode: Host): Host {
         const isNewNeighbor = UtilityRandom.roulettePerOne(this._args.perNewLinkTransact);
         let twoNode!: Host;
-        if (isNewNeighbor) {
+
+        if (!isNewNeighbor) {
+            const neighbors = oneNode.neighborsByNoAgent(IntermediaryAgent);
+            if (neighbors.length > 0) twoNode = neighbors[UtilityRandom.randomRange(0, neighbors.length - 1)];
+        }
+
+        if (isNewNeighbor || twoNode === undefined) {
             this._nodes.filter(e => !e.agent.isAgent(IntermediaryAgent))
                 .some(el => {
-                    if (!oneNode.equal(twoNode)) {
-                        const edge = new Edge(oneNode, twoNode)
+                    if (!oneNode.equal(el)) {
 
                         if (!oneNode.neighbors.contains(el)) {
                             twoNode = el;
@@ -618,11 +623,6 @@ export class Network {
                     }
                 });
 
-        }
-        
-        if (twoNode === undefined) {
-            const neighbors = oneNode.neighborsByNoAgent(IntermediaryAgent);
-            twoNode = neighbors[UtilityRandom.randomRange(0, neighbors.length - 1)];
         }
 
         return twoNode;

@@ -1,0 +1,1094 @@
+2021-08-28 01:23:42.912 INFO [=======================]
+2021-08-28 01:23:42.913 INFO [Inicio de la simulación]
+2021-08-28 01:23:42.914 INFO [=======================]
+2021-08-28 01:23:42.914 INFO [Configuración global: ]
+{
+  "totalIteration": 1
+}
+2021-08-28 01:23:42.915 DEBUG [DATOS DEL SAMPLE]
+{
+  "rangeMaxTimesWatchList": 21.675,
+  "rangeMaxTimesCleanWatchList": 8.6375,
+  "rangeMaxAmountTransaction": 6616.25,
+  "rangePropensityFraud": 0.69525,
+  "rangeLinkedIntermediary": 0.739,
+  "rangeMaxLinkedNoIntermediary": 6.7375,
+  "rangeMaxLinkedIndBusInter": 2.91,
+  "rangeExecuteDeposit": 0.18225,
+  "rangeExecuteTransfer": 0.609,
+  "rangeExecuteWithdrawal": 0.42875,
+  "rangeNoNeighbor": 0.697,
+  "rangeNewLinkTransact": 0.031,
+  "rangePopulation": 1788.5,
+  "rangeIndividual": 0.70925,
+  "rangeBusiness": 0.30475,
+  "rangeIntermediary": 30.64,
+  "rangeNoProfitBusiness": 0.79125,
+  "rangeProfitBusiness": 0.49025,
+  "rangeTrustBusiness": 0.78775,
+  "rangeShellBusiness": 0.66175,
+  "rangeHighPropensityFraud": 0.71075,
+  "rangeWatchList": 0.21825
+}
+2021-08-28 01:23:42.916 INFO [Configuración global: ]
+{
+  "totalTimes": 1,
+  "numPopIndivual": 1230,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 154,
+  "numPopProfitBusiness": 95,
+  "numPopTrustBusiness": 153,
+  "numPopShellBusiness": 129,
+  "numPopHighPropensityFraud": 1250,
+  "perPopWatchList": 0.21825,
+  "maxTimesWatchList": 22,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.69525,
+  "maxHighPropensityFraud": 0.89525,
+  "perLinkedIntermediary": 0.739,
+  "numMaxLinkedNoIntermediary": 6.7375,
+  "numMaxLinkedIndBusInter": 2.91,
+  "perExecuteDeposit": 0.18225,
+  "perExecuteTransfer": 0.609,
+  "perExecuteWithdrawal": 0.42875,
+  "amountSuspiciousOperation": 10000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 6616.25
+  },
+  "perNewLinkTransact": 0.031
+}
+2021-08-28 01:23:52.300 FATAL [Cannot read property 'agent' of undefined]
+TypeError: Cannot read property 'agent' of undefined
+    at Host.equal (http://localhost:9000/renderer.js:67520:21)
+    at http://localhost:9000/renderer.js:68023:30
+    at Array.some (<anonymous>)
+    at Network.oldOrNewNeighbor (http://localhost:9000/renderer.js:68022:18)
+    at _loop_2 (http://localhost:9000/renderer.js:67813:44)
+    at Network.createTransferOperation (http://localhost:9000/renderer.js:67858:27)
+    at Function.Simulation.run (http://localhost:9000/renderer.js:69349:29)
+    at onSimulation (http://localhost:9000/renderer.js:69482:33)
+    at onClick (http://localhost:9000/renderer.js:69494:139)
+    at HTMLUnknownElement.callCallback (http://localhost:9000/renderer.js:34055:14)
+2021-08-28 01:28:40.970 INFO [=======================]
+2021-08-28 01:28:40.971 INFO [Inicio de la simulación]
+2021-08-28 01:28:40.971 INFO [=======================]
+2021-08-28 01:28:40.972 INFO [Configuración global: ]
+{
+  "totalIteration": 1
+}
+2021-08-28 01:28:40.972 DEBUG [DATOS DEL SAMPLE]
+{
+  "rangeMaxTimesWatchList": 21.675,
+  "rangeMaxTimesCleanWatchList": 8.6375,
+  "rangeMaxAmountTransaction": 6616.25,
+  "rangePropensityFraud": 0.69525,
+  "rangeLinkedIntermediary": 0.739,
+  "rangeMaxLinkedNoIntermediary": 6.7375,
+  "rangeMaxLinkedIndBusInter": 2.91,
+  "rangeExecuteDeposit": 0.18225,
+  "rangeExecuteTransfer": 0.609,
+  "rangeExecuteWithdrawal": 0.42875,
+  "rangeNoNeighbor": 0.697,
+  "rangeNewLinkTransact": 0.031,
+  "rangePopulation": 1788.5,
+  "rangeIndividual": 0.70925,
+  "rangeBusiness": 0.30475,
+  "rangeIntermediary": 30.64,
+  "rangeNoProfitBusiness": 0.79125,
+  "rangeProfitBusiness": 0.49025,
+  "rangeTrustBusiness": 0.78775,
+  "rangeShellBusiness": 0.66175,
+  "rangeHighPropensityFraud": 0.71075,
+  "rangeWatchList": 0.21825
+}
+2021-08-28 01:28:40.973 INFO [Configuración global: ]
+{
+  "totalTimes": 1,
+  "numPopIndivual": 1230,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 154,
+  "numPopProfitBusiness": 95,
+  "numPopTrustBusiness": 153,
+  "numPopShellBusiness": 129,
+  "numPopHighPropensityFraud": 1250,
+  "perPopWatchList": 0.21825,
+  "maxTimesWatchList": 22,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.69525,
+  "maxHighPropensityFraud": 0.89525,
+  "perLinkedIntermediary": 0.739,
+  "numMaxLinkedNoIntermediary": 6.7375,
+  "numMaxLinkedIndBusInter": 2.91,
+  "perExecuteDeposit": 0.18225,
+  "perExecuteTransfer": 0.609,
+  "perExecuteWithdrawal": 0.42875,
+  "amountSuspiciousOperation": 10000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 6616.25
+  },
+  "perNewLinkTransact": 0.031
+}
+2021-08-28 01:33:51.013 INFO [=======================]
+2021-08-28 01:33:51.015 INFO [Inicio de la simulación]
+2021-08-28 01:33:51.015 INFO [=======================]
+2021-08-28 01:33:51.015 INFO [Configuración global: ]
+{
+  "totalIteration": 1
+}
+2021-08-28 01:33:51.016 DEBUG [DATOS DEL SAMPLE]
+{
+  "rangeMaxTimesWatchList": 21.675,
+  "rangeMaxTimesCleanWatchList": 8.6375,
+  "rangeMaxAmountTransaction": 6616.25,
+  "rangePropensityFraud": 0.69525,
+  "rangeLinkedIntermediary": 0.739,
+  "rangeMaxLinkedNoIntermediary": 6.7375,
+  "rangeMaxLinkedIndBusInter": 2.91,
+  "rangeExecuteDeposit": 0.18225,
+  "rangeExecuteTransfer": 0.609,
+  "rangeExecuteWithdrawal": 0.42875,
+  "rangeNoNeighbor": 0.697,
+  "rangeNewLinkTransact": 0.031,
+  "rangePopulation": 1788.5,
+  "rangeIndividual": 0.70925,
+  "rangeBusiness": 0.30475,
+  "rangeIntermediary": 30.64,
+  "rangeNoProfitBusiness": 0.79125,
+  "rangeProfitBusiness": 0.49025,
+  "rangeTrustBusiness": 0.78775,
+  "rangeShellBusiness": 0.66175,
+  "rangeHighPropensityFraud": 0.71075,
+  "rangeWatchList": 0.21825
+}
+2021-08-28 01:33:51.017 INFO [Configuración global: ]
+{
+  "totalTimes": 1,
+  "numPopIndivual": 1230,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 154,
+  "numPopProfitBusiness": 95,
+  "numPopTrustBusiness": 153,
+  "numPopShellBusiness": 129,
+  "numPopHighPropensityFraud": 1250,
+  "perPopWatchList": 0.21825,
+  "maxTimesWatchList": 22,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.69525,
+  "maxHighPropensityFraud": 0.89525,
+  "perLinkedIntermediary": 0.739,
+  "numMaxLinkedNoIntermediary": 6.7375,
+  "numMaxLinkedIndBusInter": 2.91,
+  "perExecuteDeposit": 0.18225,
+  "perExecuteTransfer": 0.609,
+  "perExecuteWithdrawal": 0.42875,
+  "amountSuspiciousOperation": 10000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 6616.25
+  },
+  "perNewLinkTransact": 0.031
+}
+2021-08-28 01:34:18.463 INFO [=======================]
+2021-08-28 01:34:18.463 INFO [Inicio de la simulación]
+2021-08-28 01:34:18.463 INFO [=======================]
+2021-08-28 01:34:18.463 INFO [Configuración global: ]
+{
+  "totalIteration": 1
+}
+2021-08-28 01:34:18.463 DEBUG [DATOS DEL SAMPLE]
+{
+  "rangeMaxTimesWatchList": 21.675,
+  "rangeMaxTimesCleanWatchList": 8.6375,
+  "rangeMaxAmountTransaction": 6616.25,
+  "rangePropensityFraud": 0.69525,
+  "rangeLinkedIntermediary": 0.739,
+  "rangeMaxLinkedNoIntermediary": 6.7375,
+  "rangeMaxLinkedIndBusInter": 2.91,
+  "rangeExecuteDeposit": 0.18225,
+  "rangeExecuteTransfer": 0.609,
+  "rangeExecuteWithdrawal": 0.42875,
+  "rangeNoNeighbor": 0.697,
+  "rangeNewLinkTransact": 0.031,
+  "rangePopulation": 1788.5,
+  "rangeIndividual": 0.70925,
+  "rangeBusiness": 0.30475,
+  "rangeIntermediary": 30.64,
+  "rangeNoProfitBusiness": 0.79125,
+  "rangeProfitBusiness": 0.49025,
+  "rangeTrustBusiness": 0.78775,
+  "rangeShellBusiness": 0.66175,
+  "rangeHighPropensityFraud": 0.71075,
+  "rangeWatchList": 0.21825
+}
+2021-08-28 01:34:18.463 INFO [Configuración global: ]
+{
+  "totalTimes": 1,
+  "numPopIndivual": 1230,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 154,
+  "numPopProfitBusiness": 95,
+  "numPopTrustBusiness": 153,
+  "numPopShellBusiness": 129,
+  "numPopHighPropensityFraud": 1250,
+  "perPopWatchList": 0.21825,
+  "maxTimesWatchList": 22,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.69525,
+  "maxHighPropensityFraud": 0.89525,
+  "perLinkedIntermediary": 0.739,
+  "numMaxLinkedNoIntermediary": 6.7375,
+  "numMaxLinkedIndBusInter": 2.91,
+  "perExecuteDeposit": 0.18225,
+  "perExecuteTransfer": 0.609,
+  "perExecuteWithdrawal": 0.42875,
+  "amountSuspiciousOperation": 10000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 6616.25
+  },
+  "perNewLinkTransact": 0.031
+}
+2021-08-28 01:34:26.963 INFO [=======================]
+2021-08-28 01:34:26.963 INFO [Inicio de la simulación]
+2021-08-28 01:34:26.963 INFO [=======================]
+2021-08-28 01:34:26.963 INFO [Configuración global: ]
+{
+  "totalIteration": 1
+}
+2021-08-28 01:34:26.963 DEBUG [DATOS DEL SAMPLE]
+{
+  "rangeMaxTimesWatchList": 21.675,
+  "rangeMaxTimesCleanWatchList": 8.6375,
+  "rangeMaxAmountTransaction": 6616.25,
+  "rangePropensityFraud": 0.69525,
+  "rangeLinkedIntermediary": 0.739,
+  "rangeMaxLinkedNoIntermediary": 6.7375,
+  "rangeMaxLinkedIndBusInter": 2.91,
+  "rangeExecuteDeposit": 0.18225,
+  "rangeExecuteTransfer": 0.609,
+  "rangeExecuteWithdrawal": 0.42875,
+  "rangeNoNeighbor": 0.697,
+  "rangeNewLinkTransact": 0.031,
+  "rangePopulation": 1788.5,
+  "rangeIndividual": 0.70925,
+  "rangeBusiness": 0.30475,
+  "rangeIntermediary": 30.64,
+  "rangeNoProfitBusiness": 0.79125,
+  "rangeProfitBusiness": 0.49025,
+  "rangeTrustBusiness": 0.78775,
+  "rangeShellBusiness": 0.66175,
+  "rangeHighPropensityFraud": 0.71075,
+  "rangeWatchList": 0.21825
+}
+2021-08-28 01:34:26.963 INFO [Configuración global: ]
+{
+  "totalTimes": 1,
+  "numPopIndivual": 1230,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 154,
+  "numPopProfitBusiness": 95,
+  "numPopTrustBusiness": 153,
+  "numPopShellBusiness": 129,
+  "numPopHighPropensityFraud": 1250,
+  "perPopWatchList": 0.21825,
+  "maxTimesWatchList": 22,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.69525,
+  "maxHighPropensityFraud": 0.89525,
+  "perLinkedIntermediary": 0.739,
+  "numMaxLinkedNoIntermediary": 6.7375,
+  "numMaxLinkedIndBusInter": 2.91,
+  "perExecuteDeposit": 0.18225,
+  "perExecuteTransfer": 0.609,
+  "perExecuteWithdrawal": 0.42875,
+  "amountSuspiciousOperation": 10000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 6616.25
+  },
+  "perNewLinkTransact": 0.031
+}
+2021-08-28 01:35:00.992 INFO [=======================]
+2021-08-28 01:35:00.992 INFO [Inicio de la simulación]
+2021-08-28 01:35:00.992 INFO [=======================]
+2021-08-28 01:35:00.992 INFO [Configuración global: ]
+{
+  "totalIteration": 1
+}
+2021-08-28 01:35:00.993 DEBUG [DATOS DEL SAMPLE]
+{
+  "rangeMaxTimesWatchList": 21.675,
+  "rangeMaxTimesCleanWatchList": 8.6375,
+  "rangeMaxAmountTransaction": 6616.25,
+  "rangePropensityFraud": 0.69525,
+  "rangeLinkedIntermediary": 0.739,
+  "rangeMaxLinkedNoIntermediary": 6.7375,
+  "rangeMaxLinkedIndBusInter": 2.91,
+  "rangeExecuteDeposit": 0.18225,
+  "rangeExecuteTransfer": 0.609,
+  "rangeExecuteWithdrawal": 0.42875,
+  "rangeNoNeighbor": 0.697,
+  "rangeNewLinkTransact": 0.031,
+  "rangePopulation": 1788.5,
+  "rangeIndividual": 0.70925,
+  "rangeBusiness": 0.30475,
+  "rangeIntermediary": 30.64,
+  "rangeNoProfitBusiness": 0.79125,
+  "rangeProfitBusiness": 0.49025,
+  "rangeTrustBusiness": 0.78775,
+  "rangeShellBusiness": 0.66175,
+  "rangeHighPropensityFraud": 0.71075,
+  "rangeWatchList": 0.21825
+}
+2021-08-28 01:35:00.993 INFO [Configuración global: ]
+{
+  "totalTimes": 1,
+  "numPopIndivual": 1230,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 154,
+  "numPopProfitBusiness": 95,
+  "numPopTrustBusiness": 153,
+  "numPopShellBusiness": 129,
+  "numPopHighPropensityFraud": 1250,
+  "perPopWatchList": 0.21825,
+  "maxTimesWatchList": 22,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.69525,
+  "maxHighPropensityFraud": 0.89525,
+  "perLinkedIntermediary": 0.739,
+  "numMaxLinkedNoIntermediary": 6.7375,
+  "numMaxLinkedIndBusInter": 2.91,
+  "perExecuteDeposit": 0.18225,
+  "perExecuteTransfer": 0.609,
+  "perExecuteWithdrawal": 0.42875,
+  "amountSuspiciousOperation": 10000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 6616.25
+  },
+  "perNewLinkTransact": 0.031
+}
+2021-08-28 01:35:09.882 INFO [=======================]
+2021-08-28 01:35:09.883 INFO [Inicio de la simulación]
+2021-08-28 01:35:09.883 INFO [=======================]
+2021-08-28 01:35:09.883 INFO [Configuración global: ]
+{
+  "totalIteration": 1
+}
+2021-08-28 01:35:09.883 DEBUG [DATOS DEL SAMPLE]
+{
+  "rangeMaxTimesWatchList": 21.675,
+  "rangeMaxTimesCleanWatchList": 8.6375,
+  "rangeMaxAmountTransaction": 6616.25,
+  "rangePropensityFraud": 0.69525,
+  "rangeLinkedIntermediary": 0.739,
+  "rangeMaxLinkedNoIntermediary": 6.7375,
+  "rangeMaxLinkedIndBusInter": 2.91,
+  "rangeExecuteDeposit": 0.18225,
+  "rangeExecuteTransfer": 0.609,
+  "rangeExecuteWithdrawal": 0.42875,
+  "rangeNoNeighbor": 0.697,
+  "rangeNewLinkTransact": 0.031,
+  "rangePopulation": 1788.5,
+  "rangeIndividual": 0.70925,
+  "rangeBusiness": 0.30475,
+  "rangeIntermediary": 30.64,
+  "rangeNoProfitBusiness": 0.79125,
+  "rangeProfitBusiness": 0.49025,
+  "rangeTrustBusiness": 0.78775,
+  "rangeShellBusiness": 0.66175,
+  "rangeHighPropensityFraud": 0.71075,
+  "rangeWatchList": 0.21825
+}
+2021-08-28 01:35:09.883 INFO [Configuración global: ]
+{
+  "totalTimes": 1,
+  "numPopIndivual": 1230,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 154,
+  "numPopProfitBusiness": 95,
+  "numPopTrustBusiness": 153,
+  "numPopShellBusiness": 129,
+  "numPopHighPropensityFraud": 1250,
+  "perPopWatchList": 0.21825,
+  "maxTimesWatchList": 22,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.69525,
+  "maxHighPropensityFraud": 0.89525,
+  "perLinkedIntermediary": 0.739,
+  "numMaxLinkedNoIntermediary": 6.7375,
+  "numMaxLinkedIndBusInter": 2.91,
+  "perExecuteDeposit": 0.18225,
+  "perExecuteTransfer": 0.609,
+  "perExecuteWithdrawal": 0.42875,
+  "amountSuspiciousOperation": 10000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 6616.25
+  },
+  "perNewLinkTransact": 0.031
+}
+2021-08-28 01:39:22.088 INFO [=======================]
+2021-08-28 01:39:22.090 INFO [Inicio de la simulación]
+2021-08-28 01:39:22.090 INFO [=======================]
+2021-08-28 01:39:22.090 INFO [Configuración global: ]
+{
+  "totalIteration": 1
+}
+2021-08-28 01:39:22.091 DEBUG [DATOS DEL SAMPLE]
+{
+  "rangeMaxTimesWatchList": 21.675,
+  "rangeMaxTimesCleanWatchList": 8.6375,
+  "rangeMaxAmountTransaction": 6616.25,
+  "rangePropensityFraud": 0.69525,
+  "rangeLinkedIntermediary": 0.739,
+  "rangeMaxLinkedNoIntermediary": 6.7375,
+  "rangeMaxLinkedIndBusInter": 2.91,
+  "rangeExecuteDeposit": 0.18225,
+  "rangeExecuteTransfer": 0.609,
+  "rangeExecuteWithdrawal": 0.42875,
+  "rangeNoNeighbor": 0.697,
+  "rangeNewLinkTransact": 0.031,
+  "rangePopulation": 1788.5,
+  "rangeIndividual": 0.70925,
+  "rangeBusiness": 0.30475,
+  "rangeIntermediary": 30.64,
+  "rangeNoProfitBusiness": 0.79125,
+  "rangeProfitBusiness": 0.49025,
+  "rangeTrustBusiness": 0.78775,
+  "rangeShellBusiness": 0.66175,
+  "rangeHighPropensityFraud": 0.71075,
+  "rangeWatchList": 0.21825
+}
+2021-08-28 01:39:22.092 INFO [Configuración global: ]
+{
+  "totalTimes": 1,
+  "numPopIndivual": 1230,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 154,
+  "numPopProfitBusiness": 95,
+  "numPopTrustBusiness": 153,
+  "numPopShellBusiness": 129,
+  "numPopHighPropensityFraud": 1250,
+  "perPopWatchList": 0.21825,
+  "maxTimesWatchList": 22,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.69525,
+  "maxHighPropensityFraud": 0.89525,
+  "perLinkedIntermediary": 0.739,
+  "numMaxLinkedNoIntermediary": 6.7375,
+  "numMaxLinkedIndBusInter": 2.91,
+  "perExecuteDeposit": 0.18225,
+  "perExecuteTransfer": 0.609,
+  "perExecuteWithdrawal": 0.42875,
+  "amountSuspiciousOperation": 10000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 6616.25
+  },
+  "perNewLinkTransact": 0.031
+}
+2021-08-28 01:40:09.341 INFO [=======================]
+2021-08-28 01:40:09.343 INFO [Inicio de la simulación]
+2021-08-28 01:40:09.343 INFO [=======================]
+2021-08-28 01:40:09.343 INFO [Configuración global: ]
+{
+  "totalIteration": 1
+}
+2021-08-28 01:40:09.344 DEBUG [DATOS DEL SAMPLE]
+{
+  "rangeMaxTimesWatchList": 21.675,
+  "rangeMaxTimesCleanWatchList": 8.6375,
+  "rangeMaxAmountTransaction": 6616.25,
+  "rangePropensityFraud": 0.69525,
+  "rangeLinkedIntermediary": 0.739,
+  "rangeMaxLinkedNoIntermediary": 6.7375,
+  "rangeMaxLinkedIndBusInter": 2.91,
+  "rangeExecuteDeposit": 0.18225,
+  "rangeExecuteTransfer": 0.609,
+  "rangeExecuteWithdrawal": 0.42875,
+  "rangeNoNeighbor": 0.697,
+  "rangeNewLinkTransact": 0.031,
+  "rangePopulation": 1788.5,
+  "rangeIndividual": 0.70925,
+  "rangeBusiness": 0.30475,
+  "rangeIntermediary": 30.64,
+  "rangeNoProfitBusiness": 0.79125,
+  "rangeProfitBusiness": 0.49025,
+  "rangeTrustBusiness": 0.78775,
+  "rangeShellBusiness": 0.66175,
+  "rangeHighPropensityFraud": 0.71075,
+  "rangeWatchList": 0.21825
+}
+2021-08-28 01:40:09.345 INFO [Configuración global: ]
+{
+  "totalTimes": 1,
+  "numPopIndivual": 1230,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 154,
+  "numPopProfitBusiness": 95,
+  "numPopTrustBusiness": 153,
+  "numPopShellBusiness": 129,
+  "numPopHighPropensityFraud": 1250,
+  "perPopWatchList": 0.21825,
+  "maxTimesWatchList": 22,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.69525,
+  "maxHighPropensityFraud": 0.89525,
+  "perLinkedIntermediary": 0.739,
+  "numMaxLinkedNoIntermediary": 6.7375,
+  "numMaxLinkedIndBusInter": 2.91,
+  "perExecuteDeposit": 0.18225,
+  "perExecuteTransfer": 0.609,
+  "perExecuteWithdrawal": 0.42875,
+  "amountSuspiciousOperation": 10000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 6616.25
+  },
+  "perNewLinkTransact": 0.031
+}
+2021-08-28 01:40:09.578 INFO [Agente creado]
+2021-08-28 01:46:10.938 INFO [=======================]
+2021-08-28 01:46:10.940 INFO [Inicio de la simulación]
+2021-08-28 01:46:10.942 INFO [Configuración global: ]
+{
+  "totalTimes": 1,
+  "numPopIndivual": 1230,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 154,
+  "numPopProfitBusiness": 95,
+  "numPopTrustBusiness": 153,
+  "numPopShellBusiness": 129,
+  "numPopHighPropensityFraud": 1250,
+  "perPopWatchList": 0.21825,
+  "maxTimesWatchList": 22,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.69525,
+  "maxHighPropensityFraud": 0.89525,
+  "perLinkedIntermediary": 0.739,
+  "numMaxLinkedNoIntermediary": 6.7375,
+  "numMaxLinkedIndBusInter": 2.91,
+  "perExecuteDeposit": 0.18225,
+  "perExecuteTransfer": 0.609,
+  "perExecuteWithdrawal": 0.42875,
+  "amountSuspiciousOperation": 10000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 6616.25
+  },
+  "perNewLinkTransact": 0.031
+}
+2021-08-28 01:46:10.941 DEBUG [DATOS DEL SAMPLE]
+{
+  "rangeMaxTimesWatchList": 21.675,
+  "rangeMaxTimesCleanWatchList": 8.6375,
+  "rangeMaxAmountTransaction": 6616.25,
+  "rangePropensityFraud": 0.69525,
+  "rangeLinkedIntermediary": 0.739,
+  "rangeMaxLinkedNoIntermediary": 6.7375,
+  "rangeMaxLinkedIndBusInter": 2.91,
+  "rangeExecuteDeposit": 0.18225,
+  "rangeExecuteTransfer": 0.609,
+  "rangeExecuteWithdrawal": 0.42875,
+  "rangeNoNeighbor": 0.697,
+  "rangeNewLinkTransact": 0.031,
+  "rangePopulation": 1788.5,
+  "rangeIndividual": 0.70925,
+  "rangeBusiness": 0.30475,
+  "rangeIntermediary": 30.64,
+  "rangeNoProfitBusiness": 0.79125,
+  "rangeProfitBusiness": 0.49025,
+  "rangeTrustBusiness": 0.78775,
+  "rangeShellBusiness": 0.66175,
+  "rangeHighPropensityFraud": 0.71075,
+  "rangeWatchList": 0.21825
+}
+2021-08-28 01:46:11.070 INFO [Agentes creados]
+2021-08-28 01:46:18.249 INFO [Red creada]
+2021-08-28 01:46:10.940 INFO [=======================]
+2021-08-28 01:46:10.940 INFO [Configuración global: ]
+{
+  "totalIteration": 1
+}
+2021-08-28 01:50:02.576 INFO [=======================]
+2021-08-28 01:50:02.578 INFO [Inicio de la simulación]
+2021-08-28 01:50:02.578 INFO [=======================]
+2021-08-28 01:50:02.578 INFO [Configuración global: ]
+{
+  "totalIteration": 1
+}
+2021-08-28 01:50:02.579 DEBUG [DATOS DEL SAMPLE]
+{
+  "rangeMaxTimesWatchList": 21.675,
+  "rangeMaxTimesCleanWatchList": 8.6375,
+  "rangeMaxAmountTransaction": 6616.25,
+  "rangePropensityFraud": 0.69525,
+  "rangeLinkedIntermediary": 0.739,
+  "rangeMaxLinkedNoIntermediary": 6.7375,
+  "rangeMaxLinkedIndBusInter": 2.91,
+  "rangeExecuteDeposit": 0.18225,
+  "rangeExecuteTransfer": 0.609,
+  "rangeExecuteWithdrawal": 0.42875,
+  "rangeNoNeighbor": 0.697,
+  "rangeNewLinkTransact": 0.031,
+  "rangePopulation": 1788.5,
+  "rangeIndividual": 0.70925,
+  "rangeBusiness": 0.30475,
+  "rangeIntermediary": 30.64,
+  "rangeNoProfitBusiness": 0.79125,
+  "rangeProfitBusiness": 0.49025,
+  "rangeTrustBusiness": 0.78775,
+  "rangeShellBusiness": 0.66175,
+  "rangeHighPropensityFraud": 0.71075,
+  "rangeWatchList": 0.21825
+}
+2021-08-28 01:50:02.580 INFO [Configuración global: ]
+{
+  "totalTimes": 1,
+  "numPopIndivual": 1230,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 154,
+  "numPopProfitBusiness": 95,
+  "numPopTrustBusiness": 153,
+  "numPopShellBusiness": 129,
+  "numPopHighPropensityFraud": 1250,
+  "perPopWatchList": 0.21825,
+  "maxTimesWatchList": 22,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.69525,
+  "maxHighPropensityFraud": 0.89525,
+  "perLinkedIntermediary": 0.739,
+  "numMaxLinkedNoIntermediary": 6.7375,
+  "numMaxLinkedIndBusInter": 2.91,
+  "perExecuteDeposit": 0.18225,
+  "perExecuteTransfer": 0.609,
+  "perExecuteWithdrawal": 0.42875,
+  "amountSuspiciousOperation": 10000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 6616.25
+  },
+  "perNewLinkTransact": 0.031
+}
+2021-08-28 01:50:02.713 INFO [Agentes creados]
+2021-08-28 01:50:09.940 INFO [Red creada]
+2021-08-28 02:00:29.528 INFO [Inicio de la simulación]
+2021-08-28 02:00:29.529 INFO [Configuración global: ]
+{
+  "totalIteration": 1
+}
+2021-08-28 02:00:29.540 DEBUG [DATOS DEL SAMPLE]
+{
+  "rangeMaxTimesWatchList": 21.675,
+  "rangeMaxTimesCleanWatchList": 8.6375,
+  "rangeMaxAmountTransaction": 6616.25,
+  "rangePropensityFraud": 0.69525,
+  "rangeLinkedIntermediary": 0.739,
+  "rangeMaxLinkedNoIntermediary": 6.7375,
+  "rangeMaxLinkedIndBusInter": 2.91,
+  "rangeExecuteDeposit": 0.18225,
+  "rangeExecuteTransfer": 0.609,
+  "rangeExecuteWithdrawal": 0.42875,
+  "rangeNoNeighbor": 0.697,
+  "rangeNewLinkTransact": 0.031,
+  "rangePopulation": 1788.5,
+  "rangeIndividual": 0.70925,
+  "rangeBusiness": 0.30475,
+  "rangeIntermediary": 30.64,
+  "rangeNoProfitBusiness": 0.79125,
+  "rangeProfitBusiness": 0.49025,
+  "rangeTrustBusiness": 0.78775,
+  "rangeShellBusiness": 0.66175,
+  "rangeHighPropensityFraud": 0.71075,
+  "rangeWatchList": 0.21825
+}
+2021-08-28 02:00:29.541 INFO [Configuración global: ]
+{
+  "totalTimes": 1,
+  "numPopIndivual": 1230,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 154,
+  "numPopProfitBusiness": 95,
+  "numPopTrustBusiness": 153,
+  "numPopShellBusiness": 129,
+  "numPopHighPropensityFraud": 1250,
+  "perPopWatchList": 0.21825,
+  "maxTimesWatchList": 22,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.69525,
+  "maxHighPropensityFraud": 0.89525,
+  "perLinkedIntermediary": 0.739,
+  "numMaxLinkedNoIntermediary": 6.7375,
+  "numMaxLinkedIndBusInter": 2.91,
+  "perExecuteDeposit": 0.18225,
+  "perExecuteTransfer": 0.609,
+  "perExecuteWithdrawal": 0.42875,
+  "amountSuspiciousOperation": 10000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 6616.25
+  },
+  "perNewLinkTransact": 0.031
+}
+2021-08-28 02:00:29.694 INFO [Agentes creados]
+2021-08-28 02:00:37.141 INFO [Red creada]
+2021-08-28 02:02:15.002 INFO [Inicio de la simulación]
+2021-08-28 02:02:15.004 INFO [Configuración global: ]
+{
+  "totalIteration": 1
+}
+2021-08-28 02:02:15.015 DEBUG [DATOS DEL SAMPLE]
+{
+  "rangeMaxTimesWatchList": 21.675,
+  "rangeMaxTimesCleanWatchList": 8.6375,
+  "rangeMaxAmountTransaction": 6616.25,
+  "rangePropensityFraud": 0.69525,
+  "rangeLinkedIntermediary": 0.739,
+  "rangeMaxLinkedNoIntermediary": 6.7375,
+  "rangeMaxLinkedIndBusInter": 2.91,
+  "rangeExecuteDeposit": 0.18225,
+  "rangeExecuteTransfer": 0.609,
+  "rangeExecuteWithdrawal": 0.42875,
+  "rangeNoNeighbor": 0.697,
+  "rangeNewLinkTransact": 0.031,
+  "rangePopulation": 1788.5,
+  "rangeIndividual": 0.70925,
+  "rangeBusiness": 0.30475,
+  "rangeIntermediary": 30.64,
+  "rangeNoProfitBusiness": 0.79125,
+  "rangeProfitBusiness": 0.49025,
+  "rangeTrustBusiness": 0.78775,
+  "rangeShellBusiness": 0.66175,
+  "rangeHighPropensityFraud": 0.71075,
+  "rangeWatchList": 0.21825
+}
+2021-08-28 02:02:15.015 INFO [Configuración global: ]
+{
+  "totalTimes": 1,
+  "numPopIndivual": 1230,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 154,
+  "numPopProfitBusiness": 95,
+  "numPopTrustBusiness": 153,
+  "numPopShellBusiness": 129,
+  "numPopHighPropensityFraud": 1250,
+  "perPopWatchList": 0.21825,
+  "maxTimesWatchList": 22,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.69525,
+  "maxHighPropensityFraud": 0.89525,
+  "perLinkedIntermediary": 0.739,
+  "numMaxLinkedNoIntermediary": 6.7375,
+  "numMaxLinkedIndBusInter": 2.91,
+  "perExecuteDeposit": 0.18225,
+  "perExecuteTransfer": 0.609,
+  "perExecuteWithdrawal": 0.42875,
+  "amountSuspiciousOperation": 10000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 6616.25
+  },
+  "perNewLinkTransact": 0.031
+}
+2021-08-28 02:02:15.145 INFO [Agentes creados]
+2021-08-28 02:02:22.470 INFO [Red creada]
+2021-08-28 02:02:22.539 INFO [createDepositOperacion]
+2021-08-28 02:02:23.679 INFO [createTransferOperation]
+2021-08-28 02:02:23.729 INFO [createWithdrawalOperation]
+2021-08-28 02:02:23.768 INFO [createDepositOperacion]
+2021-08-28 02:02:24.521 INFO [createTransferOperation]
+2021-08-28 02:02:24.565 INFO [createWithdrawalOperation]
+2021-08-28 02:02:24.604 INFO [createDepositOperacion]
+2021-08-28 02:02:25.251 INFO [createTransferOperation]
+2021-08-28 02:02:25.294 INFO [createWithdrawalOperation]
+2021-08-28 02:02:25.323 INFO [createDepositOperacion]
+2021-08-28 02:02:25.927 INFO [createTransferOperation]
+2021-08-28 02:02:25.969 INFO [createWithdrawalOperation]
+2021-08-28 02:02:25.999 INFO [createDepositOperacion]
+2021-08-28 02:02:26.643 INFO [createTransferOperation]
+2021-08-28 02:02:26.680 INFO [createWithdrawalOperation]
+2021-08-28 02:02:26.708 INFO [createDepositOperacion]
+2021-08-28 02:02:27.197 INFO [createTransferOperation]
+2021-08-28 02:02:27.236 INFO [createWithdrawalOperation]
+2021-08-28 02:02:27.264 INFO [createDepositOperacion]
+2021-08-28 02:02:27.852 INFO [createTransferOperation]
+2021-08-28 02:02:27.891 INFO [createWithdrawalOperation]
+2021-08-28 02:02:27.929 INFO [createDepositOperacion]
+2021-08-28 02:02:28.486 INFO [createTransferOperation]
+2021-08-28 02:02:28.526 INFO [createWithdrawalOperation]
+2021-08-28 02:02:28.554 INFO [createDepositOperacion]
+2021-08-28 02:02:29.051 INFO [createTransferOperation]
+2021-08-28 02:02:29.090 INFO [createWithdrawalOperation]
+2021-08-28 02:02:29.117 INFO [createDepositOperacion]
+2021-08-28 02:02:29.606 INFO [createTransferOperation]
+2021-08-28 02:02:29.644 INFO [createWithdrawalOperation]
+2021-08-28 02:02:29.671 INFO [createDepositOperacion]
+2021-08-28 02:02:30.165 INFO [createTransferOperation]
+2021-08-28 02:02:30.204 INFO [createWithdrawalOperation]
+2021-08-28 02:02:30.231 INFO [createDepositOperacion]
+2021-08-28 02:02:30.705 INFO [createTransferOperation]
+2021-08-28 02:02:30.742 INFO [createWithdrawalOperation]
+2021-08-28 02:02:30.770 INFO [createDepositOperacion]
+2021-08-28 02:02:31.262 INFO [createTransferOperation]
+2021-08-28 02:02:31.300 INFO [createWithdrawalOperation]
+2021-08-28 02:02:31.328 INFO [createDepositOperacion]
+2021-08-28 02:02:31.792 INFO [createTransferOperation]
+2021-08-28 02:02:31.830 INFO [createWithdrawalOperation]
+2021-08-28 02:02:31.858 INFO [createDepositOperacion]
+2021-08-28 02:02:32.331 INFO [createTransferOperation]
+2021-08-28 02:02:32.383 INFO [createWithdrawalOperation]
+2021-08-28 02:02:32.410 INFO [createDepositOperacion]
+2021-08-28 02:02:32.921 INFO [createTransferOperation]
+2021-08-28 02:02:32.959 INFO [createWithdrawalOperation]
+2021-08-28 02:02:32.988 INFO [createDepositOperacion]
+2021-08-28 02:02:33.502 INFO [createTransferOperation]
+2021-08-28 02:02:33.540 INFO [createWithdrawalOperation]
+2021-08-28 02:02:33.568 INFO [createDepositOperacion]
+2021-08-28 02:02:34.006 INFO [createTransferOperation]
+2021-08-28 02:02:34.045 INFO [createWithdrawalOperation]
+2021-08-28 02:02:34.074 INFO [createDepositOperacion]
+2021-08-28 02:02:34.596 INFO [createTransferOperation]
+2021-08-28 02:02:34.634 INFO [createWithdrawalOperation]
+2021-08-28 02:02:34.663 INFO [createDepositOperacion]
+2021-08-28 02:02:35.206 INFO [createTransferOperation]
+2021-08-28 02:02:35.252 INFO [createWithdrawalOperation]
+2021-08-28 02:02:35.285 INFO [createDepositOperacion]
+2021-08-28 02:02:35.850 INFO [createTransferOperation]
+2021-08-28 02:02:35.894 INFO [createWithdrawalOperation]
+2021-08-28 02:02:35.924 INFO [createDepositOperacion]
+2021-08-28 02:02:36.479 INFO [createTransferOperation]
+2021-08-28 02:02:36.517 INFO [createWithdrawalOperation]
+2021-08-28 02:02:36.554 INFO [createDepositOperacion]
+2021-08-28 02:02:37.030 INFO [createTransferOperation]
+2021-08-28 02:02:37.067 INFO [createWithdrawalOperation]
+2021-08-28 02:02:37.095 INFO [createDepositOperacion]
+2021-08-28 02:02:37.541 INFO [createTransferOperation]
+2021-08-28 02:02:37.578 INFO [createWithdrawalOperation]
+2021-08-28 02:02:37.606 INFO [createDepositOperacion]
+2021-08-28 02:02:38.106 INFO [createTransferOperation]
+2021-08-28 02:02:38.159 INFO [createWithdrawalOperation]
+2021-08-28 02:02:38.186 INFO [createDepositOperacion]
+2021-08-28 02:02:38.621 INFO [createTransferOperation]
+2021-08-28 02:02:38.658 INFO [createWithdrawalOperation]
+2021-08-28 02:02:38.686 INFO [createDepositOperacion]
+2021-08-28 02:02:39.144 INFO [createTransferOperation]
+2021-08-28 02:02:39.181 INFO [createWithdrawalOperation]
+2021-08-28 02:02:39.208 INFO [createDepositOperacion]
+2021-08-28 02:02:39.682 INFO [createTransferOperation]
+2021-08-28 02:02:39.732 INFO [createWithdrawalOperation]
+2021-08-28 02:02:39.769 INFO [createDepositOperacion]
+2021-08-28 02:02:40.244 INFO [createTransferOperation]
+2021-08-28 02:02:40.285 INFO [createWithdrawalOperation]
+2021-08-28 02:02:40.314 INFO [createDepositOperacion]
+2021-08-28 02:02:40.784 INFO [createTransferOperation]
+2021-08-28 02:02:40.822 INFO [createWithdrawalOperation]
+2021-08-28 02:02:40.883 INFO [createDepositOperacion]
+2021-08-28 02:02:41.374 INFO [createTransferOperation]
+2021-08-28 02:02:41.412 INFO [createWithdrawalOperation]
+2021-08-28 02:02:41.440 INFO [createDepositOperacion]
+2021-08-28 02:02:41.901 INFO [createTransferOperation]
+2021-08-28 02:02:41.939 INFO [createWithdrawalOperation]
+2021-08-28 02:02:41.967 INFO [createDepositOperacion]
+2021-08-28 02:02:42.410 INFO [createTransferOperation]
+2021-08-28 02:02:42.448 INFO [createWithdrawalOperation]
+2021-08-28 02:02:42.489 INFO [createDepositOperacion]
+2021-08-28 02:02:42.941 INFO [createTransferOperation]
+2021-08-28 02:02:42.979 INFO [createWithdrawalOperation]
+2021-08-28 02:02:43.006 INFO [createDepositOperacion]
+2021-08-28 02:02:43.463 INFO [createTransferOperation]
+2021-08-28 02:02:43.501 INFO [createWithdrawalOperation]
+2021-08-28 02:02:43.529 INFO [createDepositOperacion]
+2021-08-28 02:02:43.965 INFO [createTransferOperation]
+2021-08-28 02:02:44.002 INFO [createWithdrawalOperation]
+2021-08-28 02:02:44.034 INFO [createDepositOperacion]
+2021-08-28 02:02:44.533 INFO [createTransferOperation]
+2021-08-28 02:02:44.571 INFO [createWithdrawalOperation]
+2021-08-28 02:02:44.599 INFO [createDepositOperacion]
+2021-08-28 02:02:45.041 INFO [createTransferOperation]
+2021-08-28 02:02:45.079 INFO [createWithdrawalOperation]
+2021-08-28 02:02:45.107 INFO [createDepositOperacion]
+2021-08-28 02:02:45.549 INFO [createTransferOperation]
+2021-08-28 02:02:45.599 INFO [createWithdrawalOperation]
+2021-08-28 02:02:45.626 INFO [createDepositOperacion]
+2021-08-28 02:02:46.084 INFO [createTransferOperation]
+2021-08-28 02:02:46.135 INFO [createWithdrawalOperation]
+2021-08-28 02:02:46.163 INFO [createDepositOperacion]
+2021-08-28 02:02:46.647 INFO [createTransferOperation]
+2021-08-28 02:02:46.684 INFO [createWithdrawalOperation]
+2021-08-28 02:02:46.719 INFO [createDepositOperacion]
+2021-08-28 02:02:47.265 INFO [createTransferOperation]
+2021-08-28 02:02:47.304 INFO [createWithdrawalOperation]
+2021-08-28 02:02:47.332 INFO [createDepositOperacion]
+2021-08-28 02:02:47.808 INFO [createTransferOperation]
+2021-08-28 02:02:47.852 INFO [createWithdrawalOperation]
+2021-08-28 02:02:47.880 INFO [createDepositOperacion]
+2021-08-28 02:02:48.350 INFO [createTransferOperation]
+2021-08-28 02:02:48.388 INFO [createWithdrawalOperation]
+2021-08-28 02:02:48.426 INFO [createDepositOperacion]
+2021-08-28 02:02:48.903 INFO [createTransferOperation]
+2021-08-28 02:02:48.940 INFO [createWithdrawalOperation]
+2021-08-28 02:02:48.969 INFO [createDepositOperacion]
+2021-08-28 02:02:49.472 INFO [createTransferOperation]
+2021-08-28 02:02:49.509 INFO [createWithdrawalOperation]
+2021-08-28 02:02:49.537 INFO [createDepositOperacion]
+2021-08-28 02:02:49.992 INFO [createTransferOperation]
+2021-08-28 02:02:50.043 INFO [createWithdrawalOperation]
+2021-08-28 02:02:50.076 INFO [createDepositOperacion]
+2021-08-28 02:02:50.582 INFO [createTransferOperation]
+2021-08-28 02:02:50.620 INFO [createWithdrawalOperation]
+2021-08-28 02:02:50.649 INFO [createDepositOperacion]
+2021-08-28 02:02:51.077 INFO [createTransferOperation]
+2021-08-28 02:02:51.115 INFO [createWithdrawalOperation]
+2021-08-28 02:02:51.143 INFO [createDepositOperacion]
+2021-08-28 02:02:51.593 INFO [createTransferOperation]
+2021-08-28 02:02:51.634 INFO [createWithdrawalOperation]
+2021-08-28 02:02:51.662 INFO [createDepositOperacion]
+2021-08-28 02:02:52.142 INFO [createTransferOperation]
+2021-08-28 02:02:52.180 INFO [createWithdrawalOperation]
+2021-08-28 02:02:52.208 INFO [createDepositOperacion]
+2021-08-28 02:02:52.704 INFO [createTransferOperation]
+2021-08-28 02:02:52.744 INFO [createWithdrawalOperation]
+2021-08-28 02:02:52.773 INFO [createDepositOperacion]
+2021-08-28 02:02:53.309 INFO [createTransferOperation]
+2021-08-28 02:02:53.347 INFO [createWithdrawalOperation]
+2021-08-28 02:02:53.375 INFO [createDepositOperacion]
+2021-08-28 02:02:53.877 INFO [createTransferOperation]
+2021-08-28 02:02:53.915 INFO [createWithdrawalOperation]
+2021-08-28 02:02:53.943 INFO [createDepositOperacion]
+2021-08-28 02:02:54.467 INFO [createTransferOperation]
+2021-08-28 02:02:54.506 INFO [createWithdrawalOperation]
+2021-08-28 02:02:54.536 INFO [createDepositOperacion]
+2021-08-28 02:02:54.972 INFO [createTransferOperation]
+2021-08-28 02:02:55.010 INFO [createWithdrawalOperation]
+2021-08-28 02:02:55.038 INFO [createDepositOperacion]
+2021-08-28 02:02:55.589 INFO [createTransferOperation]
+2021-08-28 02:02:55.640 INFO [createWithdrawalOperation]
+2021-08-28 02:02:55.669 INFO [createDepositOperacion]
+2021-08-28 02:02:56.146 INFO [createTransferOperation]
+2021-08-28 02:02:56.186 INFO [createWithdrawalOperation]
+2021-08-28 02:02:56.216 INFO [createDepositOperacion]
+2021-08-28 02:02:56.715 INFO [createTransferOperation]
+2021-08-28 02:02:56.754 INFO [createWithdrawalOperation]
+2021-08-28 02:02:56.784 INFO [createDepositOperacion]
+2021-08-28 02:02:57.227 INFO [createTransferOperation]
+2021-08-28 02:02:57.271 INFO [createWithdrawalOperation]
+2021-08-28 02:02:57.299 INFO [createDepositOperacion]
+2021-08-28 02:02:57.781 INFO [createTransferOperation]
+2021-08-28 02:02:57.821 INFO [createWithdrawalOperation]
+2021-08-28 02:02:57.852 INFO [createDepositOperacion]
+2021-08-28 02:02:58.350 INFO [createTransferOperation]
+2021-08-28 02:02:58.389 INFO [createWithdrawalOperation]
+2021-08-28 02:02:58.418 INFO [createDepositOperacion]
+2021-08-28 02:02:58.892 INFO [createTransferOperation]
+2021-08-28 02:02:58.930 INFO [createWithdrawalOperation]
+2021-08-28 02:02:58.958 INFO [createDepositOperacion]
+2021-08-28 02:02:59.486 INFO [createTransferOperation]
+2021-08-28 02:02:59.524 INFO [createWithdrawalOperation]
+2021-08-28 02:02:59.553 INFO [createDepositOperacion]
+2021-08-28 02:03:00.032 INFO [createTransferOperation]
+2021-08-28 02:03:00.070 INFO [createWithdrawalOperation]
+2021-08-28 02:03:00.100 INFO [createDepositOperacion]
+2021-08-28 02:03:00.580 INFO [createTransferOperation]
+2021-08-28 02:03:00.619 INFO [createWithdrawalOperation]
+2021-08-28 02:03:00.657 INFO [createDepositOperacion]
+2021-08-28 02:03:01.076 INFO [createTransferOperation]
+2021-08-28 02:03:01.113 INFO [createWithdrawalOperation]
+2021-08-28 02:03:01.141 INFO [createDepositOperacion]
+2021-08-28 02:03:01.626 INFO [createTransferOperation]
+2021-08-28 02:03:01.663 INFO [createWithdrawalOperation]
+2021-08-28 02:03:01.691 INFO [createDepositOperacion]
+2021-08-28 02:03:02.153 INFO [createTransferOperation]
+2021-08-28 02:03:02.204 INFO [createWithdrawalOperation]
+2021-08-28 02:03:02.241 INFO [createDepositOperacion]
+2021-08-28 02:03:02.648 INFO [createTransferOperation]
+2021-08-28 02:03:02.686 INFO [createWithdrawalOperation]
+2021-08-28 02:03:02.725 INFO [createDepositOperacion]
+2021-08-28 02:03:03.156 INFO [createTransferOperation]
+2021-08-28 02:03:03.194 INFO [createWithdrawalOperation]
+2021-08-28 02:03:03.223 INFO [createDepositOperacion]
+2021-08-28 02:03:03.723 INFO [createTransferOperation]
+2021-08-28 02:03:03.762 INFO [createWithdrawalOperation]
+2021-08-28 02:03:03.800 INFO [createDepositOperacion]
+2021-08-28 02:03:04.281 INFO [createTransferOperation]
+2021-08-28 02:03:04.319 INFO [createWithdrawalOperation]
+2021-08-28 02:03:04.346 INFO [createDepositOperacion]
+2021-08-28 02:03:04.832 INFO [createTransferOperation]
+2021-08-28 02:03:04.870 INFO [createWithdrawalOperation]
+2021-08-28 02:03:04.898 INFO [createDepositOperacion]
+2021-08-28 02:03:05.425 INFO [createTransferOperation]
+2021-08-28 02:03:05.464 INFO [createWithdrawalOperation]
+2021-08-28 02:03:05.492 INFO [createDepositOperacion]
+2021-08-28 02:03:05.988 INFO [createTransferOperation]
+2021-08-28 02:03:06.026 INFO [createWithdrawalOperation]
+2021-08-28 02:03:06.054 INFO [createDepositOperacion]
+2021-08-28 02:03:06.572 INFO [createTransferOperation]
+2021-08-28 02:03:06.624 INFO [createWithdrawalOperation]
+2021-08-28 02:03:06.653 INFO [createDepositOperacion]
+2021-08-28 02:03:07.131 INFO [createTransferOperation]
+2021-08-28 02:03:07.168 INFO [createWithdrawalOperation]
+2021-08-28 02:03:07.196 INFO [createDepositOperacion]
+2021-08-28 02:03:07.645 INFO [createTransferOperation]
+2021-08-28 02:03:07.683 INFO [createWithdrawalOperation]
+2021-08-28 02:03:07.710 INFO [createDepositOperacion]
+2021-08-28 02:03:08.206 INFO [createTransferOperation]
+2021-08-28 02:03:08.244 INFO [createWithdrawalOperation]
+2021-08-28 02:03:08.272 INFO [createDepositOperacion]
+2021-08-28 02:03:08.682 INFO [createTransferOperation]
+2021-08-28 02:03:08.721 INFO [createWithdrawalOperation]
+2021-08-28 02:03:08.761 INFO [createDepositOperacion]
+2021-08-28 02:03:09.213 INFO [createTransferOperation]
+2021-08-28 02:03:09.265 INFO [createWithdrawalOperation]
+2021-08-28 02:03:09.296 INFO [createDepositOperacion]
+2021-08-28 02:03:09.769 INFO [createTransferOperation]
+2021-08-28 02:03:09.806 INFO [createWithdrawalOperation]
+2021-08-28 02:03:09.834 INFO [createDepositOperacion]
+2021-08-28 02:03:10.284 INFO [createTransferOperation]
+2021-08-28 02:03:10.345 INFO [createWithdrawalOperation]
+2021-08-28 02:03:10.378 INFO [createDepositOperacion]
+2021-08-28 02:03:10.868 INFO [createTransferOperation]
+2021-08-28 02:03:10.907 INFO [createWithdrawalOperation]
+2021-08-28 02:03:10.936 INFO [createDepositOperacion]
+2021-08-28 02:03:11.420 INFO [createTransferOperation]
+2021-08-28 02:03:11.469 INFO [createWithdrawalOperation]
+2021-08-28 02:03:11.507 INFO [createDepositOperacion]
+2021-08-28 02:03:12.016 INFO [createTransferOperation]
+2021-08-28 02:03:12.053 INFO [createWithdrawalOperation]
+2021-08-28 02:03:12.082 INFO [createDepositOperacion]
+2021-08-28 02:03:12.534 INFO [createTransferOperation]
+2021-08-28 02:03:12.570 INFO [createWithdrawalOperation]
+2021-08-28 02:03:12.598 INFO [createDepositOperacion]
+2021-08-28 02:03:13.076 INFO [createTransferOperation]
+2021-08-28 02:03:13.113 INFO [createWithdrawalOperation]
+2021-08-28 02:03:13.154 INFO [createDepositOperacion]
+2021-08-28 02:03:13.600 INFO [createTransferOperation]
+2021-08-28 02:03:13.638 INFO [createWithdrawalOperation]
+2021-08-28 02:03:13.666 INFO [createDepositOperacion]
+2021-08-28 02:03:14.163 INFO [createTransferOperation]
+2021-08-28 02:03:14.202 INFO [createWithdrawalOperation]
+2021-08-28 02:03:14.230 INFO [createDepositOperacion]
+2021-08-28 02:03:14.718 INFO [createTransferOperation]
+2021-08-28 02:03:14.756 INFO [createWithdrawalOperation]
+2021-08-28 02:03:14.784 INFO [createDepositOperacion]
+2021-08-28 02:03:15.295 INFO [createTransferOperation]
+2021-08-28 02:03:15.348 INFO [createWithdrawalOperation]
+2021-08-28 02:03:15.376 INFO [createDepositOperacion]
+2021-08-28 02:03:15.852 INFO [createTransferOperation]
+2021-08-28 02:03:15.890 INFO [createWithdrawalOperation]
+2021-08-28 02:03:15.917 INFO [createDepositOperacion]
+2021-08-28 02:03:16.395 INFO [createTransferOperation]
+2021-08-28 02:03:16.434 INFO [createWithdrawalOperation]
+2021-08-28 02:03:16.463 INFO [createDepositOperacion]
+2021-08-28 02:03:16.959 INFO [createTransferOperation]
+2021-08-28 02:03:16.998 INFO [createWithdrawalOperation]
+2021-08-28 02:03:17.038 INFO [createDepositOperacion]
+2021-08-28 02:03:17.527 INFO [createTransferOperation]
+2021-08-28 02:03:17.565 INFO [createWithdrawalOperation]
+2021-08-28 02:03:17.592 INFO [createDepositOperacion]
+2021-08-28 02:03:18.067 INFO [createTransferOperation]
+2021-08-28 02:03:18.104 INFO [createWithdrawalOperation]
+2021-08-28 02:03:18.132 INFO [createDepositOperacion]
+2021-08-28 02:03:18.593 INFO [createTransferOperation]
+2021-08-28 02:03:18.631 INFO [createWithdrawalOperation]
