@@ -619,6 +619,7 @@ export class Network {
                 });
 
         }
+        
         if (twoNode === undefined) {
             const neighbors = oneNode.neighborsByNoAgent(IntermediaryAgent);
             twoNode = neighbors[UtilityRandom.randomRange(0, neighbors.length - 1)];

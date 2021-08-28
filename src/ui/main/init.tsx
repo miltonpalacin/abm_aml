@@ -37,24 +37,24 @@ const App = () => {
                     </div>
                 </div>
                 <div className="row m-2 p-1 background-blue">
-                    <div className="col-md-2">
+                    <div className="col-md-3">
                         <span>asdas</span>
                         <button type="button" className="btn btn-success">
                             Button
                         </button>
                     </div>
-                    <div className="col-md-7 background-yellow">
+                    <div className="col-md-9 background-yellow">
                         <h3>
                             h3. Lorem ipsum dolor sit amet.
                         </h3>
                     </div>
-                    <div className="col-md-3 background-green">
-                        <LogList logs={log}></LogList>
-                    </div>
+                    {/* <div className="col-md-3 background-green"> */}
+                        
+                    {/* </div> */}
                 </div>
                 <div className="row mt-auto m-2 p-1 align-items-end background-pink">
                     <div className="col-md-12 m-2 p-1">
-                        axsa
+                    <LogList logs={log}></LogList>
                     </div>
                 </div>
             </div>
