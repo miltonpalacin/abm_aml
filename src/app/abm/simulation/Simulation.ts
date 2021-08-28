@@ -40,7 +40,7 @@ export class Simulation {
                 /**                    CONFIGURACIÓN LOCAL                    */
                 /** ********************************************************* */
 
-                const args = Setup.local(iteration);
+                const args = Setup.local((iteration - 1));
                 const network = new Network(args);
                 const idSimulation = await dbCreateSimulation(args, codProceso);
                 Log.info(`ID Simulation [${idSimulation}]`);
