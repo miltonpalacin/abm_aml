@@ -1,3 +1,4 @@
+import moment from "moment";
 import { dbCreateSimulation } from "../data/DataBase";
 import { Network } from "../environment/Network";
 import { Log } from "../helper/Log";
@@ -10,6 +11,7 @@ export class Simulation {
         // Tiempo que tiene como unidad un día
         let currentTime: number = 0;
         const awaitTime = 5;
+        const codProceos = (moment(new Date())).format("YYYYMMDDHHmmss");
 
         try {
             /** ********************************************************* */
@@ -38,7 +40,7 @@ export class Simulation {
 
                 const args = Setup.local(iteration);
                 const network = new Network(args);
-                const idSimulation = await dbCreateSimulation(args)
+                const idSimulation = await dbCreateSimulation(args, codProceos);
                 Log.info(`ID Simulation [${idSimulation}]`);
                 Log.info(`Configuración global de la simulación [${iteration}]`, args);
                 await sleep(awaitTime);
