@@ -136,8 +136,9 @@ export class Log {
 
         const len = this._logCache.push(item);
 
-        if (len > this._logCacheMaxSize)
-            this._logCache.shift();
+        if (len > this._logCacheMaxSize) {
+            this._logCache.splice(0, Math.ceil(0.1 * this._logCacheMaxSize));
+        }
     }
 
     private static addLogCache(type: LogTypes, message: string, detail?: string): void {
