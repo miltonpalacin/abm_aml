@@ -74,7 +74,7 @@ export class Simulation {
 
                     currentTime = tick
 
-                    Log.warn(`INICIO DÍA => ${tick} DE LA SIMULACIÓN => ${config.totalIteration}`);
+                    Log.warn(`INICIO DÍA => ${tick} DE LA SIMULACIÓN => ${iteration}`);
 
                     /** ************************************************************** */
                     /**    OPERACION: DEPOSIT    */
@@ -98,7 +98,7 @@ export class Simulation {
                     Log.info(`Operaciones para el día ${tick} de la simulación ${iteration}`);
                     await sleep(awaitTime);
 
-                    Log.info(`FIN DÍA => ${tick} DE LA SIMULACIÓN => ${config.totalIteration}`);
+                    Log.info(`FIN DÍA => ${tick} DE LA SIMULACIÓN => ${iteration}`);
                 }
 
                 Log.silly(`${network.transactions.length} de transacciones de la simulación ${iteration}`);
