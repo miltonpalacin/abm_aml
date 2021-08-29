@@ -47,7 +47,12 @@ const App = () => {
         setMessageSee("Para red para verlo")
         setStop(false);
         setMessageStop("Cancelar")
-        await Simulation.run(setNetwork, setCurrentArg);
+        await (() => {
+            return new Promise(resolve => {
+                Simulation.run(setNetwork, setCurrentArg);
+                return resolve;
+            });
+        })();
         setRunSimulation(false);
         setSeeNetwork(true);
         setMessageSee("En espera de un red")
@@ -72,6 +77,12 @@ const App = () => {
         if (messageStop === "Cancelar") {
             Setup.cancelarSimulation = true;
             setStop(true);
+
+            setRunSimulation(false);
+            setSeeNetwork(true);
+            setMessageSee("En espera de un red")
+            setStop(true);
+            setMessageStop("En espera de ejecución")
         }
     }
 
@@ -161,16 +172,16 @@ const App = () => {
                             <div className="card-body" style={{ maxHeight: "220px", overflow: "auto" }} >
                                 {currentNode != undefined ? (
                                     <pre>
-                                        <p><span className="fst-italic">Código:</span>{currentNode?.codeShort}</p>
-                                        <p><span className="fst-italic">Tipo:</span>{currentNode?.code}</p>
-                                        <p><span className="fst-italic">Lugar del Agente:</span>{currentNode?.placeAgent}</p>
-                                        <p><span className="fst-italic">Lugar de Movimiento:</span>{currentNode?.placeNode}</p>
-                                        <p><span className="fst-italic">Ingresos:</span>{currentNode?.amountIn}</p>
-                                        <p><span className="fst-italic">Egresos:</span>{currentNode?.amountOut}</p>
-                                        <p><span className="fst-italic">Ingreso Ilegal:</span>{currentNode?.totalIllegalIn}</p>
-                                        <p><span className="fst-italic">Egreso Ilegal:</span>{currentNode?.totalIllegalOut}</p>
-                                        <p><span className="fst-italic">Esta congelado:</span>{currentNode?.isFrozen ? "Sí" : "No"}</p>
-                                        <p><span className="fst-italic">Entidad (Intermediarios):</span>{currentNode?.entityFinantial}</p>
+                                        <p><span className="fst-italic">Código:</span> {currentNode?.codeShort}</p>
+                                        <p><span className="fst-italic">Tipo:</span> {currentNode?.code}</p>
+                                        <p><span className="fst-italic">Lugar del Agente:</span> {currentNode?.placeAgent}</p>
+                                        <p><span className="fst-italic">Lugar de Movimiento:</span> {currentNode?.placeNode}</p>
+                                        <p><span className="fst-italic">Ingresos:</span> {currentNode?.amountIn}</p>
+                                        <p><span className="fst-italic">Egresos:</span> {currentNode?.amountOut}</p>
+                                        <p><span className="fst-italic">Ingreso Ilegal:</span> {currentNode?.totalIllegalIn}</p>
+                                        <p><span className="fst-italic">Egreso Ilegal:</span> {currentNode?.totalIllegalOut}</p>
+                                        <p><span className="fst-italic">Esta congelado:</span> {currentNode?.isFrozen ? "Sí" : "No"}</p>
+                                        <p><span className="fst-italic">Entidad (Intermediarios):</span> {currentNode?.entityFinantial}</p>
                                     </pre>
                                 ) : (<p className="card-text">Presione un agente de la red...</p>)
                                 }

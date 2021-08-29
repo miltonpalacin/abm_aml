@@ -1,6 +1,10 @@
 import { BaseOperationAgent } from "@/app/abm/agent/BaseOperationAgent";
 import { IndividualAgent } from "@/app/abm/agent/IndividualAgent";
 import { IntermediaryAgent } from "@/app/abm/agent/IntermediaryAgent";
+import { NoProfitBusinessAgent } from "@/app/abm/agent/NoProfitBusinessAgent";
+import { ProfitBusinessAgent } from "@/app/abm/agent/ProfitBusinessAgent";
+import { ShellTypeBusinessAgent } from "@/app/abm/agent/ShellTypeBusinessAgent";
+import { TrustFundBusinessAgent } from "@/app/abm/agent/TrustFundBusinessAgent";
 import { Network } from "@/app/abm/environment/Network";
 import { INodeInfo } from "@/app/abm/helper/Types";
 import { Simulation } from "@/app/abm/simulation/Simulation";
@@ -142,6 +146,32 @@ function drawTopology(props: INodeLink) {
         .data(links)
         .join("line")
         .classed("link", true);
+
+    //svg.append("circle").attr("cx", 200).attr("cy", 130).attr("r", 6).style("fill", "#69b3a2");
+    //svg.append("circle").attr("cx", 200).attr("cy", 160).attr("r", 6).style("fill", "#404080");
+    svg.append("circle").attr("cx", 100).attr("cy", 100).attr("r", 5).style("fill", "#325d88");
+    svg.append("circle").attr("cx", 100).attr("cy", 120).attr("r", 5).style("fill", "#325d88");
+    svg.append("circle").attr("cx", 100).attr("cy", 140).attr("r", 5).style("fill", "#325d88");
+    svg.append("circle").attr("cx", 100).attr("cy", 160).attr("r", 5).style("fill", "#325d88");
+    svg.append("circle").attr("cx", 100).attr("cy", 180).attr("r", 5).style("fill", "#325d88");
+    svg.append("circle").attr("cx", 100).attr("cy", 200).attr("r", 5).style("fill", "#325d88");
+    svg.append("circle").attr("cx", 100).attr("cy", 220).attr("r", 5).style("fill", "#325d88");
+
+    svg.append("text").attr("x", 110).attr("y", 100).
+        text("Enlaces/Conexiones: " + network.edges.length).style("font-size", "12px").attr("alignment-baseline", "middle");
+    svg.append("text").attr("x", 110).attr("y", 120).
+        text("Individuos normales: " + network.nodes.filter(n => n.agent.isAgent(IndividualAgent)).length).style("font-size", "12px").attr("alignment-baseline", "middle");
+    svg.append("text").attr("x", 110).attr("y", 140).
+        text("Intermediarios financieros: " + network.nodes.filter(n => n.agent.isAgent(IntermediaryAgent)).length).style("font-size", "12px").attr("alignment-baseline", "middle");
+    svg.append("text").attr("x", 110).attr("y", 160).
+        text("Empresa con fines de lucro: " + network.nodes.filter(n => n.agent.isAgent(ProfitBusinessAgent)).length).style("font-size", "12px").attr("alignment-baseline", "middle");
+    svg.append("text").attr("x", 110).attr("y", 180).
+        text("Empresa sin fines de lucro: " + network.nodes.filter(n => n.agent.isAgent(NoProfitBusinessAgent)).length).style("font-size", "12px").attr("alignment-baseline", "middle");
+    svg.append("text").attr("x", 110).attr("y", 200).
+        text("Empresa fondo fiduciario: " + network.nodes.filter(n => n.agent.isAgent(TrustFundBusinessAgent)).length).style("font-size", "12px").attr("alignment-baseline", "middle");
+    svg.append("text").attr("x", 110).attr("y", 220).
+        text("Empresa fantasma: " + network.nodes.filter(n => n.agent.isAgent(ShellTypeBusinessAgent)).length).style("font-size", "12px").attr("alignment-baseline", "middle");
+
 
 
     const t1: any = svg

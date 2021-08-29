@@ -15,8 +15,8 @@ export default class DrawTopology extends React.Component<IPropsDraw> {
             <>
                 {this.props.network !== undefined ? (
                     <ReactNetworkTopology
-                        width={2024}
-                        height={2024}
+                        width={1600}
+                        height={1200}
                         network={this.props.network}
                         id={'net'}
                         onClick={(node: INodeInfo) => this.props.setInfoNode(node)} />

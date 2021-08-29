@@ -119,7 +119,7 @@ export class Setup {
 
             currentIteration: 0,
             idDatabase: 0,
-            totalIterations: 0
+            totalIterations: 0,
 
         };
         return argsCreateAgent;
