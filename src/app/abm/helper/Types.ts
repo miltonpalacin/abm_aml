@@ -95,4 +95,21 @@ export interface ITypeArgNetwork {
 
     perNewLinkTransact: number;
 
+    currentIteration: number;
+    idDatabase: number;
+    totalIterations: number;
+
+}
+
+export interface INodeInfo {
+    code: string;
+    codeShort: string;
+    placeAgent: string;
+    placeNode: string;
+    amountIn: number;
+    amountOut: number;
+    totalIllegalIn: number;
+    totalIllegalOut: number;
+    isFrozen: boolean;
+    entityFinantial: string;
 }

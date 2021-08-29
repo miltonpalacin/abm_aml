@@ -2,6 +2,7 @@ import { Pool } from "pg";
 import { BaseOperationAgent } from "../agent/BaseOperationAgent";
 import { IntermediaryAgent } from "../agent/IntermediaryAgent";
 import { Network } from "../environment/Network";
+import { Log } from "../helper/Log";
 import { ITypeArgNetwork } from "../helper/Types";
 import { TypeOperation } from "./TypeOperation";
 
@@ -69,7 +70,7 @@ async function dbCreateSimulation(keys: ITypeArgNetwork, codProceso: string) {
         return id;
 
     } catch (error) {
-        console.log(error);
+        Log.fatal(error);
     }
 
 }
@@ -120,7 +121,7 @@ async function dbCreateSimulatioResult(network: Network, idSimulation: number, c
         await pool.query(sql, values)
 
     } catch (error) {
-        console.log(error);
+        Log.fatal(error);
     }
 
 }

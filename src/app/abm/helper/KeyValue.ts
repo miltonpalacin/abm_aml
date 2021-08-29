@@ -1,7 +1,7 @@
 export class KeyValue<K, V> {
 
-    public _key!: K;
-    public _value!: V;
+    private _key!: K;
+    private _value!: V;
 
     public constructor(key: K, value: V) {
         this._key = key;

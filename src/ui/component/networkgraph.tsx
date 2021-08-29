@@ -1,6 +1,9 @@
+import { BaseOperationAgent } from "@/app/abm/agent/BaseOperationAgent";
 import { IndividualAgent } from "@/app/abm/agent/IndividualAgent";
 import { IntermediaryAgent } from "@/app/abm/agent/IntermediaryAgent";
 import { Network } from "@/app/abm/environment/Network";
+import { INodeInfo } from "@/app/abm/helper/Types";
+import { Simulation } from "@/app/abm/simulation/Simulation";
 import { SimulationLinkDatum, SimulationNodeDatum } from "d3";
 import React, { useEffect } from "react";
 import './networkgraph.css';
@@ -19,6 +22,7 @@ let iconSize = 10;
 class HostNode implements SimulationNodeDatum {
     nodeName: string = 'unknown';
     nodeType: NodeType = NodeType.NODE_UNKNOWN;
+    nodeInfo!: INodeInfo;
 
     index?: number;
     x?: number;
@@ -28,10 +32,11 @@ class HostNode implements SimulationNodeDatum {
     fx?: number | null;
     fy?: number | null;
 
-    constructor(name: string, idx: number, type: NodeType) {
+    constructor(name: string, idx: number, type: NodeType, nodeInfo: INodeInfo) {
         this.nodeName = name;
         this.index = idx;
         this.nodeType = type;
+        this.nodeInfo = nodeInfo;
     }
 
 
@@ -74,20 +79,34 @@ function drawTopology(props: INodeLink) {
     const links: HostLink[] = [];
 
     let counter = 0;
-    props.network.nodes.forEach(n => {
+    const network = Simulation.networkCurrent;
+    network.nodes.forEach(n => {
         n.agent.idPivot = counter++;
+
+        const isInter = n.agent.isAgent(IntermediaryAgent);
+        const agent = isInter ? undefined : (n.agent as BaseOperationAgent);
+        const nodeInfo: INodeInfo = {
+            code: n.agent.code,
+            codeShort: n.agent.codeShort,
+            placeAgent: n.agent.place.toString(),
+            placeNode: n.location.toString(),
+            amountIn: isInter ? 0 : agent!.ledger.totalIn,
+            amountOut: isInter ? 0 : agent!.ledger.totalOut,
+            totalIllegalIn: isInter ? 0 : agent!.ledger.totalIllegalIn,
+            totalIllegalOut: isInter ? 0 : agent!.ledger.totalIllegalOut,
+            isFrozen: isInter ? false : agent!.isFrozenAccounts,
+            entityFinantial: isInter ? (n.agent as IntermediaryAgent).finantialEntity.toString() : "-",
+        };
         nodes.push(
-            new HostNode(n.agent.codeShort,
+            new HostNode(
+                n.agent.codeShort,
                 n.agent.idPivot,
-                n.agent.isAgent(IntermediaryAgent) ?
-                    NodeType.NODE_ROUTER : (n.agent.isAgent(IndividualAgent) ?
-                        NodeType.NODE_EDGE : NodeType.NODE_SWITCH)
-            )
-        );
+                (isInter ? NodeType.NODE_ROUTER : (n.agent.isAgent(IndividualAgent) ? NodeType.NODE_EDGE : NodeType.NODE_SWITCH)),
+                nodeInfo));
 
     });
 
-    props.network.edges.forEach(e => {
+    network.edges.forEach(e => {
 
         const link: HostLink = {
             source: e.oneNode.agent.idPivot,
@@ -199,7 +218,7 @@ function drawTopology(props: INodeLink) {
             delete d.fx;
             delete d.fy;
             simulation.alpha(1).restart();
-            if (props.onClick !== undefined) props.onClick(d.nodeName);
+            if (props.onClick !== undefined) props.onClick(d.nodeInfo);
         });
 
     t2
@@ -208,7 +227,7 @@ function drawTopology(props: INodeLink) {
             delete d.fx;
             delete d.fy;
             simulation.alpha(1).restart();
-            if (props.onClick !== undefined) props.onClick(d.nodeName);
+            if (props.onClick !== undefined) props.onClick(d.nodeInfo);
         });
 
     t3
@@ -217,7 +236,7 @@ function drawTopology(props: INodeLink) {
             delete d.fx;
             delete d.fy;
             simulation.alpha(1).restart();
-            if (props.onClick !== undefined) props.onClick(d.nodeName);
+            if (props.onClick !== undefined) props.onClick(d.nodeInfo);
         });
 
 }
@@ -232,24 +251,22 @@ interface INodeLink {
     height: number;
     id: string;
     size?: number;
-    network: Network;
-    onClick?: (host: string) => void;
+    network: number;
+    onClick?: (host: INodeInfo) => void;
 
 }
 
-
-
 let totaLinks = 0;
-
-
+let totChanges = 20;
 
 function ReactNetworkTopology(props: INodeLink) {
 
     useEffect(() => {
-
-        if (totaLinks !== props.network.edges.length) {
-            totaLinks = props.network.edges.length;
-            console.log("D)entro," + props.network.nodes.length + "." + props.network.edges.length);
+        totChanges++;
+        if (totChanges >= 20 && Simulation.networkCurrent && totaLinks !== Simulation.networkCurrent.edges.length) {
+            totChanges = 1;
+            totaLinks = Simulation.networkCurrent.edges.length;
+            console.log("D)entro," + Simulation.networkCurrent.nodes.length + "." + Simulation.networkCurrent.edges.length);
             drawTopology(props);
         }
     });

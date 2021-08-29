@@ -1,6 +1,5 @@
 import { Ledger } from "./Ledger";
 import { BaseAgent } from "./BaseAgent";
-import { KeyValue } from "../helper/KeyValue";
 import { State } from "./State";
 import { Alphabet } from "./Alphabet";
 
@@ -26,7 +25,7 @@ export class BaseOperationAgent extends BaseAgent {
     // Estados del agente
     public static Q1_BALANCE_SITUACION: State = new State("q1", "Balance de situación");
     public static Q2_ESPERA_OPERACION: State = new State("q2", "En espera de algúna operación");
-    public static Q3_REALIZANOD_OPERACION: State = new State("q3", "Realizando operación");
+    public static Q3_REALIZANDO_OPERACION: State = new State("q3", "Realizando operación");
     public static Q4_CUENTA_CONGELADA: State = new State("q4", "Cuentas congeladas");
 
     // Alfabeto del agente
@@ -49,7 +48,7 @@ export class BaseOperationAgent extends BaseAgent {
         this
             .addState(BaseOperationAgent.Q1_BALANCE_SITUACION)
             .addState(BaseOperationAgent.Q2_ESPERA_OPERACION)
-            .addState(BaseOperationAgent.Q3_REALIZANOD_OPERACION)
+            .addState(BaseOperationAgent.Q3_REALIZANDO_OPERACION)
             .addState(BaseOperationAgent.Q4_CUENTA_CONGELADA);
 
         // Estableciendo el estado inicial
@@ -64,12 +63,12 @@ export class BaseOperationAgent extends BaseAgent {
         // Agregar funciones de transición
         this
             .addTransition(BaseOperationAgent.Q1_BALANCE_SITUACION, BaseOperationAgent.A1_ESPERAR, BaseOperationAgent.Q2_ESPERA_OPERACION)
-            .addTransition(BaseOperationAgent.Q1_BALANCE_SITUACION, BaseOperationAgent.A2_REALIZAR, BaseOperationAgent.Q3_REALIZANOD_OPERACION)
+            .addTransition(BaseOperationAgent.Q1_BALANCE_SITUACION, BaseOperationAgent.A2_REALIZAR, BaseOperationAgent.Q3_REALIZANDO_OPERACION)
             .addTransition(BaseOperationAgent.Q2_ESPERA_OPERACION, BaseOperationAgent.A1_ESPERAR, BaseOperationAgent.Q2_ESPERA_OPERACION)
-            .addTransition(BaseOperationAgent.Q2_ESPERA_OPERACION, BaseOperationAgent.A2_REALIZAR, BaseOperationAgent.Q3_REALIZANOD_OPERACION)
-            .addTransition(BaseOperationAgent.Q3_REALIZANOD_OPERACION, BaseOperationAgent.A1_ESPERAR, BaseOperationAgent.Q2_ESPERA_OPERACION)
-            .addTransition(BaseOperationAgent.Q3_REALIZANOD_OPERACION, BaseOperationAgent.A2_REALIZAR, BaseOperationAgent.Q3_REALIZANOD_OPERACION)
-            .addTransition(BaseOperationAgent.Q3_REALIZANOD_OPERACION, BaseOperationAgent.A3_CONGELAR, BaseOperationAgent.Q4_CUENTA_CONGELADA);
+            .addTransition(BaseOperationAgent.Q2_ESPERA_OPERACION, BaseOperationAgent.A2_REALIZAR, BaseOperationAgent.Q3_REALIZANDO_OPERACION)
+            .addTransition(BaseOperationAgent.Q3_REALIZANDO_OPERACION, BaseOperationAgent.A1_ESPERAR, BaseOperationAgent.Q2_ESPERA_OPERACION)
+            .addTransition(BaseOperationAgent.Q3_REALIZANDO_OPERACION, BaseOperationAgent.A2_REALIZAR, BaseOperationAgent.Q3_REALIZANDO_OPERACION)
+            .addTransition(BaseOperationAgent.Q3_REALIZANDO_OPERACION, BaseOperationAgent.A3_CONGELAR, BaseOperationAgent.Q4_CUENTA_CONGELADA);
 
 
         // Agregar estados de aceptación

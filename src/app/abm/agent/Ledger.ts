@@ -75,4 +75,20 @@ export class Ledger {
         return this.totalMoney;
     }
 
+    public get totalOut(): number {
+        return this._expenditure.reduce((s, c) => s + c.amount, 0);
+    }
+
+    public get totalIn(): number {
+        return this._income.reduce((s, c) => s + c.amount, 0);
+    }
+
+    public get totalIllegalOut(): number {
+        return this._expenditure.filter(f => f.isIllegaly).reduce((s, c) => s + c.amount, 0);
+    }
+
+    public get totalIllegalIn(): number {
+        return this._income.filter(f => f.isIllegaly).reduce((s, c) => s + c.amount, 0);
+    }
+
 }

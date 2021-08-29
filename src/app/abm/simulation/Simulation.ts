@@ -1,3 +1,4 @@
+import { StaticTopology } from "@/ui/component/networkgraph";
 import moment from "moment";
 import { dbCreateSimulation, dbCreateSimulatioResult } from "../data/DataBase";
 import { Network } from "../environment/Network";
@@ -6,7 +7,8 @@ import { Setup, sleep } from "./Setup";
 
 export class Simulation {
 
-    public static async run(callback: any) {
+    public static networkCurrent: Network;
+    public static async run(updateGraph: any, updateArgs: any) {
 
         // Tiempo que tiene como unidad un día
         let currentTime: number = 0;
@@ -44,9 +46,14 @@ export class Simulation {
 
                 const args = Setup.local((iteration - 1));
                 const network = new Network(args);
+                Simulation.networkCurrent = network;
                 const idSimulation = await dbCreateSimulation(args, codProceso);
+                args.currentIteration = iteration;
+                args.idDatabase = idSimulation;
+                args.totalIterations = config.totalIteration;
+                updateArgs(args);
                 Log.info(`ID Simulation [${idSimulation}]`);
-                Log.info(`Configuración global de la simulación [${iteration}]`, args);
+                //Log.info(`Configuración global de la simulación [${iteration}]`, args);
                 await sleep(awaitTime);
 
                 /** ********************************************************* */
@@ -63,7 +70,7 @@ export class Simulation {
                 /** ********************************************************* */
 
                 network.createNetwork();
-                callback(network);
+                if (!StaticTopology.stopUpdateTopologia) updateGraph(iteration);
                 await sleep(awaitTime);
                 startTotalEdges = network.edges.length;
                 startTotalWachtlist = network.whachList.length;
@@ -107,7 +114,7 @@ export class Simulation {
                 }
                 if (Setup.cancelarSimulation) break;
 
-                Log.silly(`${network.transactions.length} de transacciones de la simulación ${iteration}`);
+                Log.silly(`${network.transactions.length} transacciones de la simulación ${iteration}`);
                 await dbCreateSimulatioResult(network, idSimulation, codProceso, startTotalEdges, startTotalWachtlist);
                 await sleep(awaitTime);
             }

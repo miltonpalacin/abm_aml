@@ -1,9 +1,11 @@
 import { Network } from '@/app/abm/environment/Network';
+import { INodeInfo } from '@/app/abm/helper/Types';
 import * as React from 'react'
 import { ReactNetworkTopology } from './networkgraph';
 
 interface IPropsDraw {
-    network: Network | undefined;
+    network: number;
+    setInfoNode: (node: INodeInfo) => void;
 }
 
 export default class DrawTopology extends React.Component<IPropsDraw> {
@@ -17,7 +19,7 @@ export default class DrawTopology extends React.Component<IPropsDraw> {
                         height={2024}
                         network={this.props.network}
                         id={'net'}
-                        onClick={(node: string) => console.log('Node clicked : ' + node)} />
+                        onClick={(node: INodeInfo) => this.props.setInfoNode(node)} />
                 ) : <div> <br /><br /> <h3>En espera de la generación de una red...</h3> </div>}
             </>
         );

@@ -3,7 +3,6 @@ import { Settings } from "./Settings";
 import * as fs from 'fs';
 import path from "path";
 import * as csv from 'fast-csv';
-import { Log } from "../helper/Log";
 import { TypeFinantialEntity } from "../data/TypeFinantialEntity";
 import { UtilityRandom } from "../odd/UtilityRandom";
 
@@ -12,7 +11,6 @@ export class Setup {
     private static _fileName: string = path.resolve("./src/app/abm/simulation", "abm-aml.csv");
     private static _values: Array<ITypePreSettings>;
     public static cancelarSimulation: boolean = false;
-
 
     private static _initialize = (() => {
         Setup.init();
@@ -117,7 +115,12 @@ export class Setup {
 
             rangeAmountTransaction: { start: 0, end: sample.rangeMaxAmountTransaction },
 
-            perNewLinkTransact: sample.rangeNewLinkTransact
+            perNewLinkTransact: sample.rangeNewLinkTransact,
+
+            currentIteration: 0,
+            idDatabase: 0,
+            totalIterations: 0
+
         };
         return argsCreateAgent;
     }
