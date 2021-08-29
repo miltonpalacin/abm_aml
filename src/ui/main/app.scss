@@ -46,6 +46,8 @@ body {
 
 .simulation-draw {
   border-right: 1px solid rgba(0, 0, 0, 0.2);
+  height: 100%;
+  overflow: auto;
 }
 
 .background-soft-uni {

@@ -1,0 +1,37 @@
+.link {
+  stroke: #000;
+  stroke-width: 0.2px;
+}
+
+.node {
+  cursor: move;
+}
+
+.circle {
+  cursor: move;
+  stroke: #000;
+  stroke-width: 1px;
+}
+
+.rect {
+  cursor: move;
+  stroke: #000;
+  stroke-width: 1px;
+}
+
+.node.router {
+  fill: #bda3a3;
+}
+
+.node.edge {
+  fill: #fef0e1;
+}
+
+.node.switch {
+  fill: #e1ecfe;
+}
+
+.node.text {
+  pointer-events: none;
+  font: 10px sans-serif;
+}

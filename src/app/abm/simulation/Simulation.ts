@@ -6,7 +6,7 @@ import { Setup, sleep } from "./Setup";
 
 export class Simulation {
 
-    public static async run() {
+    public static async run(callback: any) {
 
         // Tiempo que tiene como unidad un día
         let currentTime: number = 0;
@@ -14,6 +14,7 @@ export class Simulation {
         const codProceso = (moment(new Date())).format("YYYYMMDDHHmmss");
         let startTotalEdges = 0;
         let startTotalWachtlist = 0;
+        Setup.cancelarSimulation = false;
 
         try {
             /** ********************************************************* */
@@ -29,6 +30,7 @@ export class Simulation {
 
             for (let iteration = 1; iteration <= config.totalIteration; iteration++) {
 
+                if (Setup.cancelarSimulation) break;
                 // En cada iteración se re-establece el tiempo
                 currentTime = 0;
 
@@ -61,6 +63,8 @@ export class Simulation {
                 /** ********************************************************* */
 
                 network.createNetwork();
+                callback(network);
+                await sleep(awaitTime);
                 startTotalEdges = network.edges.length;
                 startTotalWachtlist = network.whachList.length;
                 Log.info(`Red creada con [${network.edges.length}] enalces`);
@@ -72,6 +76,7 @@ export class Simulation {
 
                 for (let tick = 1; tick <= args.totalTimes; tick++) {
 
+                    if (Setup.cancelarSimulation) break;
                     currentTime = tick
 
                     Log.warn(`INICIO DÍA => ${tick} DE LA SIMULACIÓN => ${iteration}`);
@@ -100,6 +105,7 @@ export class Simulation {
 
                     Log.info(`FIN DÍA => ${tick} DE LA SIMULACIÓN => ${iteration}`);
                 }
+                if (Setup.cancelarSimulation) break;
 
                 Log.silly(`${network.transactions.length} de transacciones de la simulación ${iteration}`);
                 await dbCreateSimulatioResult(network, idSimulation, codProceso, startTotalEdges, startTotalWachtlist);

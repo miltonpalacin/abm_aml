@@ -13,7 +13,7 @@ const createWindow = (): void => {
         autoHideMenuBar: true
     });
 
-    //win.maximize();
+    win.maximize();
 
     win.loadURL(
         isDev

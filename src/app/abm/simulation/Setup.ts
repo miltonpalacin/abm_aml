@@ -11,6 +11,7 @@ export class Setup {
 
     private static _fileName: string = path.resolve("./src/app/abm/simulation", "abm-aml.csv");
     private static _values: Array<ITypePreSettings>;
+    public static cancelarSimulation: boolean = false;
 
 
     private static _initialize = (() => {

@@ -4,7 +4,10 @@ import "bootswatch/dist/sandstone/bootstrap.min.css";
 import { Log, LogItemCache } from '@/app/abm/helper/Log';
 import { LogList, scrollLogToBottom } from '../component/logList';
 import { Simulation } from '@/app/abm/simulation/Simulation';
-import { sleep } from '@/app/abm/simulation/Setup';
+import { Setup, sleep } from '@/app/abm/simulation/Setup';
+import { Network } from '@/app/abm/environment/Network';
+import DrawTopology from '../component/topology';
+import { StaticTopology } from '../component/networkgraph';
 
 // Para que dentro de app no se cree a cada momento
 let sizeLogBefore: number = 0;
@@ -15,6 +18,13 @@ const App = () => {
 
     const [log, setLog] = useState<Array<LogItemCache>>(Log.logCache);
     const [runSimulation, setRunSimulation] = useState<boolean>(false);
+    const [seeNetwork, setSeeNetwork] = useState<boolean>(true);
+    const [messageSee, setMessageSee] = useState<string>("En espera de un red");
+    const [stop, setStop] = useState<boolean>(true);
+    const [messageStop, setMessageStop] = useState<string>("En espera de ejecución");
+
+
+    const [network, setNetwork] = useState<Network>();
 
     const updateLog = () => {
         if (sizeLogBefore - Log.logCache.length !== 0) {
@@ -33,9 +43,38 @@ const App = () => {
         Log.debug(`INICIO DE ABM en AML`);
         await sleep(10);
         setRunSimulation(true);
-        await Simulation.run();
+        setSeeNetwork(false);
+        setMessageSee("Para red para verlo")
+        setStop(false);
+        setMessageStop("Cancelar")
+        await Simulation.run(setNetwork);
         setRunSimulation(false);
+        setSeeNetwork(true);
+        setMessageSee("En espera de un red")
+        setStop(true);
+        setMessageStop("En espera de ejecución")
     }
+
+    const onSeeNetwork = async () => {
+        if (messageSee === "Para red para verlo") {
+            StaticTopology.stopUpdateTopologia = true;
+            setMessageSee("Activar actualización de red");
+
+        }
+        else {
+            StaticTopology.stopUpdateTopologia = false;
+            setMessageSee("Para red para verlo");
+        }
+    }
+
+
+    const onStop = async () => {
+        if (messageStop === "Cancelar") {
+            Setup.cancelarSimulation = true;
+            setStop(true);
+        }
+    }
+
 
 
     return (
@@ -48,15 +87,20 @@ const App = () => {
                 </div>
                 <div className="row background-cream-uni simulation-body">
 
-                    <div className="col-md-9 background-no-uni simulation-draw">
-                        <h3>
-                            h3. Lorem ipsum dolor sit amet.
-                        </h3>
+                    <div className="col-md-9 background-no-uni p-1 simulation-draw">
+                        <DrawTopology network={network}></DrawTopology>
                     </div>
                     <div className="col-md-3 p-2">
-                        <button type="button" disabled={runSimulation} className="btn btn-success" onClick={() => onSimulation()}>
+                        <button type="button" disabled={runSimulation} className="btn btn-success col-md-12" onClick={() => onSimulation()}>
                             Ejecutar
                         </button>
+                        <button type="button" disabled={stop} className="btn btn-primary col-md-12 mt-2" onClick={() => onStop()}>
+                            {messageStop}
+                        </button>
+                        <button type="button" disabled={seeNetwork} className="btn btn-info col-md-12 mt-2" onClick={() => onSeeNetwork()}>
+                            {messageSee}
+                        </button>
+
                     </div>
                 </div>
                 <div className="row mt-auto background-gray-uni">

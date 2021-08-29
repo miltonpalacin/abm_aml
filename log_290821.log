@@ -1,0 +1,3231 @@
+2021-08-29 02:32:59.677 DEBUG [INICIO DE ABM en AML]
+2021-08-29 02:32:59.692 DEBUG [================================================]
+2021-08-29 02:32:59.692 DEBUG [Inicio de 200 simulaciones]
+2021-08-29 02:32:59.692 DEBUG [================================================]
+2021-08-29 02:32:59.697 INFO [================================================]
+2021-08-29 02:32:59.698 INFO [================================================]
+2021-08-29 02:32:59.698 INFO [SIMULACIÓN => 1]
+2021-08-29 02:32:59.698 INFO [ID Simulation [undefined]]
+2021-08-29 02:32:59.698 INFO [Configuración global de la simulación [1]]
+{
+  "totalTimes": 120,
+  "numPopIndividual": 487,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 48,
+  "numPopProfitBusiness": 51,
+  "numPopTrustBusiness": 21,
+  "numPopShellBusiness": 38,
+  "numPopHighPropensityFraud": 164,
+  "perPopWatchList": 0.23025,
+  "maxTimesWatchList": 23,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.61875,
+  "maxHighPropensityFraud": 0.81875,
+  "perLinkedIntermediary": 0.735,
+  "numMaxLinkedNoIntermediary": 1.0375,
+  "numMaxLinkedIndBusInter": 3.27,
+  "perExecuteDeposit": 0.12975,
+  "perExecuteTransfer": 0.539,
+  "perExecuteWithdrawal": 0.36275,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 106441.25
+  },
+  "perNewLinkTransact": 0.215
+}
+2021-08-29 02:32:59.758 INFO [Total de agentes creados [676]]
+2021-08-29 02:33:00.596 INFO [Red creada con [1928] enalces]
+2021-08-29 02:33:00.605 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:00.623 INFO [Depósitos para el día 1 de la simulación 1]
+2021-08-29 02:33:00.797 INFO [Transferencias para el día 1 de la simulación 1]
+2021-08-29 02:33:00.843 INFO [Operaciones para el día 1 de la simulación 1]
+2021-08-29 02:33:00.852 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:00.852 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:00.869 INFO [Depósitos para el día 2 de la simulación 1]
+2021-08-29 02:33:01.010 INFO [Transferencias para el día 2 de la simulación 1]
+2021-08-29 02:33:01.061 INFO [Operaciones para el día 2 de la simulación 1]
+2021-08-29 02:33:01.067 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:01.067 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:01.086 INFO [Depósitos para el día 3 de la simulación 1]
+2021-08-29 02:33:01.210 INFO [Transferencias para el día 3 de la simulación 1]
+2021-08-29 02:33:01.252 INFO [Operaciones para el día 3 de la simulación 1]
+2021-08-29 02:33:01.260 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:01.260 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:01.278 INFO [Depósitos para el día 4 de la simulación 1]
+2021-08-29 02:33:01.394 INFO [Transferencias para el día 4 de la simulación 1]
+2021-08-29 02:33:01.431 INFO [Operaciones para el día 4 de la simulación 1]
+2021-08-29 02:33:01.438 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:01.438 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:01.449 INFO [Depósitos para el día 5 de la simulación 1]
+2021-08-29 02:33:01.559 INFO [Transferencias para el día 5 de la simulación 1]
+2021-08-29 02:33:01.600 INFO [Operaciones para el día 5 de la simulación 1]
+2021-08-29 02:33:01.607 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:01.607 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:01.620 INFO [Depósitos para el día 6 de la simulación 1]
+2021-08-29 02:33:01.750 INFO [Transferencias para el día 6 de la simulación 1]
+2021-08-29 02:33:01.785 INFO [Operaciones para el día 6 de la simulación 1]
+2021-08-29 02:33:01.794 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:01.794 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:01.807 INFO [Depósitos para el día 7 de la simulación 1]
+2021-08-29 02:33:01.927 INFO [Transferencias para el día 7 de la simulación 1]
+2021-08-29 02:33:01.965 INFO [Operaciones para el día 7 de la simulación 1]
+2021-08-29 02:33:01.971 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:01.971 WARM [INICIO DÍA => 8 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:01.993 INFO [Depósitos para el día 8 de la simulación 1]
+2021-08-29 02:33:02.099 INFO [Transferencias para el día 8 de la simulación 1]
+2021-08-29 02:33:02.142 INFO [Operaciones para el día 8 de la simulación 1]
+2021-08-29 02:33:02.147 INFO [FIN DÍA => 8 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:02.147 WARM [INICIO DÍA => 9 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:02.160 INFO [Depósitos para el día 9 de la simulación 1]
+2021-08-29 02:33:02.270 INFO [Transferencias para el día 9 de la simulación 1]
+2021-08-29 02:33:02.304 INFO [Operaciones para el día 9 de la simulación 1]
+2021-08-29 02:33:02.310 INFO [FIN DÍA => 9 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:02.311 WARM [INICIO DÍA => 10 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:02.323 INFO [Depósitos para el día 10 de la simulación 1]
+2021-08-29 02:33:02.425 INFO [Transferencias para el día 10 de la simulación 1]
+2021-08-29 02:33:02.465 INFO [Operaciones para el día 10 de la simulación 1]
+2021-08-29 02:33:02.475 INFO [FIN DÍA => 10 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:02.475 WARM [INICIO DÍA => 11 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:02.493 INFO [Depósitos para el día 11 de la simulación 1]
+2021-08-29 02:33:02.593 INFO [Transferencias para el día 11 de la simulación 1]
+2021-08-29 02:33:02.629 INFO [Operaciones para el día 11 de la simulación 1]
+2021-08-29 02:33:02.635 INFO [FIN DÍA => 11 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:02.635 WARM [INICIO DÍA => 12 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:02.652 INFO [Depósitos para el día 12 de la simulación 1]
+2021-08-29 02:33:02.769 INFO [Transferencias para el día 12 de la simulación 1]
+2021-08-29 02:33:02.806 INFO [Operaciones para el día 12 de la simulación 1]
+2021-08-29 02:33:02.815 INFO [FIN DÍA => 12 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:02.815 WARM [INICIO DÍA => 13 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:02.828 INFO [Depósitos para el día 13 de la simulación 1]
+2021-08-29 02:33:02.920 INFO [Transferencias para el día 13 de la simulación 1]
+2021-08-29 02:33:02.955 INFO [Operaciones para el día 13 de la simulación 1]
+2021-08-29 02:33:02.962 INFO [FIN DÍA => 13 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:02.962 WARM [INICIO DÍA => 14 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:02.973 INFO [Depósitos para el día 14 de la simulación 1]
+2021-08-29 02:33:03.066 INFO [Transferencias para el día 14 de la simulación 1]
+2021-08-29 02:33:03.098 INFO [Operaciones para el día 14 de la simulación 1]
+2021-08-29 02:33:03.104 INFO [FIN DÍA => 14 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:03.104 WARM [INICIO DÍA => 15 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:03.114 INFO [Depósitos para el día 15 de la simulación 1]
+2021-08-29 02:33:03.216 INFO [Transferencias para el día 15 de la simulación 1]
+2021-08-29 02:33:03.253 INFO [Operaciones para el día 15 de la simulación 1]
+2021-08-29 02:33:03.259 INFO [FIN DÍA => 15 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:03.259 WARM [INICIO DÍA => 16 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:03.274 INFO [Depósitos para el día 16 de la simulación 1]
+2021-08-29 02:33:03.377 INFO [Transferencias para el día 16 de la simulación 1]
+2021-08-29 02:33:03.408 INFO [Operaciones para el día 16 de la simulación 1]
+2021-08-29 02:33:03.414 INFO [FIN DÍA => 16 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:03.414 WARM [INICIO DÍA => 17 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:03.428 INFO [Depósitos para el día 17 de la simulación 1]
+2021-08-29 02:33:03.519 INFO [Transferencias para el día 17 de la simulación 1]
+2021-08-29 02:33:03.554 INFO [Operaciones para el día 17 de la simulación 1]
+2021-08-29 02:33:03.561 INFO [FIN DÍA => 17 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:03.561 WARM [INICIO DÍA => 18 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:03.574 INFO [Depósitos para el día 18 de la simulación 1]
+2021-08-29 02:33:03.678 INFO [Transferencias para el día 18 de la simulación 1]
+2021-08-29 02:33:03.712 INFO [Operaciones para el día 18 de la simulación 1]
+2021-08-29 02:33:03.720 INFO [FIN DÍA => 18 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:03.720 WARM [INICIO DÍA => 19 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:03.735 INFO [Depósitos para el día 19 de la simulación 1]
+2021-08-29 02:33:03.835 INFO [Transferencias para el día 19 de la simulación 1]
+2021-08-29 02:33:03.871 INFO [Operaciones para el día 19 de la simulación 1]
+2021-08-29 02:33:03.878 INFO [FIN DÍA => 19 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:03.895 INFO [Depósitos para el día 20 de la simulación 1]
+2021-08-29 02:33:03.878 WARM [INICIO DÍA => 20 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:04.002 INFO [Transferencias para el día 20 de la simulación 1]
+2021-08-29 02:33:04.039 INFO [Operaciones para el día 20 de la simulación 1]
+2021-08-29 02:33:04.046 INFO [FIN DÍA => 20 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:04.046 WARM [INICIO DÍA => 21 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:04.059 INFO [Depósitos para el día 21 de la simulación 1]
+2021-08-29 02:33:04.153 INFO [Transferencias para el día 21 de la simulación 1]
+2021-08-29 02:33:04.193 INFO [Operaciones para el día 21 de la simulación 1]
+2021-08-29 02:33:04.223 INFO [FIN DÍA => 21 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:04.232 INFO [Depósitos para el día 22 de la simulación 1]
+2021-08-29 02:33:04.223 WARM [INICIO DÍA => 22 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:04.330 INFO [Transferencias para el día 22 de la simulación 1]
+2021-08-29 02:33:04.379 INFO [Operaciones para el día 22 de la simulación 1]
+2021-08-29 02:33:04.386 INFO [FIN DÍA => 22 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:04.386 WARM [INICIO DÍA => 23 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:04.399 INFO [Depósitos para el día 23 de la simulación 1]
+2021-08-29 02:33:04.514 INFO [Transferencias para el día 23 de la simulación 1]
+2021-08-29 02:33:04.554 INFO [Operaciones para el día 23 de la simulación 1]
+2021-08-29 02:33:04.562 INFO [FIN DÍA => 23 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:04.562 WARM [INICIO DÍA => 24 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:04.576 INFO [Depósitos para el día 24 de la simulación 1]
+2021-08-29 02:33:04.694 INFO [Transferencias para el día 24 de la simulación 1]
+2021-08-29 02:33:04.730 INFO [Operaciones para el día 24 de la simulación 1]
+2021-08-29 02:33:04.740 INFO [FIN DÍA => 24 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:04.740 WARM [INICIO DÍA => 25 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:04.754 INFO [Depósitos para el día 25 de la simulación 1]
+2021-08-29 02:33:04.843 INFO [Transferencias para el día 25 de la simulación 1]
+2021-08-29 02:33:04.886 INFO [Operaciones para el día 25 de la simulación 1]
+2021-08-29 02:33:04.893 INFO [FIN DÍA => 25 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:04.893 WARM [INICIO DÍA => 26 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:04.907 INFO [Depósitos para el día 26 de la simulación 1]
+2021-08-29 02:33:05.003 INFO [Transferencias para el día 26 de la simulación 1]
+2021-08-29 02:33:05.040 INFO [Operaciones para el día 26 de la simulación 1]
+2021-08-29 02:33:05.047 INFO [FIN DÍA => 26 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:05.047 WARM [INICIO DÍA => 27 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:05.057 INFO [Depósitos para el día 27 de la simulación 1]
+2021-08-29 02:33:05.149 INFO [Transferencias para el día 27 de la simulación 1]
+2021-08-29 02:33:05.186 INFO [Operaciones para el día 27 de la simulación 1]
+2021-08-29 02:33:05.193 INFO [FIN DÍA => 27 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:05.193 WARM [INICIO DÍA => 28 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:05.206 INFO [Depósitos para el día 28 de la simulación 1]
+2021-08-29 02:33:05.288 INFO [Transferencias para el día 28 de la simulación 1]
+2021-08-29 02:33:05.322 INFO [Operaciones para el día 28 de la simulación 1]
+2021-08-29 02:33:05.328 INFO [FIN DÍA => 28 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:05.328 WARM [INICIO DÍA => 29 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:05.339 INFO [Depósitos para el día 29 de la simulación 1]
+2021-08-29 02:33:05.426 INFO [Transferencias para el día 29 de la simulación 1]
+2021-08-29 02:33:05.465 INFO [Operaciones para el día 29 de la simulación 1]
+2021-08-29 02:33:05.472 WARM [INICIO DÍA => 30 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:05.472 INFO [FIN DÍA => 29 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:05.489 INFO [Depósitos para el día 30 de la simulación 1]
+2021-08-29 02:33:05.564 INFO [Transferencias para el día 30 de la simulación 1]
+2021-08-29 02:33:05.602 INFO [Operaciones para el día 30 de la simulación 1]
+2021-08-29 02:33:05.608 INFO [FIN DÍA => 30 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:05.608 WARM [INICIO DÍA => 31 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:05.620 INFO [Depósitos para el día 31 de la simulación 1]
+2021-08-29 02:33:05.701 INFO [Transferencias para el día 31 de la simulación 1]
+2021-08-29 02:33:05.736 INFO [Operaciones para el día 31 de la simulación 1]
+2021-08-29 02:33:05.742 INFO [FIN DÍA => 31 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:05.742 WARM [INICIO DÍA => 32 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:05.754 INFO [Depósitos para el día 32 de la simulación 1]
+2021-08-29 02:33:05.826 INFO [Transferencias para el día 32 de la simulación 1]
+2021-08-29 02:33:05.860 INFO [Operaciones para el día 32 de la simulación 1]
+2021-08-29 02:33:05.866 INFO [FIN DÍA => 32 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:05.866 WARM [INICIO DÍA => 33 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:05.879 INFO [Depósitos para el día 33 de la simulación 1]
+2021-08-29 02:33:05.959 INFO [Transferencias para el día 33 de la simulación 1]
+2021-08-29 02:33:05.990 INFO [Operaciones para el día 33 de la simulación 1]
+2021-08-29 02:33:05.996 INFO [FIN DÍA => 33 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:05.996 WARM [INICIO DÍA => 34 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:06.012 INFO [Depósitos para el día 34 de la simulación 1]
+2021-08-29 02:33:06.087 INFO [Transferencias para el día 34 de la simulación 1]
+2021-08-29 02:33:06.122 INFO [Operaciones para el día 34 de la simulación 1]
+2021-08-29 02:33:06.128 INFO [FIN DÍA => 34 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:06.139 INFO [Depósitos para el día 35 de la simulación 1]
+2021-08-29 02:33:06.129 WARM [INICIO DÍA => 35 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:06.206 INFO [Transferencias para el día 35 de la simulación 1]
+2021-08-29 02:33:06.239 INFO [Operaciones para el día 35 de la simulación 1]
+2021-08-29 02:33:06.246 INFO [FIN DÍA => 35 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:06.246 WARM [INICIO DÍA => 36 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:06.258 INFO [Depósitos para el día 36 de la simulación 1]
+2021-08-29 02:33:06.323 INFO [Transferencias para el día 36 de la simulación 1]
+2021-08-29 02:33:06.355 INFO [Operaciones para el día 36 de la simulación 1]
+2021-08-29 02:33:06.361 INFO [FIN DÍA => 36 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:06.362 WARM [INICIO DÍA => 37 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:06.373 INFO [Depósitos para el día 37 de la simulación 1]
+2021-08-29 02:33:06.441 INFO [Transferencias para el día 37 de la simulación 1]
+2021-08-29 02:33:06.475 INFO [Operaciones para el día 37 de la simulación 1]
+2021-08-29 02:33:06.481 WARM [INICIO DÍA => 38 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:06.481 INFO [FIN DÍA => 37 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:06.493 INFO [Depósitos para el día 38 de la simulación 1]
+2021-08-29 02:33:06.562 INFO [Transferencias para el día 38 de la simulación 1]
+2021-08-29 02:33:06.600 INFO [Operaciones para el día 38 de la simulación 1]
+2021-08-29 02:33:06.606 INFO [FIN DÍA => 38 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:06.606 WARM [INICIO DÍA => 39 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:06.618 INFO [Depósitos para el día 39 de la simulación 1]
+2021-08-29 02:33:06.684 INFO [Transferencias para el día 39 de la simulación 1]
+2021-08-29 02:33:06.718 INFO [Operaciones para el día 39 de la simulación 1]
+2021-08-29 02:33:06.725 INFO [FIN DÍA => 39 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:06.725 WARM [INICIO DÍA => 40 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:06.737 INFO [Depósitos para el día 40 de la simulación 1]
+2021-08-29 02:33:06.814 INFO [Transferencias para el día 40 de la simulación 1]
+2021-08-29 02:33:06.862 INFO [Operaciones para el día 40 de la simulación 1]
+2021-08-29 02:33:06.869 INFO [FIN DÍA => 40 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:06.869 WARM [INICIO DÍA => 41 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:06.881 INFO [Depósitos para el día 41 de la simulación 1]
+2021-08-29 02:33:06.943 INFO [Transferencias para el día 41 de la simulación 1]
+2021-08-29 02:33:06.972 INFO [Operaciones para el día 41 de la simulación 1]
+2021-08-29 02:33:06.983 INFO [FIN DÍA => 41 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:06.983 WARM [INICIO DÍA => 42 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:06.999 INFO [Depósitos para el día 42 de la simulación 1]
+2021-08-29 02:33:07.070 INFO [Transferencias para el día 42 de la simulación 1]
+2021-08-29 02:33:07.102 INFO [Operaciones para el día 42 de la simulación 1]
+2021-08-29 02:33:07.114 WARM [INICIO DÍA => 43 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:07.113 INFO [FIN DÍA => 42 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:07.128 INFO [Depósitos para el día 43 de la simulación 1]
+2021-08-29 02:33:07.192 INFO [Transferencias para el día 43 de la simulación 1]
+2021-08-29 02:33:07.234 INFO [Operaciones para el día 43 de la simulación 1]
+2021-08-29 02:33:07.246 INFO [FIN DÍA => 43 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:07.246 WARM [INICIO DÍA => 44 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:07.260 INFO [Depósitos para el día 44 de la simulación 1]
+2021-08-29 02:33:07.327 INFO [Transferencias para el día 44 de la simulación 1]
+2021-08-29 02:33:07.362 INFO [Operaciones para el día 44 de la simulación 1]
+2021-08-29 02:33:07.373 INFO [FIN DÍA => 44 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:07.373 WARM [INICIO DÍA => 45 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:07.382 INFO [Depósitos para el día 45 de la simulación 1]
+2021-08-29 02:33:07.447 INFO [Transferencias para el día 45 de la simulación 1]
+2021-08-29 02:33:07.485 INFO [Operaciones para el día 45 de la simulación 1]
+2021-08-29 02:33:07.493 INFO [FIN DÍA => 45 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:07.493 WARM [INICIO DÍA => 46 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:07.506 INFO [Depósitos para el día 46 de la simulación 1]
+2021-08-29 02:33:07.557 INFO [Transferencias para el día 46 de la simulación 1]
+2021-08-29 02:33:07.591 INFO [Operaciones para el día 46 de la simulación 1]
+2021-08-29 02:33:07.598 INFO [FIN DÍA => 46 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:07.598 WARM [INICIO DÍA => 47 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:07.606 INFO [Depósitos para el día 47 de la simulación 1]
+2021-08-29 02:33:07.661 INFO [Transferencias para el día 47 de la simulación 1]
+2021-08-29 02:33:07.698 INFO [Operaciones para el día 47 de la simulación 1]
+2021-08-29 02:33:07.704 INFO [FIN DÍA => 47 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:07.704 WARM [INICIO DÍA => 48 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:07.717 INFO [Depósitos para el día 48 de la simulación 1]
+2021-08-29 02:33:07.781 INFO [Transferencias para el día 48 de la simulación 1]
+2021-08-29 02:33:07.808 INFO [Operaciones para el día 48 de la simulación 1]
+2021-08-29 02:33:07.813 INFO [FIN DÍA => 48 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:07.813 WARM [INICIO DÍA => 49 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:07.824 INFO [Depósitos para el día 49 de la simulación 1]
+2021-08-29 02:33:07.881 INFO [Transferencias para el día 49 de la simulación 1]
+2021-08-29 02:33:07.922 INFO [Operaciones para el día 49 de la simulación 1]
+2021-08-29 02:33:07.928 INFO [FIN DÍA => 49 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:07.928 WARM [INICIO DÍA => 50 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:07.944 INFO [Depósitos para el día 50 de la simulación 1]
+2021-08-29 02:33:08.001 INFO [Transferencias para el día 50 de la simulación 1]
+2021-08-29 02:33:08.055 INFO [Operaciones para el día 50 de la simulación 1]
+2021-08-29 02:33:08.060 INFO [FIN DÍA => 50 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:08.060 WARM [INICIO DÍA => 51 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:08.075 INFO [Depósitos para el día 51 de la simulación 1]
+2021-08-29 02:33:08.129 INFO [Transferencias para el día 51 de la simulación 1]
+2021-08-29 02:33:08.167 INFO [Operaciones para el día 51 de la simulación 1]
+2021-08-29 02:33:08.172 INFO [FIN DÍA => 51 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:08.172 WARM [INICIO DÍA => 52 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:08.181 INFO [Depósitos para el día 52 de la simulación 1]
+2021-08-29 02:33:08.225 INFO [Transferencias para el día 52 de la simulación 1]
+2021-08-29 02:33:08.250 INFO [Operaciones para el día 52 de la simulación 1]
+2021-08-29 02:33:08.256 INFO [FIN DÍA => 52 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:08.256 WARM [INICIO DÍA => 53 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:08.265 INFO [Depósitos para el día 53 de la simulación 1]
+2021-08-29 02:33:08.315 INFO [Transferencias para el día 53 de la simulación 1]
+2021-08-29 02:33:08.353 INFO [Operaciones para el día 53 de la simulación 1]
+2021-08-29 02:33:08.358 INFO [FIN DÍA => 53 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:08.358 WARM [INICIO DÍA => 54 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:08.368 INFO [Depósitos para el día 54 de la simulación 1]
+2021-08-29 02:33:08.426 INFO [Transferencias para el día 54 de la simulación 1]
+2021-08-29 02:33:08.458 INFO [Operaciones para el día 54 de la simulación 1]
+2021-08-29 02:33:08.463 INFO [FIN DÍA => 54 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:08.463 WARM [INICIO DÍA => 55 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:08.473 INFO [Depósitos para el día 55 de la simulación 1]
+2021-08-29 02:33:08.527 INFO [Transferencias para el día 55 de la simulación 1]
+2021-08-29 02:33:08.560 INFO [Operaciones para el día 55 de la simulación 1]
+2021-08-29 02:33:08.565 INFO [FIN DÍA => 55 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:08.565 WARM [INICIO DÍA => 56 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:08.574 INFO [Depósitos para el día 56 de la simulación 1]
+2021-08-29 02:33:08.630 INFO [Transferencias para el día 56 de la simulación 1]
+2021-08-29 02:33:08.661 INFO [Operaciones para el día 56 de la simulación 1]
+2021-08-29 02:33:08.666 INFO [FIN DÍA => 56 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:08.666 WARM [INICIO DÍA => 57 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:08.677 INFO [Depósitos para el día 57 de la simulación 1]
+2021-08-29 02:33:08.731 INFO [Transferencias para el día 57 de la simulación 1]
+2021-08-29 02:33:08.755 INFO [Operaciones para el día 57 de la simulación 1]
+2021-08-29 02:33:08.760 INFO [FIN DÍA => 57 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:08.761 WARM [INICIO DÍA => 58 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:08.769 INFO [Depósitos para el día 58 de la simulación 1]
+2021-08-29 02:33:08.819 INFO [Transferencias para el día 58 de la simulación 1]
+2021-08-29 02:33:08.850 INFO [Operaciones para el día 58 de la simulación 1]
+2021-08-29 02:33:08.856 INFO [FIN DÍA => 58 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:08.856 WARM [INICIO DÍA => 59 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:08.863 INFO [Depósitos para el día 59 de la simulación 1]
+2021-08-29 02:33:08.924 INFO [Transferencias para el día 59 de la simulación 1]
+2021-08-29 02:33:08.961 INFO [Operaciones para el día 59 de la simulación 1]
+2021-08-29 02:33:08.966 WARM [INICIO DÍA => 60 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:08.966 INFO [FIN DÍA => 59 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:08.982 INFO [Depósitos para el día 60 de la simulación 1]
+2021-08-29 02:33:09.043 INFO [Transferencias para el día 60 de la simulación 1]
+2021-08-29 02:33:09.073 INFO [Operaciones para el día 60 de la simulación 1]
+2021-08-29 02:33:09.079 INFO [FIN DÍA => 60 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:09.079 WARM [INICIO DÍA => 61 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:09.089 INFO [Depósitos para el día 61 de la simulación 1]
+2021-08-29 02:33:09.138 INFO [Transferencias para el día 61 de la simulación 1]
+2021-08-29 02:33:09.168 INFO [Operaciones para el día 61 de la simulación 1]
+2021-08-29 02:33:09.173 INFO [FIN DÍA => 61 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:09.173 WARM [INICIO DÍA => 62 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:09.186 INFO [Depósitos para el día 62 de la simulación 1]
+2021-08-29 02:33:09.235 INFO [Transferencias para el día 62 de la simulación 1]
+2021-08-29 02:33:09.261 INFO [Operaciones para el día 62 de la simulación 1]
+2021-08-29 02:33:09.266 INFO [FIN DÍA => 62 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:09.266 WARM [INICIO DÍA => 63 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:09.278 INFO [Depósitos para el día 63 de la simulación 1]
+2021-08-29 02:33:09.330 INFO [Transferencias para el día 63 de la simulación 1]
+2021-08-29 02:33:09.368 INFO [Operaciones para el día 63 de la simulación 1]
+2021-08-29 02:33:09.373 INFO [FIN DÍA => 63 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:09.373 WARM [INICIO DÍA => 64 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:09.388 INFO [Depósitos para el día 64 de la simulación 1]
+2021-08-29 02:33:09.450 INFO [Transferencias para el día 64 de la simulación 1]
+2021-08-29 02:33:09.483 INFO [Operaciones para el día 64 de la simulación 1]
+2021-08-29 02:33:09.488 INFO [FIN DÍA => 64 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:09.488 WARM [INICIO DÍA => 65 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:09.499 INFO [Depósitos para el día 65 de la simulación 1]
+2021-08-29 02:33:09.543 INFO [Transferencias para el día 65 de la simulación 1]
+2021-08-29 02:33:09.575 INFO [Operaciones para el día 65 de la simulación 1]
+2021-08-29 02:33:09.580 INFO [FIN DÍA => 65 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:09.581 WARM [INICIO DÍA => 66 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:09.593 INFO [Depósitos para el día 66 de la simulación 1]
+2021-08-29 02:33:09.641 INFO [Transferencias para el día 66 de la simulación 1]
+2021-08-29 02:33:09.674 INFO [Operaciones para el día 66 de la simulación 1]
+2021-08-29 02:33:09.679 WARM [INICIO DÍA => 67 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:09.679 INFO [FIN DÍA => 66 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:09.687 INFO [Depósitos para el día 67 de la simulación 1]
+2021-08-29 02:33:09.746 INFO [Transferencias para el día 67 de la simulación 1]
+2021-08-29 02:33:09.776 INFO [Operaciones para el día 67 de la simulación 1]
+2021-08-29 02:33:09.781 INFO [FIN DÍA => 67 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:09.782 WARM [INICIO DÍA => 68 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:09.791 INFO [Depósitos para el día 68 de la simulación 1]
+2021-08-29 02:33:09.836 INFO [Transferencias para el día 68 de la simulación 1]
+2021-08-29 02:33:09.868 INFO [Operaciones para el día 68 de la simulación 1]
+2021-08-29 02:33:09.873 INFO [FIN DÍA => 68 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:09.873 WARM [INICIO DÍA => 69 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:09.885 INFO [Depósitos para el día 69 de la simulación 1]
+2021-08-29 02:33:09.924 INFO [Transferencias para el día 69 de la simulación 1]
+2021-08-29 02:33:09.953 INFO [Operaciones para el día 69 de la simulación 1]
+2021-08-29 02:33:09.958 INFO [FIN DÍA => 69 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:09.959 WARM [INICIO DÍA => 70 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:09.969 INFO [Depósitos para el día 70 de la simulación 1]
+2021-08-29 02:33:10.020 INFO [Transferencias para el día 70 de la simulación 1]
+2021-08-29 02:33:10.052 INFO [Operaciones para el día 70 de la simulación 1]
+2021-08-29 02:33:10.057 INFO [FIN DÍA => 70 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.070 INFO [Depósitos para el día 71 de la simulación 1]
+2021-08-29 02:33:10.057 WARM [INICIO DÍA => 71 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.118 INFO [Transferencias para el día 71 de la simulación 1]
+2021-08-29 02:33:10.149 INFO [Operaciones para el día 71 de la simulación 1]
+2021-08-29 02:33:10.154 INFO [FIN DÍA => 71 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.154 WARM [INICIO DÍA => 72 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.166 INFO [Depósitos para el día 72 de la simulación 1]
+2021-08-29 02:33:10.210 INFO [Transferencias para el día 72 de la simulación 1]
+2021-08-29 02:33:10.243 INFO [Operaciones para el día 72 de la simulación 1]
+2021-08-29 02:33:10.248 INFO [FIN DÍA => 72 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.248 WARM [INICIO DÍA => 73 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.260 INFO [Depósitos para el día 73 de la simulación 1]
+2021-08-29 02:33:10.307 INFO [Transferencias para el día 73 de la simulación 1]
+2021-08-29 02:33:10.338 INFO [Operaciones para el día 73 de la simulación 1]
+2021-08-29 02:33:10.343 INFO [FIN DÍA => 73 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.343 WARM [INICIO DÍA => 74 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.354 INFO [Depósitos para el día 74 de la simulación 1]
+2021-08-29 02:33:10.396 INFO [Transferencias para el día 74 de la simulación 1]
+2021-08-29 02:33:10.424 INFO [Operaciones para el día 74 de la simulación 1]
+2021-08-29 02:33:10.430 INFO [FIN DÍA => 74 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.430 WARM [INICIO DÍA => 75 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.438 INFO [Depósitos para el día 75 de la simulación 1]
+2021-08-29 02:33:10.488 INFO [Transferencias para el día 75 de la simulación 1]
+2021-08-29 02:33:10.515 INFO [Operaciones para el día 75 de la simulación 1]
+2021-08-29 02:33:10.520 INFO [FIN DÍA => 75 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.520 WARM [INICIO DÍA => 76 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.527 INFO [Depósitos para el día 76 de la simulación 1]
+2021-08-29 02:33:10.571 INFO [Transferencias para el día 76 de la simulación 1]
+2021-08-29 02:33:10.604 INFO [Operaciones para el día 76 de la simulación 1]
+2021-08-29 02:33:10.610 INFO [FIN DÍA => 76 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.620 INFO [Depósitos para el día 77 de la simulación 1]
+2021-08-29 02:33:10.610 WARM [INICIO DÍA => 77 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.674 INFO [Transferencias para el día 77 de la simulación 1]
+2021-08-29 02:33:10.701 INFO [Operaciones para el día 77 de la simulación 1]
+2021-08-29 02:33:10.706 INFO [FIN DÍA => 77 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.706 WARM [INICIO DÍA => 78 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.717 INFO [Depósitos para el día 78 de la simulación 1]
+2021-08-29 02:33:10.760 INFO [Transferencias para el día 78 de la simulación 1]
+2021-08-29 02:33:10.797 INFO [Operaciones para el día 78 de la simulación 1]
+2021-08-29 02:33:10.803 INFO [FIN DÍA => 78 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.803 WARM [INICIO DÍA => 79 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.810 INFO [Depósitos para el día 79 de la simulación 1]
+2021-08-29 02:33:10.855 INFO [Transferencias para el día 79 de la simulación 1]
+2021-08-29 02:33:10.888 INFO [Operaciones para el día 79 de la simulación 1]
+2021-08-29 02:33:10.893 INFO [FIN DÍA => 79 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.893 WARM [INICIO DÍA => 80 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.903 INFO [Depósitos para el día 80 de la simulación 1]
+2021-08-29 02:33:10.938 INFO [Transferencias para el día 80 de la simulación 1]
+2021-08-29 02:33:10.965 INFO [Operaciones para el día 80 de la simulación 1]
+2021-08-29 02:33:10.971 INFO [FIN DÍA => 80 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.971 WARM [INICIO DÍA => 81 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:10.981 INFO [Depósitos para el día 81 de la simulación 1]
+2021-08-29 02:33:11.013 INFO [Transferencias para el día 81 de la simulación 1]
+2021-08-29 02:33:11.045 INFO [Operaciones para el día 81 de la simulación 1]
+2021-08-29 02:33:11.050 INFO [FIN DÍA => 81 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.050 WARM [INICIO DÍA => 82 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.058 INFO [Depósitos para el día 82 de la simulación 1]
+2021-08-29 02:33:11.097 INFO [Transferencias para el día 82 de la simulación 1]
+2021-08-29 02:33:11.122 INFO [Operaciones para el día 82 de la simulación 1]
+2021-08-29 02:33:11.127 INFO [FIN DÍA => 82 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.128 WARM [INICIO DÍA => 83 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.138 INFO [Depósitos para el día 83 de la simulación 1]
+2021-08-29 02:33:11.184 INFO [Transferencias para el día 83 de la simulación 1]
+2021-08-29 02:33:11.214 INFO [Operaciones para el día 83 de la simulación 1]
+2021-08-29 02:33:11.220 INFO [FIN DÍA => 83 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.229 INFO [Depósitos para el día 84 de la simulación 1]
+2021-08-29 02:33:11.220 WARM [INICIO DÍA => 84 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.273 INFO [Transferencias para el día 84 de la simulación 1]
+2021-08-29 02:33:11.300 INFO [Operaciones para el día 84 de la simulación 1]
+2021-08-29 02:33:11.305 INFO [FIN DÍA => 84 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.305 WARM [INICIO DÍA => 85 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.317 INFO [Depósitos para el día 85 de la simulación 1]
+2021-08-29 02:33:11.360 INFO [Transferencias para el día 85 de la simulación 1]
+2021-08-29 02:33:11.389 INFO [Operaciones para el día 85 de la simulación 1]
+2021-08-29 02:33:11.394 INFO [FIN DÍA => 85 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.394 WARM [INICIO DÍA => 86 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.402 INFO [Depósitos para el día 86 de la simulación 1]
+2021-08-29 02:33:11.442 INFO [Transferencias para el día 86 de la simulación 1]
+2021-08-29 02:33:11.465 INFO [Operaciones para el día 86 de la simulación 1]
+2021-08-29 02:33:11.470 INFO [FIN DÍA => 86 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.470 WARM [INICIO DÍA => 87 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.480 INFO [Depósitos para el día 87 de la simulación 1]
+2021-08-29 02:33:11.517 INFO [Transferencias para el día 87 de la simulación 1]
+2021-08-29 02:33:11.542 INFO [Operaciones para el día 87 de la simulación 1]
+2021-08-29 02:33:11.547 WARM [INICIO DÍA => 88 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.547 INFO [FIN DÍA => 87 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.560 INFO [Depósitos para el día 88 de la simulación 1]
+2021-08-29 02:33:11.596 INFO [Transferencias para el día 88 de la simulación 1]
+2021-08-29 02:33:11.628 INFO [Operaciones para el día 88 de la simulación 1]
+2021-08-29 02:33:11.633 INFO [FIN DÍA => 88 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.633 WARM [INICIO DÍA => 89 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.646 INFO [Depósitos para el día 89 de la simulación 1]
+2021-08-29 02:33:11.705 INFO [Transferencias para el día 89 de la simulación 1]
+2021-08-29 02:33:11.736 INFO [Operaciones para el día 89 de la simulación 1]
+2021-08-29 02:33:11.741 INFO [FIN DÍA => 89 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.741 WARM [INICIO DÍA => 90 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.755 INFO [Depósitos para el día 90 de la simulación 1]
+2021-08-29 02:33:11.789 INFO [Transferencias para el día 90 de la simulación 1]
+2021-08-29 02:33:11.820 INFO [Operaciones para el día 90 de la simulación 1]
+2021-08-29 02:33:11.825 INFO [FIN DÍA => 90 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.825 WARM [INICIO DÍA => 91 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.835 INFO [Depósitos para el día 91 de la simulación 1]
+2021-08-29 02:33:11.881 INFO [Transferencias para el día 91 de la simulación 1]
+2021-08-29 02:33:11.909 INFO [Operaciones para el día 91 de la simulación 1]
+2021-08-29 02:33:11.914 INFO [FIN DÍA => 91 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.914 WARM [INICIO DÍA => 92 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.925 INFO [Depósitos para el día 92 de la simulación 1]
+2021-08-29 02:33:11.959 INFO [Transferencias para el día 92 de la simulación 1]
+2021-08-29 02:33:11.986 INFO [Operaciones para el día 92 de la simulación 1]
+2021-08-29 02:33:11.992 INFO [FIN DÍA => 92 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:11.992 WARM [INICIO DÍA => 93 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.000 INFO [Depósitos para el día 93 de la simulación 1]
+2021-08-29 02:33:12.064 INFO [Transferencias para el día 93 de la simulación 1]
+2021-08-29 02:33:12.096 INFO [Operaciones para el día 93 de la simulación 1]
+2021-08-29 02:33:12.102 INFO [FIN DÍA => 93 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.102 WARM [INICIO DÍA => 94 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.111 INFO [Depósitos para el día 94 de la simulación 1]
+2021-08-29 02:33:12.145 INFO [Transferencias para el día 94 de la simulación 1]
+2021-08-29 02:33:12.169 INFO [Operaciones para el día 94 de la simulación 1]
+2021-08-29 02:33:12.174 INFO [FIN DÍA => 94 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.174 WARM [INICIO DÍA => 95 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.185 INFO [Depósitos para el día 95 de la simulación 1]
+2021-08-29 02:33:12.228 INFO [Transferencias para el día 95 de la simulación 1]
+2021-08-29 02:33:12.256 INFO [Operaciones para el día 95 de la simulación 1]
+2021-08-29 02:33:12.261 INFO [FIN DÍA => 95 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.262 WARM [INICIO DÍA => 96 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.273 INFO [Depósitos para el día 96 de la simulación 1]
+2021-08-29 02:33:12.312 INFO [Transferencias para el día 96 de la simulación 1]
+2021-08-29 02:33:12.366 INFO [Operaciones para el día 96 de la simulación 1]
+2021-08-29 02:33:12.380 INFO [FIN DÍA => 96 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.380 WARM [INICIO DÍA => 97 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.391 INFO [Depósitos para el día 97 de la simulación 1]
+2021-08-29 02:33:12.441 INFO [Transferencias para el día 97 de la simulación 1]
+2021-08-29 02:33:12.472 INFO [Operaciones para el día 97 de la simulación 1]
+2021-08-29 02:33:12.477 INFO [FIN DÍA => 97 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.477 WARM [INICIO DÍA => 98 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.488 INFO [Depósitos para el día 98 de la simulación 1]
+2021-08-29 02:33:12.530 INFO [Transferencias para el día 98 de la simulación 1]
+2021-08-29 02:33:12.558 INFO [Operaciones para el día 98 de la simulación 1]
+2021-08-29 02:33:12.563 INFO [FIN DÍA => 98 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.563 WARM [INICIO DÍA => 99 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.574 INFO [Depósitos para el día 99 de la simulación 1]
+2021-08-29 02:33:12.610 INFO [Transferencias para el día 99 de la simulación 1]
+2021-08-29 02:33:12.635 INFO [Operaciones para el día 99 de la simulación 1]
+2021-08-29 02:33:12.640 INFO [FIN DÍA => 99 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.640 WARM [INICIO DÍA => 100 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.649 INFO [Depósitos para el día 100 de la simulación 1]
+2021-08-29 02:33:12.688 INFO [Transferencias para el día 100 de la simulación 1]
+2021-08-29 02:33:12.716 INFO [Operaciones para el día 100 de la simulación 1]
+2021-08-29 02:33:12.721 INFO [FIN DÍA => 100 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.721 WARM [INICIO DÍA => 101 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.738 INFO [Depósitos para el día 101 de la simulación 1]
+2021-08-29 02:33:12.785 INFO [Transferencias para el día 101 de la simulación 1]
+2021-08-29 02:33:12.813 INFO [Operaciones para el día 101 de la simulación 1]
+2021-08-29 02:33:12.819 INFO [FIN DÍA => 101 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.819 WARM [INICIO DÍA => 102 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.827 INFO [Depósitos para el día 102 de la simulación 1]
+2021-08-29 02:33:12.878 INFO [Transferencias para el día 102 de la simulación 1]
+2021-08-29 02:33:12.919 INFO [Operaciones para el día 102 de la simulación 1]
+2021-08-29 02:33:12.925 INFO [FIN DÍA => 102 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.925 WARM [INICIO DÍA => 103 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:12.936 INFO [Depósitos para el día 103 de la simulación 1]
+2021-08-29 02:33:12.970 INFO [Transferencias para el día 103 de la simulación 1]
+2021-08-29 02:33:13.007 INFO [Operaciones para el día 103 de la simulación 1]
+2021-08-29 02:33:13.012 INFO [FIN DÍA => 103 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.012 WARM [INICIO DÍA => 104 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.032 INFO [Depósitos para el día 104 de la simulación 1]
+2021-08-29 02:33:13.073 INFO [Transferencias para el día 104 de la simulación 1]
+2021-08-29 02:33:13.126 INFO [Operaciones para el día 104 de la simulación 1]
+2021-08-29 02:33:13.132 INFO [FIN DÍA => 104 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.132 WARM [INICIO DÍA => 105 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.139 INFO [Depósitos para el día 105 de la simulación 1]
+2021-08-29 02:33:13.178 INFO [Transferencias para el día 105 de la simulación 1]
+2021-08-29 02:33:13.206 INFO [Operaciones para el día 105 de la simulación 1]
+2021-08-29 02:33:13.211 WARM [INICIO DÍA => 106 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.211 INFO [FIN DÍA => 105 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.222 INFO [Depósitos para el día 106 de la simulación 1]
+2021-08-29 02:33:13.269 INFO [Transferencias para el día 106 de la simulación 1]
+2021-08-29 02:33:13.297 INFO [Operaciones para el día 106 de la simulación 1]
+2021-08-29 02:33:13.303 INFO [FIN DÍA => 106 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.303 WARM [INICIO DÍA => 107 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.313 INFO [Depósitos para el día 107 de la simulación 1]
+2021-08-29 02:33:13.347 INFO [Transferencias para el día 107 de la simulación 1]
+2021-08-29 02:33:13.380 INFO [Operaciones para el día 107 de la simulación 1]
+2021-08-29 02:33:13.385 INFO [FIN DÍA => 107 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.385 WARM [INICIO DÍA => 108 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.393 INFO [Depósitos para el día 108 de la simulación 1]
+2021-08-29 02:33:13.423 INFO [Transferencias para el día 108 de la simulación 1]
+2021-08-29 02:33:13.451 INFO [Operaciones para el día 108 de la simulación 1]
+2021-08-29 02:33:13.456 INFO [FIN DÍA => 108 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.456 WARM [INICIO DÍA => 109 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.463 INFO [Depósitos para el día 109 de la simulación 1]
+2021-08-29 02:33:13.500 INFO [Transferencias para el día 109 de la simulación 1]
+2021-08-29 02:33:13.531 INFO [Operaciones para el día 109 de la simulación 1]
+2021-08-29 02:33:13.536 INFO [FIN DÍA => 109 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.536 WARM [INICIO DÍA => 110 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.544 INFO [Depósitos para el día 110 de la simulación 1]
+2021-08-29 02:33:13.595 INFO [Transferencias para el día 110 de la simulación 1]
+2021-08-29 02:33:13.627 INFO [Operaciones para el día 110 de la simulación 1]
+2021-08-29 02:33:13.632 INFO [FIN DÍA => 110 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.633 WARM [INICIO DÍA => 111 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.639 INFO [Depósitos para el día 111 de la simulación 1]
+2021-08-29 02:33:13.669 INFO [Transferencias para el día 111 de la simulación 1]
+2021-08-29 02:33:13.699 INFO [Operaciones para el día 111 de la simulación 1]
+2021-08-29 02:33:13.704 INFO [FIN DÍA => 111 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.704 WARM [INICIO DÍA => 112 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.724 INFO [Depósitos para el día 112 de la simulación 1]
+2021-08-29 02:33:13.757 INFO [Transferencias para el día 112 de la simulación 1]
+2021-08-29 02:33:13.810 INFO [Operaciones para el día 112 de la simulación 1]
+2021-08-29 02:33:13.815 INFO [FIN DÍA => 112 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.815 WARM [INICIO DÍA => 113 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.824 INFO [Depósitos para el día 113 de la simulación 1]
+2021-08-29 02:33:13.865 INFO [Transferencias para el día 113 de la simulación 1]
+2021-08-29 02:33:13.900 INFO [Operaciones para el día 113 de la simulación 1]
+2021-08-29 02:33:13.905 INFO [FIN DÍA => 113 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.905 WARM [INICIO DÍA => 114 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.918 INFO [Depósitos para el día 114 de la simulación 1]
+2021-08-29 02:33:13.950 INFO [Transferencias para el día 114 de la simulación 1]
+2021-08-29 02:33:13.977 INFO [Operaciones para el día 114 de la simulación 1]
+2021-08-29 02:33:13.982 INFO [FIN DÍA => 114 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:13.983 WARM [INICIO DÍA => 115 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:14.003 INFO [Depósitos para el día 115 de la simulación 1]
+2021-08-29 02:33:14.047 INFO [Transferencias para el día 115 de la simulación 1]
+2021-08-29 02:33:14.081 INFO [Operaciones para el día 115 de la simulación 1]
+2021-08-29 02:33:14.086 INFO [FIN DÍA => 115 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:14.086 WARM [INICIO DÍA => 116 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:14.100 INFO [Depósitos para el día 116 de la simulación 1]
+2021-08-29 02:33:14.133 INFO [Transferencias para el día 116 de la simulación 1]
+2021-08-29 02:33:14.177 INFO [Operaciones para el día 116 de la simulación 1]
+2021-08-29 02:33:14.182 INFO [FIN DÍA => 116 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:14.182 WARM [INICIO DÍA => 117 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:14.188 INFO [Depósitos para el día 117 de la simulación 1]
+2021-08-29 02:33:14.220 INFO [Transferencias para el día 117 de la simulación 1]
+2021-08-29 02:33:14.259 INFO [Operaciones para el día 117 de la simulación 1]
+2021-08-29 02:33:14.265 INFO [FIN DÍA => 117 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:14.265 WARM [INICIO DÍA => 118 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:14.274 INFO [Depósitos para el día 118 de la simulación 1]
+2021-08-29 02:33:14.306 INFO [Transferencias para el día 118 de la simulación 1]
+2021-08-29 02:33:14.342 INFO [Operaciones para el día 118 de la simulación 1]
+2021-08-29 02:33:14.347 INFO [FIN DÍA => 118 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:14.347 WARM [INICIO DÍA => 119 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:14.358 INFO [Depósitos para el día 119 de la simulación 1]
+2021-08-29 02:33:14.398 INFO [Transferencias para el día 119 de la simulación 1]
+2021-08-29 02:33:14.426 INFO [Operaciones para el día 119 de la simulación 1]
+2021-08-29 02:33:14.431 INFO [FIN DÍA => 119 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:14.431 WARM [INICIO DÍA => 120 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:14.443 INFO [Depósitos para el día 120 de la simulación 1]
+2021-08-29 02:33:14.490 INFO [Transferencias para el día 120 de la simulación 1]
+2021-08-29 02:33:14.527 INFO [Operaciones para el día 120 de la simulación 1]
+2021-08-29 02:33:14.538 INFO [FIN DÍA => 120 DE LA SIMULACIÓN => 1]
+2021-08-29 02:33:14.538 SILLY [50521 de transacciones de la simulación 1]
+2021-08-29 02:33:14.544 INFO [================================================]
+2021-08-29 02:33:14.544 INFO [SIMULACIÓN => 2]
+2021-08-29 02:33:14.544 INFO [================================================]
+2021-08-29 02:33:14.544 INFO [ID Simulation [undefined]]
+2021-08-29 02:33:14.545 INFO [Configuración global de la simulación [2]]
+{
+  "totalTimes": 120,
+  "numPopIndividual": 230,
+  "numPopIntermediary": 55,
+  "numPopNoProfitBusiness": 30,
+  "numPopProfitBusiness": 31,
+  "numPopTrustBusiness": 15,
+  "numPopShellBusiness": 26,
+  "numPopHighPropensityFraud": 76,
+  "perPopWatchList": 0.22725,
+  "maxTimesWatchList": 19,
+  "maxTimesCleanWatchList": 5,
+  "maxPropensityFraud": 0.89175,
+  "maxHighPropensityFraud": 0.9,
+  "perLinkedIntermediary": 0.653,
+  "numMaxLinkedNoIntermediary": 15.0625,
+  "numMaxLinkedIndBusInter": 3.03,
+  "perExecuteDeposit": 0.02175,
+  "perExecuteTransfer": 0.331,
+  "perExecuteWithdrawal": 0.46475,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 109178.75
+  },
+  "perNewLinkTransact": 0.281
+}
+2021-08-29 02:33:14.586 INFO [Total de agentes creados [387]]
+2021-08-29 02:33:15.688 INFO [Red creada con [2434] enalces]
+2021-08-29 02:33:15.693 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:15.694 INFO [Depósitos para el día 1 de la simulación 2]
+2021-08-29 02:33:15.778 INFO [Transferencias para el día 1 de la simulación 2]
+2021-08-29 02:33:15.801 INFO [Operaciones para el día 1 de la simulación 2]
+2021-08-29 02:33:15.806 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:15.806 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:15.808 INFO [Depósitos para el día 2 de la simulación 2]
+2021-08-29 02:33:15.874 INFO [Transferencias para el día 2 de la simulación 2]
+2021-08-29 02:33:15.907 INFO [Operaciones para el día 2 de la simulación 2]
+2021-08-29 02:33:15.912 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:15.912 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:15.913 INFO [Depósitos para el día 3 de la simulación 2]
+2021-08-29 02:33:15.986 INFO [Transferencias para el día 3 de la simulación 2]
+2021-08-29 02:33:16.020 INFO [Operaciones para el día 3 de la simulación 2]
+2021-08-29 02:33:16.025 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.025 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.029 INFO [Depósitos para el día 4 de la simulación 2]
+2021-08-29 02:33:16.082 INFO [Transferencias para el día 4 de la simulación 2]
+2021-08-29 02:33:16.108 INFO [Operaciones para el día 4 de la simulación 2]
+2021-08-29 02:33:16.113 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.113 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.114 INFO [Depósitos para el día 5 de la simulación 2]
+2021-08-29 02:33:16.169 INFO [Transferencias para el día 5 de la simulación 2]
+2021-08-29 02:33:16.191 INFO [Operaciones para el día 5 de la simulación 2]
+2021-08-29 02:33:16.196 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.196 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.197 INFO [Depósitos para el día 6 de la simulación 2]
+2021-08-29 02:33:16.250 INFO [Transferencias para el día 6 de la simulación 2]
+2021-08-29 02:33:16.273 INFO [Operaciones para el día 6 de la simulación 2]
+2021-08-29 02:33:16.278 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.278 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.279 INFO [Depósitos para el día 7 de la simulación 2]
+2021-08-29 02:33:16.325 INFO [Transferencias para el día 7 de la simulación 2]
+2021-08-29 02:33:16.353 INFO [Operaciones para el día 7 de la simulación 2]
+2021-08-29 02:33:16.358 WARM [INICIO DÍA => 8 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.358 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.359 INFO [Depósitos para el día 8 de la simulación 2]
+2021-08-29 02:33:16.404 INFO [Transferencias para el día 8 de la simulación 2]
+2021-08-29 02:33:16.428 INFO [Operaciones para el día 8 de la simulación 2]
+2021-08-29 02:33:16.433 INFO [FIN DÍA => 8 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.434 INFO [Depósitos para el día 9 de la simulación 2]
+2021-08-29 02:33:16.433 WARM [INICIO DÍA => 9 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.472 INFO [Transferencias para el día 9 de la simulación 2]
+2021-08-29 02:33:16.492 INFO [Operaciones para el día 9 de la simulación 2]
+2021-08-29 02:33:16.497 INFO [FIN DÍA => 9 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.497 WARM [INICIO DÍA => 10 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.498 INFO [Depósitos para el día 10 de la simulación 2]
+2021-08-29 02:33:16.549 INFO [Transferencias para el día 10 de la simulación 2]
+2021-08-29 02:33:16.575 INFO [Operaciones para el día 10 de la simulación 2]
+2021-08-29 02:33:16.580 INFO [FIN DÍA => 10 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.581 WARM [INICIO DÍA => 11 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.582 INFO [Depósitos para el día 11 de la simulación 2]
+2021-08-29 02:33:16.628 INFO [Transferencias para el día 11 de la simulación 2]
+2021-08-29 02:33:16.657 INFO [Operaciones para el día 11 de la simulación 2]
+2021-08-29 02:33:16.663 INFO [FIN DÍA => 11 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.663 WARM [INICIO DÍA => 12 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.664 INFO [Depósitos para el día 12 de la simulación 2]
+2021-08-29 02:33:16.715 INFO [Transferencias para el día 12 de la simulación 2]
+2021-08-29 02:33:16.746 INFO [Operaciones para el día 12 de la simulación 2]
+2021-08-29 02:33:16.751 INFO [FIN DÍA => 12 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.751 WARM [INICIO DÍA => 13 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.752 INFO [Depósitos para el día 13 de la simulación 2]
+2021-08-29 02:33:16.795 INFO [Transferencias para el día 13 de la simulación 2]
+2021-08-29 02:33:16.821 INFO [Operaciones para el día 13 de la simulación 2]
+2021-08-29 02:33:16.826 INFO [FIN DÍA => 13 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.826 WARM [INICIO DÍA => 14 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.829 INFO [Depósitos para el día 14 de la simulación 2]
+2021-08-29 02:33:16.858 INFO [Transferencias para el día 14 de la simulación 2]
+2021-08-29 02:33:16.884 INFO [Operaciones para el día 14 de la simulación 2]
+2021-08-29 02:33:16.889 INFO [FIN DÍA => 14 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.889 WARM [INICIO DÍA => 15 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.890 INFO [Depósitos para el día 15 de la simulación 2]
+2021-08-29 02:33:16.924 INFO [Transferencias para el día 15 de la simulación 2]
+2021-08-29 02:33:16.940 INFO [Operaciones para el día 15 de la simulación 2]
+2021-08-29 02:33:16.946 INFO [FIN DÍA => 15 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.946 WARM [INICIO DÍA => 16 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:16.948 INFO [Depósitos para el día 16 de la simulación 2]
+2021-08-29 02:33:16.980 INFO [Transferencias para el día 16 de la simulación 2]
+2021-08-29 02:33:17.002 INFO [Operaciones para el día 16 de la simulación 2]
+2021-08-29 02:33:17.007 INFO [FIN DÍA => 16 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.008 WARM [INICIO DÍA => 17 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.008 INFO [Depósitos para el día 17 de la simulación 2]
+2021-08-29 02:33:17.043 INFO [Transferencias para el día 17 de la simulación 2]
+2021-08-29 02:33:17.065 INFO [Operaciones para el día 17 de la simulación 2]
+2021-08-29 02:33:17.071 WARM [INICIO DÍA => 18 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.071 INFO [FIN DÍA => 17 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.072 INFO [Depósitos para el día 18 de la simulación 2]
+2021-08-29 02:33:17.110 INFO [Transferencias para el día 18 de la simulación 2]
+2021-08-29 02:33:17.134 INFO [Operaciones para el día 18 de la simulación 2]
+2021-08-29 02:33:17.139 INFO [FIN DÍA => 18 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.139 WARM [INICIO DÍA => 19 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.141 INFO [Depósitos para el día 19 de la simulación 2]
+2021-08-29 02:33:17.182 INFO [Transferencias para el día 19 de la simulación 2]
+2021-08-29 02:33:17.208 INFO [Operaciones para el día 19 de la simulación 2]
+2021-08-29 02:33:17.213 INFO [FIN DÍA => 19 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.213 WARM [INICIO DÍA => 20 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.216 INFO [Depósitos para el día 20 de la simulación 2]
+2021-08-29 02:33:17.253 INFO [Transferencias para el día 20 de la simulación 2]
+2021-08-29 02:33:17.280 INFO [Operaciones para el día 20 de la simulación 2]
+2021-08-29 02:33:17.285 INFO [FIN DÍA => 20 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.285 WARM [INICIO DÍA => 21 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.286 INFO [Depósitos para el día 21 de la simulación 2]
+2021-08-29 02:33:17.328 INFO [Transferencias para el día 21 de la simulación 2]
+2021-08-29 02:33:17.402 INFO [Operaciones para el día 21 de la simulación 2]
+2021-08-29 02:33:17.413 INFO [FIN DÍA => 21 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.414 INFO [Depósitos para el día 22 de la simulación 2]
+2021-08-29 02:33:17.413 WARM [INICIO DÍA => 22 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.444 INFO [Transferencias para el día 22 de la simulación 2]
+2021-08-29 02:33:17.473 INFO [Operaciones para el día 22 de la simulación 2]
+2021-08-29 02:33:17.478 INFO [FIN DÍA => 22 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.478 WARM [INICIO DÍA => 23 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.479 INFO [Depósitos para el día 23 de la simulación 2]
+2021-08-29 02:33:17.508 INFO [Transferencias para el día 23 de la simulación 2]
+2021-08-29 02:33:17.534 INFO [Operaciones para el día 23 de la simulación 2]
+2021-08-29 02:33:17.539 INFO [FIN DÍA => 23 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.539 WARM [INICIO DÍA => 24 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.540 INFO [Depósitos para el día 24 de la simulación 2]
+2021-08-29 02:33:17.583 INFO [Transferencias para el día 24 de la simulación 2]
+2021-08-29 02:33:17.611 INFO [Operaciones para el día 24 de la simulación 2]
+2021-08-29 02:33:17.618 INFO [FIN DÍA => 24 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.618 WARM [INICIO DÍA => 25 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.620 INFO [Depósitos para el día 25 de la simulación 2]
+2021-08-29 02:33:17.680 INFO [Transferencias para el día 25 de la simulación 2]
+2021-08-29 02:33:17.701 INFO [Operaciones para el día 25 de la simulación 2]
+2021-08-29 02:33:17.706 INFO [FIN DÍA => 25 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.707 WARM [INICIO DÍA => 26 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.709 INFO [Depósitos para el día 26 de la simulación 2]
+2021-08-29 02:33:17.755 INFO [Transferencias para el día 26 de la simulación 2]
+2021-08-29 02:33:17.774 INFO [Operaciones para el día 26 de la simulación 2]
+2021-08-29 02:33:17.780 WARM [INICIO DÍA => 27 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.780 INFO [FIN DÍA => 26 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.781 INFO [Depósitos para el día 27 de la simulación 2]
+2021-08-29 02:33:17.810 INFO [Transferencias para el día 27 de la simulación 2]
+2021-08-29 02:33:17.833 INFO [Operaciones para el día 27 de la simulación 2]
+2021-08-29 02:33:17.838 INFO [FIN DÍA => 27 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.838 WARM [INICIO DÍA => 28 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.840 INFO [Depósitos para el día 28 de la simulación 2]
+2021-08-29 02:33:17.869 INFO [Transferencias para el día 28 de la simulación 2]
+2021-08-29 02:33:17.891 INFO [Operaciones para el día 28 de la simulación 2]
+2021-08-29 02:33:17.897 INFO [FIN DÍA => 28 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.897 WARM [INICIO DÍA => 29 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.898 INFO [Depósitos para el día 29 de la simulación 2]
+2021-08-29 02:33:17.919 INFO [Transferencias para el día 29 de la simulación 2]
+2021-08-29 02:33:17.935 INFO [Operaciones para el día 29 de la simulación 2]
+2021-08-29 02:33:17.940 INFO [FIN DÍA => 29 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.940 WARM [INICIO DÍA => 30 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.943 INFO [Depósitos para el día 30 de la simulación 2]
+2021-08-29 02:33:17.970 INFO [Transferencias para el día 30 de la simulación 2]
+2021-08-29 02:33:17.992 INFO [Operaciones para el día 30 de la simulación 2]
+2021-08-29 02:33:17.997 WARM [INICIO DÍA => 31 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.997 INFO [FIN DÍA => 30 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:17.998 INFO [Depósitos para el día 31 de la simulación 2]
+2021-08-29 02:33:18.034 INFO [Transferencias para el día 31 de la simulación 2]
+2021-08-29 02:33:18.051 INFO [Operaciones para el día 31 de la simulación 2]
+2021-08-29 02:33:18.057 INFO [FIN DÍA => 31 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.057 WARM [INICIO DÍA => 32 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.065 INFO [Depósitos para el día 32 de la simulación 2]
+2021-08-29 02:33:18.126 INFO [Transferencias para el día 32 de la simulación 2]
+2021-08-29 02:33:18.144 INFO [Operaciones para el día 32 de la simulación 2]
+2021-08-29 02:33:18.149 INFO [FIN DÍA => 32 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.149 WARM [INICIO DÍA => 33 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.152 INFO [Depósitos para el día 33 de la simulación 2]
+2021-08-29 02:33:18.187 INFO [Transferencias para el día 33 de la simulación 2]
+2021-08-29 02:33:18.205 INFO [Operaciones para el día 33 de la simulación 2]
+2021-08-29 02:33:18.210 INFO [FIN DÍA => 33 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.210 WARM [INICIO DÍA => 34 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.212 INFO [Depósitos para el día 34 de la simulación 2]
+2021-08-29 02:33:18.243 INFO [Transferencias para el día 34 de la simulación 2]
+2021-08-29 02:33:18.261 INFO [Operaciones para el día 34 de la simulación 2]
+2021-08-29 02:33:18.266 INFO [FIN DÍA => 34 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.266 WARM [INICIO DÍA => 35 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.269 INFO [Depósitos para el día 35 de la simulación 2]
+2021-08-29 02:33:18.303 INFO [Transferencias para el día 35 de la simulación 2]
+2021-08-29 02:33:18.325 INFO [Operaciones para el día 35 de la simulación 2]
+2021-08-29 02:33:18.330 INFO [FIN DÍA => 35 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.330 WARM [INICIO DÍA => 36 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.331 INFO [Depósitos para el día 36 de la simulación 2]
+2021-08-29 02:33:18.364 INFO [Transferencias para el día 36 de la simulación 2]
+2021-08-29 02:33:18.380 INFO [Operaciones para el día 36 de la simulación 2]
+2021-08-29 02:33:18.385 INFO [FIN DÍA => 36 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.385 WARM [INICIO DÍA => 37 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.386 INFO [Depósitos para el día 37 de la simulación 2]
+2021-08-29 02:33:18.415 INFO [Transferencias para el día 37 de la simulación 2]
+2021-08-29 02:33:18.439 INFO [Operaciones para el día 37 de la simulación 2]
+2021-08-29 02:33:18.445 INFO [FIN DÍA => 37 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.445 WARM [INICIO DÍA => 38 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.446 INFO [Depósitos para el día 38 de la simulación 2]
+2021-08-29 02:33:18.487 INFO [Transferencias para el día 38 de la simulación 2]
+2021-08-29 02:33:18.505 INFO [Operaciones para el día 38 de la simulación 2]
+2021-08-29 02:33:18.511 INFO [FIN DÍA => 38 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.511 WARM [INICIO DÍA => 39 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.512 INFO [Depósitos para el día 39 de la simulación 2]
+2021-08-29 02:33:18.542 INFO [Transferencias para el día 39 de la simulación 2]
+2021-08-29 02:33:18.558 INFO [Operaciones para el día 39 de la simulación 2]
+2021-08-29 02:33:18.563 INFO [FIN DÍA => 39 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.563 WARM [INICIO DÍA => 40 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.565 INFO [Depósitos para el día 40 de la simulación 2]
+2021-08-29 02:33:18.597 INFO [Transferencias para el día 40 de la simulación 2]
+2021-08-29 02:33:18.612 INFO [Operaciones para el día 40 de la simulación 2]
+2021-08-29 02:33:18.618 INFO [FIN DÍA => 40 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.618 WARM [INICIO DÍA => 41 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.620 INFO [Depósitos para el día 41 de la simulación 2]
+2021-08-29 02:33:18.650 INFO [Transferencias para el día 41 de la simulación 2]
+2021-08-29 02:33:18.669 INFO [Operaciones para el día 41 de la simulación 2]
+2021-08-29 02:33:18.675 INFO [FIN DÍA => 41 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.675 WARM [INICIO DÍA => 42 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.676 INFO [Depósitos para el día 42 de la simulación 2]
+2021-08-29 02:33:18.716 INFO [Transferencias para el día 42 de la simulación 2]
+2021-08-29 02:33:18.730 INFO [Operaciones para el día 42 de la simulación 2]
+2021-08-29 02:33:18.735 INFO [FIN DÍA => 42 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.735 WARM [INICIO DÍA => 43 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.737 INFO [Depósitos para el día 43 de la simulación 2]
+2021-08-29 02:33:18.767 INFO [Transferencias para el día 43 de la simulación 2]
+2021-08-29 02:33:18.783 INFO [Operaciones para el día 43 de la simulación 2]
+2021-08-29 02:33:18.789 INFO [FIN DÍA => 43 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.789 WARM [INICIO DÍA => 44 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.790 INFO [Depósitos para el día 44 de la simulación 2]
+2021-08-29 02:33:18.811 INFO [Transferencias para el día 44 de la simulación 2]
+2021-08-29 02:33:18.831 INFO [Operaciones para el día 44 de la simulación 2]
+2021-08-29 02:33:18.836 INFO [FIN DÍA => 44 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.836 WARM [INICIO DÍA => 45 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.837 INFO [Depósitos para el día 45 de la simulación 2]
+2021-08-29 02:33:18.857 INFO [Transferencias para el día 45 de la simulación 2]
+2021-08-29 02:33:18.871 INFO [Operaciones para el día 45 de la simulación 2]
+2021-08-29 02:33:18.877 INFO [FIN DÍA => 45 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.877 WARM [INICIO DÍA => 46 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.878 INFO [Depósitos para el día 46 de la simulación 2]
+2021-08-29 02:33:18.906 INFO [Transferencias para el día 46 de la simulación 2]
+2021-08-29 02:33:18.922 INFO [Operaciones para el día 46 de la simulación 2]
+2021-08-29 02:33:18.928 INFO [FIN DÍA => 46 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.932 INFO [Depósitos para el día 47 de la simulación 2]
+2021-08-29 02:33:18.928 WARM [INICIO DÍA => 47 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.954 INFO [Transferencias para el día 47 de la simulación 2]
+2021-08-29 02:33:18.968 INFO [Operaciones para el día 47 de la simulación 2]
+2021-08-29 02:33:18.974 INFO [FIN DÍA => 47 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.974 WARM [INICIO DÍA => 48 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:18.976 INFO [Depósitos para el día 48 de la simulación 2]
+2021-08-29 02:33:18.997 INFO [Transferencias para el día 48 de la simulación 2]
+2021-08-29 02:33:19.013 INFO [Operaciones para el día 48 de la simulación 2]
+2021-08-29 02:33:19.018 INFO [FIN DÍA => 48 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.018 WARM [INICIO DÍA => 49 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.019 INFO [Depósitos para el día 49 de la simulación 2]
+2021-08-29 02:33:19.050 INFO [Transferencias para el día 49 de la simulación 2]
+2021-08-29 02:33:19.064 INFO [Operaciones para el día 49 de la simulación 2]
+2021-08-29 02:33:19.069 INFO [FIN DÍA => 49 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.069 WARM [INICIO DÍA => 50 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.071 INFO [Depósitos para el día 50 de la simulación 2]
+2021-08-29 02:33:19.095 INFO [Transferencias para el día 50 de la simulación 2]
+2021-08-29 02:33:19.108 INFO [Operaciones para el día 50 de la simulación 2]
+2021-08-29 02:33:19.113 WARM [INICIO DÍA => 51 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.113 INFO [FIN DÍA => 50 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.114 INFO [Depósitos para el día 51 de la simulación 2]
+2021-08-29 02:33:19.134 INFO [Transferencias para el día 51 de la simulación 2]
+2021-08-29 02:33:19.148 INFO [Operaciones para el día 51 de la simulación 2]
+2021-08-29 02:33:19.153 INFO [FIN DÍA => 51 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.153 WARM [INICIO DÍA => 52 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.155 INFO [Depósitos para el día 52 de la simulación 2]
+2021-08-29 02:33:19.177 INFO [Transferencias para el día 52 de la simulación 2]
+2021-08-29 02:33:19.190 INFO [Operaciones para el día 52 de la simulación 2]
+2021-08-29 02:33:19.195 INFO [FIN DÍA => 52 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.195 WARM [INICIO DÍA => 53 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.197 INFO [Depósitos para el día 53 de la simulación 2]
+2021-08-29 02:33:19.216 INFO [Transferencias para el día 53 de la simulación 2]
+2021-08-29 02:33:19.234 INFO [Operaciones para el día 53 de la simulación 2]
+2021-08-29 02:33:19.240 INFO [FIN DÍA => 53 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.240 WARM [INICIO DÍA => 54 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.241 INFO [Depósitos para el día 54 de la simulación 2]
+2021-08-29 02:33:19.268 INFO [Transferencias para el día 54 de la simulación 2]
+2021-08-29 02:33:19.286 INFO [Operaciones para el día 54 de la simulación 2]
+2021-08-29 02:33:19.291 INFO [FIN DÍA => 54 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.291 WARM [INICIO DÍA => 55 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.293 INFO [Depósitos para el día 55 de la simulación 2]
+2021-08-29 02:33:19.319 INFO [Transferencias para el día 55 de la simulación 2]
+2021-08-29 02:33:19.333 INFO [Operaciones para el día 55 de la simulación 2]
+2021-08-29 02:33:19.338 INFO [FIN DÍA => 55 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.338 WARM [INICIO DÍA => 56 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.340 INFO [Depósitos para el día 56 de la simulación 2]
+2021-08-29 02:33:19.368 INFO [Transferencias para el día 56 de la simulación 2]
+2021-08-29 02:33:19.379 INFO [Operaciones para el día 56 de la simulación 2]
+2021-08-29 02:33:19.384 INFO [FIN DÍA => 56 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.385 WARM [INICIO DÍA => 57 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.392 INFO [Depósitos para el día 57 de la simulación 2]
+2021-08-29 02:33:19.421 INFO [Transferencias para el día 57 de la simulación 2]
+2021-08-29 02:33:19.432 INFO [Operaciones para el día 57 de la simulación 2]
+2021-08-29 02:33:19.437 INFO [FIN DÍA => 57 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.437 WARM [INICIO DÍA => 58 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.439 INFO [Depósitos para el día 58 de la simulación 2]
+2021-08-29 02:33:19.468 INFO [Transferencias para el día 58 de la simulación 2]
+2021-08-29 02:33:19.484 INFO [Operaciones para el día 58 de la simulación 2]
+2021-08-29 02:33:19.489 INFO [FIN DÍA => 58 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.489 WARM [INICIO DÍA => 59 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.493 INFO [Depósitos para el día 59 de la simulación 2]
+2021-08-29 02:33:19.522 INFO [Transferencias para el día 59 de la simulación 2]
+2021-08-29 02:33:19.538 INFO [Operaciones para el día 59 de la simulación 2]
+2021-08-29 02:33:19.543 INFO [FIN DÍA => 59 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.543 WARM [INICIO DÍA => 60 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.544 INFO [Depósitos para el día 60 de la simulación 2]
+2021-08-29 02:33:19.569 INFO [Transferencias para el día 60 de la simulación 2]
+2021-08-29 02:33:19.582 INFO [Operaciones para el día 60 de la simulación 2]
+2021-08-29 02:33:19.587 INFO [FIN DÍA => 60 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.588 WARM [INICIO DÍA => 61 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.589 INFO [Depósitos para el día 61 de la simulación 2]
+2021-08-29 02:33:19.617 INFO [Transferencias para el día 61 de la simulación 2]
+2021-08-29 02:33:19.637 INFO [Operaciones para el día 61 de la simulación 2]
+2021-08-29 02:33:19.642 INFO [FIN DÍA => 61 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.642 WARM [INICIO DÍA => 62 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.643 INFO [Depósitos para el día 62 de la simulación 2]
+2021-08-29 02:33:19.668 INFO [Transferencias para el día 62 de la simulación 2]
+2021-08-29 02:33:19.680 INFO [Operaciones para el día 62 de la simulación 2]
+2021-08-29 02:33:19.685 INFO [FIN DÍA => 62 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.685 WARM [INICIO DÍA => 63 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.688 INFO [Depósitos para el día 63 de la simulación 2]
+2021-08-29 02:33:19.743 INFO [Transferencias para el día 63 de la simulación 2]
+2021-08-29 02:33:19.761 INFO [Operaciones para el día 63 de la simulación 2]
+2021-08-29 02:33:19.767 INFO [FIN DÍA => 63 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.768 INFO [Depósitos para el día 64 de la simulación 2]
+2021-08-29 02:33:19.767 WARM [INICIO DÍA => 64 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.797 INFO [Transferencias para el día 64 de la simulación 2]
+2021-08-29 02:33:19.813 INFO [Operaciones para el día 64 de la simulación 2]
+2021-08-29 02:33:19.818 INFO [FIN DÍA => 64 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.818 WARM [INICIO DÍA => 65 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.819 INFO [Depósitos para el día 65 de la simulación 2]
+2021-08-29 02:33:19.843 INFO [Transferencias para el día 65 de la simulación 2]
+2021-08-29 02:33:19.853 INFO [Operaciones para el día 65 de la simulación 2]
+2021-08-29 02:33:19.859 WARM [INICIO DÍA => 66 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.859 INFO [FIN DÍA => 65 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.859 INFO [Depósitos para el día 66 de la simulación 2]
+2021-08-29 02:33:19.890 INFO [Transferencias para el día 66 de la simulación 2]
+2021-08-29 02:33:19.904 INFO [Operaciones para el día 66 de la simulación 2]
+2021-08-29 02:33:19.909 INFO [FIN DÍA => 66 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.909 WARM [INICIO DÍA => 67 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.911 INFO [Depósitos para el día 67 de la simulación 2]
+2021-08-29 02:33:19.933 INFO [Transferencias para el día 67 de la simulación 2]
+2021-08-29 02:33:19.950 INFO [Operaciones para el día 67 de la simulación 2]
+2021-08-29 02:33:19.955 INFO [FIN DÍA => 67 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.955 WARM [INICIO DÍA => 68 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:19.956 INFO [Depósitos para el día 68 de la simulación 2]
+2021-08-29 02:33:19.989 INFO [Transferencias para el día 68 de la simulación 2]
+2021-08-29 02:33:20.005 INFO [Operaciones para el día 68 de la simulación 2]
+2021-08-29 02:33:20.011 WARM [INICIO DÍA => 69 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.011 INFO [FIN DÍA => 68 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.012 INFO [Depósitos para el día 69 de la simulación 2]
+2021-08-29 02:33:20.030 INFO [Transferencias para el día 69 de la simulación 2]
+2021-08-29 02:33:20.047 INFO [Operaciones para el día 69 de la simulación 2]
+2021-08-29 02:33:20.052 INFO [FIN DÍA => 69 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.052 WARM [INICIO DÍA => 70 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.053 INFO [Depósitos para el día 70 de la simulación 2]
+2021-08-29 02:33:20.079 INFO [Transferencias para el día 70 de la simulación 2]
+2021-08-29 02:33:20.096 INFO [Operaciones para el día 70 de la simulación 2]
+2021-08-29 02:33:20.101 INFO [FIN DÍA => 70 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.101 WARM [INICIO DÍA => 71 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.102 INFO [Depósitos para el día 71 de la simulación 2]
+2021-08-29 02:33:20.119 INFO [Transferencias para el día 71 de la simulación 2]
+2021-08-29 02:33:20.135 INFO [Operaciones para el día 71 de la simulación 2]
+2021-08-29 02:33:20.140 INFO [FIN DÍA => 71 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.141 INFO [Depósitos para el día 72 de la simulación 2]
+2021-08-29 02:33:20.140 WARM [INICIO DÍA => 72 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.168 INFO [Transferencias para el día 72 de la simulación 2]
+2021-08-29 02:33:20.186 INFO [Operaciones para el día 72 de la simulación 2]
+2021-08-29 02:33:20.192 INFO [FIN DÍA => 72 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.192 WARM [INICIO DÍA => 73 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.193 INFO [Depósitos para el día 73 de la simulación 2]
+2021-08-29 02:33:20.219 INFO [Transferencias para el día 73 de la simulación 2]
+2021-08-29 02:33:20.234 INFO [Operaciones para el día 73 de la simulación 2]
+2021-08-29 02:33:20.239 INFO [FIN DÍA => 73 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.239 WARM [INICIO DÍA => 74 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.241 INFO [Depósitos para el día 74 de la simulación 2]
+2021-08-29 02:33:20.268 INFO [Transferencias para el día 74 de la simulación 2]
+2021-08-29 02:33:20.282 INFO [Operaciones para el día 74 de la simulación 2]
+2021-08-29 02:33:20.287 INFO [FIN DÍA => 74 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.287 WARM [INICIO DÍA => 75 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.288 INFO [Depósitos para el día 75 de la simulación 2]
+2021-08-29 02:33:20.313 INFO [Transferencias para el día 75 de la simulación 2]
+2021-08-29 02:33:20.323 INFO [Operaciones para el día 75 de la simulación 2]
+2021-08-29 02:33:20.329 INFO [FIN DÍA => 75 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.329 WARM [INICIO DÍA => 76 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.329 INFO [Depósitos para el día 76 de la simulación 2]
+2021-08-29 02:33:20.352 INFO [Transferencias para el día 76 de la simulación 2]
+2021-08-29 02:33:20.365 INFO [Operaciones para el día 76 de la simulación 2]
+2021-08-29 02:33:20.370 INFO [FIN DÍA => 76 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.370 WARM [INICIO DÍA => 77 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.372 INFO [Depósitos para el día 77 de la simulación 2]
+2021-08-29 02:33:20.392 INFO [Transferencias para el día 77 de la simulación 2]
+2021-08-29 02:33:20.402 INFO [Operaciones para el día 77 de la simulación 2]
+2021-08-29 02:33:20.408 INFO [FIN DÍA => 77 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.408 WARM [INICIO DÍA => 78 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.408 INFO [Depósitos para el día 78 de la simulación 2]
+2021-08-29 02:33:20.431 INFO [Transferencias para el día 78 de la simulación 2]
+2021-08-29 02:33:20.446 INFO [Operaciones para el día 78 de la simulación 2]
+2021-08-29 02:33:20.451 INFO [FIN DÍA => 78 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.451 WARM [INICIO DÍA => 79 DE LA SIMULACIÓN => 2]
+2021-08-29 02:33:20.452 INFO [Depósitos para el día 79 de la simulación 2]
+2021-08-29 02:35:43.794 DEBUG [INICIO DE ABM en AML]
+2021-08-29 02:35:43.815 DEBUG [================================================]
+2021-08-29 02:35:43.815 DEBUG [Inicio de 1 simulaciones]
+2021-08-29 02:35:43.815 DEBUG [================================================]
+2021-08-29 02:35:43.821 INFO [================================================]
+2021-08-29 02:35:43.821 INFO [SIMULACIÓN => 1]
+2021-08-29 02:35:43.821 INFO [================================================]
+2021-08-29 02:35:43.822 INFO [ID Simulation [undefined]]
+2021-08-29 02:35:43.822 INFO [Configuración global de la simulación [1]]
+{
+  "totalTimes": 1,
+  "numPopIndividual": 487,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 48,
+  "numPopProfitBusiness": 51,
+  "numPopTrustBusiness": 21,
+  "numPopShellBusiness": 38,
+  "numPopHighPropensityFraud": 164,
+  "perPopWatchList": 0.23025,
+  "maxTimesWatchList": 23,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.61875,
+  "maxHighPropensityFraud": 0.81875,
+  "perLinkedIntermediary": 0.735,
+  "numMaxLinkedNoIntermediary": 1.0375,
+  "numMaxLinkedIndBusInter": 3.27,
+  "perExecuteDeposit": 0.12975,
+  "perExecuteTransfer": 0.539,
+  "perExecuteWithdrawal": 0.36275,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 106441.25
+  },
+  "perNewLinkTransact": 0.215
+}
+2021-08-29 02:35:43.884 INFO [Total de agentes creados [676]]
+2021-08-29 02:35:44.701 INFO [Red creada con [1943] enalces]
+2021-08-29 02:35:44.711 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 02:35:44.725 INFO [Depósitos para el día 1 de la simulación 1]
+2021-08-29 02:35:44.871 INFO [Transferencias para el día 1 de la simulación 1]
+2021-08-29 02:35:44.913 INFO [Operaciones para el día 1 de la simulación 1]
+2021-08-29 02:35:44.923 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 02:35:44.924 SILLY [802 de transacciones de la simulación 1]
+2021-08-29 02:35:44.930 DEBUG [================================================]
+2021-08-29 02:35:44.930 DEBUG [Fin de 1 simulaciones]
+2021-08-29 02:35:44.930 DEBUG [================================================]
+2021-08-29 02:40:55.171 DEBUG [INICIO DE ABM en AML]
+2021-08-29 02:40:55.201 DEBUG [================================================]
+2021-08-29 02:40:55.201 DEBUG [Inicio de 1 simulaciones]
+2021-08-29 02:40:55.201 DEBUG [================================================]
+2021-08-29 02:40:55.207 INFO [================================================]
+2021-08-29 02:40:55.207 INFO [SIMULACIÓN => 1]
+2021-08-29 02:40:55.207 INFO [================================================]
+2021-08-29 02:40:55.208 INFO [ID Simulation [undefined]]
+2021-08-29 02:40:55.208 INFO [Configuración global de la simulación [1]]
+{
+  "totalTimes": 1,
+  "numPopIndividual": 487,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 48,
+  "numPopProfitBusiness": 51,
+  "numPopTrustBusiness": 21,
+  "numPopShellBusiness": 38,
+  "numPopHighPropensityFraud": 164,
+  "perPopWatchList": 0.23025,
+  "maxTimesWatchList": 23,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.61875,
+  "maxHighPropensityFraud": 0.81875,
+  "perLinkedIntermediary": 0.735,
+  "numMaxLinkedNoIntermediary": 1.0375,
+  "numMaxLinkedIndBusInter": 3.27,
+  "perExecuteDeposit": 0.12975,
+  "perExecuteTransfer": 0.539,
+  "perExecuteWithdrawal": 0.36275,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 106441.25
+  },
+  "perNewLinkTransact": 0.215
+}
+2021-08-29 02:40:55.312 INFO [Total de agentes creados [676]]
+2021-08-29 02:40:56.162 INFO [Red creada con [1938] enalces]
+2021-08-29 02:40:56.189 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 02:40:56.207 INFO [Depósitos para el día 1 de la simulación 1]
+2021-08-29 02:40:56.357 INFO [Transferencias para el día 1 de la simulación 1]
+2021-08-29 02:40:56.400 INFO [Operaciones para el día 1 de la simulación 1]
+2021-08-29 02:40:56.405 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 02:40:56.406 SILLY [778 de transacciones de la simulación 1]
+2021-08-29 02:40:56.412 DEBUG [================================================]
+2021-08-29 02:40:56.412 DEBUG [Fin de 1 simulaciones]
+2021-08-29 02:40:56.412 DEBUG [================================================]
+2021-08-29 02:43:49.857 DEBUG [INICIO DE ABM en AML]
+2021-08-29 02:43:49.871 DEBUG [================================================]
+2021-08-29 02:43:49.871 DEBUG [Inicio de 1 simulaciones]
+2021-08-29 02:43:49.871 DEBUG [================================================]
+2021-08-29 02:43:49.876 INFO [================================================]
+2021-08-29 02:43:49.876 INFO [SIMULACIÓN => 1]
+2021-08-29 02:43:49.876 INFO [================================================]
+2021-08-29 02:43:49.877 INFO [ID Simulation [undefined]]
+2021-08-29 02:43:49.877 INFO [Configuración global de la simulación [1]]
+{
+  "totalTimes": 1,
+  "numPopIndividual": 487,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 48,
+  "numPopProfitBusiness": 51,
+  "numPopTrustBusiness": 21,
+  "numPopShellBusiness": 38,
+  "numPopHighPropensityFraud": 164,
+  "perPopWatchList": 0.23025,
+  "maxTimesWatchList": 23,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.61875,
+  "maxHighPropensityFraud": 0.81875,
+  "perLinkedIntermediary": 0.735,
+  "numMaxLinkedNoIntermediary": 1.0375,
+  "numMaxLinkedIndBusInter": 3.27,
+  "perExecuteDeposit": 0.12975,
+  "perExecuteTransfer": 0.539,
+  "perExecuteWithdrawal": 0.36275,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 106441.25
+  },
+  "perNewLinkTransact": 0.215
+}
+2021-08-29 02:43:49.994 INFO [Total de agentes creados [676]]
+2021-08-29 02:43:50.878 INFO [Red creada con [1929] enalces]
+2021-08-29 02:43:50.944 INFO [Depósitos para el día 1 de la simulación 1]
+2021-08-29 02:43:50.932 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 02:43:51.118 INFO [Transferencias para el día 1 de la simulación 1]
+2021-08-29 02:43:51.187 INFO [Operaciones para el día 1 de la simulación 1]
+2021-08-29 02:43:51.274 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 02:43:51.274 SILLY [799 de transacciones de la simulación 1]
+2021-08-29 02:43:51.356 DEBUG [================================================]
+2021-08-29 02:43:51.356 DEBUG [Fin de 1 simulaciones]
+2021-08-29 02:43:51.356 DEBUG [================================================]
+2021-08-29 02:46:20.647 DEBUG [INICIO DE ABM en AML]
+2021-08-29 02:46:20.662 DEBUG [================================================]
+2021-08-29 02:46:20.662 DEBUG [Inicio de 1 simulaciones]
+2021-08-29 02:46:20.662 DEBUG [================================================]
+2021-08-29 02:46:20.667 INFO [================================================]
+2021-08-29 02:46:20.667 INFO [================================================]
+2021-08-29 02:46:20.667 INFO [SIMULACIÓN => 1]
+2021-08-29 02:46:20.668 INFO [ID Simulation [undefined]]
+2021-08-29 02:46:20.668 INFO [Configuración global de la simulación [1]]
+{
+  "totalTimes": 1,
+  "numPopIndividual": 487,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 48,
+  "numPopProfitBusiness": 51,
+  "numPopTrustBusiness": 21,
+  "numPopShellBusiness": 38,
+  "numPopHighPropensityFraud": 164,
+  "perPopWatchList": 0.23025,
+  "maxTimesWatchList": 23,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.61875,
+  "maxHighPropensityFraud": 0.81875,
+  "perLinkedIntermediary": 0.735,
+  "numMaxLinkedNoIntermediary": 1.0375,
+  "numMaxLinkedIndBusInter": 3.27,
+  "perExecuteDeposit": 0.12975,
+  "perExecuteTransfer": 0.539,
+  "perExecuteWithdrawal": 0.36275,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 106441.25
+  },
+  "perNewLinkTransact": 0.215
+}
+2021-08-29 02:46:20.779 INFO [Total de agentes creados [676]]
+2021-08-29 02:46:21.633 INFO [Red creada con [1946] enalces]
+2021-08-29 02:46:21.682 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 02:46:21.700 INFO [Depósitos para el día 1 de la simulación 1]
+2021-08-29 02:46:21.957 INFO [Transferencias para el día 1 de la simulación 1]
+2021-08-29 02:46:22.057 INFO [Operaciones para el día 1 de la simulación 1]
+2021-08-29 02:46:22.184 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 02:46:22.184 SILLY [811 de transacciones de la simulación 1]
+2021-08-29 02:46:22.287 DEBUG [================================================]
+2021-08-29 02:46:22.288 DEBUG [================================================]
+2021-08-29 02:46:22.288 DEBUG [Fin de 1 simulaciones]
+2021-08-29 02:52:27.470 DEBUG [INICIO DE ABM en AML]
+2021-08-29 02:52:27.488 DEBUG [================================================]
+2021-08-29 02:52:27.488 DEBUG [Inicio de 1 simulaciones]
+2021-08-29 02:52:27.488 DEBUG [================================================]
+2021-08-29 02:52:27.494 INFO [================================================]
+2021-08-29 02:52:27.494 INFO [SIMULACIÓN => 1]
+2021-08-29 02:52:27.495 INFO [ID Simulation [undefined]]
+2021-08-29 02:52:27.494 INFO [================================================]
+2021-08-29 02:52:27.495 INFO [Configuración global de la simulación [1]]
+{
+  "totalTimes": 1,
+  "numPopIndividual": 487,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 48,
+  "numPopProfitBusiness": 51,
+  "numPopTrustBusiness": 21,
+  "numPopShellBusiness": 38,
+  "numPopHighPropensityFraud": 164,
+  "perPopWatchList": 0.23025,
+  "maxTimesWatchList": 23,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.61875,
+  "maxHighPropensityFraud": 0.81875,
+  "perLinkedIntermediary": 0.735,
+  "numMaxLinkedNoIntermediary": 1.0375,
+  "numMaxLinkedIndBusInter": 3.27,
+  "perExecuteDeposit": 0.12975,
+  "perExecuteTransfer": 0.539,
+  "perExecuteWithdrawal": 0.36275,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 106441.25
+  },
+  "perNewLinkTransact": 0.215
+}
+2021-08-29 02:52:27.621 INFO [Total de agentes creados [676]]
+2021-08-29 02:52:28.536 INFO [Red creada con [1936] enalces]
+2021-08-29 02:52:28.578 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 02:52:28.590 INFO [Depósitos para el día 1 de la simulación 1]
+2021-08-29 02:52:28.761 INFO [Transferencias para el día 1 de la simulación 1]
+2021-08-29 02:52:28.827 INFO [Operaciones para el día 1 de la simulación 1]
+2021-08-29 02:52:28.904 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 02:52:28.904 SILLY [789 de transacciones de la simulación 1]
+2021-08-29 02:52:28.990 DEBUG [================================================]
+2021-08-29 02:52:28.990 DEBUG [Fin de 1 simulaciones]
+2021-08-29 02:52:28.990 DEBUG [================================================]
+2021-08-29 02:54:05.652 DEBUG [INICIO DE ABM en AML]
+2021-08-29 02:54:05.670 DEBUG [================================================]
+2021-08-29 02:54:05.670 DEBUG [Inicio de 1 simulaciones]
+2021-08-29 02:54:05.670 DEBUG [================================================]
+2021-08-29 02:54:05.675 INFO [================================================]
+2021-08-29 02:54:05.676 INFO [SIMULACIÓN => 1]
+2021-08-29 02:54:05.676 INFO [================================================]
+2021-08-29 02:54:05.676 INFO [ID Simulation [undefined]]
+2021-08-29 02:54:05.676 INFO [Configuración global de la simulación [1]]
+{
+  "totalTimes": 1,
+  "numPopIndividual": 487,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 48,
+  "numPopProfitBusiness": 51,
+  "numPopTrustBusiness": 21,
+  "numPopShellBusiness": 38,
+  "numPopHighPropensityFraud": 164,
+  "perPopWatchList": 0.23025,
+  "maxTimesWatchList": 23,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.61875,
+  "maxHighPropensityFraud": 0.81875,
+  "perLinkedIntermediary": 0.735,
+  "numMaxLinkedNoIntermediary": 1.0375,
+  "numMaxLinkedIndBusInter": 3.27,
+  "perExecuteDeposit": 0.12975,
+  "perExecuteTransfer": 0.539,
+  "perExecuteWithdrawal": 0.36275,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 106441.25
+  },
+  "perNewLinkTransact": 0.215
+}
+2021-08-29 02:54:05.777 INFO [Total de agentes creados [676]]
+2021-08-29 02:54:06.662 INFO [Red creada con [1924] enalces]
+2021-08-29 02:54:06.709 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 02:54:06.728 INFO [Depósitos para el día 1 de la simulación 1]
+2021-08-29 02:54:06.933 INFO [Transferencias para el día 1 de la simulación 1]
+2021-08-29 02:54:07.059 INFO [Operaciones para el día 1 de la simulación 1]
+2021-08-29 02:54:07.151 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 02:54:07.151 SILLY [788 de transacciones de la simulación 1]
+2021-08-29 02:54:07.270 DEBUG [================================================]
+2021-08-29 02:54:07.270 DEBUG [Fin de 1 simulaciones]
+2021-08-29 02:54:07.270 DEBUG [================================================]
+2021-08-29 02:56:25.911 DEBUG [INICIO DE ABM en AML]
+2021-08-29 02:56:25.935 DEBUG [================================================]
+2021-08-29 02:56:25.936 DEBUG [Inicio de 10 simulaciones]
+2021-08-29 02:56:25.936 DEBUG [================================================]
+2021-08-29 02:56:25.953 INFO [================================================]
+2021-08-29 02:56:25.953 INFO [SIMULACIÓN => 1]
+2021-08-29 02:56:25.953 INFO [================================================]
+2021-08-29 02:56:25.955 INFO [ID Simulation [undefined]]
+2021-08-29 02:56:25.955 INFO [Configuración global de la simulación [1]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 487,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 48,
+  "numPopProfitBusiness": 51,
+  "numPopTrustBusiness": 21,
+  "numPopShellBusiness": 38,
+  "numPopHighPropensityFraud": 164,
+  "perPopWatchList": 0.23025,
+  "maxTimesWatchList": 23,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.61875,
+  "maxHighPropensityFraud": 0.81875,
+  "perLinkedIntermediary": 0.735,
+  "numMaxLinkedNoIntermediary": 1.0375,
+  "numMaxLinkedIndBusInter": 3.27,
+  "perExecuteDeposit": 0.12975,
+  "perExecuteTransfer": 0.539,
+  "perExecuteWithdrawal": 0.36275,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 106441.25
+  },
+  "perNewLinkTransact": 0.215
+}
+2021-08-29 02:56:26.022 INFO [Total de agentes creados [676]]
+2021-08-29 02:56:26.866 INFO [Red creada con [1930] enalces]
+2021-08-29 02:56:26.958 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 02:56:26.972 INFO [Depósitos para el día 1 de la simulación 1]
+2021-08-29 02:56:27.208 INFO [Transferencias para el día 1 de la simulación 1]
+2021-08-29 02:56:27.339 INFO [Operaciones para el día 1 de la simulación 1]
+2021-08-29 02:56:27.442 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 02:56:27.442 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 1]
+2021-08-29 02:56:27.455 INFO [Depósitos para el día 2 de la simulación 1]
+2021-08-29 02:56:27.673 INFO [Transferencias para el día 2 de la simulación 1]
+2021-08-29 02:56:27.771 INFO [Operaciones para el día 2 de la simulación 1]
+2021-08-29 02:56:27.870 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 1]
+2021-08-29 02:56:27.870 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 1]
+2021-08-29 02:56:27.888 INFO [Depósitos para el día 3 de la simulación 1]
+2021-08-29 02:56:28.207 INFO [Transferencias para el día 3 de la simulación 1]
+2021-08-29 02:56:28.383 INFO [Operaciones para el día 3 de la simulación 1]
+2021-08-29 02:56:28.509 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 1]
+2021-08-29 02:56:28.509 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 1]
+2021-08-29 02:56:28.526 INFO [Depósitos para el día 4 de la simulación 1]
+2021-08-29 02:56:28.782 INFO [Transferencias para el día 4 de la simulación 1]
+2021-08-29 02:56:28.950 INFO [Operaciones para el día 4 de la simulación 1]
+2021-08-29 02:56:29.202 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 1]
+2021-08-29 02:56:29.202 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 1]
+2021-08-29 02:56:29.213 INFO [Depósitos para el día 5 de la simulación 1]
+2021-08-29 02:56:29.436 INFO [Transferencias para el día 5 de la simulación 1]
+2021-08-29 02:56:29.594 INFO [Operaciones para el día 5 de la simulación 1]
+2021-08-29 02:56:29.756 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 1]
+2021-08-29 02:56:29.756 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 1]
+2021-08-29 02:56:29.771 INFO [Depósitos para el día 6 de la simulación 1]
+2021-08-29 02:56:30.003 INFO [Transferencias para el día 6 de la simulación 1]
+2021-08-29 02:56:30.223 INFO [Operaciones para el día 6 de la simulación 1]
+2021-08-29 02:56:30.377 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 1]
+2021-08-29 02:56:30.377 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 1]
+2021-08-29 02:56:30.387 INFO [Depósitos para el día 7 de la simulación 1]
+2021-08-29 02:56:30.615 INFO [Transferencias para el día 7 de la simulación 1]
+2021-08-29 02:56:30.828 INFO [Operaciones para el día 7 de la simulación 1]
+2021-08-29 02:56:31.022 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 1]
+2021-08-29 02:56:31.022 WARM [INICIO DÍA => 8 DE LA SIMULACIÓN => 1]
+2021-08-29 02:56:31.034 INFO [Depósitos para el día 8 de la simulación 1]
+2021-08-29 02:56:31.315 INFO [Transferencias para el día 8 de la simulación 1]
+2021-08-29 02:56:31.557 INFO [Operaciones para el día 8 de la simulación 1]
+2021-08-29 02:56:31.774 WARM [INICIO DÍA => 9 DE LA SIMULACIÓN => 1]
+2021-08-29 02:56:31.774 INFO [FIN DÍA => 8 DE LA SIMULACIÓN => 1]
+2021-08-29 02:56:31.786 INFO [Depósitos para el día 9 de la simulación 1]
+2021-08-29 02:56:32.098 INFO [Transferencias para el día 9 de la simulación 1]
+2021-08-29 02:56:32.495 INFO [Operaciones para el día 9 de la simulación 1]
+2021-08-29 02:56:32.681 INFO [FIN DÍA => 9 DE LA SIMULACIÓN => 1]
+2021-08-29 02:56:32.681 WARM [INICIO DÍA => 10 DE LA SIMULACIÓN => 1]
+2021-08-29 02:56:32.694 INFO [Depósitos para el día 10 de la simulación 1]
+2021-08-29 02:56:32.961 INFO [Transferencias para el día 10 de la simulación 1]
+2021-08-29 02:56:33.219 INFO [Operaciones para el día 10 de la simulación 1]
+2021-08-29 02:56:33.415 INFO [FIN DÍA => 10 DE LA SIMULACIÓN => 1]
+2021-08-29 02:56:33.415 SILLY [6868 de transacciones de la simulación 1]
+2021-08-29 02:56:33.617 INFO [================================================]
+2021-08-29 02:56:33.617 INFO [SIMULACIÓN => 2]
+2021-08-29 02:56:33.617 INFO [================================================]
+2021-08-29 02:56:33.618 INFO [ID Simulation [undefined]]
+2021-08-29 02:56:33.618 INFO [Configuración global de la simulación [2]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 230,
+  "numPopIntermediary": 55,
+  "numPopNoProfitBusiness": 30,
+  "numPopProfitBusiness": 31,
+  "numPopTrustBusiness": 15,
+  "numPopShellBusiness": 26,
+  "numPopHighPropensityFraud": 76,
+  "perPopWatchList": 0.22725,
+  "maxTimesWatchList": 19,
+  "maxTimesCleanWatchList": 5,
+  "maxPropensityFraud": 0.89175,
+  "maxHighPropensityFraud": 0.9,
+  "perLinkedIntermediary": 0.653,
+  "numMaxLinkedNoIntermediary": 15.0625,
+  "numMaxLinkedIndBusInter": 3.03,
+  "perExecuteDeposit": 0.02175,
+  "perExecuteTransfer": 0.331,
+  "perExecuteWithdrawal": 0.46475,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 109178.75
+  },
+  "perNewLinkTransact": 0.281
+}
+2021-08-29 02:56:33.844 INFO [Total de agentes creados [387]]
+2021-08-29 02:56:35.486 INFO [Red creada con [2427] enalces]
+2021-08-29 02:56:35.691 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 2]
+2021-08-29 02:56:35.695 INFO [Depósitos para el día 1 de la simulación 2]
+2021-08-29 02:56:35.982 INFO [Transferencias para el día 1 de la simulación 2]
+2021-08-29 02:56:36.232 INFO [Operaciones para el día 1 de la simulación 2]
+2021-08-29 02:56:36.705 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 2]
+2021-08-29 02:56:36.705 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 2]
+2021-08-29 02:56:36.706 INFO [Depósitos para el día 2 de la simulación 2]
+2021-08-29 02:56:37.014 INFO [Transferencias para el día 2 de la simulación 2]
+2021-08-29 02:56:37.292 INFO [Operaciones para el día 2 de la simulación 2]
+2021-08-29 02:56:37.806 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 2]
+2021-08-29 02:56:37.806 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 2]
+2021-08-29 02:56:37.809 INFO [Depósitos para el día 3 de la simulación 2]
+2021-08-29 02:56:38.091 INFO [Transferencias para el día 3 de la simulación 2]
+2021-08-29 02:56:38.351 INFO [Operaciones para el día 3 de la simulación 2]
+2021-08-29 02:56:38.948 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 2]
+2021-08-29 02:56:38.948 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 2]
+2021-08-29 02:56:38.955 INFO [Depósitos para el día 4 de la simulación 2]
+2021-08-29 02:56:39.294 INFO [Transferencias para el día 4 de la simulación 2]
+2021-08-29 02:56:39.602 INFO [Operaciones para el día 4 de la simulación 2]
+2021-08-29 02:56:40.192 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 2]
+2021-08-29 02:56:40.192 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 2]
+2021-08-29 02:56:40.194 INFO [Depósitos para el día 5 de la simulación 2]
+2021-08-29 02:56:40.517 INFO [Transferencias para el día 5 de la simulación 2]
+2021-08-29 02:56:40.836 INFO [Operaciones para el día 5 de la simulación 2]
+2021-08-29 02:56:41.479 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 2]
+2021-08-29 02:56:41.479 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 2]
+2021-08-29 02:56:41.480 INFO [Depósitos para el día 6 de la simulación 2]
+2021-08-29 02:56:41.803 INFO [Transferencias para el día 6 de la simulación 2]
+2021-08-29 02:56:42.104 INFO [Operaciones para el día 6 de la simulación 2]
+2021-08-29 02:56:42.787 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 2]
+2021-08-29 02:56:42.787 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 2]
+2021-08-29 02:56:42.788 INFO [Depósitos para el día 7 de la simulación 2]
+2021-08-29 02:56:43.111 INFO [Transferencias para el día 7 de la simulación 2]
+2021-08-29 02:56:43.727 INFO [Operaciones para el día 7 de la simulación 2]
+2021-08-29 02:56:44.047 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 2]
+2021-08-29 02:56:44.047 WARM [INICIO DÍA => 8 DE LA SIMULACIÓN => 2]
+2021-08-29 02:56:44.048 INFO [Depósitos para el día 8 de la simulación 2]
+2021-08-29 02:56:44.772 INFO [Transferencias para el día 8 de la simulación 2]
+2021-08-29 02:56:45.138 INFO [Operaciones para el día 8 de la simulación 2]
+2021-08-29 02:56:45.946 INFO [FIN DÍA => 8 DE LA SIMULACIÓN => 2]
+2021-08-29 02:56:45.946 WARM [INICIO DÍA => 9 DE LA SIMULACIÓN => 2]
+2021-08-29 02:56:45.950 INFO [Depósitos para el día 9 de la simulación 2]
+2021-08-29 02:56:46.334 INFO [Transferencias para el día 9 de la simulación 2]
+2021-08-29 02:56:47.070 INFO [Operaciones para el día 9 de la simulación 2]
+2021-08-29 02:56:47.460 INFO [FIN DÍA => 9 DE LA SIMULACIÓN => 2]
+2021-08-29 02:56:47.461 WARM [INICIO DÍA => 10 DE LA SIMULACIÓN => 2]
+2021-08-29 02:56:47.461 INFO [Depósitos para el día 10 de la simulación 2]
+2021-08-29 02:56:48.259 INFO [Transferencias para el día 10 de la simulación 2]
+2021-08-29 02:56:48.645 INFO [Operaciones para el día 10 de la simulación 2]
+2021-08-29 02:56:49.398 INFO [FIN DÍA => 10 DE LA SIMULACIÓN => 2]
+2021-08-29 02:56:49.399 SILLY [2080 de transacciones de la simulación 2]
+2021-08-29 02:56:49.776 INFO [SIMULACIÓN => 3]
+2021-08-29 02:56:49.776 INFO [================================================]
+2021-08-29 02:56:49.776 INFO [================================================]
+2021-08-29 02:56:49.777 INFO [ID Simulation [undefined]]
+2021-08-29 02:56:49.777 INFO [Configuración global de la simulación [3]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 628,
+  "numPopIntermediary": 18,
+  "numPopNoProfitBusiness": 36,
+  "numPopProfitBusiness": 36,
+  "numPopTrustBusiness": 105,
+  "numPopShellBusiness": 69,
+  "numPopHighPropensityFraud": 622,
+  "perPopWatchList": 0.08625,
+  "maxTimesWatchList": 19,
+  "maxTimesCleanWatchList": 5,
+  "maxPropensityFraud": 0.69525,
+  "maxHighPropensityFraud": 0.89525,
+  "perLinkedIntermediary": 0.773,
+  "numMaxLinkedNoIntermediary": 9.6625,
+  "numMaxLinkedIndBusInter": 2.75,
+  "perExecuteDeposit": 0.03375,
+  "perExecuteTransfer": 0.607,
+  "perExecuteWithdrawal": 0.35375,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 8986.25
+  },
+  "perNewLinkTransact": 0.371
+}
+2021-08-29 02:56:50.601 INFO [Total de agentes creados [892]]
+2021-08-29 02:56:54.263 INFO [Red creada con [3389] enalces]
+2021-08-29 02:56:55.479 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 3]
+2021-08-29 02:56:55.480 INFO [Depósitos para el día 1 de la simulación 3]
+2021-08-29 02:56:56.341 INFO [Transferencias para el día 1 de la simulación 3]
+2021-08-29 02:56:56.987 INFO [Operaciones para el día 1 de la simulación 3]
+2021-08-29 02:56:57.738 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 3]
+2021-08-29 02:56:57.738 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 3]
+2021-08-29 02:56:57.740 INFO [Depósitos para el día 2 de la simulación 3]
+2021-08-29 02:56:58.588 INFO [Transferencias para el día 2 de la simulación 3]
+2021-08-29 02:57:00.104 INFO [Operaciones para el día 2 de la simulación 3]
+2021-08-29 02:57:01.616 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 3]
+2021-08-29 02:57:01.616 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 3]
+2021-08-29 02:57:01.618 INFO [Depósitos para el día 3 de la simulación 3]
+2021-08-29 02:57:02.502 INFO [Transferencias para el día 3 de la simulación 3]
+2021-08-29 02:57:03.242 INFO [Operaciones para el día 3 de la simulación 3]
+2021-08-29 02:57:04.014 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 3]
+2021-08-29 02:57:04.014 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 3]
+2021-08-29 02:57:04.016 INFO [Depósitos para el día 4 de la simulación 3]
+2021-08-29 02:57:04.912 INFO [Transferencias para el día 4 de la simulación 3]
+2021-08-29 02:57:05.714 INFO [Operaciones para el día 4 de la simulación 3]
+2021-08-29 02:57:06.504 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 3]
+2021-08-29 02:57:06.504 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 3]
+2021-08-29 02:57:06.505 INFO [Depósitos para el día 5 de la simulación 3]
+2021-08-29 02:57:07.281 INFO [Transferencias para el día 5 de la simulación 3]
+2021-08-29 02:57:08.254 INFO [Operaciones para el día 5 de la simulación 3]
+2021-08-29 02:57:09.006 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 3]
+2021-08-29 02:57:09.006 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 3]
+2021-08-29 02:57:09.007 INFO [Depósitos para el día 6 de la simulación 3]
+2021-08-29 02:57:09.946 INFO [Transferencias para el día 6 de la simulación 3]
+2021-08-29 02:57:10.742 INFO [Operaciones para el día 6 de la simulación 3]
+2021-08-29 02:57:12.445 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 3]
+2021-08-29 02:57:12.445 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 3]
+2021-08-29 02:57:12.446 INFO [Depósitos para el día 7 de la simulación 3]
+2021-08-29 02:57:13.388 INFO [Transferencias para el día 7 de la simulación 3]
+2021-08-29 02:57:14.163 INFO [Operaciones para el día 7 de la simulación 3]
+2021-08-29 02:57:15.071 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 3]
+2021-08-29 02:57:15.071 WARM [INICIO DÍA => 8 DE LA SIMULACIÓN => 3]
+2021-08-29 02:57:15.073 INFO [Depósitos para el día 8 de la simulación 3]
+2021-08-29 02:57:15.895 INFO [Transferencias para el día 8 de la simulación 3]
+2021-08-29 02:57:17.962 INFO [Operaciones para el día 8 de la simulación 3]
+2021-08-29 02:57:18.783 WARM [INICIO DÍA => 9 DE LA SIMULACIÓN => 3]
+2021-08-29 02:57:18.783 INFO [FIN DÍA => 8 DE LA SIMULACIÓN => 3]
+2021-08-29 02:57:18.785 INFO [Depósitos para el día 9 de la simulación 3]
+2021-08-29 02:57:20.555 INFO [Transferencias para el día 9 de la simulación 3]
+2021-08-29 02:57:22.206 INFO [Operaciones para el día 9 de la simulación 3]
+2021-08-29 02:57:23.091 INFO [FIN DÍA => 9 DE LA SIMULACIÓN => 3]
+2021-08-29 02:57:23.091 WARM [INICIO DÍA => 10 DE LA SIMULACIÓN => 3]
+2021-08-29 02:57:23.093 INFO [Depósitos para el día 10 de la simulación 3]
+2021-08-29 02:57:25.103 INFO [Transferencias para el día 10 de la simulación 3]
+2021-08-29 02:57:27.074 INFO [Operaciones para el día 10 de la simulación 3]
+2021-08-29 02:57:27.082 INFO [FIN DÍA => 10 DE LA SIMULACIÓN => 3]
+2021-08-29 02:57:27.082 SILLY [4694 de transacciones de la simulación 3]
+2021-08-29 02:57:27.088 INFO [SIMULACIÓN => 4]
+2021-08-29 02:57:27.088 INFO [================================================]
+2021-08-29 02:57:27.089 INFO [================================================]
+2021-08-29 02:57:27.089 INFO [ID Simulation [undefined]]
+2021-08-29 02:57:27.089 INFO [Configuración global de la simulación [4]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 527,
+  "numPopIntermediary": 55,
+  "numPopNoProfitBusiness": 19,
+  "numPopProfitBusiness": 39,
+  "numPopTrustBusiness": 42,
+  "numPopShellBusiness": 48,
+  "numPopHighPropensityFraud": 384,
+  "perPopWatchList": 0.08325,
+  "maxTimesWatchList": 16,
+  "maxTimesCleanWatchList": 10,
+  "maxPropensityFraud": 0.89925,
+  "maxHighPropensityFraud": 0.9,
+  "perLinkedIntermediary": 0.645,
+  "numMaxLinkedNoIntermediary": 4.4125,
+  "numMaxLinkedIndBusInter": 4.47,
+  "perExecuteDeposit": 0.02925,
+  "perExecuteTransfer": 0.549,
+  "perExecuteWithdrawal": 0.30425,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 12818.75
+  },
+  "perNewLinkTransact": 0.369
+}
+2021-08-29 02:57:28.079 INFO [Total de agentes creados [730]]
+2021-08-29 02:57:33.619 INFO [Red creada con [4016] enalces]
+2021-08-29 02:57:35.678 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 4]
+2021-08-29 02:57:35.680 INFO [Depósitos para el día 1 de la simulación 4]
+2021-08-29 02:57:36.927 INFO [Transferencias para el día 1 de la simulación 4]
+2021-08-29 02:57:38.970 INFO [Operaciones para el día 1 de la simulación 4]
+2021-08-29 02:57:39.921 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 4]
+2021-08-29 02:57:39.921 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 4]
+2021-08-29 02:57:39.927 INFO [Depósitos para el día 2 de la simulación 4]
+2021-08-29 02:57:42.137 INFO [Transferencias para el día 2 de la simulación 4]
+2021-08-29 02:57:44.136 INFO [Operaciones para el día 2 de la simulación 4]
+2021-08-29 02:57:45.657 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 4]
+2021-08-29 02:57:45.657 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 4]
+2021-08-29 02:57:45.659 INFO [Depósitos para el día 3 de la simulación 4]
+2021-08-29 02:57:47.974 INFO [Transferencias para el día 3 de la simulación 4]
+2021-08-29 02:57:50.089 INFO [Operaciones para el día 3 de la simulación 4]
+2021-08-29 02:57:51.040 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 4]
+2021-08-29 02:57:51.040 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 4]
+2021-08-29 02:57:51.047 INFO [Depósitos para el día 4 de la simulación 4]
+2021-08-29 02:57:53.620 INFO [Transferencias para el día 4 de la simulación 4]
+2021-08-29 02:57:55.905 INFO [Operaciones para el día 4 de la simulación 4]
+2021-08-29 02:57:57.122 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 4]
+2021-08-29 02:57:57.122 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 4]
+2021-08-29 02:57:57.136 INFO [Depósitos para el día 5 de la simulación 4]
+2021-08-29 03:16:12.280 DEBUG [INICIO DE ABM en AML]
+2021-08-29 03:16:12.318 DEBUG [================================================]
+2021-08-29 03:16:12.318 DEBUG [Inicio de 10 simulaciones]
+2021-08-29 03:16:12.318 DEBUG [================================================]
+2021-08-29 03:16:12.324 INFO [================================================]
+2021-08-29 03:16:12.324 INFO [SIMULACIÓN => 1]
+2021-08-29 03:16:12.324 INFO [================================================]
+2021-08-29 03:16:12.325 INFO [ID Simulation [undefined]]
+2021-08-29 03:16:12.325 INFO [Configuración global de la simulación [1]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 487,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 48,
+  "numPopProfitBusiness": 51,
+  "numPopTrustBusiness": 21,
+  "numPopShellBusiness": 38,
+  "numPopHighPropensityFraud": 164,
+  "perPopWatchList": 0.23025,
+  "maxTimesWatchList": 23,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.61875,
+  "maxHighPropensityFraud": 0.81875,
+  "perLinkedIntermediary": 0.735,
+  "numMaxLinkedNoIntermediary": 1.0375,
+  "numMaxLinkedIndBusInter": 3.27,
+  "perExecuteDeposit": 0.12975,
+  "perExecuteTransfer": 0.539,
+  "perExecuteWithdrawal": 0.36275,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 106441.25
+  },
+  "perNewLinkTransact": 0.215
+}
+2021-08-29 03:16:12.386 INFO [Total de agentes creados [676]]
+2021-08-29 03:16:13.363 INFO [Red creada con [1936] enalces]
+2021-08-29 03:16:13.428 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 03:16:13.449 INFO [Depósitos para el día 1 de la simulación 1]
+2021-08-29 03:16:13.647 INFO [Transferencias para el día 1 de la simulación 1]
+2021-08-29 03:16:13.733 INFO [Operaciones para el día 1 de la simulación 1]
+2021-08-29 03:16:13.847 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 03:16:13.847 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 1]
+2021-08-29 03:16:13.861 INFO [Depósitos para el día 2 de la simulación 1]
+2021-08-29 03:16:14.112 INFO [Transferencias para el día 2 de la simulación 1]
+2021-08-29 03:16:14.298 INFO [Operaciones para el día 2 de la simulación 1]
+2021-08-29 03:16:14.487 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 1]
+2021-08-29 03:16:14.487 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 1]
+2021-08-29 03:16:14.500 INFO [Depósitos para el día 3 de la simulación 1]
+2021-08-29 03:16:14.713 INFO [Transferencias para el día 3 de la simulación 1]
+2021-08-29 03:16:14.819 INFO [Operaciones para el día 3 de la simulación 1]
+2021-08-29 03:16:14.987 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 1]
+2021-08-29 03:16:14.987 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 1]
+2021-08-29 03:16:15.002 INFO [Depósitos para el día 4 de la simulación 1]
+2021-08-29 03:16:15.216 INFO [Transferencias para el día 4 de la simulación 1]
+2021-08-29 03:16:15.558 INFO [Operaciones para el día 4 de la simulación 1]
+2021-08-29 03:16:15.695 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 1]
+2021-08-29 03:16:15.695 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 1]
+2021-08-29 03:16:15.711 INFO [Depósitos para el día 5 de la simulación 1]
+2021-08-29 03:16:15.930 INFO [Transferencias para el día 5 de la simulación 1]
+2021-08-29 03:16:16.069 INFO [Operaciones para el día 5 de la simulación 1]
+2021-08-29 03:16:16.304 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 1]
+2021-08-29 03:16:16.304 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 1]
+2021-08-29 03:16:16.317 INFO [Depósitos para el día 6 de la simulación 1]
+2021-08-29 03:16:16.580 INFO [Transferencias para el día 6 de la simulación 1]
+2021-08-29 03:16:16.733 INFO [Operaciones para el día 6 de la simulación 1]
+2021-08-29 03:16:16.864 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 1]
+2021-08-29 03:16:16.864 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 1]
+2021-08-29 03:16:16.876 INFO [Depósitos para el día 7 de la simulación 1]
+2021-08-29 03:16:17.093 INFO [Transferencias para el día 7 de la simulación 1]
+2021-08-29 03:16:17.346 INFO [Operaciones para el día 7 de la simulación 1]
+2021-08-29 03:16:17.709 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 1]
+2021-08-29 03:16:17.724 INFO [Depósitos para el día 8 de la simulación 1]
+2021-08-29 03:16:17.709 WARM [INICIO DÍA => 8 DE LA SIMULACIÓN => 1]
+2021-08-29 03:16:17.993 INFO [Transferencias para el día 8 de la simulación 1]
+2021-08-29 03:16:18.218 INFO [Operaciones para el día 8 de la simulación 1]
+2021-08-29 03:16:18.470 INFO [FIN DÍA => 8 DE LA SIMULACIÓN => 1]
+2021-08-29 03:16:18.470 WARM [INICIO DÍA => 9 DE LA SIMULACIÓN => 1]
+2021-08-29 03:16:18.484 INFO [Depósitos para el día 9 de la simulación 1]
+2021-08-29 03:16:18.942 INFO [Transferencias para el día 9 de la simulación 1]
+2021-08-29 03:16:19.230 INFO [Operaciones para el día 9 de la simulación 1]
+2021-08-29 03:16:19.454 INFO [FIN DÍA => 9 DE LA SIMULACIÓN => 1]
+2021-08-29 03:16:19.454 WARM [INICIO DÍA => 10 DE LA SIMULACIÓN => 1]
+2021-08-29 03:16:19.467 INFO [Depósitos para el día 10 de la simulación 1]
+2021-08-29 03:16:19.818 INFO [Transferencias para el día 10 de la simulación 1]
+2021-08-29 03:16:20.078 INFO [Operaciones para el día 10 de la simulación 1]
+2021-08-29 03:16:20.352 INFO [FIN DÍA => 10 DE LA SIMULACIÓN => 1]
+2021-08-29 03:16:20.352 SILLY [6886 de transacciones de la simulación 1]
+2021-08-29 03:16:20.358 INFO [================================================]
+2021-08-29 03:16:20.358 INFO [SIMULACIÓN => 2]
+2021-08-29 03:16:20.358 INFO [================================================]
+2021-08-29 03:16:20.359 INFO [ID Simulation [undefined]]
+2021-08-29 03:16:20.359 INFO [Configuración global de la simulación [2]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 230,
+  "numPopIntermediary": 55,
+  "numPopNoProfitBusiness": 30,
+  "numPopProfitBusiness": 31,
+  "numPopTrustBusiness": 15,
+  "numPopShellBusiness": 26,
+  "numPopHighPropensityFraud": 76,
+  "perPopWatchList": 0.22725,
+  "maxTimesWatchList": 19,
+  "maxTimesCleanWatchList": 5,
+  "maxPropensityFraud": 0.89175,
+  "maxHighPropensityFraud": 0.9,
+  "perLinkedIntermediary": 0.653,
+  "numMaxLinkedNoIntermediary": 15.0625,
+  "numMaxLinkedIndBusInter": 3.03,
+  "perExecuteDeposit": 0.02175,
+  "perExecuteTransfer": 0.331,
+  "perExecuteWithdrawal": 0.46475,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 109178.75
+  },
+  "perNewLinkTransact": 0.281
+}
+2021-08-29 03:16:20.386 INFO [Total de agentes creados [387]]
+2021-08-29 03:16:21.844 INFO [Red creada con [2428] enalces]
+2021-08-29 03:16:22.069 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 2]
+2021-08-29 03:16:22.070 INFO [Depósitos para el día 1 de la simulación 2]
+2021-08-29 03:16:22.356 INFO [Transferencias para el día 1 de la simulación 2]
+2021-08-29 03:16:22.606 INFO [Operaciones para el día 1 de la simulación 2]
+2021-08-29 03:16:23.136 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 2]
+2021-08-29 03:16:23.136 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 2]
+2021-08-29 03:16:23.137 INFO [Depósitos para el día 2 de la simulación 2]
+2021-08-29 03:16:23.429 INFO [Transferencias para el día 2 de la simulación 2]
+2021-08-29 03:16:23.667 INFO [Operaciones para el día 2 de la simulación 2]
+2021-08-29 03:16:24.211 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 2]
+2021-08-29 03:16:24.211 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 2]
+2021-08-29 03:16:24.212 INFO [Depósitos para el día 3 de la simulación 2]
+2021-08-29 03:16:24.513 INFO [Transferencias para el día 3 de la simulación 2]
+2021-08-29 03:16:24.777 INFO [Operaciones para el día 3 de la simulación 2]
+2021-08-29 03:16:25.429 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 2]
+2021-08-29 03:16:25.429 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 2]
+2021-08-29 03:16:25.431 INFO [Depósitos para el día 4 de la simulación 2]
+2021-08-29 03:16:25.746 INFO [Transferencias para el día 4 de la simulación 2]
+2021-08-29 03:16:26.007 INFO [Operaciones para el día 4 de la simulación 2]
+2021-08-29 03:16:26.655 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 2]
+2021-08-29 03:16:26.655 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 2]
+2021-08-29 03:16:26.659 INFO [Depósitos para el día 5 de la simulación 2]
+2021-08-29 03:16:27.122 INFO [Transferencias para el día 5 de la simulación 2]
+2021-08-29 03:16:27.833 INFO [Operaciones para el día 5 de la simulación 2]
+2021-08-29 03:16:28.147 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 2]
+2021-08-29 03:16:28.147 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 2]
+2021-08-29 03:16:28.148 INFO [Depósitos para el día 6 de la simulación 2]
+2021-08-29 03:16:28.599 INFO [Transferencias para el día 6 de la simulación 2]
+2021-08-29 03:16:28.935 INFO [Operaciones para el día 6 de la simulación 2]
+2021-08-29 03:16:29.280 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 2]
+2021-08-29 03:16:29.280 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 2]
+2021-08-29 03:16:29.285 INFO [Depósitos para el día 7 de la simulación 2]
+2021-08-29 03:16:29.620 INFO [Transferencias para el día 7 de la simulación 2]
+2021-08-29 03:16:29.938 INFO [Operaciones para el día 7 de la simulación 2]
+2021-08-29 03:16:30.274 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 2]
+2021-08-29 03:16:30.274 WARM [INICIO DÍA => 8 DE LA SIMULACIÓN => 2]
+2021-08-29 03:16:30.275 INFO [Depósitos para el día 8 de la simulación 2]
+2021-08-29 03:16:30.999 INFO [Transferencias para el día 8 de la simulación 2]
+2021-08-29 03:16:31.373 INFO [Operaciones para el día 8 de la simulación 2]
+2021-08-29 03:16:32.115 INFO [FIN DÍA => 8 DE LA SIMULACIÓN => 2]
+2021-08-29 03:16:32.115 WARM [INICIO DÍA => 9 DE LA SIMULACIÓN => 2]
+2021-08-29 03:16:32.117 INFO [Depósitos para el día 9 de la simulación 2]
+2021-08-29 03:16:32.517 INFO [Transferencias para el día 9 de la simulación 2]
+2021-08-29 03:16:32.910 INFO [Operaciones para el día 9 de la simulación 2]
+2021-08-29 03:16:33.278 INFO [FIN DÍA => 9 DE LA SIMULACIÓN => 2]
+2021-08-29 03:16:33.278 WARM [INICIO DÍA => 10 DE LA SIMULACIÓN => 2]
+2021-08-29 03:16:33.278 INFO [Depósitos para el día 10 de la simulación 2]
+2021-08-29 03:16:33.708 INFO [Transferencias para el día 10 de la simulación 2]
+2021-08-29 03:16:34.109 INFO [Operaciones para el día 10 de la simulación 2]
+2021-08-29 03:16:34.521 INFO [FIN DÍA => 10 DE LA SIMULACIÓN => 2]
+2021-08-29 03:16:34.521 SILLY [2205 de transacciones de la simulación 2]
+2021-08-29 03:16:35.014 INFO [SIMULACIÓN => 3]
+2021-08-29 03:16:35.014 INFO [================================================]
+2021-08-29 03:16:35.014 INFO [================================================]
+2021-08-29 03:16:35.014 INFO [ID Simulation [undefined]]
+2021-08-29 03:16:35.014 INFO [Configuración global de la simulación [3]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 628,
+  "numPopIntermediary": 18,
+  "numPopNoProfitBusiness": 36,
+  "numPopProfitBusiness": 36,
+  "numPopTrustBusiness": 105,
+  "numPopShellBusiness": 69,
+  "numPopHighPropensityFraud": 622,
+  "perPopWatchList": 0.08625,
+  "maxTimesWatchList": 19,
+  "maxTimesCleanWatchList": 5,
+  "maxPropensityFraud": 0.69525,
+  "maxHighPropensityFraud": 0.89525,
+  "perLinkedIntermediary": 0.773,
+  "numMaxLinkedNoIntermediary": 9.6625,
+  "numMaxLinkedIndBusInter": 2.75,
+  "perExecuteDeposit": 0.03375,
+  "perExecuteTransfer": 0.607,
+  "perExecuteWithdrawal": 0.35375,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 8986.25
+  },
+  "perNewLinkTransact": 0.371
+}
+2021-08-29 03:16:35.883 INFO [Total de agentes creados [892]]
+2021-08-29 03:16:39.880 INFO [Red creada con [3421] enalces]
+2021-08-29 03:16:40.650 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 3]
+2021-08-29 03:16:40.652 INFO [Depósitos para el día 1 de la simulación 3]
+2021-08-29 03:16:41.542 INFO [Transferencias para el día 1 de la simulación 3]
+2021-08-29 03:16:42.860 INFO [Operaciones para el día 1 de la simulación 3]
+2021-08-29 03:16:43.688 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 3]
+2021-08-29 03:16:43.688 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 3]
+2021-08-29 03:16:43.689 INFO [Depósitos para el día 2 de la simulación 3]
+2021-08-29 03:16:44.559 INFO [Transferencias para el día 2 de la simulación 3]
+2021-08-29 03:16:46.059 INFO [Operaciones para el día 2 de la simulación 3]
+2021-08-29 03:16:46.779 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 3]
+2021-08-29 03:16:46.779 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 3]
+2021-08-29 03:16:46.781 INFO [Depósitos para el día 3 de la simulación 3]
+2021-08-29 03:16:47.705 INFO [Transferencias para el día 3 de la simulación 3]
+2021-08-29 03:16:49.344 INFO [Operaciones para el día 3 de la simulación 3]
+2021-08-29 03:17:33.361 DEBUG [INICIO DE ABM en AML]
+2021-08-29 03:17:33.387 DEBUG [================================================]
+2021-08-29 03:17:33.387 DEBUG [Inicio de 10 simulaciones]
+2021-08-29 03:17:33.387 DEBUG [================================================]
+2021-08-29 03:17:33.395 INFO [================================================]
+2021-08-29 03:17:33.395 INFO [SIMULACIÓN => 1]
+2021-08-29 03:17:33.395 INFO [================================================]
+2021-08-29 03:17:33.396 INFO [ID Simulation [undefined]]
+2021-08-29 03:17:33.396 INFO [Configuración global de la simulación [1]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 487,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 48,
+  "numPopProfitBusiness": 51,
+  "numPopTrustBusiness": 21,
+  "numPopShellBusiness": 38,
+  "numPopHighPropensityFraud": 164,
+  "perPopWatchList": 0.23025,
+  "maxTimesWatchList": 23,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.61875,
+  "maxHighPropensityFraud": 0.81875,
+  "perLinkedIntermediary": 0.735,
+  "numMaxLinkedNoIntermediary": 1.0375,
+  "numMaxLinkedIndBusInter": 3.27,
+  "perExecuteDeposit": 0.12975,
+  "perExecuteTransfer": 0.539,
+  "perExecuteWithdrawal": 0.36275,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 106441.25
+  },
+  "perNewLinkTransact": 0.215
+}
+2021-08-29 03:17:33.449 INFO [Total de agentes creados [676]]
+2021-08-29 03:17:34.300 INFO [Red creada con [1920] enalces]
+2021-08-29 03:17:34.364 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 03:17:34.381 INFO [Depósitos para el día 1 de la simulación 1]
+2021-08-29 03:17:34.590 INFO [Transferencias para el día 1 de la simulación 1]
+2021-08-29 03:17:34.709 INFO [Operaciones para el día 1 de la simulación 1]
+2021-08-29 03:17:34.821 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 03:17:34.836 INFO [Depósitos para el día 2 de la simulación 1]
+2021-08-29 03:17:34.821 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 1]
+2021-08-29 03:17:35.019 INFO [Transferencias para el día 2 de la simulación 1]
+2021-08-29 03:17:35.119 INFO [Operaciones para el día 2 de la simulación 1]
+2021-08-29 03:17:35.255 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 1]
+2021-08-29 03:17:35.255 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 1]
+2021-08-29 03:17:35.265 INFO [Depósitos para el día 3 de la simulación 1]
+2021-08-29 03:17:35.550 INFO [Transferencias para el día 3 de la simulación 1]
+2021-08-29 03:17:35.682 INFO [Operaciones para el día 3 de la simulación 1]
+2021-08-29 03:17:35.830 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 1]
+2021-08-29 03:17:35.830 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 1]
+2021-08-29 03:17:35.843 INFO [Depósitos para el día 4 de la simulación 1]
+2021-08-29 03:17:36.035 INFO [Transferencias para el día 4 de la simulación 1]
+2021-08-29 03:17:36.210 INFO [Operaciones para el día 4 de la simulación 1]
+2021-08-29 03:17:36.353 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 1]
+2021-08-29 03:17:36.354 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 1]
+2021-08-29 03:17:36.380 INFO [Depósitos para el día 5 de la simulación 1]
+2021-08-29 03:17:36.662 INFO [Transferencias para el día 5 de la simulación 1]
+2021-08-29 03:17:36.827 INFO [Operaciones para el día 5 de la simulación 1]
+2021-08-29 03:17:37.007 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 1]
+2021-08-29 03:17:37.007 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 1]
+2021-08-29 03:17:37.020 INFO [Depósitos para el día 6 de la simulación 1]
+2021-08-29 03:17:37.275 INFO [Transferencias para el día 6 de la simulación 1]
+2021-08-29 03:17:37.454 INFO [Operaciones para el día 6 de la simulación 1]
+2021-08-29 03:17:37.677 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 1]
+2021-08-29 03:17:37.677 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 1]
+2021-08-29 03:17:37.688 INFO [Depósitos para el día 7 de la simulación 1]
+2021-08-29 03:17:37.933 INFO [Transferencias para el día 7 de la simulación 1]
+2021-08-29 03:17:38.146 INFO [Operaciones para el día 7 de la simulación 1]
+2021-08-29 03:17:38.370 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 1]
+2021-08-29 03:17:38.370 WARM [INICIO DÍA => 8 DE LA SIMULACIÓN => 1]
+2021-08-29 03:17:38.387 INFO [Depósitos para el día 8 de la simulación 1]
+2021-08-29 03:17:38.744 INFO [Transferencias para el día 8 de la simulación 1]
+2021-08-29 03:17:38.958 INFO [Operaciones para el día 8 de la simulación 1]
+2021-08-29 03:17:39.139 INFO [FIN DÍA => 8 DE LA SIMULACIÓN => 1]
+2021-08-29 03:17:39.139 WARM [INICIO DÍA => 9 DE LA SIMULACIÓN => 1]
+2021-08-29 03:17:39.153 INFO [Depósitos para el día 9 de la simulación 1]
+2021-08-29 03:17:39.413 INFO [Transferencias para el día 9 de la simulación 1]
+2021-08-29 03:17:39.609 INFO [Operaciones para el día 9 de la simulación 1]
+2021-08-29 03:17:39.792 INFO [FIN DÍA => 9 DE LA SIMULACIÓN => 1]
+2021-08-29 03:17:39.792 WARM [INICIO DÍA => 10 DE LA SIMULACIÓN => 1]
+2021-08-29 03:17:39.805 INFO [Depósitos para el día 10 de la simulación 1]
+2021-08-29 03:17:40.244 INFO [Transferencias para el día 10 de la simulación 1]
+2021-08-29 03:17:40.455 INFO [Operaciones para el día 10 de la simulación 1]
+2021-08-29 03:17:40.638 INFO [FIN DÍA => 10 DE LA SIMULACIÓN => 1]
+2021-08-29 03:17:40.638 SILLY [7023 de transacciones de la simulación 1]
+2021-08-29 03:17:40.837 INFO [================================================]
+2021-08-29 03:17:40.837 INFO [SIMULACIÓN => 2]
+2021-08-29 03:17:40.837 INFO [================================================]
+2021-08-29 03:17:40.838 INFO [ID Simulation [undefined]]
+2021-08-29 03:17:40.838 INFO [Configuración global de la simulación [2]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 230,
+  "numPopIntermediary": 55,
+  "numPopNoProfitBusiness": 30,
+  "numPopProfitBusiness": 31,
+  "numPopTrustBusiness": 15,
+  "numPopShellBusiness": 26,
+  "numPopHighPropensityFraud": 76,
+  "perPopWatchList": 0.22725,
+  "maxTimesWatchList": 19,
+  "maxTimesCleanWatchList": 5,
+  "maxPropensityFraud": 0.89175,
+  "maxHighPropensityFraud": 0.9,
+  "perLinkedIntermediary": 0.653,
+  "numMaxLinkedNoIntermediary": 15.0625,
+  "numMaxLinkedIndBusInter": 3.03,
+  "perExecuteDeposit": 0.02175,
+  "perExecuteTransfer": 0.331,
+  "perExecuteWithdrawal": 0.46475,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 109178.75
+  },
+  "perNewLinkTransact": 0.281
+}
+2021-08-29 03:17:41.097 INFO [Total de agentes creados [387]]
+2021-08-29 03:17:42.403 INFO [Red creada con [2383] enalces]
+2021-08-29 03:17:42.408 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 2]
+2021-08-29 03:17:42.411 INFO [Depósitos para el día 1 de la simulación 2]
+2021-08-29 03:17:42.503 INFO [Transferencias para el día 1 de la simulación 2]
+2021-08-29 03:17:42.710 INFO [Operaciones para el día 1 de la simulación 2]
+2021-08-29 03:17:42.895 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 2]
+2021-08-29 03:17:42.895 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 2]
+2021-08-29 03:17:42.900 INFO [Depósitos para el día 2 de la simulación 2]
+2021-08-29 03:17:43.155 INFO [Transferencias para el día 2 de la simulación 2]
+2021-08-29 03:17:43.372 INFO [Operaciones para el día 2 de la simulación 2]
+2021-08-29 03:17:43.742 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 2]
+2021-08-29 03:17:43.747 INFO [Depósitos para el día 3 de la simulación 2]
+2021-08-29 03:17:43.742 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 2]
+2021-08-29 03:17:44.014 INFO [Transferencias para el día 3 de la simulación 2]
+2021-08-29 03:17:44.231 INFO [Operaciones para el día 3 de la simulación 2]
+2021-08-29 03:17:44.409 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 2]
+2021-08-29 03:17:44.409 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 2]
+2021-08-29 03:17:44.413 INFO [Depósitos para el día 4 de la simulación 2]
+2021-08-29 03:17:44.865 INFO [Transferencias para el día 4 de la simulación 2]
+2021-08-29 03:17:45.076 INFO [Operaciones para el día 4 de la simulación 2]
+2021-08-29 03:17:45.260 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 2]
+2021-08-29 03:17:45.260 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 2]
+2021-08-29 03:17:45.261 INFO [Depósitos para el día 5 de la simulación 2]
+2021-08-29 03:17:45.501 INFO [Transferencias para el día 5 de la simulación 2]
+2021-08-29 03:17:45.715 INFO [Operaciones para el día 5 de la simulación 2]
+2021-08-29 03:17:45.910 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 2]
+2021-08-29 03:17:45.910 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 2]
+2021-08-29 03:17:45.911 INFO [Depósitos para el día 6 de la simulación 2]
+2021-08-29 03:17:46.142 INFO [Transferencias para el día 6 de la simulación 2]
+2021-08-29 03:17:46.352 INFO [Operaciones para el día 6 de la simulación 2]
+2021-08-29 03:17:46.559 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 2]
+2021-08-29 03:17:46.561 INFO [Depósitos para el día 7 de la simulación 2]
+2021-08-29 03:17:46.559 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 2]
+2021-08-29 03:17:46.796 INFO [Transferencias para el día 7 de la simulación 2]
+2021-08-29 03:17:47.003 INFO [Operaciones para el día 7 de la simulación 2]
+2021-08-29 03:17:47.192 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 2]
+2021-08-29 03:17:47.192 WARM [INICIO DÍA => 8 DE LA SIMULACIÓN => 2]
+2021-08-29 03:17:47.194 INFO [Depósitos para el día 8 de la simulación 2]
+2021-08-29 03:17:47.451 INFO [Transferencias para el día 8 de la simulación 2]
+2021-08-29 03:17:47.653 INFO [Operaciones para el día 8 de la simulación 2]
+2021-08-29 03:17:48.014 INFO [FIN DÍA => 8 DE LA SIMULACIÓN => 2]
+2021-08-29 03:17:48.015 WARM [INICIO DÍA => 9 DE LA SIMULACIÓN => 2]
+2021-08-29 03:17:48.016 INFO [Depósitos para el día 9 de la simulación 2]
+2021-08-29 03:17:48.251 INFO [Transferencias para el día 9 de la simulación 2]
+2021-08-29 03:17:48.481 INFO [Operaciones para el día 9 de la simulación 2]
+2021-08-29 03:17:48.688 INFO [FIN DÍA => 9 DE LA SIMULACIÓN => 2]
+2021-08-29 03:17:48.688 WARM [INICIO DÍA => 10 DE LA SIMULACIÓN => 2]
+2021-08-29 03:17:48.689 INFO [Depósitos para el día 10 de la simulación 2]
+2021-08-29 03:17:49.111 INFO [Transferencias para el día 10 de la simulación 2]
+2021-08-29 03:17:49.334 INFO [Operaciones para el día 10 de la simulación 2]
+2021-08-29 03:17:49.513 INFO [FIN DÍA => 10 DE LA SIMULACIÓN => 2]
+2021-08-29 03:17:49.513 SILLY [2212 de transacciones de la simulación 2]
+2021-08-29 03:17:49.702 INFO [================================================]
+2021-08-29 03:17:49.702 INFO [SIMULACIÓN => 3]
+2021-08-29 03:17:49.702 INFO [================================================]
+2021-08-29 03:17:49.702 INFO [ID Simulation [undefined]]
+2021-08-29 03:17:49.702 INFO [Configuración global de la simulación [3]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 628,
+  "numPopIntermediary": 18,
+  "numPopNoProfitBusiness": 36,
+  "numPopProfitBusiness": 36,
+  "numPopTrustBusiness": 105,
+  "numPopShellBusiness": 69,
+  "numPopHighPropensityFraud": 622,
+  "perPopWatchList": 0.08625,
+  "maxTimesWatchList": 19,
+  "maxTimesCleanWatchList": 5,
+  "maxPropensityFraud": 0.69525,
+  "maxHighPropensityFraud": 0.89525,
+  "perLinkedIntermediary": 0.773,
+  "numMaxLinkedNoIntermediary": 9.6625,
+  "numMaxLinkedIndBusInter": 2.75,
+  "perExecuteDeposit": 0.03375,
+  "perExecuteTransfer": 0.607,
+  "perExecuteWithdrawal": 0.35375,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 8986.25
+  },
+  "perNewLinkTransact": 0.371
+}
+2021-08-29 03:17:49.937 INFO [Total de agentes creados [892]]
+2021-08-29 03:17:52.754 INFO [Red creada con [3431] enalces]
+2021-08-29 03:17:52.937 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 3]
+2021-08-29 03:17:52.938 INFO [Depósitos para el día 1 de la simulación 3]
+2021-08-29 03:17:53.340 INFO [Transferencias para el día 1 de la simulación 3]
+2021-08-29 03:17:53.534 INFO [Operaciones para el día 1 de la simulación 3]
+2021-08-29 03:17:53.730 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 3]
+2021-08-29 03:17:53.730 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 3]
+2021-08-29 03:17:53.732 INFO [Depósitos para el día 2 de la simulación 3]
+2021-08-29 03:17:54.083 INFO [Transferencias para el día 2 de la simulación 3]
+2021-08-29 03:17:54.280 INFO [Operaciones para el día 2 de la simulación 3]
+2021-08-29 03:17:54.463 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 3]
+2021-08-29 03:17:54.463 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 3]
+2021-08-29 03:17:54.464 INFO [Depósitos para el día 3 de la simulación 3]
+2021-08-29 03:17:54.784 INFO [Transferencias para el día 3 de la simulación 3]
+2021-08-29 03:17:54.979 INFO [Operaciones para el día 3 de la simulación 3]
+2021-08-29 03:17:55.192 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 3]
+2021-08-29 03:17:55.192 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 3]
+2021-08-29 03:17:55.194 INFO [Depósitos para el día 4 de la simulación 3]
+2021-08-29 03:17:55.463 INFO [Transferencias para el día 4 de la simulación 3]
+2021-08-29 03:17:55.651 INFO [Operaciones para el día 4 de la simulación 3]
+2021-08-29 03:17:55.844 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 3]
+2021-08-29 03:17:55.844 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 3]
+2021-08-29 03:17:55.846 INFO [Depósitos para el día 5 de la simulación 3]
+2021-08-29 03:17:56.110 INFO [Transferencias para el día 5 de la simulación 3]
+2021-08-29 03:17:56.285 INFO [Operaciones para el día 5 de la simulación 3]
+2021-08-29 03:17:56.467 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 3]
+2021-08-29 03:17:56.467 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 3]
+2021-08-29 03:17:56.468 INFO [Depósitos para el día 6 de la simulación 3]
+2021-08-29 03:17:56.719 INFO [Transferencias para el día 6 de la simulación 3]
+2021-08-29 03:17:56.921 INFO [Operaciones para el día 6 de la simulación 3]
+2021-08-29 03:17:57.283 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 3]
+2021-08-29 03:17:57.283 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 3]
+2021-08-29 03:17:57.284 INFO [Depósitos para el día 7 de la simulación 3]
+2021-08-29 03:17:57.530 INFO [Transferencias para el día 7 de la simulación 3]
+2021-08-29 03:17:57.712 INFO [Operaciones para el día 7 de la simulación 3]
+2021-08-29 03:17:57.888 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 3]
+2021-08-29 03:17:57.889 WARM [INICIO DÍA => 8 DE LA SIMULACIÓN => 3]
+2021-08-29 03:17:57.890 INFO [Depósitos para el día 8 de la simulación 3]
+2021-08-29 03:17:58.136 INFO [Transferencias para el día 8 de la simulación 3]
+2021-08-29 03:17:58.482 INFO [Operaciones para el día 8 de la simulación 3]
+2021-08-29 03:17:58.662 INFO [FIN DÍA => 8 DE LA SIMULACIÓN => 3]
+2021-08-29 03:17:58.662 WARM [INICIO DÍA => 9 DE LA SIMULACIÓN => 3]
+2021-08-29 03:17:58.663 INFO [Depósitos para el día 9 de la simulación 3]
+2021-08-29 03:17:58.985 INFO [Transferencias para el día 9 de la simulación 3]
+2021-08-29 03:17:59.162 INFO [Operaciones para el día 9 de la simulación 3]
+2021-08-29 03:17:59.345 INFO [FIN DÍA => 9 DE LA SIMULACIÓN => 3]
+2021-08-29 03:17:59.345 WARM [INICIO DÍA => 10 DE LA SIMULACIÓN => 3]
+2021-08-29 03:17:59.348 INFO [Depósitos para el día 10 de la simulación 3]
+2021-08-29 03:17:59.593 INFO [Transferencias para el día 10 de la simulación 3]
+2021-08-29 03:17:59.777 INFO [Operaciones para el día 10 de la simulación 3]
+2021-08-29 03:17:59.957 INFO [FIN DÍA => 10 DE LA SIMULACIÓN => 3]
+2021-08-29 03:17:59.957 SILLY [4591 de transacciones de la simulación 3]
+2021-08-29 03:18:00.141 INFO [SIMULACIÓN => 4]
+2021-08-29 03:18:00.141 INFO [================================================]
+2021-08-29 03:18:00.141 INFO [================================================]
+2021-08-29 03:18:00.142 INFO [ID Simulation [undefined]]
+2021-08-29 03:18:00.142 INFO [Configuración global de la simulación [4]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 527,
+  "numPopIntermediary": 55,
+  "numPopNoProfitBusiness": 19,
+  "numPopProfitBusiness": 39,
+  "numPopTrustBusiness": 42,
+  "numPopShellBusiness": 48,
+  "numPopHighPropensityFraud": 384,
+  "perPopWatchList": 0.08325,
+  "maxTimesWatchList": 16,
+  "maxTimesCleanWatchList": 10,
+  "maxPropensityFraud": 0.89925,
+  "maxHighPropensityFraud": 0.9,
+  "perLinkedIntermediary": 0.645,
+  "numMaxLinkedNoIntermediary": 4.4125,
+  "numMaxLinkedIndBusInter": 4.47,
+  "perExecuteDeposit": 0.02925,
+  "perExecuteTransfer": 0.549,
+  "perExecuteWithdrawal": 0.30425,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 12818.75
+  },
+  "perNewLinkTransact": 0.369
+}
+2021-08-29 03:18:00.359 INFO [Total de agentes creados [730]]
+2021-08-29 03:18:03.663 INFO [Red creada con [4072] enalces]
+2021-08-29 03:18:03.842 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 4]
+2021-08-29 03:18:03.853 INFO [Depósitos para el día 1 de la simulación 4]
+2021-08-29 03:18:04.362 INFO [Transferencias para el día 1 de la simulación 4]
+2021-08-29 03:18:04.736 INFO [Operaciones para el día 1 de la simulación 4]
+2021-08-29 03:18:04.915 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 4]
+2021-08-29 03:18:04.915 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 4]
+2021-08-29 03:18:04.920 INFO [Depósitos para el día 2 de la simulación 4]
+2021-08-29 03:18:05.385 INFO [Transferencias para el día 2 de la simulación 4]
+2021-08-29 03:18:05.763 INFO [Operaciones para el día 2 de la simulación 4]
+2021-08-29 03:18:05.944 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 4]
+2021-08-29 03:18:05.944 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 4]
+2021-08-29 03:18:05.947 INFO [Depósitos para el día 3 de la simulación 4]
+2021-08-29 03:18:06.386 INFO [Transferencias para el día 3 de la simulación 4]
+2021-08-29 03:18:06.799 INFO [Operaciones para el día 3 de la simulación 4]
+2021-08-29 03:18:06.983 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 4]
+2021-08-29 03:18:06.983 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 4]
+2021-08-29 03:18:06.988 INFO [Depósitos para el día 4 de la simulación 4]
+2021-08-29 03:18:07.397 INFO [Transferencias para el día 4 de la simulación 4]
+2021-08-29 03:18:07.584 INFO [Operaciones para el día 4 de la simulación 4]
+2021-08-29 03:18:07.982 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 4]
+2021-08-29 03:18:07.983 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 4]
+2021-08-29 03:18:07.988 INFO [Depósitos para el día 5 de la simulación 4]
+2021-08-29 03:18:08.411 INFO [Transferencias para el día 5 de la simulación 4]
+2021-08-29 03:18:08.602 INFO [Operaciones para el día 5 de la simulación 4]
+2021-08-29 03:18:08.968 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 4]
+2021-08-29 03:18:08.968 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 4]
+2021-08-29 03:18:08.980 INFO [Depósitos para el día 6 de la simulación 4]
+2021-08-29 03:18:09.355 INFO [Transferencias para el día 6 de la simulación 4]
+2021-08-29 03:18:09.541 INFO [Operaciones para el día 6 de la simulación 4]
+2021-08-29 03:18:09.722 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 4]
+2021-08-29 03:18:09.722 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 4]
+2021-08-29 03:18:09.732 INFO [Depósitos para el día 7 de la simulación 4]
+2021-08-29 03:18:10.327 INFO [Transferencias para el día 7 de la simulación 4]
+2021-08-29 03:18:10.506 INFO [Operaciones para el día 7 de la simulación 4]
+2021-08-29 03:18:10.688 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 4]
+2021-08-29 03:18:10.688 WARM [INICIO DÍA => 8 DE LA SIMULACIÓN => 4]
+2021-08-29 03:18:10.690 INFO [Depósitos para el día 8 de la simulación 4]
+2021-08-29 03:18:11.097 INFO [Transferencias para el día 8 de la simulación 4]
+2021-08-29 03:18:11.451 INFO [Operaciones para el día 8 de la simulación 4]
+2021-08-29 03:18:11.631 INFO [FIN DÍA => 8 DE LA SIMULACIÓN => 4]
+2021-08-29 03:18:11.631 WARM [INICIO DÍA => 9 DE LA SIMULACIÓN => 4]
+2021-08-29 03:18:11.632 INFO [Depósitos para el día 9 de la simulación 4]
+2021-08-29 03:18:11.995 INFO [Transferencias para el día 9 de la simulación 4]
+2021-08-29 03:18:12.175 INFO [Operaciones para el día 9 de la simulación 4]
+2021-08-29 03:18:12.361 INFO [FIN DÍA => 9 DE LA SIMULACIÓN => 4]
+2021-08-29 03:18:12.368 INFO [Depósitos para el día 10 de la simulación 4]
+2021-08-29 03:18:12.361 WARM [INICIO DÍA => 10 DE LA SIMULACIÓN => 4]
+2021-08-29 03:18:12.703 INFO [Transferencias para el día 10 de la simulación 4]
+2021-08-29 03:18:12.893 INFO [Operaciones para el día 10 de la simulación 4]
+2021-08-29 03:18:13.073 INFO [FIN DÍA => 10 DE LA SIMULACIÓN => 4]
+2021-08-29 03:18:13.073 SILLY [4702 de transacciones de la simulación 4]
+2021-08-29 03:18:13.258 INFO [================================================]
+2021-08-29 03:18:13.258 INFO [SIMULACIÓN => 5]
+2021-08-29 03:18:13.258 INFO [================================================]
+2021-08-29 03:18:13.258 INFO [ID Simulation [undefined]]
+2021-08-29 03:18:13.259 INFO [Configuración global de la simulación [5]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 911,
+  "numPopIntermediary": 60,
+  "numPopNoProfitBusiness": 69,
+  "numPopProfitBusiness": 145,
+  "numPopTrustBusiness": 51,
+  "numPopShellBusiness": 168,
+  "numPopHighPropensityFraud": 489,
+  "perPopWatchList": 0.03225,
+  "maxTimesWatchList": 25,
+  "maxTimesCleanWatchList": 10,
+  "maxPropensityFraud": 0.83325,
+  "maxHighPropensityFraud": 0.9,
+  "perLinkedIntermediary": 0.781,
+  "numMaxLinkedNoIntermediary": 7.1125,
+  "numMaxLinkedIndBusInter": 4.05,
+  "perExecuteDeposit": 0.01725,
+  "perExecuteTransfer": 0.321,
+  "perExecuteWithdrawal": 0.28475,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 103703.75
+  },
+  "perNewLinkTransact": 0.039
+}
+2021-08-29 03:18:13.526 INFO [Total de agentes creados [1404]]
+2021-08-29 03:18:21.876 INFO [Red creada con [6764] enalces]
+2021-08-29 03:18:22.077 INFO [Depósitos para el día 1 de la simulación 5]
+2021-08-29 03:18:22.065 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 5]
+2021-08-29 03:18:22.755 INFO [Transferencias para el día 1 de la simulación 5]
+2021-08-29 03:18:23.080 INFO [Operaciones para el día 1 de la simulación 5]
+2021-08-29 03:18:23.258 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 5]
+2021-08-29 03:18:23.258 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 5]
+2021-08-29 03:18:23.265 INFO [Depósitos para el día 2 de la simulación 5]
+2021-08-29 03:18:23.912 INFO [Transferencias para el día 2 de la simulación 5]
+2021-08-29 03:18:24.435 INFO [Operaciones para el día 2 de la simulación 5]
+2021-08-29 03:18:24.609 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 5]
+2021-08-29 03:18:24.609 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 5]
+2021-08-29 03:18:24.616 INFO [Depósitos para el día 3 de la simulación 5]
+2021-08-29 03:18:25.199 INFO [Transferencias para el día 3 de la simulación 5]
+2021-08-29 03:18:25.508 INFO [Operaciones para el día 3 de la simulación 5]
+2021-08-29 03:18:26.592 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 5]
+2021-08-29 03:18:26.593 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 5]
+2021-08-29 03:18:26.619 INFO [Depósitos para el día 4 de la simulación 5]
+2021-08-29 03:18:27.620 INFO [Transferencias para el día 4 de la simulación 5]
+2021-08-29 03:18:29.838 INFO [Operaciones para el día 4 de la simulación 5]
+2021-08-29 03:18:31.151 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 5]
+2021-08-29 03:18:31.152 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 5]
+2021-08-29 03:18:31.163 INFO [Depósitos para el día 5 de la simulación 5]
+2021-08-29 03:18:32.329 INFO [Transferencias para el día 5 de la simulación 5]
+2021-08-29 03:18:33.113 INFO [Operaciones para el día 5 de la simulación 5]
+2021-08-29 03:18:33.732 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 5]
+2021-08-29 03:18:33.743 INFO [Depósitos para el día 6 de la simulación 5]
+2021-08-29 03:18:33.732 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 5]
+2021-08-29 03:18:34.134 INFO [Transferencias para el día 6 de la simulación 5]
+2021-08-29 03:18:34.972 INFO [Operaciones para el día 6 de la simulación 5]
+2021-08-29 03:18:35.642 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 5]
+2021-08-29 03:18:35.642 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 5]
+2021-08-29 03:18:35.649 INFO [Depósitos para el día 7 de la simulación 5]
+2021-08-29 03:18:36.666 INFO [Transferencias para el día 7 de la simulación 5]
+2021-08-29 03:18:37.423 INFO [Operaciones para el día 7 de la simulación 5]
+2021-08-29 03:18:38.049 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 5]
+2021-08-29 03:18:38.049 WARM [INICIO DÍA => 8 DE LA SIMULACIÓN => 5]
+2021-08-29 03:18:38.082 INFO [Depósitos para el día 8 de la simulación 5]
+2021-08-29 03:18:39.114 INFO [Transferencias para el día 8 de la simulación 5]
+2021-08-29 03:18:39.881 INFO [Operaciones para el día 8 de la simulación 5]
+2021-08-29 03:18:40.498 INFO [FIN DÍA => 8 DE LA SIMULACIÓN => 5]
+2021-08-29 03:18:40.498 WARM [INICIO DÍA => 9 DE LA SIMULACIÓN => 5]
+2021-08-29 03:18:40.511 INFO [Depósitos para el día 9 de la simulación 5]
+2021-08-29 03:18:41.512 INFO [Transferencias para el día 9 de la simulación 5]
+2021-08-29 03:18:42.342 INFO [Operaciones para el día 9 de la simulación 5]
+2021-08-29 03:18:43.003 INFO [FIN DÍA => 9 DE LA SIMULACIÓN => 5]
+2021-08-29 03:18:43.003 WARM [INICIO DÍA => 10 DE LA SIMULACIÓN => 5]
+2021-08-29 03:18:43.017 INFO [Depósitos para el día 10 de la simulación 5]
+2021-08-29 03:18:43.971 INFO [Transferencias para el día 10 de la simulación 5]
+2021-08-29 03:18:44.739 INFO [Operaciones para el día 10 de la simulación 5]
+2021-08-29 03:18:45.353 INFO [FIN DÍA => 10 DE LA SIMULACIÓN => 5]
+2021-08-29 03:18:45.353 SILLY [9157 de transacciones de la simulación 5]
+2021-08-29 03:18:46.004 INFO [================================================]
+2021-08-29 03:18:46.005 INFO [SIMULACIÓN => 6]
+2021-08-29 03:18:46.005 INFO [ID Simulation [undefined]]
+2021-08-29 03:18:46.005 INFO [================================================]
+2021-08-29 03:18:46.005 INFO [Configuración global de la simulación [6]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 177,
+  "numPopIntermediary": 67,
+  "numPopNoProfitBusiness": 16,
+  "numPopProfitBusiness": 12,
+  "numPopTrustBusiness": 16,
+  "numPopShellBusiness": 10,
+  "numPopHighPropensityFraud": 151,
+  "perPopWatchList": 0.20775,
+  "maxTimesWatchList": 21,
+  "maxTimesCleanWatchList": 4,
+  "maxPropensityFraud": 0.75075,
+  "maxHighPropensityFraud": 0.9,
+  "perLinkedIntermediary": 0.435,
+  "numMaxLinkedNoIntermediary": 6.2125,
+  "numMaxLinkedIndBusInter": 2.07,
+  "perExecuteDeposit": 0.01575,
+  "perExecuteTransfer": 0.555,
+  "perExecuteWithdrawal": 0.47675,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 14461.25
+  },
+  "perNewLinkTransact": 0.209
+}
+2021-08-29 03:18:46.729 INFO [Total de agentes creados [298]]
+2021-08-29 03:18:48.460 INFO [Red creada con [1694] enalces]
+2021-08-29 03:18:49.131 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 6]
+2021-08-29 03:18:49.133 INFO [Depósitos para el día 1 de la simulación 6]
+2021-08-29 03:18:49.935 INFO [Transferencias para el día 1 de la simulación 6]
+2021-08-29 03:18:50.663 INFO [Operaciones para el día 1 de la simulación 6]
+2021-08-29 03:18:50.668 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 6]
+2021-08-29 03:18:50.669 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 6]
+2021-08-29 03:18:50.672 INFO [Depósitos para el día 2 de la simulación 6]
+2021-08-29 03:18:50.736 INFO [Transferencias para el día 2 de la simulación 6]
+2021-08-29 03:18:51.401 INFO [Operaciones para el día 2 de la simulación 6]
+2021-08-29 03:18:52.060 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 6]
+2021-08-29 03:18:52.061 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 6]
+2021-08-29 03:18:52.061 INFO [Depósitos para el día 3 de la simulación 6]
+2021-08-29 03:18:52.787 INFO [Transferencias para el día 3 de la simulación 6]
+2021-08-29 03:18:53.469 INFO [Operaciones para el día 3 de la simulación 6]
+2021-08-29 03:18:54.122 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 6]
+2021-08-29 03:18:54.122 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 6]
+2021-08-29 03:18:54.124 INFO [Depósitos para el día 4 de la simulación 6]
+2021-08-29 03:18:54.811 INFO [Transferencias para el día 4 de la simulación 6]
+2021-08-29 03:18:55.446 INFO [Operaciones para el día 4 de la simulación 6]
+2021-08-29 03:18:56.080 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 6]
+2021-08-29 03:18:56.080 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 6]
+2021-08-29 03:18:56.081 INFO [Depósitos para el día 5 de la simulación 6]
+2021-08-29 03:18:56.823 INFO [Transferencias para el día 5 de la simulación 6]
+2021-08-29 03:18:57.461 INFO [Operaciones para el día 5 de la simulación 6]
+2021-08-29 03:18:58.112 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 6]
+2021-08-29 03:18:58.112 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 6]
+2021-08-29 03:18:58.115 INFO [Depósitos para el día 6 de la simulación 6]
+2021-08-29 03:18:58.803 INFO [Transferencias para el día 6 de la simulación 6]
+2021-08-29 03:18:59.454 INFO [Operaciones para el día 6 de la simulación 6]
+2021-08-29 03:19:00.153 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 6]
+2021-08-29 03:19:00.153 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 6]
+2021-08-29 03:19:00.154 INFO [Depósitos para el día 7 de la simulación 6]
+2021-08-29 03:19:01.503 INFO [Transferencias para el día 7 de la simulación 6]
+2021-08-29 03:19:02.794 INFO [Operaciones para el día 7 de la simulación 6]
+2021-08-29 03:19:03.516 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 6]
+2021-08-29 03:19:03.516 WARM [INICIO DÍA => 8 DE LA SIMULACIÓN => 6]
+2021-08-29 03:19:03.517 INFO [Depósitos para el día 8 de la simulación 6]
+2021-08-29 03:19:04.175 INFO [Transferencias para el día 8 de la simulación 6]
+2021-08-29 03:19:04.831 INFO [Operaciones para el día 8 de la simulación 6]
+2021-08-29 03:19:05.458 INFO [FIN DÍA => 8 DE LA SIMULACIÓN => 6]
+2021-08-29 03:19:05.458 WARM [INICIO DÍA => 9 DE LA SIMULACIÓN => 6]
+2021-08-29 03:19:05.459 INFO [Depósitos para el día 9 de la simulación 6]
+2021-08-29 03:19:06.194 INFO [Transferencias para el día 9 de la simulación 6]
+2021-08-29 03:19:06.879 INFO [Operaciones para el día 9 de la simulación 6]
+2021-08-29 03:19:07.520 INFO [FIN DÍA => 9 DE LA SIMULACIÓN => 6]
+2021-08-29 03:19:07.520 WARM [INICIO DÍA => 10 DE LA SIMULACIÓN => 6]
+2021-08-29 03:19:07.520 INFO [Depósitos para el día 10 de la simulación 6]
+2021-08-29 03:19:08.171 INFO [Transferencias para el día 10 de la simulación 6]
+2021-08-29 03:19:08.824 INFO [Operaciones para el día 10 de la simulación 6]
+2021-08-29 03:19:09.458 INFO [FIN DÍA => 10 DE LA SIMULACIÓN => 6]
+2021-08-29 03:19:09.458 SILLY [1173 de transacciones de la simulación 6]
+2021-08-29 03:19:10.819 INFO [SIMULACIÓN => 7]
+2021-08-29 03:19:10.819 INFO [================================================]
+2021-08-29 03:19:10.819 INFO [================================================]
+2021-08-29 03:19:10.820 INFO [ID Simulation [undefined]]
+2021-08-29 03:19:10.820 INFO [Configuración global de la simulación [7]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 808,
+  "numPopIntermediary": 42,
+  "numPopNoProfitBusiness": 62,
+  "numPopProfitBusiness": 170,
+  "numPopTrustBusiness": 191,
+  "numPopShellBusiness": 114,
+  "numPopHighPropensityFraud": 211,
+  "perPopWatchList": 0.25725,
+  "maxTimesWatchList": 16,
+  "maxTimesCleanWatchList": 7,
+  "maxPropensityFraud": 0.77775,
+  "maxHighPropensityFraud": 0.9,
+  "perLinkedIntermediary": 0.583,
+  "numMaxLinkedNoIntermediary": 7.3375,
+  "numMaxLinkedIndBusInter": 5.81,
+  "perExecuteDeposit": 0.12525,
+  "perExecuteTransfer": 0.637,
+  "perExecuteWithdrawal": 0.27575,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 52238.75
+  },
+  "perNewLinkTransact": 0.113
+}
+2021-08-29 03:19:11.588 INFO [Total de agentes creados [1387]]
+2021-08-29 03:19:19.067 INFO [Red creada con [5903] enalces]
+2021-08-29 03:19:19.072 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 7]
+2021-08-29 03:19:19.116 INFO [Depósitos para el día 1 de la simulación 7]
+2021-08-29 03:19:21.269 INFO [Transferencias para el día 1 de la simulación 7]
+2021-08-29 03:19:21.979 INFO [Operaciones para el día 1 de la simulación 7]
+2021-08-29 03:19:22.594 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 7]
+2021-08-29 03:19:22.594 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 7]
+2021-08-29 03:19:22.656 INFO [Depósitos para el día 2 de la simulación 7]
+2021-08-29 03:19:24.596 INFO [Transferencias para el día 2 de la simulación 7]
+2021-08-29 03:19:25.332 INFO [Operaciones para el día 2 de la simulación 7]
+2021-08-29 03:19:25.965 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 7]
+2021-08-29 03:19:25.965 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 7]
+2021-08-29 03:19:26.067 INFO [Depósitos para el día 3 de la simulación 7]
+2021-08-29 03:19:28.698 INFO [Transferencias para el día 3 de la simulación 7]
+2021-08-29 03:19:30.090 INFO [Operaciones para el día 3 de la simulación 7]
+2021-08-29 03:19:31.457 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 7]
+2021-08-29 03:19:31.458 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 7]
+2021-08-29 03:19:31.521 INFO [Depósitos para el día 4 de la simulación 7]
+2021-08-29 03:19:33.311 INFO [Transferencias para el día 4 de la simulación 7]
+2021-08-29 03:19:34.065 INFO [Operaciones para el día 4 de la simulación 7]
+2021-08-29 03:19:34.689 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 7]
+2021-08-29 03:19:34.689 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 7]
+2021-08-29 03:19:34.794 INFO [Depósitos para el día 5 de la simulación 7]
+2021-08-29 03:19:36.591 INFO [Transferencias para el día 5 de la simulación 7]
+2021-08-29 03:19:37.358 INFO [Operaciones para el día 5 de la simulación 7]
+2021-08-29 03:19:37.972 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 7]
+2021-08-29 03:19:37.972 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 7]
+2021-08-29 03:19:38.045 INFO [Depósitos para el día 6 de la simulación 7]
+2021-08-29 03:19:39.872 INFO [Transferencias para el día 6 de la simulación 7]
+2021-08-29 03:19:40.672 INFO [Operaciones para el día 6 de la simulación 7]
+2021-08-29 03:19:41.301 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 7]
+2021-08-29 03:19:41.301 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 7]
+2021-08-29 03:19:41.367 INFO [Depósitos para el día 7 de la simulación 7]
+2021-08-29 03:19:43.878 INFO [Transferencias para el día 7 de la simulación 7]
+2021-08-29 03:19:45.354 INFO [Operaciones para el día 7 de la simulación 7]
+2021-08-29 03:19:46.607 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 7]
+2021-08-29 03:19:46.607 WARM [INICIO DÍA => 8 DE LA SIMULACIÓN => 7]
+2021-08-29 03:19:46.675 INFO [Depósitos para el día 8 de la simulación 7]
+2021-08-29 03:19:49.092 INFO [Transferencias para el día 8 de la simulación 7]
+2021-08-29 03:19:50.533 INFO [Operaciones para el día 8 de la simulación 7]
+2021-08-29 03:19:51.151 INFO [FIN DÍA => 8 DE LA SIMULACIÓN => 7]
+2021-08-29 03:19:51.151 WARM [INICIO DÍA => 9 DE LA SIMULACIÓN => 7]
+2021-08-29 03:19:51.239 INFO [Depósitos para el día 9 de la simulación 7]
+2021-08-29 03:19:53.103 INFO [Transferencias para el día 9 de la simulación 7]
+2021-08-29 03:19:53.933 INFO [Operaciones para el día 9 de la simulación 7]
+2021-08-29 03:19:54.583 INFO [FIN DÍA => 9 DE LA SIMULACIÓN => 7]
+2021-08-29 03:19:54.583 WARM [INICIO DÍA => 10 DE LA SIMULACIÓN => 7]
+2021-08-29 03:19:54.684 INFO [Depósitos para el día 10 de la simulación 7]
+2021-08-29 03:19:56.448 INFO [Transferencias para el día 10 de la simulación 7]
+2021-08-29 03:19:57.864 INFO [Operaciones para el día 10 de la simulación 7]
+2021-08-29 03:19:58.505 INFO [FIN DÍA => 10 DE LA SIMULACIÓN => 7]
+2021-08-29 03:19:58.505 SILLY [13931 de transacciones de la simulación 7]
+2021-08-29 03:19:59.198 INFO [================================================]
+2021-08-29 03:19:59.199 INFO [SIMULACIÓN => 8]
+2021-08-29 03:19:59.199 INFO [================================================]
+2021-08-29 03:19:59.199 INFO [ID Simulation [undefined]]
+2021-08-29 03:19:59.199 INFO [Configuración global de la simulación [8]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 618,
+  "numPopIntermediary": 32,
+  "numPopNoProfitBusiness": 108,
+  "numPopProfitBusiness": 43,
+  "numPopTrustBusiness": 195,
+  "numPopShellBusiness": 103,
+  "numPopHighPropensityFraud": 719,
+  "perPopWatchList": 0.26025,
+  "maxTimesWatchList": 24,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.79725,
+  "maxHighPropensityFraud": 0.9,
+  "perLinkedIntermediary": 0.475,
+  "numMaxLinkedNoIntermediary": 11.9125,
+  "numMaxLinkedIndBusInter": 4.71,
+  "perExecuteDeposit": 0.20625,
+  "perExecuteTransfer": 0.551,
+  "perExecuteWithdrawal": 0.32825,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 63188.75
+  },
+  "perNewLinkTransact": 0.377
+}
+2021-08-29 03:19:59.918 INFO [Total de agentes creados [1099]]
+2021-08-29 03:20:07.676 INFO [Red creada con [5807] enalces]
+2021-08-29 03:20:08.315 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 8]
+2021-08-29 03:20:08.523 INFO [Depósitos para el día 1 de la simulación 8]
+2021-08-29 03:20:10.471 INFO [Transferencias para el día 1 de la simulación 8]
+2021-08-29 03:20:12.085 INFO [Operaciones para el día 1 de la simulación 8]
+2021-08-29 03:20:12.746 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 8]
+2021-08-29 03:20:12.746 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 8]
+2021-08-29 03:20:12.983 INFO [Depósitos para el día 2 de la simulación 8]
+2021-08-29 03:20:15.705 INFO [Transferencias para el día 2 de la simulación 8]
+2021-08-29 03:20:17.344 INFO [Operaciones para el día 2 de la simulación 8]
+2021-08-29 03:20:17.964 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 8]
+2021-08-29 03:20:17.964 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 8]
+2021-08-29 03:20:18.234 INFO [Depósitos para el día 3 de la simulación 8]
+2021-08-29 03:20:20.230 INFO [Transferencias para el día 3 de la simulación 8]
+2021-08-29 03:20:21.802 INFO [Operaciones para el día 3 de la simulación 8]
+2021-08-29 03:20:22.452 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 8]
+2021-08-29 03:20:22.452 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 8]
+2021-08-29 03:20:22.765 INFO [Depósitos para el día 4 de la simulación 8]
+2021-08-29 03:20:24.746 INFO [Transferencias para el día 4 de la simulación 8]
+2021-08-29 03:20:25.720 INFO [Operaciones para el día 4 de la simulación 8]
+2021-08-29 03:20:26.344 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 8]
+2021-08-29 03:20:26.344 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 8]
+2021-08-29 03:20:26.553 INFO [Depósitos para el día 5 de la simulación 8]
+2021-08-29 03:20:29.236 INFO [Transferencias para el día 5 de la simulación 8]
+2021-08-29 03:20:30.832 INFO [Operaciones para el día 5 de la simulación 8]
+2021-08-29 03:20:32.095 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 8]
+2021-08-29 03:20:32.095 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 8]
+2021-08-29 03:20:32.327 INFO [Depósitos para el día 6 de la simulación 8]
+2021-08-29 03:20:34.937 INFO [Transferencias para el día 6 de la simulación 8]
+2021-08-29 03:20:36.449 INFO [Operaciones para el día 6 de la simulación 8]
+2021-08-29 03:20:37.518 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 8]
+2021-08-29 03:20:37.518 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 8]
+2021-08-29 03:20:37.681 INFO [Depósitos para el día 7 de la simulación 8]
+2021-08-29 03:20:40.036 INFO [Transferencias para el día 7 de la simulación 8]
+2021-08-29 03:20:41.267 INFO [Operaciones para el día 7 de la simulación 8]
+2021-08-29 03:20:42.200 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 8]
+2021-08-29 03:20:42.437 INFO [Depósitos para el día 8 de la simulación 8]
+2021-08-29 03:20:42.200 WARM [INICIO DÍA => 8 DE LA SIMULACIÓN => 8]
+2021-08-29 03:20:44.658 INFO [Transferencias para el día 8 de la simulación 8]
+2021-08-29 03:20:45.737 INFO [Operaciones para el día 8 de la simulación 8]
+2021-08-29 03:20:46.397 INFO [FIN DÍA => 8 DE LA SIMULACIÓN => 8]
+2021-08-29 03:20:46.397 WARM [INICIO DÍA => 9 DE LA SIMULACIÓN => 8]
+2021-08-29 03:20:46.621 INFO [Depósitos para el día 9 de la simulación 8]
+2021-08-29 03:20:48.167 INFO [Transferencias para el día 9 de la simulación 8]
+2021-08-29 03:20:49.117 INFO [Operaciones para el día 9 de la simulación 8]
+2021-08-29 03:20:49.335 INFO [FIN DÍA => 9 DE LA SIMULACIÓN => 8]
+2021-08-29 03:20:49.335 WARM [INICIO DÍA => 10 DE LA SIMULACIÓN => 8]
+2021-08-29 03:20:49.560 INFO [Depósitos para el día 10 de la simulación 8]
+2021-08-29 03:20:51.402 INFO [Transferencias para el día 10 de la simulación 8]
+2021-08-29 03:20:52.242 INFO [Operaciones para el día 10 de la simulación 8]
+2021-08-29 03:20:52.449 INFO [FIN DÍA => 10 DE LA SIMULACIÓN => 8]
+2021-08-29 03:20:52.449 SILLY [17428 de transacciones de la simulación 8]
+2021-08-29 03:20:52.903 INFO [================================================]
+2021-08-29 03:20:52.903 INFO [SIMULACIÓN => 9]
+2021-08-29 03:20:52.903 INFO [================================================]
+2021-08-29 03:20:52.904 INFO [ID Simulation [undefined]]
+2021-08-29 03:20:52.904 INFO [Configuración global de la simulación [9]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 709,
+  "numPopIntermediary": 45,
+  "numPopNoProfitBusiness": 87,
+  "numPopProfitBusiness": 115,
+  "numPopTrustBusiness": 93,
+  "numPopShellBusiness": 158,
+  "numPopHighPropensityFraud": 605,
+  "perPopWatchList": 0.19125,
+  "maxTimesWatchList": 23,
+  "maxTimesCleanWatchList": 6,
+  "maxPropensityFraud": 0.72825,
+  "maxHighPropensityFraud": 0.9,
+  "perLinkedIntermediary": 0.795,
+  "numMaxLinkedNoIntermediary": 2.0875,
+  "numMaxLinkedIndBusInter": 3.45,
+  "perExecuteDeposit": 0.19425,
+  "perExecuteTransfer": 0.409,
+  "perExecuteWithdrawal": 0.21125,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 29243.75
+  },
+  "perNewLinkTransact": 0.179
+}
+2021-08-29 03:20:53.239 INFO [Total de agentes creados [1207]]
+2021-08-29 03:20:56.944 INFO [Red creada con [4121] enalces]
+2021-08-29 03:20:57.174 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 9]
+2021-08-29 03:20:57.225 INFO [Depósitos para el día 1 de la simulación 9]
+2021-08-29 03:20:57.755 INFO [Transferencias para el día 1 de la simulación 9]
+2021-08-29 03:20:58.248 INFO [Operaciones para el día 1 de la simulación 9]
+2021-08-29 03:20:58.464 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 9]
+2021-08-29 03:20:58.465 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 9]
+2021-08-29 03:20:58.530 INFO [Depósitos para el día 2 de la simulación 9]
+2021-08-29 03:20:59.025 INFO [Transferencias para el día 2 de la simulación 9]
+2021-08-29 03:20:59.527 INFO [Operaciones para el día 2 de la simulación 9]
+2021-08-29 03:20:59.744 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 9]
+2021-08-29 03:20:59.744 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 9]
+2021-08-29 03:20:59.808 INFO [Depósitos para el día 3 de la simulación 9]
+2021-08-29 03:21:00.350 INFO [Transferencias para el día 3 de la simulación 9]
+2021-08-29 03:21:00.943 INFO [Operaciones para el día 3 de la simulación 9]
+2021-08-29 03:21:01.158 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 9]
+2021-08-29 03:21:01.158 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 9]
+2021-08-29 03:21:01.230 INFO [Depósitos para el día 4 de la simulación 9]
+2021-08-29 03:21:01.752 INFO [Transferencias para el día 4 de la simulación 9]
+2021-08-29 03:21:02.300 INFO [Operaciones para el día 4 de la simulación 9]
+2021-08-29 03:21:02.532 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 9]
+2021-08-29 03:21:02.532 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 9]
+2021-08-29 03:21:02.613 INFO [Depósitos para el día 5 de la simulación 9]
+2021-08-29 03:21:03.134 INFO [Transferencias para el día 5 de la simulación 9]
+2021-08-29 03:21:03.640 INFO [Operaciones para el día 5 de la simulación 9]
+2021-08-29 03:21:03.861 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 9]
+2021-08-29 03:21:03.863 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 9]
+2021-08-29 03:21:03.951 INFO [Depósitos para el día 6 de la simulación 9]
+2021-08-29 03:21:04.462 INFO [Transferencias para el día 6 de la simulación 9]
+2021-08-29 03:21:04.747 INFO [Operaciones para el día 6 de la simulación 9]
+2021-08-29 03:21:04.970 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 9]
+2021-08-29 03:21:04.970 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 9]
+2021-08-29 03:21:05.035 INFO [Depósitos para el día 7 de la simulación 9]
+2021-08-29 03:21:05.533 INFO [Transferencias para el día 7 de la simulación 9]
+2021-08-29 03:21:06.118 INFO [Operaciones para el día 7 de la simulación 9]
+2021-08-29 03:21:06.341 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 9]
+2021-08-29 03:21:06.341 WARM [INICIO DÍA => 8 DE LA SIMULACIÓN => 9]
+2021-08-29 03:21:06.404 INFO [Depósitos para el día 8 de la simulación 9]
+2021-08-29 03:21:06.881 INFO [Transferencias para el día 8 de la simulación 9]
+2021-08-29 03:21:07.423 INFO [Operaciones para el día 8 de la simulación 9]
+2021-08-29 03:21:07.709 INFO [FIN DÍA => 8 DE LA SIMULACIÓN => 9]
+2021-08-29 03:21:07.709 WARM [INICIO DÍA => 9 DE LA SIMULACIÓN => 9]
+2021-08-29 03:21:07.804 INFO [Depósitos para el día 9 de la simulación 9]
+2021-08-29 03:21:08.636 INFO [Transferencias para el día 9 de la simulación 9]
+2021-08-29 03:21:08.906 INFO [Operaciones para el día 9 de la simulación 9]
+2021-08-29 03:21:09.366 INFO [FIN DÍA => 9 DE LA SIMULACIÓN => 9]
+2021-08-29 03:21:09.366 WARM [INICIO DÍA => 10 DE LA SIMULACIÓN => 9]
+2021-08-29 03:21:09.437 INFO [Depósitos para el día 10 de la simulación 9]
+2021-08-29 03:21:09.938 INFO [Transferencias para el día 10 de la simulación 9]
+2021-08-29 03:21:10.448 INFO [Operaciones para el día 10 de la simulación 9]
+2021-08-29 03:21:10.676 SILLY [11855 de transacciones de la simulación 9]
+2021-08-29 03:21:10.676 INFO [FIN DÍA => 10 DE LA SIMULACIÓN => 9]
+2021-08-29 03:21:10.966 INFO [================================================]
+2021-08-29 03:21:10.967 INFO [================================================]
+2021-08-29 03:21:10.967 INFO [ID Simulation [undefined]]
+2021-08-29 03:21:10.966 INFO [SIMULACIÓN => 10]
+2021-08-29 03:21:10.967 INFO [Configuración global de la simulación [10]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 1425,
+  "numPopIntermediary": 11,
+  "numPopNoProfitBusiness": 82,
+  "numPopProfitBusiness": 28,
+  "numPopTrustBusiness": 77,
+  "numPopShellBusiness": 97,
+  "numPopHighPropensityFraud": 514,
+  "perPopWatchList": 0.23175,
+  "maxTimesWatchList": 16,
+  "maxTimesCleanWatchList": 10,
+  "maxPropensityFraud": 0.80175,
+  "maxHighPropensityFraud": 0.9,
+  "perLinkedIntermediary": 0.461,
+  "numMaxLinkedNoIntermediary": 12.1375,
+  "numMaxLinkedIndBusInter": 4.39,
+  "perExecuteDeposit": 0.02025,
+  "perExecuteTransfer": 0.601,
+  "perExecuteWithdrawal": 0.21725,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 31433.75
+  },
+  "perNewLinkTransact": 0.043
+}
+2021-08-29 03:21:11.503 INFO [Total de agentes creados [1720]]
+2021-08-29 03:21:23.056 INFO [Red creada con [7714] enalces]
+2021-08-29 03:44:23.077 DEBUG [INICIO DE ABM en AML]
+2021-08-29 03:44:23.095 DEBUG [================================================]
+2021-08-29 03:44:23.095 DEBUG [Inicio de 10 simulaciones]
+2021-08-29 03:44:23.095 DEBUG [================================================]
+2021-08-29 03:44:23.101 INFO [================================================]
+2021-08-29 03:44:23.101 INFO [SIMULACIÓN => 1]
+2021-08-29 03:44:23.101 INFO [================================================]
+2021-08-29 03:44:23.102 INFO [ID Simulation [undefined]]
+2021-08-29 03:44:23.102 INFO [Configuración global de la simulación [1]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 487,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 48,
+  "numPopProfitBusiness": 51,
+  "numPopTrustBusiness": 21,
+  "numPopShellBusiness": 38,
+  "numPopHighPropensityFraud": 164,
+  "perPopWatchList": 0.23025,
+  "maxTimesWatchList": 23,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.61875,
+  "maxHighPropensityFraud": 0.81875,
+  "perLinkedIntermediary": 0.735,
+  "numMaxLinkedNoIntermediary": 1.0375,
+  "numMaxLinkedIndBusInter": 3.27,
+  "perExecuteDeposit": 0.12975,
+  "perExecuteTransfer": 0.539,
+  "perExecuteWithdrawal": 0.36275,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 106441.25
+  },
+  "perNewLinkTransact": 0.215
+}
+2021-08-29 03:44:23.160 INFO [Total de agentes creados [676]]
+2021-08-29 03:44:24.033 INFO [Red creada con [1928] enalces]
+2021-08-29 03:44:24.082 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 03:44:24.095 INFO [Depósitos para el día 1 de la simulación 1]
+2021-08-29 03:44:24.337 INFO [Transferencias para el día 1 de la simulación 1]
+2021-08-29 03:44:24.548 INFO [Operaciones para el día 1 de la simulación 1]
+2021-08-29 03:44:24.728 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 03:44:24.728 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 1]
+2021-08-29 03:44:24.741 INFO [Depósitos para el día 2 de la simulación 1]
+2021-08-29 03:44:24.933 INFO [Transferencias para el día 2 de la simulación 1]
+2021-08-29 03:44:25.041 INFO [Operaciones para el día 2 de la simulación 1]
+2021-08-29 03:44:25.302 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 1]
+2021-08-29 03:44:25.303 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 1]
+2021-08-29 03:44:25.314 INFO [Depósitos para el día 3 de la simulación 1]
+2021-08-29 03:44:25.563 INFO [Transferencias para el día 3 de la simulación 1]
+2021-08-29 03:44:25.691 INFO [Operaciones para el día 3 de la simulación 1]
+2021-08-29 03:44:25.863 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 1]
+2021-08-29 03:44:25.863 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 1]
+2021-08-29 03:44:25.878 INFO [Depósitos para el día 4 de la simulación 1]
+2021-08-29 03:44:26.106 INFO [Transferencias para el día 4 de la simulación 1]
+2021-08-29 03:44:26.376 INFO [Operaciones para el día 4 de la simulación 1]
+2021-08-29 03:44:26.589 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 1]
+2021-08-29 03:44:26.589 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 1]
+2021-08-29 03:44:26.602 INFO [Depósitos para el día 5 de la simulación 1]
+2021-08-29 03:44:26.920 INFO [Transferencias para el día 5 de la simulación 1]
+2021-08-29 03:44:27.099 INFO [Operaciones para el día 5 de la simulación 1]
+2021-08-29 03:44:27.327 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 1]
+2021-08-29 03:44:27.327 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 1]
+2021-08-29 03:44:27.348 INFO [Depósitos para el día 6 de la simulación 1]
+2021-08-29 03:44:27.702 INFO [Transferencias para el día 6 de la simulación 1]
+2021-08-29 03:44:27.975 INFO [Operaciones para el día 6 de la simulación 1]
+2021-08-29 03:44:28.182 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 1]
+2021-08-29 03:44:28.182 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 1]
+2021-08-29 03:44:28.195 INFO [Depósitos para el día 7 de la simulación 1]
+2021-08-29 03:44:28.663 INFO [Transferencias para el día 7 de la simulación 1]
+2021-08-29 03:44:28.872 INFO [Operaciones para el día 7 de la simulación 1]
+2021-08-29 03:44:29.081 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 1]
+2021-08-29 03:44:29.081 WARM [INICIO DÍA => 8 DE LA SIMULACIÓN => 1]
+2021-08-29 03:44:29.092 INFO [Depósitos para el día 8 de la simulación 1]
+2021-08-29 03:44:29.432 INFO [Transferencias para el día 8 de la simulación 1]
+2021-08-29 03:44:29.825 INFO [Operaciones para el día 8 de la simulación 1]
+2021-08-29 03:44:30.109 INFO [FIN DÍA => 8 DE LA SIMULACIÓN => 1]
+2021-08-29 03:44:30.109 WARM [INICIO DÍA => 9 DE LA SIMULACIÓN => 1]
+2021-08-29 03:44:30.133 INFO [Depósitos para el día 9 de la simulación 1]
+2021-08-29 03:44:30.453 INFO [Transferencias para el día 9 de la simulación 1]
+2021-08-29 03:44:30.949 INFO [Operaciones para el día 9 de la simulación 1]
+2021-08-29 03:44:31.149 WARM [INICIO DÍA => 10 DE LA SIMULACIÓN => 1]
+2021-08-29 03:44:31.148 INFO [FIN DÍA => 9 DE LA SIMULACIÓN => 1]
+2021-08-29 03:44:31.166 INFO [Depósitos para el día 10 de la simulación 1]
+2021-08-29 03:44:31.484 INFO [Transferencias para el día 10 de la simulación 1]
+2021-08-29 03:44:31.924 INFO [Operaciones para el día 10 de la simulación 1]
+2021-08-29 03:44:32.239 INFO [FIN DÍA => 10 DE LA SIMULACIÓN => 1]
+2021-08-29 03:44:32.239 SILLY [6940 de transacciones de la simulación 1]
+2021-08-29 03:44:32.484 INFO [================================================]
+2021-08-29 03:44:32.485 INFO [SIMULACIÓN => 2]
+2021-08-29 03:44:32.485 INFO [================================================]
+2021-08-29 03:44:32.485 INFO [ID Simulation [undefined]]
+2021-08-29 03:44:32.485 INFO [Configuración global de la simulación [2]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 230,
+  "numPopIntermediary": 55,
+  "numPopNoProfitBusiness": 30,
+  "numPopProfitBusiness": 31,
+  "numPopTrustBusiness": 15,
+  "numPopShellBusiness": 26,
+  "numPopHighPropensityFraud": 76,
+  "perPopWatchList": 0.22725,
+  "maxTimesWatchList": 19,
+  "maxTimesCleanWatchList": 5,
+  "maxPropensityFraud": 0.89175,
+  "maxHighPropensityFraud": 0.9,
+  "perLinkedIntermediary": 0.653,
+  "numMaxLinkedNoIntermediary": 15.0625,
+  "numMaxLinkedIndBusInter": 3.03,
+  "perExecuteDeposit": 0.02175,
+  "perExecuteTransfer": 0.331,
+  "perExecuteWithdrawal": 0.46475,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 109178.75
+  },
+  "perNewLinkTransact": 0.281
+}
+2021-08-29 03:44:32.725 INFO [Total de agentes creados [387]]
+2021-08-29 03:44:34.670 INFO [Red creada con [2412] enalces]
+2021-08-29 03:44:34.880 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 2]
+2021-08-29 03:44:34.883 INFO [Depósitos para el día 1 de la simulación 2]
+2021-08-29 03:44:35.203 INFO [Transferencias para el día 1 de la simulación 2]
+2021-08-29 03:44:35.653 INFO [Operaciones para el día 1 de la simulación 2]
+2021-08-29 03:44:35.984 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 2]
+2021-08-29 03:44:35.984 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 2]
+2021-08-29 03:44:35.987 INFO [Depósitos para el día 2 de la simulación 2]
+2021-08-29 03:44:36.369 INFO [Transferencias para el día 2 de la simulación 2]
+2021-08-29 03:44:36.948 INFO [Operaciones para el día 2 de la simulación 2]
+2021-08-29 03:44:37.301 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 2]
+2021-08-29 03:44:37.302 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 2]
+2021-08-29 03:44:37.303 INFO [Depósitos para el día 3 de la simulación 2]
+2021-08-29 03:44:37.690 INFO [Transferencias para el día 3 de la simulación 2]
+2021-08-29 03:44:38.042 INFO [Operaciones para el día 3 de la simulación 2]
+2021-08-29 03:44:38.376 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 2]
+2021-08-29 03:44:38.376 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 2]
+2021-08-29 03:44:38.380 INFO [Depósitos para el día 4 de la simulación 2]
+2021-08-29 03:44:38.736 INFO [Transferencias para el día 4 de la simulación 2]
+2021-08-29 03:44:39.350 INFO [Operaciones para el día 4 de la simulación 2]
+2021-08-29 03:44:39.719 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 2]
+2021-08-29 03:44:39.719 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 2]
+2021-08-29 03:44:39.720 INFO [Depósitos para el día 5 de la simulación 2]
+2021-08-29 03:44:40.385 INFO [Transferencias para el día 5 de la simulación 2]
+2021-08-29 03:44:40.812 INFO [Operaciones para el día 5 de la simulación 2]
+2021-08-29 03:44:41.550 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 2]
+2021-08-29 03:44:41.550 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 2]
+2021-08-29 03:44:41.551 INFO [Depósitos para el día 6 de la simulación 2]
+2021-08-29 03:44:42.024 INFO [Transferencias para el día 6 de la simulación 2]
+2021-08-29 03:44:42.750 INFO [Operaciones para el día 6 de la simulación 2]
+2021-08-29 03:46:01.649 DEBUG [INICIO DE ABM en AML]
+2021-08-29 03:46:01.687 DEBUG [================================================]
+2021-08-29 03:46:01.687 DEBUG [Inicio de 10 simulaciones]
+2021-08-29 03:46:01.687 DEBUG [================================================]
+2021-08-29 03:46:01.695 INFO [================================================]
+2021-08-29 03:46:01.695 INFO [SIMULACIÓN => 1]
+2021-08-29 03:46:01.695 INFO [================================================]
+2021-08-29 03:46:01.696 INFO [ID Simulation [undefined]]
+2021-08-29 03:46:01.697 INFO [Configuración global de la simulación [1]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 487,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 48,
+  "numPopProfitBusiness": 51,
+  "numPopTrustBusiness": 21,
+  "numPopShellBusiness": 38,
+  "numPopHighPropensityFraud": 164,
+  "perPopWatchList": 0.23025,
+  "maxTimesWatchList": 23,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.61875,
+  "maxHighPropensityFraud": 0.81875,
+  "perLinkedIntermediary": 0.735,
+  "numMaxLinkedNoIntermediary": 1.0375,
+  "numMaxLinkedIndBusInter": 3.27,
+  "perExecuteDeposit": 0.12975,
+  "perExecuteTransfer": 0.539,
+  "perExecuteWithdrawal": 0.36275,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 106441.25
+  },
+  "perNewLinkTransact": 0.215
+}
+2021-08-29 03:46:01.754 INFO [Total de agentes creados [676]]
+2021-08-29 03:46:02.627 INFO [Red creada con [1940] enalces]
+2021-08-29 03:46:02.688 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 03:46:02.706 INFO [Depósitos para el día 1 de la simulación 1]
+2021-08-29 03:46:02.960 INFO [Transferencias para el día 1 de la simulación 1]
+2021-08-29 03:46:03.069 INFO [Operaciones para el día 1 de la simulación 1]
+2021-08-29 03:46:03.190 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 03:46:03.190 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 1]
+2021-08-29 03:46:03.202 INFO [Depósitos para el día 2 de la simulación 1]
+2021-08-29 03:46:03.389 INFO [Transferencias para el día 2 de la simulación 1]
+2021-08-29 03:46:03.496 INFO [Operaciones para el día 2 de la simulación 1]
+2021-08-29 03:46:03.745 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 1]
+2021-08-29 03:46:03.745 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 1]
+2021-08-29 03:46:03.757 INFO [Depósitos para el día 3 de la simulación 1]
+2021-08-29 03:46:03.967 INFO [Transferencias para el día 3 de la simulación 1]
+2021-08-29 03:46:04.087 INFO [Operaciones para el día 3 de la simulación 1]
+2021-08-29 03:46:04.249 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 1]
+2021-08-29 03:46:04.249 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 1]
+2021-08-29 03:46:04.260 INFO [Depósitos para el día 4 de la simulación 1]
+2021-08-29 03:46:04.467 INFO [Transferencias para el día 4 de la simulación 1]
+2021-08-29 03:46:04.612 INFO [Operaciones para el día 4 de la simulación 1]
+2021-08-29 03:46:04.933 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 1]
+2021-08-29 03:46:04.933 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 1]
+2021-08-29 03:46:04.945 INFO [Depósitos para el día 5 de la simulación 1]
+2021-08-29 03:46:05.222 INFO [Transferencias para el día 5 de la simulación 1]
+2021-08-29 03:46:05.370 INFO [Operaciones para el día 5 de la simulación 1]
+2021-08-29 03:46:05.544 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 1]
+2021-08-29 03:46:05.545 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 1]
+2021-08-29 03:46:05.558 INFO [Depósitos para el día 6 de la simulación 1]
+2021-08-29 03:46:05.801 INFO [Transferencias para el día 6 de la simulación 1]
+2021-08-29 03:46:06.095 INFO [Operaciones para el día 6 de la simulación 1]
+2021-08-29 03:46:06.303 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 1]
+2021-08-29 03:46:06.303 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 1]
+2021-08-29 03:46:06.315 INFO [Depósitos para el día 7 de la simulación 1]
+2021-08-29 03:46:06.562 INFO [Transferencias para el día 7 de la simulación 1]
+2021-08-29 03:46:06.751 INFO [Operaciones para el día 7 de la simulación 1]
+2021-08-29 03:46:06.979 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 1]
+2021-08-29 03:46:06.979 WARM [INICIO DÍA => 8 DE LA SIMULACIÓN => 1]
+2021-08-29 03:46:06.992 INFO [Depósitos para el día 8 de la simulación 1]
+2021-08-29 03:46:07.259 INFO [Transferencias para el día 8 de la simulación 1]
+2021-08-29 03:46:07.458 INFO [Operaciones para el día 8 de la simulación 1]
+2021-08-29 03:46:07.682 INFO [FIN DÍA => 8 DE LA SIMULACIÓN => 1]
+2021-08-29 03:46:07.682 WARM [INICIO DÍA => 9 DE LA SIMULACIÓN => 1]
+2021-08-29 03:46:07.705 INFO [Depósitos para el día 9 de la simulación 1]
+2021-08-29 03:46:08.004 INFO [Transferencias para el día 9 de la simulación 1]
+2021-08-29 03:46:08.464 INFO [Operaciones para el día 9 de la simulación 1]
+2021-08-29 03:46:08.687 INFO [FIN DÍA => 9 DE LA SIMULACIÓN => 1]
+2021-08-29 03:46:08.687 WARM [INICIO DÍA => 10 DE LA SIMULACIÓN => 1]
+2021-08-29 03:46:08.701 INFO [Depósitos para el día 10 de la simulación 1]
+2021-08-29 03:46:09.007 INFO [Transferencias para el día 10 de la simulación 1]
+2021-08-29 03:46:09.303 INFO [Operaciones para el día 10 de la simulación 1]
+2021-08-29 03:46:09.522 INFO [FIN DÍA => 10 DE LA SIMULACIÓN => 1]
+2021-08-29 03:46:09.523 SILLY [6954 de transacciones de la simulación 1]
+2021-08-29 03:46:09.783 INFO [================================================]
+2021-08-29 03:46:09.783 INFO [SIMULACIÓN => 2]
+2021-08-29 03:46:09.784 INFO [================================================]
+2021-08-29 03:46:09.784 INFO [ID Simulation [undefined]]
+2021-08-29 03:46:09.784 INFO [Configuración global de la simulación [2]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 230,
+  "numPopIntermediary": 55,
+  "numPopNoProfitBusiness": 30,
+  "numPopProfitBusiness": 31,
+  "numPopTrustBusiness": 15,
+  "numPopShellBusiness": 26,
+  "numPopHighPropensityFraud": 76,
+  "perPopWatchList": 0.22725,
+  "maxTimesWatchList": 19,
+  "maxTimesCleanWatchList": 5,
+  "maxPropensityFraud": 0.89175,
+  "maxHighPropensityFraud": 0.9,
+  "perLinkedIntermediary": 0.653,
+  "numMaxLinkedNoIntermediary": 15.0625,
+  "numMaxLinkedIndBusInter": 3.03,
+  "perExecuteDeposit": 0.02175,
+  "perExecuteTransfer": 0.331,
+  "perExecuteWithdrawal": 0.46475,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 109178.75
+  },
+  "perNewLinkTransact": 0.281
+}
+2021-08-29 03:46:10.015 INFO [Total de agentes creados [387]]
+2021-08-29 03:46:11.856 INFO [Red creada con [2399] enalces]
+2021-08-29 03:46:12.064 INFO [Depósitos para el día 1 de la simulación 2]
+2021-08-29 03:46:12.059 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 2]
+2021-08-29 03:46:12.359 INFO [Transferencias para el día 1 de la simulación 2]
+2021-08-29 03:46:12.629 INFO [Operaciones para el día 1 de la simulación 2]
+2021-08-29 03:46:13.096 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 2]
+2021-08-29 03:46:13.095 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 2]
+2021-08-29 03:46:13.096 INFO [Depósitos para el día 2 de la simulación 2]
+2021-08-29 03:46:13.409 INFO [Transferencias para el día 2 de la simulación 2]
+2021-08-29 03:46:13.696 INFO [Operaciones para el día 2 de la simulación 2]
+2021-08-29 03:46:14.252 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 2]
+2021-08-29 03:46:14.252 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 2]
+2021-08-29 03:46:14.257 INFO [Depósitos para el día 3 de la simulación 2]
+2021-08-29 03:46:14.608 INFO [Transferencias para el día 3 de la simulación 2]
+2021-08-29 03:46:14.991 INFO [Operaciones para el día 3 de la simulación 2]
+2021-08-29 03:46:15.620 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 2]
+2021-08-29 03:46:15.620 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 2]
+2021-08-29 03:46:15.621 INFO [Depósitos para el día 4 de la simulación 2]
+2021-08-29 03:46:16.043 INFO [Transferencias para el día 4 de la simulación 2]
+2021-08-29 03:46:16.688 INFO [Operaciones para el día 4 de la simulación 2]
+2021-08-29 03:46:17.026 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 2]
+2021-08-29 03:46:17.026 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 2]
+2021-08-29 03:46:17.027 INFO [Depósitos para el día 5 de la simulación 2]
+2021-08-29 03:46:17.403 INFO [Transferencias para el día 5 de la simulación 2]
+2021-08-29 03:46:18.046 INFO [Operaciones para el día 5 de la simulación 2]
+2021-08-29 03:46:18.404 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 2]
+2021-08-29 03:46:18.405 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 2]
+2021-08-29 03:46:18.406 INFO [Depósitos para el día 6 de la simulación 2]
+2021-08-29 03:46:19.083 INFO [Transferencias para el día 6 de la simulación 2]
+2021-08-29 03:46:19.471 INFO [Operaciones para el día 6 de la simulación 2]
+2021-08-29 03:46:20.168 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 2]
+2021-08-29 03:46:20.168 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 2]
+2021-08-29 03:46:20.174 INFO [Depósitos para el día 7 de la simulación 2]
+2021-08-29 03:46:20.546 INFO [Transferencias para el día 7 de la simulación 2]
+2021-08-29 03:46:21.233 INFO [Operaciones para el día 7 de la simulación 2]
+2021-08-29 03:46:21.582 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 2]
+2021-08-29 03:46:21.582 WARM [INICIO DÍA => 8 DE LA SIMULACIÓN => 2]
+2021-08-29 03:46:21.583 INFO [Depósitos para el día 8 de la simulación 2]
+2021-08-29 03:46:22.299 INFO [Transferencias para el día 8 de la simulación 2]
+2021-08-29 03:46:22.715 INFO [Operaciones para el día 8 de la simulación 2]
+2021-08-29 03:46:23.466 INFO [FIN DÍA => 8 DE LA SIMULACIÓN => 2]
+2021-08-29 03:46:23.468 INFO [Depósitos para el día 9 de la simulación 2]
+2021-08-29 03:46:23.467 WARM [INICIO DÍA => 9 DE LA SIMULACIÓN => 2]
+2021-08-29 03:46:23.859 INFO [Transferencias para el día 9 de la simulación 2]
+2021-08-29 03:46:24.578 INFO [Operaciones para el día 9 de la simulación 2]
+2021-08-29 03:46:24.955 INFO [FIN DÍA => 9 DE LA SIMULACIÓN => 2]
+2021-08-29 03:46:24.956 WARM [INICIO DÍA => 10 DE LA SIMULACIÓN => 2]
+2021-08-29 03:46:24.957 INFO [Depósitos para el día 10 de la simulación 2]
+2021-08-29 03:46:25.822 INFO [Transferencias para el día 10 de la simulación 2]
+2021-08-29 03:46:26.256 INFO [Operaciones para el día 10 de la simulación 2]
+2021-08-29 03:46:27.059 SILLY [2198 de transacciones de la simulación 2]
+2021-08-29 03:46:27.058 INFO [FIN DÍA => 10 DE LA SIMULACIÓN => 2]
+2021-08-29 03:46:27.460 INFO [================================================]
+2021-08-29 03:46:27.461 INFO [SIMULACIÓN => 3]
+2021-08-29 03:46:27.461 INFO [================================================]
+2021-08-29 03:46:27.461 INFO [Configuración global de la simulación [3]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 628,
+  "numPopIntermediary": 18,
+  "numPopNoProfitBusiness": 36,
+  "numPopProfitBusiness": 36,
+  "numPopTrustBusiness": 105,
+  "numPopShellBusiness": 69,
+  "numPopHighPropensityFraud": 622,
+  "perPopWatchList": 0.08625,
+  "maxTimesWatchList": 19,
+  "maxTimesCleanWatchList": 5,
+  "maxPropensityFraud": 0.69525,
+  "maxHighPropensityFraud": 0.89525,
+  "perLinkedIntermediary": 0.773,
+  "numMaxLinkedNoIntermediary": 9.6625,
+  "numMaxLinkedIndBusInter": 2.75,
+  "perExecuteDeposit": 0.03375,
+  "perExecuteTransfer": 0.607,
+  "perExecuteWithdrawal": 0.35375,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 8986.25
+  },
+  "perNewLinkTransact": 0.371
+}
+2021-08-29 03:46:27.461 INFO [ID Simulation [undefined]]
+2021-08-29 03:46:28.308 INFO [Total de agentes creados [892]]
+2021-08-29 03:46:32.024 INFO [Red creada con [3416] enalces]
+2021-08-29 03:46:33.383 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 3]
+2021-08-29 03:46:33.385 INFO [Depósitos para el día 1 de la simulación 3]
+2021-08-29 03:46:34.870 INFO [Transferencias para el día 1 de la simulación 3]
+2021-08-29 03:46:35.559 INFO [Operaciones para el día 1 de la simulación 3]
+2021-08-29 03:46:36.286 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 3]
+2021-08-29 03:46:36.286 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 3]
+2021-08-29 03:46:36.288 INFO [Depósitos para el día 2 de la simulación 3]
+2021-08-29 03:46:37.759 INFO [Transferencias para el día 2 de la simulación 3]
+2021-08-29 03:46:39.117 INFO [Operaciones para el día 2 de la simulación 3]
+2021-08-29 03:46:40.472 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 3]
+2021-08-29 03:46:40.472 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 3]
+2021-08-29 03:46:40.474 INFO [Depósitos para el día 3 de la simulación 3]
+2021-08-29 03:46:41.247 INFO [Transferencias para el día 3 de la simulación 3]
+2021-08-29 03:46:42.636 INFO [Operaciones para el día 3 de la simulación 3]
+2021-08-29 03:46:43.292 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 3]
+2021-08-29 03:46:43.292 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 3]
+2021-08-29 03:46:43.294 INFO [Depósitos para el día 4 de la simulación 3]
+2021-08-29 03:46:44.072 INFO [Transferencias para el día 4 de la simulación 3]
+2021-08-29 03:46:44.739 INFO [Operaciones para el día 4 de la simulación 3]
+2021-08-29 03:46:45.445 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 3]
+2021-08-29 03:46:45.445 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 3]
+2021-08-29 03:46:45.446 INFO [Depósitos para el día 5 de la simulación 3]
+2021-08-29 03:46:46.211 INFO [Transferencias para el día 5 de la simulación 3]
+2021-08-29 03:46:47.567 INFO [Operaciones para el día 5 de la simulación 3]
+2021-08-29 03:46:49.006 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 3]
+2021-08-29 03:46:49.006 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 3]
+2021-08-29 03:46:49.007 INFO [Depósitos para el día 6 de la simulación 3]
+2021-08-29 03:46:49.829 INFO [Transferencias para el día 6 de la simulación 3]
+2021-08-29 03:46:50.548 INFO [Operaciones para el día 6 de la simulación 3]
+2021-08-29 03:46:51.895 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 3]
+2021-08-29 03:46:51.896 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 3]
+2021-08-29 03:46:51.897 INFO [Depósitos para el día 7 de la simulación 3]
+2021-08-29 03:46:53.341 INFO [Transferencias para el día 7 de la simulación 3]
+2021-08-29 03:46:54.664 INFO [Operaciones para el día 7 de la simulación 3]
+2021-08-29 03:46:56.061 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 3]
+2021-08-29 03:46:56.061 WARM [INICIO DÍA => 8 DE LA SIMULACIÓN => 3]
+2021-08-29 03:46:56.062 INFO [Depósitos para el día 8 de la simulación 3]
+2021-08-29 03:46:57.651 INFO [Transferencias para el día 8 de la simulación 3]
+2021-08-29 03:50:43.837 DEBUG [INICIO DE ABM en AML]
+2021-08-29 03:50:43.871 DEBUG [================================================]
+2021-08-29 03:50:43.871 DEBUG [Inicio de 10 simulaciones]
+2021-08-29 03:50:43.871 DEBUG [================================================]
+2021-08-29 03:51:59.539 DEBUG [INICIO DE ABM en AML]
+2021-08-29 03:51:59.569 DEBUG [================================================]
+2021-08-29 03:51:59.569 DEBUG [Inicio de 10 simulaciones]
+2021-08-29 03:51:59.569 DEBUG [================================================]
+2021-08-29 03:52:46.656 DEBUG [INICIO DE ABM en AML]
+2021-08-29 03:52:46.682 DEBUG [================================================]
+2021-08-29 03:52:46.682 DEBUG [Inicio de 10 simulaciones]
+2021-08-29 03:52:46.682 DEBUG [================================================]
+2021-08-29 03:52:46.690 INFO [================================================]
+2021-08-29 03:52:46.690 INFO [================================================]
+2021-08-29 03:52:46.691 INFO [ID Simulation [undefined]]
+2021-08-29 03:52:46.690 INFO [SIMULACIÓN => 1]
+2021-08-29 03:52:46.691 INFO [Configuración global de la simulación [1]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 487,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 48,
+  "numPopProfitBusiness": 51,
+  "numPopTrustBusiness": 21,
+  "numPopShellBusiness": 38,
+  "numPopHighPropensityFraud": 164,
+  "perPopWatchList": 0.23025,
+  "maxTimesWatchList": 23,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.61875,
+  "maxHighPropensityFraud": 0.81875,
+  "perLinkedIntermediary": 0.735,
+  "numMaxLinkedNoIntermediary": 1.0375,
+  "numMaxLinkedIndBusInter": 3.27,
+  "perExecuteDeposit": 0.12975,
+  "perExecuteTransfer": 0.539,
+  "perExecuteWithdrawal": 0.36275,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 106441.25
+  },
+  "perNewLinkTransact": 0.215
+}
+2021-08-29 03:52:46.746 INFO [Total de agentes creados [676]]
+2021-08-29 03:52:47.557 INFO [Red creada con [1934] enalces]
+2021-08-29 03:52:47.665 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 03:52:47.689 INFO [Depósitos para el día 1 de la simulación 1]
+2021-08-29 03:52:47.849 INFO [Transferencias para el día 1 de la simulación 1]
+2021-08-29 03:52:47.925 INFO [Operaciones para el día 1 de la simulación 1]
+2021-08-29 03:52:48.003 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 03:52:48.088 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 1]
+2021-08-29 03:52:48.103 INFO [Depósitos para el día 2 de la simulación 1]
+2021-08-29 03:52:48.271 INFO [Transferencias para el día 2 de la simulación 1]
+2021-08-29 03:52:48.394 INFO [Operaciones para el día 2 de la simulación 1]
+2021-08-29 03:52:48.556 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 1]
+2021-08-29 03:52:48.669 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 1]
+2021-08-29 03:52:48.682 INFO [Depósitos para el día 3 de la simulación 1]
+2021-08-29 03:52:48.904 INFO [Transferencias para el día 3 de la simulación 1]
+2021-08-29 03:52:49.043 INFO [Operaciones para el día 3 de la simulación 1]
+2021-08-29 03:52:49.155 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 1]
+2021-08-29 03:52:49.284 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 1]
+2021-08-29 03:52:49.295 INFO [Depósitos para el día 4 de la simulación 1]
+2021-08-29 03:52:49.515 INFO [Transferencias para el día 4 de la simulación 1]
+2021-08-29 03:52:49.789 INFO [Operaciones para el día 4 de la simulación 1]
+2021-08-29 03:52:49.966 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 1]
+2021-08-29 03:52:50.119 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 1]
+2021-08-29 03:52:50.135 INFO [Depósitos para el día 5 de la simulación 1]
+2021-08-29 03:52:50.362 INFO [Transferencias para el día 5 de la simulación 1]
+2021-08-29 03:52:50.500 INFO [Operaciones para el día 5 de la simulación 1]
+2021-08-29 04:01:16.580 DEBUG [INICIO DE ABM en AML]
+2021-08-29 04:01:16.611 DEBUG [================================================]
+2021-08-29 04:01:16.611 DEBUG [Inicio de 10 simulaciones]
+2021-08-29 04:01:16.611 DEBUG [================================================]
+2021-08-29 04:01:16.621 INFO [SIMULACIÓN => 1]
+2021-08-29 04:01:16.621 INFO [================================================]
+2021-08-29 04:01:16.621 INFO [================================================]
+2021-08-29 04:01:16.622 INFO [ID Simulation [undefined]]
+2021-08-29 04:01:16.622 INFO [Configuración global de la simulación [1]]
+{
+  "totalTimes": 10,
+  "numPopIndividual": 487,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 48,
+  "numPopProfitBusiness": 51,
+  "numPopTrustBusiness": 21,
+  "numPopShellBusiness": 38,
+  "numPopHighPropensityFraud": 164,
+  "perPopWatchList": 0.23025,
+  "maxTimesWatchList": 23,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.61875,
+  "maxHighPropensityFraud": 0.81875,
+  "perLinkedIntermediary": 0.735,
+  "numMaxLinkedNoIntermediary": 1.0375,
+  "numMaxLinkedIndBusInter": 3.27,
+  "perExecuteDeposit": 0.12975,
+  "perExecuteTransfer": 0.539,
+  "perExecuteWithdrawal": 0.36275,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 106441.25
+  },
+  "perNewLinkTransact": 0.215
+}
+2021-08-29 04:01:16.674 INFO [Total de agentes creados [676]]
+2021-08-29 04:01:17.504 INFO [Red creada con [1919] enalces]
+2021-08-29 04:01:17.562 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 04:01:17.585 INFO [Depósitos para el día 1 de la simulación 1]
+2021-08-29 04:01:17.821 INFO [Transferencias para el día 1 de la simulación 1]
+2021-08-29 04:01:17.929 INFO [Operaciones para el día 1 de la simulación 1]
+2021-08-29 04:01:18.048 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-29 04:01:18.048 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 1]
+2021-08-29 04:01:18.064 INFO [Depósitos para el día 2 de la simulación 1]
+2021-08-29 04:01:18.264 INFO [Transferencias para el día 2 de la simulación 1]
+2021-08-29 04:01:18.366 INFO [Operaciones para el día 2 de la simulación 1]
+2021-08-29 04:01:18.598 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 1]
+2021-08-29 04:01:18.613 INFO [Depósitos para el día 3 de la simulación 1]
+2021-08-29 04:01:18.598 WARM [INICIO DÍA => 3 DE LA SIMULACIÓN => 1]
+2021-08-29 04:01:18.876 INFO [Transferencias para el día 3 de la simulación 1]
+2021-08-29 04:01:19.012 INFO [Operaciones para el día 3 de la simulación 1]
+2021-08-29 04:01:19.144 INFO [FIN DÍA => 3 DE LA SIMULACIÓN => 1]
+2021-08-29 04:01:19.144 WARM [INICIO DÍA => 4 DE LA SIMULACIÓN => 1]
+2021-08-29 04:01:19.156 INFO [Depósitos para el día 4 de la simulación 1]
+2021-08-29 04:01:19.412 INFO [Transferencias para el día 4 de la simulación 1]
+2021-08-29 04:01:19.588 INFO [Operaciones para el día 4 de la simulación 1]
+2021-08-29 04:01:19.797 INFO [FIN DÍA => 4 DE LA SIMULACIÓN => 1]
+2021-08-29 04:01:19.798 WARM [INICIO DÍA => 5 DE LA SIMULACIÓN => 1]
+2021-08-29 04:01:19.811 INFO [Depósitos para el día 5 de la simulación 1]
+2021-08-29 04:01:20.058 INFO [Transferencias para el día 5 de la simulación 1]
+2021-08-29 04:01:20.226 INFO [Operaciones para el día 5 de la simulación 1]
+2021-08-29 04:01:20.399 INFO [FIN DÍA => 5 DE LA SIMULACIÓN => 1]
+2021-08-29 04:01:20.399 WARM [INICIO DÍA => 6 DE LA SIMULACIÓN => 1]
+2021-08-29 04:01:20.412 INFO [Depósitos para el día 6 de la simulación 1]
+2021-08-29 04:01:20.698 INFO [Transferencias para el día 6 de la simulación 1]
+2021-08-29 04:01:20.879 INFO [Operaciones para el día 6 de la simulación 1]
+2021-08-29 04:01:21.096 INFO [FIN DÍA => 6 DE LA SIMULACIÓN => 1]
+2021-08-29 04:01:21.096 WARM [INICIO DÍA => 7 DE LA SIMULACIÓN => 1]
+2021-08-29 04:01:21.113 INFO [Depósitos para el día 7 de la simulación 1]
+2021-08-29 04:01:21.371 INFO [Transferencias para el día 7 de la simulación 1]
+2021-08-29 04:01:21.583 INFO [Operaciones para el día 7 de la simulación 1]
+2021-08-29 04:01:22.008 INFO [FIN DÍA => 7 DE LA SIMULACIÓN => 1]
+2021-08-29 04:01:22.008 DEBUG [================================================]
+2021-08-29 04:01:22.008 DEBUG [Fin de 10 simulaciones]
+2021-08-29 04:01:22.008 DEBUG [================================================]

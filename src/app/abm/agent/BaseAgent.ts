@@ -53,6 +53,13 @@ export abstract class BaseAgent implements IHash {
     private _acceptanceStates!: ArrayList<State>;
 
 
+    /** Orden de creación */
+    private static _orderUniversal: number = 0;
+
+    public idUniversal!: number;
+    public idPivot!: number;
+
+
     //#####################################
     // CONSTRUCTOR
     //#####################################
@@ -62,6 +69,7 @@ export abstract class BaseAgent implements IHash {
         this.transitionsFunction = new HashMap();
         this.alphabets = ArrayList.create();
         this.acceptanceStates = ArrayList.create();
+        this.idUniversal = ++BaseAgent._orderUniversal;
     }
 
     //#####################################
