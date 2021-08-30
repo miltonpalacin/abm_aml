@@ -49,7 +49,7 @@ export class Simulation {
                 Simulation.networkCurrent = network;
                 const idSimulation = await dbCreateSimulation(args, codProceso);
                 Log.info(`ID Simulation [${idSimulation}]`);
-                //Log.info(`Configuración global de la simulación [${iteration}]`, args);
+                Log.info(`Configuración global de la simulación [${iteration}]`, args);
                 await sleep(awaitTime);
 
                 /** ********************************************************* */
