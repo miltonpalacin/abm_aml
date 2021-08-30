@@ -31,7 +31,7 @@ export class BaseOperationAgent extends BaseAgent {
     // Alfabeto del agente
     public static A1_ESPERAR: Alphabet = new Alphabet("a1", "Esperar operación");
     public static A2_REALIZAR: Alphabet = new Alphabet("a2", "Realizar operación");
-    public static A3_CONGELAR: Alphabet = new Alphabet("a3", "Esperar operación");
+    public static A3_CONGELAR: Alphabet = new Alphabet("a3", "Congelar cuenta");
 
     //#####################################
     // CONSTRUCTOR y BUILD
