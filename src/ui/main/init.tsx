@@ -48,16 +48,17 @@ const App = () => {
         setStop(false);
         setMessageStop("Cancelar")
         await (() => {
-            return new Promise(resolve => {
-                Simulation.run(setNetwork, setCurrentArg);
+            return new Promise(async resolve => {
+                await Simulation.run(setNetwork, setCurrentArg);
+                setRunSimulation(false);
+                setSeeNetwork(true);
+                setMessageSee("En espera de un red")
+                setStop(true);
+                setMessageStop("En espera de ejecución")
                 return resolve;
             });
         })();
-        setRunSimulation(false);
-        setSeeNetwork(true);
-        setMessageSee("En espera de un red")
-        setStop(true);
-        setMessageStop("En espera de ejecución")
+      
     }
 
     const onSeeNetwork = async () => {
@@ -109,7 +110,7 @@ const App = () => {
                     <div className="col-md-9 background-no-uni p-1 simulation-draw">
                         <DrawTopology network={network} setInfoNode={(node: INodeInfo) => setInfoNode(node)}> </DrawTopology>
                     </div>
-                    <div className="col-md-3 p-2" style={{ height: "100%", overflow: "auto" }}>
+                    <div className="col-md-3 p-4">
                         <button type="button" disabled={runSimulation} className="btn btn-success col-md-12" onClick={() => onSimulation()}>
                             Ejecutar Simulación
                         </button>
@@ -132,6 +133,9 @@ const App = () => {
                                         <p><span className="fst-italic">currentIteration:</span><span> {currentArg.currentIteration}</span></p>
                                         <p><span className="fst-italic">totalTimes:</span><span> {currentArg.totalTimes}</span></p>
                                         <p><span className="fst-italic">idDatabase:</span><span> {currentArg.idDatabase}</span></p>
+                                        <p><em className="fw-bold">Red Actual:</em> </p>
+                                        <p><span className="fst-italic">totalNodes:</span><span> {currentArg.totalNodes}</span></p>
+                                        <p><span className="fst-italic">totalEdges:</span><span> {currentArg.totalEdges}</span></p>
                                         <p><em className="fw-bold">Población:</em> </p>
                                         <p><span className="fst-italic">numPopIndividual:</span><span> {currentArg.numPopIndividual}</span></p>
                                         <p><span className="fst-italic">numPopIntermediary:</span><span> {currentArg.numPopIntermediary}</span></p>
@@ -147,7 +151,7 @@ const App = () => {
                                         <p><em className="fw-bold">Fraude:</em> </p>
                                         <p><span className="fst-italic">maxPropensityFraud:</span><span> {currentArg.maxPropensityFraud}</span></p>
                                         <p><span className="fst-italic">maxHighPropensityFraud:</span><span> {currentArg.maxHighPropensityFraud}</span></p>
-                                        <p><em className="fw-bold">Enlace/Conexione:</em> </p>
+                                        <p><em className="fw-bold">Enlace/Conexiones:</em> </p>
                                         <p><span className="fst-italic">perLinkedIntermediary:</span><span> {currentArg.perLinkedIntermediary}</span></p>
                                         <p><span className="fst-italic">numMaxLinkedNoIntermediary:</span><span> {currentArg.numMaxLinkedNoIntermediary}</span></p>
                                         <p><span className="fst-italic">numMaxLinkedIndBusInter:</span><span> {currentArg.numMaxLinkedIndBusInter}</span></p>
@@ -169,7 +173,7 @@ const App = () => {
                         </div>
                         <div className="card bg-light mb-3">
                             <div className="card-header fw-bold">Datos de un agente</div>
-                            <div className="card-body" style={{ maxHeight: "220px", overflow: "auto" }} >
+                            <div className="card-body" style={{ maxHeight: "215px", overflow: "auto" }} >
                                 {currentNode != undefined ? (
                                     <pre>
                                         <p><span className="fst-italic">Código:</span> {currentNode?.codeShort}</p>

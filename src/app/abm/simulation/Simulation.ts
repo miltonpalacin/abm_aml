@@ -48,10 +48,6 @@ export class Simulation {
                 const network = new Network(args);
                 Simulation.networkCurrent = network;
                 const idSimulation = await dbCreateSimulation(args, codProceso);
-                args.currentIteration = iteration;
-                args.idDatabase = idSimulation;
-                args.totalIterations = config.totalIteration;
-                updateArgs(args);
                 Log.info(`ID Simulation [${idSimulation}]`);
                 //Log.info(`Configuración global de la simulación [${iteration}]`, args);
                 await sleep(awaitTime);
@@ -70,6 +66,12 @@ export class Simulation {
                 /** ********************************************************* */
 
                 network.createNetwork();
+                args.currentIteration = iteration;
+                args.idDatabase = idSimulation;
+                args.totalIterations = config.totalIteration;
+                args.totalEdges = network.edges.length;
+                args.totalNodes = network.nodes.length;
+                updateArgs(args);
                 if (!StaticTopology.stopUpdateTopologia) updateGraph(iteration);
                 await sleep(awaitTime);
                 startTotalEdges = network.edges.length;

@@ -71802,7 +71802,7 @@ var Setup = /** @class */ (function () {
             perNewLinkTransact: sample.rangeNewLinkTransact,
             currentIteration: 0,
             idDatabase: 0,
-            totalIterations: 0
+            totalIterations: 0,
         };
         return argsCreateAgent;
     };
@@ -72111,6 +72111,10 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.StaticTopology = exports.ReactNetworkTopology = exports.NodeType = void 0;
 var IndividualAgent_1 = __webpack_require__(/*! @/app/abm/agent/IndividualAgent */ "./src/app/abm/agent/IndividualAgent.ts");
 var IntermediaryAgent_1 = __webpack_require__(/*! @/app/abm/agent/IntermediaryAgent */ "./src/app/abm/agent/IntermediaryAgent.ts");
+var NoProfitBusinessAgent_1 = __webpack_require__(/*! @/app/abm/agent/NoProfitBusinessAgent */ "./src/app/abm/agent/NoProfitBusinessAgent.ts");
+var ProfitBusinessAgent_1 = __webpack_require__(/*! @/app/abm/agent/ProfitBusinessAgent */ "./src/app/abm/agent/ProfitBusinessAgent.ts");
+var ShellTypeBusinessAgent_1 = __webpack_require__(/*! @/app/abm/agent/ShellTypeBusinessAgent */ "./src/app/abm/agent/ShellTypeBusinessAgent.ts");
+var TrustFundBusinessAgent_1 = __webpack_require__(/*! @/app/abm/agent/TrustFundBusinessAgent */ "./src/app/abm/agent/TrustFundBusinessAgent.ts");
 var Simulation_1 = __webpack_require__(/*! @/app/abm/simulation/Simulation */ "./src/app/abm/simulation/Simulation.ts");
 var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 __webpack_require__(/*! ./networkgraph.css */ "./src/ui/component/networkgraph.css");
@@ -72217,6 +72221,29 @@ function drawTopology(props) {
         .data(links)
         .join("line")
         .classed("link", true);
+    //svg.append("circle").attr("cx", 200).attr("cy", 130).attr("r", 6).style("fill", "#69b3a2");
+    //svg.append("circle").attr("cx", 200).attr("cy", 160).attr("r", 6).style("fill", "#404080");
+    svg.append("circle").attr("cx", 100).attr("cy", 100).attr("r", 5).style("fill", "#325d88");
+    svg.append("circle").attr("cx", 100).attr("cy", 120).attr("r", 5).style("fill", "#325d88");
+    svg.append("circle").attr("cx", 100).attr("cy", 140).attr("r", 5).style("fill", "#325d88");
+    svg.append("circle").attr("cx", 100).attr("cy", 160).attr("r", 5).style("fill", "#325d88");
+    svg.append("circle").attr("cx", 100).attr("cy", 180).attr("r", 5).style("fill", "#325d88");
+    svg.append("circle").attr("cx", 100).attr("cy", 200).attr("r", 5).style("fill", "#325d88");
+    svg.append("circle").attr("cx", 100).attr("cy", 220).attr("r", 5).style("fill", "#325d88");
+    svg.append("text").attr("x", 110).attr("y", 100).
+        text("Enlaces/Conexiones: " + network.edges.length).style("font-size", "12px").attr("alignment-baseline", "middle");
+    svg.append("text").attr("x", 110).attr("y", 120).
+        text("Individuos normales: " + network.nodes.filter(function (n) { return n.agent.isAgent(IndividualAgent_1.IndividualAgent); }).length).style("font-size", "12px").attr("alignment-baseline", "middle");
+    svg.append("text").attr("x", 110).attr("y", 140).
+        text("Intermediarios financieros: " + network.nodes.filter(function (n) { return n.agent.isAgent(IntermediaryAgent_1.IntermediaryAgent); }).length).style("font-size", "12px").attr("alignment-baseline", "middle");
+    svg.append("text").attr("x", 110).attr("y", 160).
+        text("Empresa con fines de lucro: " + network.nodes.filter(function (n) { return n.agent.isAgent(ProfitBusinessAgent_1.ProfitBusinessAgent); }).length).style("font-size", "12px").attr("alignment-baseline", "middle");
+    svg.append("text").attr("x", 110).attr("y", 180).
+        text("Empresa sin fines de lucro: " + network.nodes.filter(function (n) { return n.agent.isAgent(NoProfitBusinessAgent_1.NoProfitBusinessAgent); }).length).style("font-size", "12px").attr("alignment-baseline", "middle");
+    svg.append("text").attr("x", 110).attr("y", 200).
+        text("Empresa fondo fiduciario: " + network.nodes.filter(function (n) { return n.agent.isAgent(TrustFundBusinessAgent_1.TrustFundBusinessAgent); }).length).style("font-size", "12px").attr("alignment-baseline", "middle");
+    svg.append("text").attr("x", 110).attr("y", 220).
+        text("Empresa fantasma: " + network.nodes.filter(function (n) { return n.agent.isAgent(ShellTypeBusinessAgent_1.ShellTypeBusinessAgent); }).length).style("font-size", "12px").attr("alignment-baseline", "middle");
     var t1 = svg
         .selectAll("g1")
         .data(edges).enter()
@@ -72388,7 +72415,7 @@ var DrawTopology = /** @class */ (function (_super) {
     }
     DrawTopology.prototype.render = function () {
         var _this = this;
-        return (React.createElement(React.Fragment, null, this.props.network !== undefined ? (React.createElement(networkgraph_1.ReactNetworkTopology, { width: 2024, height: 2024, network: this.props.network, id: 'net', onClick: function (node) { return _this.props.setInfoNode(node); } })) : React.createElement("div", null,
+        return (React.createElement(React.Fragment, null, this.props.network !== undefined ? (React.createElement(networkgraph_1.ReactNetworkTopology, { width: 1600, height: 1200, network: this.props.network, id: 'net', onClick: function (node) { return _this.props.setInfoNode(node); } })) : React.createElement("div", null,
             " ",
             React.createElement("br", null),
             React.createElement("br", null),
@@ -72523,16 +72550,16 @@ var App = function () {
                     return [4 /*yield*/, (function () {
                             return new Promise(function (resolve) {
                                 Simulation_1.Simulation.run(setNetwork, setCurrentArg);
+                                setRunSimulation(false);
+                                setSeeNetwork(true);
+                                setMessageSee("En espera de un red");
+                                setStop(true);
+                                setMessageStop("En espera de ejecución");
                                 return resolve;
                             });
                         })()];
                 case 2:
                     _a.sent();
-                    setRunSimulation(false);
-                    setSeeNetwork(true);
-                    setMessageSee("En espera de un red");
-                    setStop(true);
-                    setMessageStop("En espera de ejecución");
                     return [2 /*return*/];
             }
         });
@@ -72555,6 +72582,11 @@ var App = function () {
             if (messageStop === "Cancelar") {
                 Setup_1.Setup.cancelarSimulation = true;
                 setStop(true);
+                setRunSimulation(false);
+                setSeeNetwork(true);
+                setMessageSee("En espera de un red");
+                setStop(true);
+                setMessageStop("En espera de ejecución");
             }
             return [2 /*return*/];
         });
@@ -72576,7 +72608,7 @@ var App = function () {
             react_1.default.createElement("div", { className: "row background-cream-uni simulation-body" },
                 react_1.default.createElement("div", { className: "col-md-9 background-no-uni p-1 simulation-draw" },
                     react_1.default.createElement(topology_1.default, { network: network, setInfoNode: function (node) { return setInfoNode(node); } }, " ")),
-                react_1.default.createElement("div", { className: "col-md-3 p-2", style: { height: "100%", overflow: "auto" } },
+                react_1.default.createElement("div", { className: "col-md-3 p-2" },
                     react_1.default.createElement("button", { type: "button", disabled: runSimulation, className: "btn btn-success col-md-12", onClick: function () { return onSimulation(); } }, "Ejecutar Simulaci\u00F3n"),
                     react_1.default.createElement("button", { type: "button", disabled: stop, className: "btn btn-primary col-md-12 mt-2", onClick: function () { return onStop(); } }, messageStop),
                     react_1.default.createElement("button", { type: "button", disabled: seeNetwork, className: "btn btn-info col-md-12 mt-2", onClick: function () { return onSeeNetwork(); } }, messageSee),
@@ -72676,7 +72708,7 @@ var App = function () {
                                     " ",
                                     currentArg.maxHighPropensityFraud)),
                             react_1.default.createElement("p", null,
-                                react_1.default.createElement("em", { className: "fw-bold" }, "Enlace/Conexione:"),
+                                react_1.default.createElement("em", { className: "fw-bold" }, "Enlace/Conexiones:"),
                                 " "),
                             react_1.default.createElement("p", null,
                                 react_1.default.createElement("span", { className: "fst-italic" }, "perLinkedIntermediary:"),
@@ -72734,34 +72766,44 @@ var App = function () {
                         react_1.default.createElement("div", { className: "card-header fw-bold" }, "Datos de un agente"),
                         react_1.default.createElement("div", { className: "card-body", style: { maxHeight: "220px", overflow: "auto" } }, currentNode != undefined ? (react_1.default.createElement("pre", null,
                             react_1.default.createElement("p", null,
-                                react_1.default.createElement("span", { className: "fst-italic" }, "C\u00F3digo:"), currentNode === null || currentNode === void 0 ? void 0 :
+                                react_1.default.createElement("span", { className: "fst-italic" }, "C\u00F3digo:"),
+                                " ", currentNode === null || currentNode === void 0 ? void 0 :
                                 currentNode.codeShort),
                             react_1.default.createElement("p", null,
-                                react_1.default.createElement("span", { className: "fst-italic" }, "Tipo:"), currentNode === null || currentNode === void 0 ? void 0 :
+                                react_1.default.createElement("span", { className: "fst-italic" }, "Tipo:"),
+                                " ", currentNode === null || currentNode === void 0 ? void 0 :
                                 currentNode.code),
                             react_1.default.createElement("p", null,
-                                react_1.default.createElement("span", { className: "fst-italic" }, "Lugar del Agente:"), currentNode === null || currentNode === void 0 ? void 0 :
+                                react_1.default.createElement("span", { className: "fst-italic" }, "Lugar del Agente:"),
+                                " ", currentNode === null || currentNode === void 0 ? void 0 :
                                 currentNode.placeAgent),
                             react_1.default.createElement("p", null,
-                                react_1.default.createElement("span", { className: "fst-italic" }, "Lugar de Movimiento:"), currentNode === null || currentNode === void 0 ? void 0 :
+                                react_1.default.createElement("span", { className: "fst-italic" }, "Lugar de Movimiento:"),
+                                " ", currentNode === null || currentNode === void 0 ? void 0 :
                                 currentNode.placeNode),
                             react_1.default.createElement("p", null,
-                                react_1.default.createElement("span", { className: "fst-italic" }, "Ingresos:"), currentNode === null || currentNode === void 0 ? void 0 :
+                                react_1.default.createElement("span", { className: "fst-italic" }, "Ingresos:"),
+                                " ", currentNode === null || currentNode === void 0 ? void 0 :
                                 currentNode.amountIn),
                             react_1.default.createElement("p", null,
-                                react_1.default.createElement("span", { className: "fst-italic" }, "Egresos:"), currentNode === null || currentNode === void 0 ? void 0 :
+                                react_1.default.createElement("span", { className: "fst-italic" }, "Egresos:"),
+                                " ", currentNode === null || currentNode === void 0 ? void 0 :
                                 currentNode.amountOut),
                             react_1.default.createElement("p", null,
-                                react_1.default.createElement("span", { className: "fst-italic" }, "Ingreso Ilegal:"), currentNode === null || currentNode === void 0 ? void 0 :
+                                react_1.default.createElement("span", { className: "fst-italic" }, "Ingreso Ilegal:"),
+                                " ", currentNode === null || currentNode === void 0 ? void 0 :
                                 currentNode.totalIllegalIn),
                             react_1.default.createElement("p", null,
-                                react_1.default.createElement("span", { className: "fst-italic" }, "Egreso Ilegal:"), currentNode === null || currentNode === void 0 ? void 0 :
+                                react_1.default.createElement("span", { className: "fst-italic" }, "Egreso Ilegal:"),
+                                " ", currentNode === null || currentNode === void 0 ? void 0 :
                                 currentNode.totalIllegalOut),
                             react_1.default.createElement("p", null,
                                 react_1.default.createElement("span", { className: "fst-italic" }, "Esta congelado:"),
+                                " ",
                                 (currentNode === null || currentNode === void 0 ? void 0 : currentNode.isFrozen) ? "Sí" : "No"),
                             react_1.default.createElement("p", null,
-                                react_1.default.createElement("span", { className: "fst-italic" }, "Entidad (Intermediarios):"), currentNode === null || currentNode === void 0 ? void 0 :
+                                react_1.default.createElement("span", { className: "fst-italic" }, "Entidad (Intermediarios):"),
+                                " ", currentNode === null || currentNode === void 0 ? void 0 :
                                 currentNode.entityFinantial))) : (react_1.default.createElement("p", { className: "card-text" }, "Presione un agente de la red...")))))),
             react_1.default.createElement("div", { className: "row mt-auto background-gray-uni" },
                 react_1.default.createElement("div", { className: "col-md-12" },

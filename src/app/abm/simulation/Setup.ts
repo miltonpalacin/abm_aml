@@ -121,6 +121,9 @@ export class Setup {
             idDatabase: 0,
             totalIterations: 0,
 
+            totalNodes: 0,
+            totalEdges: 0
+
         };
         return argsCreateAgent;
     }

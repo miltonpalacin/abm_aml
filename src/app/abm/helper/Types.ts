@@ -98,6 +98,9 @@ export interface ITypeArgNetwork {
     currentIteration: number;
     idDatabase: number;
     totalIterations: number;
+    
+    totalNodes: number;
+    totalEdges: number;
 
 }
 
