@@ -1,0 +1,107 @@
+2021-08-31 01:49:58.492 DEBUG [INICIO DE ABM en AML]
+2021-08-31 01:49:58.512 DEBUG [================================================]
+2021-08-31 01:49:58.512 DEBUG [Inicio de 2 simulaciones]
+2021-08-31 01:49:58.512 DEBUG [================================================]
+2021-08-31 01:49:58.517 INFO [================================================]
+2021-08-31 01:49:58.517 INFO [SIMULACIÓN => 1]
+2021-08-31 01:49:58.518 INFO [================================================]
+2021-08-31 01:49:58.530 INFO [ID Simulation [790]]
+2021-08-31 01:49:58.530 INFO [Configuración global de la simulación [1]]
+{
+  "totalTimes": 2,
+  "numPopIndividual": 487,
+  "numPopIntermediary": 31,
+  "numPopNoProfitBusiness": 48,
+  "numPopProfitBusiness": 51,
+  "numPopTrustBusiness": 21,
+  "numPopShellBusiness": 38,
+  "numPopHighPropensityFraud": 164,
+  "perPopWatchList": 0.23025,
+  "maxTimesWatchList": 23,
+  "maxTimesCleanWatchList": 9,
+  "maxPropensityFraud": 0.61875,
+  "maxHighPropensityFraud": 0.81875,
+  "perLinkedIntermediary": 0.735,
+  "numMaxLinkedNoIntermediary": 1.0375,
+  "numMaxLinkedIndBusInter": 3.27,
+  "perExecuteDeposit": 0.12975,
+  "perExecuteTransfer": 0.539,
+  "perExecuteWithdrawal": 0.36275,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 106441.25
+  },
+  "perNewLinkTransact": 0.215,
+  "currentIteration": 0,
+  "idDatabase": 0,
+  "totalIterations": 0,
+  "totalNodes": 0,
+  "totalEdges": 0
+}
+2021-08-31 01:49:58.584 INFO [Total de agentes creados [676]]
+2021-08-31 01:49:59.696 INFO [Red creada con [1906] enalces]
+2021-08-31 01:49:59.745 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-31 01:49:59.766 INFO [Depósitos para el día 1 de la simulación 1]
+2021-08-31 01:49:59.936 INFO [Transferencias para el día 1 de la simulación 1]
+2021-08-31 01:50:00.005 INFO [Operaciones para el día 1 de la simulación 1]
+2021-08-31 01:50:00.044 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 1]
+2021-08-31 01:50:00.044 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 1]
+2021-08-31 01:50:00.060 INFO [Depósitos para el día 2 de la simulación 1]
+2021-08-31 01:50:00.221 INFO [Transferencias para el día 2 de la simulación 1]
+2021-08-31 01:50:00.303 INFO [Operaciones para el día 2 de la simulación 1]
+2021-08-31 01:50:00.339 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 1]
+2021-08-31 01:50:00.339 SILLY [1545 transacciones de la simulación 1]
+2021-08-31 01:50:00.444 INFO [================================================]
+2021-08-31 01:50:00.444 INFO [SIMULACIÓN => 2]
+2021-08-31 01:50:00.444 INFO [================================================]
+2021-08-31 01:50:00.494 INFO [ID Simulation [791]]
+2021-08-31 01:50:00.494 INFO [Configuración global de la simulación [2]]
+{
+  "totalTimes": 2,
+  "numPopIndividual": 230,
+  "numPopIntermediary": 55,
+  "numPopNoProfitBusiness": 30,
+  "numPopProfitBusiness": 31,
+  "numPopTrustBusiness": 15,
+  "numPopShellBusiness": 26,
+  "numPopHighPropensityFraud": 76,
+  "perPopWatchList": 0.22725,
+  "maxTimesWatchList": 19,
+  "maxTimesCleanWatchList": 5,
+  "maxPropensityFraud": 0.89175,
+  "maxHighPropensityFraud": 0.9,
+  "perLinkedIntermediary": 0.653,
+  "numMaxLinkedNoIntermediary": 15.0625,
+  "numMaxLinkedIndBusInter": 3.03,
+  "perExecuteDeposit": 0.02175,
+  "perExecuteTransfer": 0.331,
+  "perExecuteWithdrawal": 0.46475,
+  "amountSuspiciousOperation": 9000,
+  "rangeAmountTransaction": {
+    "start": 0,
+    "end": 109178.75
+  },
+  "perNewLinkTransact": 0.281,
+  "currentIteration": 0,
+  "idDatabase": 0,
+  "totalIterations": 0,
+  "totalNodes": 0,
+  "totalEdges": 0
+}
+2021-08-31 01:50:00.562 INFO [Total de agentes creados [387]]
+2021-08-31 01:50:01.667 INFO [Red creada con [2412] enalces]
+2021-08-31 01:50:01.722 WARM [INICIO DÍA => 1 DE LA SIMULACIÓN => 2]
+2021-08-31 01:50:01.724 INFO [Depósitos para el día 1 de la simulación 2]
+2021-08-31 01:50:01.846 INFO [Transferencias para el día 1 de la simulación 2]
+2021-08-31 01:50:01.917 INFO [Operaciones para el día 1 de la simulación 2]
+2021-08-31 01:50:01.951 INFO [FIN DÍA => 1 DE LA SIMULACIÓN => 2]
+2021-08-31 01:50:01.951 WARM [INICIO DÍA => 2 DE LA SIMULACIÓN => 2]
+2021-08-31 01:50:01.953 INFO [Depósitos para el día 2 de la simulación 2]
+2021-08-31 01:50:02.049 INFO [Transferencias para el día 2 de la simulación 2]
+2021-08-31 01:50:02.112 INFO [Operaciones para el día 2 de la simulación 2]
+2021-08-31 01:50:02.150 INFO [FIN DÍA => 2 DE LA SIMULACIÓN => 2]
+2021-08-31 01:50:02.150 SILLY [604 transacciones de la simulación 2]
+2021-08-31 01:50:02.229 DEBUG [================================================]
+2021-08-31 01:50:02.229 DEBUG [Fin de 2 simulaciones]
+2021-08-31 01:50:02.229 DEBUG [================================================]

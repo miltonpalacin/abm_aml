@@ -36,7 +36,7 @@ export class Setup {
                         rangeExecuteDeposit: Number(row.rangeExecuteDeposit),
                         rangeExecuteTransfer: Number(row.rangeExecuteTransfer),
                         rangeExecuteWithdrawal: Number(row.rangeExecuteWithdrawal),
-                        rangeNoNeighbor: Number(row.rangeNoNeighbor),
+                        //rangeNoNeighbor: Number(row.rangeNoNeighbor),
                         rangeNewLinkTransact: Number(row.rangeNewLinkTransact),
                         rangePopulation: Number(row.rangePopulation),
                         rangeIndividual: Number(row.rangeIndividual),

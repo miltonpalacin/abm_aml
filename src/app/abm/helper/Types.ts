@@ -14,7 +14,7 @@ export interface ITypePreSettings {
     rangeExecuteDeposit: number;
     rangeExecuteTransfer: number;
     rangeExecuteWithdrawal: number;
-    rangeNoNeighbor: number;
+    //rangeNoNeighbor: number;
     rangeNewLinkTransact: number;
     rangePopulation: number;
     rangeIndividual: number;
@@ -43,7 +43,7 @@ export interface ITypeSettings {
     rangeExecuteDeposit: IRange;
     rangeExecuteTransfer: IRange;
     rangeExecuteWithdrawal: IRange;
-    rangeNoNeighbor: IRange;
+    //rangeNoNeighbor: IRange;
     rangeNewLinkTransact: IRange;
     population: {
         range: IRange,
