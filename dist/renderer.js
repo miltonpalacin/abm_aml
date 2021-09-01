@@ -1750,7 +1750,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "html,\nbody {\n  font-family: \"Open Sans SBS\", \"Helvetica\", \"Arial\", sans-serif;\n  font-size: 14px;\n  font-weight: 400;\n  line-height: 20px;\n}\n\nhtml,\n#root {\n  width: 100%;\n  height: 100%;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  height: calc(100vh - 190px);\n}\n\n.list-log ul {\n  border: 1px dashed rgba(0, 0, 0, 0.3);\n  border-radius: 0 !important;\n  min-height: 200px;\n  max-height: 200px;\n  font-size: 12px;\n  background-color: white;\n  background-color: #f8f8f8;\n}\n.list-log ul li {\n  padding: 2px;\n  border: 1px dashed #dfd7ca;\n}\n\n.simulation-title h3 {\n  color: #370303 !important;\n}\n\n.simulation-body {\n  height: calc(100% - 100px);\n  border-top: 1px solid rgba(0, 0, 0, 0.2);\n  border-bottom: 1px solid rgba(0, 0, 0, 0.2);\n}\n\n.simulation-draw {\n  border-right: 1px solid rgba(0, 0, 0, 0.2);\n  height: 100%;\n  overflow: auto;\n}\n\n.background-soft-uni {\n  background-color: #f8e3e3;\n}\n\n.background-cream-uni {\n  background-color: #fff8d9;\n}\n\n.background-no-uni {\n  background-color: white;\n}\n\n.background-gray-uni {\n  background-color: #f8f8f8;\n}", "",{"version":3,"sources":["webpack://./src/ui/main/app.scss"],"names":[],"mappings":"AAAA;;EAEE,8DAAA;EACA,eAAA;EACA,gBAAA;EACA,iBAAA;AACF;;AAEA;;EAEE,WAAA;EACA,YAAA;AACF;;AAEA;EACE,SAAA;EACA,UAAA;EACA,2BAAA;AACF;;AAGE;EACE,qCAAA;EACA,2BAAA;EACA,iBAAA;EACA,iBAAA;EACA,eAAA;EACA,uBAAA;EACA,yBAAA;AAAJ;AACI;EACE,YAAA;EACA,0BAAA;AACN;;AAIA;EACE,yBAAA;AADF;;AAIA;EACE,0BAAA;EACA,wCAAA;EACA,2CAAA;AADF;;AAIA;EACE,0CAAA;EACA,YAAA;EACA,cAAA;AADF;;AAIA;EACE,yBAAA;AADF;;AAIA;EACE,yBAAA;AADF;;AAIA;EACE,uBAAA;AADF;;AAGA;EACE,yBAAA;AAAF","sourcesContent":["html,\nbody {\n  font-family: \"Open Sans SBS\", \"Helvetica\", \"Arial\", sans-serif;\n  font-size: 14px;\n  font-weight: 400;\n  line-height: 20px;\n}\n\nhtml,\n#root {\n  width: 100%;\n  height: 100%;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  height: calc(100vh - 190px);\n}\n\n.list-log {\n  ul {\n    border: 1px dashed rgba(0, 0, 0, 0.3);\n    border-radius: 0 !important;\n    min-height: 200px;\n    max-height: 200px;\n    font-size: 12px;\n    background-color: white;\n    background-color: rgb(248, 248, 248);\n    li {\n      padding: 2px;\n      border: 1px dashed #dfd7ca;\n    }\n  }\n}\n\n.simulation-title h3 {\n  color: rgb(55, 3, 3) !important;\n}\n\n.simulation-body {\n  height: calc(100% - 100px);\n  border-top: 1px solid rgba(0, 0, 0, 0.2);\n  border-bottom: 1px solid rgba(0, 0, 0, 0.2);\n}\n\n.simulation-draw {\n  border-right: 1px solid rgba(0, 0, 0, 0.2);\n  height: 100%;\n  overflow: auto;\n}\n\n.background-soft-uni {\n  background-color: rgb(248, 227, 227);\n}\n\n.background-cream-uni {\n  background-color: rgb(255, 248, 217);\n}\n\n.background-no-uni {\n  background-color: white;\n}\n.background-gray-uni {\n  background-color: rgb(248, 248, 248);\n}\n\n// #products {\n//   height: 100vh;\n//   overflow: auto;\n//   padding: 2px;\n// }\n\n// .max-vh {\n//   height: 80vh;\n//   overflow: auto;\n//   padding: 2px;\n// }\n// .background-black {\n//   background-color: black;\n// }\n// .background-red {\n//   background-color: red;\n// }\n// .background-blue {\n//   background-color: blue;\n//   height: calc(100% - 100px);\n// }\n// .background-yellow {\n//   background-color: yellow;\n// }\n// .background-green {\n//   background-color: green;\n// }\n// .background-pink {\n//   background-color: pink;\n// }\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "html,\nbody {\n  font-family: \"Open Sans SBS\", \"Helvetica\", \"Arial\", sans-serif;\n  font-size: 14px;\n  font-weight: 400;\n  line-height: 20px;\n}\n\nhtml,\n#root {\n  width: 100%;\n  height: 100%;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  height: calc(100vh - 190px);\n}\n\n.list-log ul {\n  border: 1px dashed rgba(0, 0, 0, 0.3);\n  border-radius: 0 !important;\n  min-height: 200px;\n  max-height: 200px;\n  font-size: 12px;\n  background-color: white;\n  background-color: #f8f8f8;\n}\n.list-log ul li {\n  padding: 2px;\n  border: 1px dashed #dfd7ca;\n}\n\n.simulation-title h3 {\n  color: #370303 !important;\n}\n\n.simulation-body {\n  height: calc(100% - 100px);\n  border-top: 1px solid rgba(0, 0, 0, 0.2);\n  border-bottom: 1px solid rgba(0, 0, 0, 0.2);\n}\n\n.simulation-draw {\n  border-right: 1px solid rgba(0, 0, 0, 0.2);\n  height: 100%;\n  overflow: auto;\n}\n\n.background-soft-uni {\n  background-color: #f8e3e3;\n}\n\n.background-cream-uni {\n  background-color: #fff8d9;\n}\n\n.background-no-uni {\n  background-color: white;\n}\n\n.background-gray-uni {\n  background-color: #f8f8f8;\n}\n\n:disabled {\n  color: #fff;\n  background-color: #9b9b9b !important;\n  border-color: #727272 !important;\n}", "",{"version":3,"sources":["webpack://./src/ui/main/app.scss"],"names":[],"mappings":"AAAA;;EAEE,8DAAA;EACA,eAAA;EACA,gBAAA;EACA,iBAAA;AACF;;AAEA;;EAEE,WAAA;EACA,YAAA;AACF;;AAEA;EACE,SAAA;EACA,UAAA;EACA,2BAAA;AACF;;AAGE;EACE,qCAAA;EACA,2BAAA;EACA,iBAAA;EACA,iBAAA;EACA,eAAA;EACA,uBAAA;EACA,yBAAA;AAAJ;AACI;EACE,YAAA;EACA,0BAAA;AACN;;AAIA;EACE,yBAAA;AADF;;AAIA;EACE,0BAAA;EACA,wCAAA;EACA,2CAAA;AADF;;AAIA;EACE,0CAAA;EACA,YAAA;EACA,cAAA;AADF;;AAIA;EACE,yBAAA;AADF;;AAIA;EACE,yBAAA;AADF;;AAIA;EACE,uBAAA;AADF;;AAGA;EACE,yBAAA;AAAF;;AAGA;EACE,WAAA;EACA,oCAAA;EACA,gCAAA;AAAF","sourcesContent":["html,\nbody {\n  font-family: \"Open Sans SBS\", \"Helvetica\", \"Arial\", sans-serif;\n  font-size: 14px;\n  font-weight: 400;\n  line-height: 20px;\n}\n\nhtml,\n#root {\n  width: 100%;\n  height: 100%;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  height: calc(100vh - 190px);\n}\n\n.list-log {\n  ul {\n    border: 1px dashed rgba(0, 0, 0, 0.3);\n    border-radius: 0 !important;\n    min-height: 200px;\n    max-height: 200px;\n    font-size: 12px;\n    background-color: white;\n    background-color: rgb(248, 248, 248);\n    li {\n      padding: 2px;\n      border: 1px dashed #dfd7ca;\n    }\n  }\n}\n\n.simulation-title h3 {\n  color: rgb(55, 3, 3) !important;\n}\n\n.simulation-body {\n  height: calc(100% - 100px);\n  border-top: 1px solid rgba(0, 0, 0, 0.2);\n  border-bottom: 1px solid rgba(0, 0, 0, 0.2);\n}\n\n.simulation-draw {\n  border-right: 1px solid rgba(0, 0, 0, 0.2);\n  height: 100%;\n  overflow: auto;\n}\n\n.background-soft-uni {\n  background-color: rgb(248, 227, 227);\n}\n\n.background-cream-uni {\n  background-color: rgb(255, 248, 217);\n}\n\n.background-no-uni {\n  background-color: white;\n}\n.background-gray-uni {\n  background-color: rgb(248, 248, 248);\n}\n\n:disabled {\n  color: #fff;\n  background-color: rgb(155, 155, 155) !important;\n  border-color: rgb(114, 114, 114) !important;\n}\n// #products {\n//   height: 100vh;\n//   overflow: auto;\n//   padding: 2px;\n// }\n\n// .max-vh {\n//   height: 80vh;\n//   overflow: auto;\n//   padding: 2px;\n// }\n// .background-black {\n//   background-color: black;\n// }\n// .background-red {\n//   background-color: red;\n// }\n// .background-blue {\n//   background-color: blue;\n//   height: calc(100% - 100px);\n// }\n// .background-yellow {\n//   background-color: yellow;\n// }\n// .background-green {\n//   background-color: green;\n// }\n// .background-pink {\n//   background-color: pink;\n// }\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -68860,7 +68860,7 @@ var BaseOperationAgent = /** @class */ (function (_super) {
     // Alfabeto del agente
     BaseOperationAgent.A1_ESPERAR = new Alphabet_1.Alphabet("a1", "Esperar operación");
     BaseOperationAgent.A2_REALIZAR = new Alphabet_1.Alphabet("a2", "Realizar operación");
-    BaseOperationAgent.A3_CONGELAR = new Alphabet_1.Alphabet("a3", "Esperar operación");
+    BaseOperationAgent.A3_CONGELAR = new Alphabet_1.Alphabet("a3", "Congelar cuenta");
     return BaseOperationAgent;
 }(BaseAgent_1.BaseAgent));
 exports.BaseOperationAgent = BaseOperationAgent;
@@ -71736,7 +71736,7 @@ var Setup = /** @class */ (function () {
                                         rangeExecuteDeposit: Number(row.rangeExecuteDeposit),
                                         rangeExecuteTransfer: Number(row.rangeExecuteTransfer),
                                         rangeExecuteWithdrawal: Number(row.rangeExecuteWithdrawal),
-                                        rangeNoNeighbor: Number(row.rangeNoNeighbor),
+                                        //rangeNoNeighbor: Number(row.rangeNoNeighbor),
                                         rangeNewLinkTransact: Number(row.rangeNewLinkTransact),
                                         rangePopulation: Number(row.rangePopulation),
                                         rangeIndividual: Number(row.rangeIndividual),
@@ -71803,6 +71803,8 @@ var Setup = /** @class */ (function () {
             currentIteration: 0,
             idDatabase: 0,
             totalIterations: 0,
+            totalNodes: 0,
+            totalEdges: 0
         };
         return argsCreateAgent;
     };
@@ -71919,15 +71921,10 @@ var Simulation = /** @class */ (function () {
                         return [4 /*yield*/, DataBase_1.dbCreateSimulation(args, codProceso)];
                     case 4:
                         idSimulation = _a.sent();
-                        args.currentIteration = iteration;
-                        args.idDatabase = idSimulation;
-                        args.totalIterations = config.totalIteration;
-                        updateArgs(args);
                         Log_1.Log.info("ID Simulation [" + idSimulation + "]");
-                        //Log.info(`Configuración global de la simulación [${iteration}]`, args);
+                        Log_1.Log.info("Configuraci\u00F3n global de la simulaci\u00F3n [" + iteration + "]", args);
                         return [4 /*yield*/, Setup_1.sleep(awaitTime)];
                     case 5:
-                        //Log.info(`Configuración global de la simulación [${iteration}]`, args);
                         _a.sent();
                         /** ********************************************************* */
                         /**                INICIALIZACIÓN DE AGENTES                  */
@@ -71941,6 +71938,12 @@ var Simulation = /** @class */ (function () {
                         /**                   CREACIÓN DE LA RED                      */
                         /** ********************************************************* */
                         network.createNetwork();
+                        args.currentIteration = iteration;
+                        args.idDatabase = idSimulation;
+                        args.totalIterations = config.totalIteration;
+                        args.totalEdges = network.edges.length;
+                        args.totalNodes = network.nodes.length;
+                        updateArgs(args);
                         if (!networkgraph_1.StaticTopology.stopUpdateTopologia)
                             updateGraph(iteration);
                         return [4 /*yield*/, Setup_1.sleep(awaitTime)];
@@ -72548,15 +72551,21 @@ var App = function () {
                     setStop(false);
                     setMessageStop("Cancelar");
                     return [4 /*yield*/, (function () {
-                            return new Promise(function (resolve) {
-                                Simulation_1.Simulation.run(setNetwork, setCurrentArg);
-                                setRunSimulation(false);
-                                setSeeNetwork(true);
-                                setMessageSee("En espera de un red");
-                                setStop(true);
-                                setMessageStop("En espera de ejecución");
-                                return resolve;
-                            });
+                            return new Promise(function (resolve) { return __awaiter(void 0, void 0, void 0, function () {
+                                return __generator(this, function (_a) {
+                                    switch (_a.label) {
+                                        case 0: return [4 /*yield*/, Simulation_1.Simulation.run(setNetwork, setCurrentArg)];
+                                        case 1:
+                                            _a.sent();
+                                            setRunSimulation(false);
+                                            setSeeNetwork(true);
+                                            setMessageSee("En espera de un red");
+                                            setStop(true);
+                                            setMessageStop("En espera de ejecución");
+                                            return [2 /*return*/, resolve];
+                                    }
+                                });
+                            }); });
                         })()];
                 case 2:
                     _a.sent();
@@ -72608,7 +72617,7 @@ var App = function () {
             react_1.default.createElement("div", { className: "row background-cream-uni simulation-body" },
                 react_1.default.createElement("div", { className: "col-md-9 background-no-uni p-1 simulation-draw" },
                     react_1.default.createElement(topology_1.default, { network: network, setInfoNode: function (node) { return setInfoNode(node); } }, " ")),
-                react_1.default.createElement("div", { className: "col-md-3 p-2" },
+                react_1.default.createElement("div", { className: "col-md-3 p-4" },
                     react_1.default.createElement("button", { type: "button", disabled: runSimulation, className: "btn btn-success col-md-12", onClick: function () { return onSimulation(); } }, "Ejecutar Simulaci\u00F3n"),
                     react_1.default.createElement("button", { type: "button", disabled: stop, className: "btn btn-primary col-md-12 mt-2", onClick: function () { return onStop(); } }, messageStop),
                     react_1.default.createElement("button", { type: "button", disabled: seeNetwork, className: "btn btn-info col-md-12 mt-2", onClick: function () { return onSeeNetwork(); } }, messageSee),
@@ -72638,6 +72647,19 @@ var App = function () {
                                 react_1.default.createElement("span", null,
                                     " ",
                                     currentArg.idDatabase)),
+                            react_1.default.createElement("p", null,
+                                react_1.default.createElement("em", { className: "fw-bold" }, "Red Actual:"),
+                                " "),
+                            react_1.default.createElement("p", null,
+                                react_1.default.createElement("span", { className: "fst-italic" }, "totalNodes:"),
+                                react_1.default.createElement("span", null,
+                                    " ",
+                                    currentArg.totalNodes)),
+                            react_1.default.createElement("p", null,
+                                react_1.default.createElement("span", { className: "fst-italic" }, "totalEdges:"),
+                                react_1.default.createElement("span", null,
+                                    " ",
+                                    currentArg.totalEdges)),
                             react_1.default.createElement("p", null,
                                 react_1.default.createElement("em", { className: "fw-bold" }, "Poblaci\u00F3n:"),
                                 " "),
@@ -72764,7 +72786,7 @@ var App = function () {
                                     " ")))) : (react_1.default.createElement("p", { className: "card-text" }, "Ejecute la simulaci\u00F3n...")))),
                     react_1.default.createElement("div", { className: "card bg-light mb-3" },
                         react_1.default.createElement("div", { className: "card-header fw-bold" }, "Datos de un agente"),
-                        react_1.default.createElement("div", { className: "card-body", style: { maxHeight: "220px", overflow: "auto" } }, currentNode != undefined ? (react_1.default.createElement("pre", null,
+                        react_1.default.createElement("div", { className: "card-body", style: { maxHeight: "215px", overflow: "auto" } }, currentNode != undefined ? (react_1.default.createElement("pre", null,
                             react_1.default.createElement("p", null,
                                 react_1.default.createElement("span", { className: "fst-italic" }, "C\u00F3digo:"),
                                 " ", currentNode === null || currentNode === void 0 ? void 0 :
